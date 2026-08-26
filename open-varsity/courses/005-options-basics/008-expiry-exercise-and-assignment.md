@@ -1,0 +1,61 @@
+Chapters
+Module B · The Contract and Settlement - Chapter 08
+# Expiry, Exercise and Assignment
+What actually happens on expiry day. Learn how in-the-money and out-of-the-money options are treated, how auto-exercise works, and the assignment risk a seller must respect.
+Mechanics
+What you'll learn
+  * ·What happens on expiry day
+  * ·ITM, ATM and OTM at expiry
+  * ·Auto-exercise of ITM options
+  * ·Settlement in cash or shares
+  * ·Assignment risk for sellers
+  * ·Why you square off in time
+
+
+Every option you ever buy or sell has a death date stamped on it. For the RELIANCE options in our running example, that date is 28 July 2026. Until then the option is a living bet, rising and falling with the stock and the clock. But on expiry day the bet is called in. The option stops being about the future and becomes a single, simple question: did it finish with any real worth, or did it finish as nothing? This chapter walks through exactly what happens on that last day, who gets paid, who has to pay, and the one practical habit that keeps beginners out of trouble, squaring off in time.
+## Expiry day: the deadline arrives
+An option is a right with a deadline, and that deadline is the expiry. In India, monthly contracts expire on a set weekday, and the exchange settles them on a Tuesday. Our RELIANCE 1320 options expire on 28 July 2026, and the NIFTY monthly contracts in our index example share that same 28 July expiry.
+Up to that day, an option's premium has two parts: intrinsic value, the real here-and-now worth, and time-value, the hope premium that melts as expiry nears. On expiry day the hope runs out. By the close, time-value has fully drained to zero, and the only thing left inside the option is its intrinsic value. That is the whole story of expiry in one line: time-value dies, and intrinsic value is all that settles.
+So what each option is worth at the close depends entirely on its moneyness, on where the strike sits against the final settlement price.
+Key idea
+On expiry day, time-value is gone. An option settles for its intrinsic value and nothing more. If it finished in-the-money it pays out that intrinsic worth; if it finished at-the-money or out-of-the-money it expires worthless.
+## In-the-money pays, out-of-the-money expires worthless
+Let us put the outcomes side by side using the RELIANCE 1320 call, depending on where RELIANCE settles on 28 July.  
+| Settlement  | 1320 call moneyness  | What the call is worth  | Result for the buyer  |  
+| --- | --- | --- | --- |  
+| 1360  | In-the-money by 40  | Rs 40 a share, about Rs 20,000 a lot  | Pays out its intrinsic value  |  
+| 1320  | At-the-money  | Nothing  | Expires worthless  |  
+| 1290  | Out-of-the-money  | Nothing  | Expires worthless  |  
+Read the rows honestly. If RELIANCE settles at 1360, the 1320 call is forty rupees in-the-money, so it settles for Rs 40 a share, which on a lot of 500 is about Rs 20,000. If RELIANCE settles right at 1320, or anywhere below it, the call has no intrinsic value and simply expires worthless. The buyer loses the full premium paid, about Rs 15,590 a lot. The 1320 put behaves as the mirror: it pays only if RELIANCE settles below 1320, and expires worthless at or above it.
+This is the brutal arithmetic of expiry for a buyer. There is no partial credit for being close. An option that finishes one rupee out-of-the-money is worth exactly the same as one that finishes a hundred rupees out, which is nothing.
+Heads up
+Finishing close to the strike earns a buyer nothing. An option that expires even slightly out-of-the-money is worth zero, and the entire premium is lost. Most out-of-the-money options reach expiry worthless, which is why far-out lottery options bleed buyers steadily.
+## Auto-exercise: the exchange does the work
+Here is a relief for beginners. You do not have to do anything for an in-the-money option to pay you. The exchange runs **auto-exercise** : at expiry, every option that finishes in-the-money is exercised automatically, and the settlement value is credited to the buyer and debited from the seller. You do not press a button, place an order, or send any instruction. If your option finished with intrinsic value, the system collects it for you.
+Equally, an out-of-the-money option needs no action either. It simply expires and disappears from your account, with the premium already spent. There is nothing to abandon and nothing to claim, because there is nothing there.
+So the buyer's expiry experience is mostly automatic. The catch is not the mechanics. The catch is what an in-the-money settlement actually delivers, and that depends on whether you were holding an index option or a stock option.
+Note
+Auto-exercise means the exchange settles every in-the-money option for you at expiry without any action on your part. You never need to manually exercise; the system does it. Out-of-the-money options simply lapse.
+## Assignment: the seller's side of the deal
+Every option has two sides. When a buyer's option is exercised, someone on the other side is **assigned**. Assignment is simply being chosen to fulfil the obligation you took on when you sold the option and collected the premium.
+If you sold the RELIANCE 1320 call and it finishes in-the-money, you are assigned. You took the premium of about Rs 15,590 upfront, and now you must settle the option's intrinsic value to the buyer. The seller does not get to walk away. That is the bargain a seller strikes: premium today in exchange for a duty that can be called in at expiry.
+What settling actually means splits sharply along one line, index options versus stock options.
+## Cash for index, delivery for stock
+This is the part that surprises beginners, and it deserves a slow read.
+**Index options are cash-settled.** NIFTY has no physical shares to hand over, so an in-the-money NIFTY option simply settles in cash. If you held a NIFTY 24050 call and the index settled higher, the intrinsic value in points, times the lot of 65, is paid into your account in rupees. If you had sold it and were assigned, that same cash is debited. Money moves, nothing else.
+**Single-stock options in India are physically settled.** This is the trap. An in-the-money RELIANCE option does not settle in cash. It converts into an actual delivery of shares. A call buyer who holds an in-the-money RELIANCE call to expiry must take delivery of 500 RELIANCE shares and pay for them. At about Rs 1,318 a share, that is roughly Rs 6,59,000 of stock for one lot. A call seller who is assigned must deliver those 500 shares. A put works the other way: the put buyer delivers shares and the assigned put seller must buy them.
+So a beginner who sold a RELIANCE option for a small premium, forgot about it, and let it run into expiry in-the-money can wake up assigned a delivery obligation worth several lakh rupees, far beyond the tiny premium collected. That is a genuine danger, not a theoretical one.
+Heads up
+A stock option held to expiry in-the-money turns into real share delivery, not cash. One in-the-money RELIANCE lot means 500 shares changing hands, worth about Rs 6,59,000. A seller assigned on a stock option must deliver or take those shares. Never let a stock option drift into expiry by accident.
+## The settlement price, not the last tick
+When the exchange decides whether your option is in-the-money and by how much, it does not use the last tick you happened to see. It uses the underlying's official **final settlement price**. For an index option this is the official closing value of the index. For a single-stock option, from **3 August 2026** the underlying F&O stock's official close is normally the equilibrium price discovered in the cash-market **Closing Auction Session (CAS)** , not the old closing-window VWAP.
+VWAP still has a role: the stock's 15:00-15:15 VWAP is the CAS reference price and becomes the close if the auction cannot discover an equilibrium price. The index itself is not auctioned separately, but its official close reflects the auction closes of CAS-eligible constituents and VWAP closes of constituents outside CAS. Equity options continue trading until 15:40; the derivative contract's own closing price still uses its 15:10-15:40 VWAP. The practical point is unchanged: you cannot choose the final settlement number, so many traders close the position themselves instead of leaving it to expiry.
+## Square off in time: the practical rule
+All of this leads to one simple habit that protects most beginners, which is to **square off in time**. To square off means to close the position before expiry by taking the opposite trade, selling the option you bought, or buying back the option you sold. Once you have squared off, you have no position left to settle, and expiry day holds no surprises for you.
+Most option traders, retail and professional alike, close their positions before expiry rather than carry them into settlement. They do this for three reasons. First, it avoids the physical-delivery obligation on stock options entirely. Second, exercising or being assigned on an in-the-money option carries its own settlement tax on the full intrinsic value, an extra cost that closing in the market avoids. Third, it lets you control the exit at a price you can see, rather than being settled at a single official closing value you cannot influence.
+The rule for a beginner is plain. Do not hold a stock option into the final hours of expiry unless you fully intend to take or give delivery and have the cash or shares to do it. If you are unsure, close the position with time to spare. The convenience of auto-exercise is real, but it is not a reason to be careless, because the same automatic system that pays a buyer can saddle a forgetful seller with a delivery worth lakhs.
+![On expiry day an in-the-money option is auto-exercised and pays its intrinsic value, while at-the-money and out-of-the-money options expire worthless; the seller of an in-the-money option is assigned and must settle, in cash for an index and in share delivery for a stock.](https://openalgo.in/options-basics/images/diagram-expiry-exercise.png) DiagramOn expiry day an in-the-money option is auto-exercised and pays its intrinsic value, while at-the-money and out-of-the-money options expire worthless; the seller of an in-the-money option is assigned and must settle, in cash for an index and in share delivery for a stock.
+Tip
+The safe default for a beginner is to square off before expiry. Closing the position yourself removes any assignment or delivery risk, avoids the settlement tax on exercise, and lets you exit at a price you can see rather than one official close.
+Expiry is where an option finally tells the truth. The hope you paid for has melted away, and only the hard intrinsic value remains. For a buyer that means a payout if you finished in-the-money and a total loss if you did not. For a seller it means assignment, in cash on an index and in real shares on a stock. Understand both sides before you ever hold a contract to its last day, and make squaring off in time your default habit.
+On this page

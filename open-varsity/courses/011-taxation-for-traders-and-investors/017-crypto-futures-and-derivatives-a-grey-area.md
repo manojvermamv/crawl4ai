@@ -1,0 +1,60 @@
+Chapters
+Module D · Global and Crypto - Chapter 17
+# Crypto Futures and Derivatives: A Grey Area
+Crypto futures are taxed very differently from crypto itself, and the rules are still unsettled. Learn why crypto derivatives are usually business income at slab rates, not the flat 30 percent, the offshore-platform TCS, and the litigation risk to respect.
+Crypto
+What you'll learn
+  * ·Not the flat 30 percent
+  * ·Treated as business income
+  * ·No 1 percent TDS on futures
+  * ·Offshore platforms and TCS
+  * ·The unsettled rules
+  * ·Why caution matters here
+
+
+After the last chapter, a trader could be forgiven for thinking all crypto is taxed the same brutal way: a flat 30%, no expenses, no relief on losses. So when the same trader starts dealing in crypto futures rather than the coins themselves, the natural assumption is that the 30% rule follows them there too. It may not. Crypto futures sit in a genuinely different, and far less settled, corner of the tax world, and this chapter is an honest tour of what we know, what is likely, and what nobody can yet promise you.
+Let us be clear from the first line, because honesty matters more than tidiness here. The treatment of crypto futures in India is not fully settled. The tax department has not issued clear guidance, and there is real room for dispute. What follows is the careful, commonly held reading, not a guarantee, and you should treat it as a starting point for a conversation with a professional, never as a final answer.
+![Crypto futures are derivatives, not a transfer of a coin, so the flat 30% generally does not apply, but the rules remain unsettled.](https://openalgo.in/taxation/images/diagram-crypto-fno.png) DiagramCrypto futures are derivatives, not a transfer of a coin, so the flat 30% generally does not apply, but the rules remain unsettled.
+## Futures are a bet on price, not a coin you own
+Start with what a crypto future actually is. When you trade a future, you are not buying or selling the coin itself. You are entering a contract whose value tracks the coin's price. You never take ownership of the underlying asset in the way you do when you buy a coin in the spot market.
+That distinction is the whole ballgame for tax. Section 115BBH, the flat 30% rule from the previous chapter, is written around the transfer of a Virtual Digital Asset. A crypto future is a derivative, not a transfer of a VDA, so Section 115BBH generally does not apply to it. The harsh 30% machinery was built for buying and selling coins, and a contract on a coin's price is, in most readings, a different animal.
+Key idea
+Crypto futures are derivatives, not a transfer of a coin. Because the flat 30% under Section 115BBH is written around transferring a Virtual Digital Asset, it generally does not reach a futures contract. This is the central reason crypto futures are treated differently from spot crypto, though the matter is not beyond dispute.
+## The likely treatment: business income at slab
+If the flat 30% does not apply, then what does. The common reading is that gains from crypto futures are treated as business income, taxed at your normal slab rates rather than a single flat figure. Some take a more conservative view and treat the activity as speculative, but the broad direction is the same: this is income that flows into the regular slab system.
+That has two consequences that are gentler than the spot crypto rules. First, slab rates can be lower than a flat 30% for many traders, because the lower bands tax part of your income at 5%, 10% and 15% before the top rate is reached. Second, because it is business income, expenses and at least some loss set-off may be available, neither of which exists in the spot crypto world.
+Think about what those two points mean for a real trader. A platform subscription, data costs, and other genuine business expenses might be deductible against futures income, where the spot crypto rules would have ignored them entirely. A losing month might soften the tax on a winning month, instead of vanishing without trace. Treated this way, crypto futures look far closer to ordinary trading in other markets than to the punishing spot crypto regime. The relief is real, but it depends entirely on the classification holding up, which is the very thing nobody can yet promise.  
+| Feature  | Spot crypto (buying coins)  | Crypto futures (common reading)  |  
+| --- | --- | --- |  
+| Governing rule  | Flat 30% under Section 115BBH  | Usually business income at slab  |  
+| Expenses deductible  | Only the cost of the coin  | Business expenses may be allowed  |  
+| Loss set-off  | Not allowed at all  | Some set-off may apply  |  
+| 1% TDS on sale  | Yes, under Section 194S  | No  |  
+Note
+None of this is a loophole or a tax dodge. It flows from a simple legal fact: a futures contract is not the coin. But "generally treated as" is doing real work in that sentence. The favourable points in the table are the likely position, not a settled one, which is why the closing section of this chapter matters as much as this one.
+## No 1 percent TDS here, but a serious offshore problem
+One practical difference is worth stating plainly. The 1% TDS under Section 194S, which bites on every spot sale of a coin, does not apply to crypto futures. There is no 1% TDS on a crypto futures trade, because, again, there is no transfer of a VDA for the provision to attach to.
+The bigger issue is not tax at all, it is foreign-exchange law. Funding an account on a platform based outside India means remitting money abroad under the Liberalised Remittance Scheme, and here is the trap many traders miss: the LRS rules expressly prohibit remittances that are in the nature of margins or margin calls to overseas exchanges or counterparties, and they do not permit remittances for overseas derivatives, futures or options. In other words, sending money abroad to fund a crypto futures margin is generally not a permitted use of the LRS in the first place, regardless of any tax you might pay on the gains.
+Heads up
+Do not assume offshore crypto futures are fine as long as you pay the tax. Under RBI's Liberalised Remittance Scheme, remittances for margins or margin calls to overseas exchanges, and for overseas derivatives, are prohibited. So funding an offshore crypto futures account can breach foreign-exchange law (FEMA), a separate and serious matter from income tax. This is one of those areas where the right step is to speak to a qualified professional before you act, not after.
+Even where money does move abroad for a permitted purpose, the 20% TCS that applies to LRS remittances above Rs 7 lakh in a year leaves a clear, traceable footprint against your PAN, reclaimable later as a credit. Between the FEMA restriction, the unsettled income-tax treatment, and that visible money trail, the honest conclusion is simple: this is not a corner of the market to wander into casually.
+## Worked example: how the bill can differ
+Numbers make the stakes concrete. Suppose a trader makes a profit of 3,00,000 on crypto futures in a year, and assume for illustration that this profit lands in the 20% slab band on top of their other income.
+If crypto futures were taxed like spot crypto under the flat 30%, the tax would be 30% of 3,00,000, which is 90,000, plus cess. Under the common reading, as business income taxed at a 20% slab rate, the tax on that slice would be about 20% of 3,00,000, which is 60,000, plus cess. That is a difference of roughly 30,000 on this one figure, before you even count the expenses and loss set-off that business treatment may allow but spot crypto forbids.
+Real example
+Crypto futures profit of 3,00,000. Treated as spot crypto at the flat 30%, tax would be 90,000 plus cess. Treated as business income falling in a 20% slab band, tax would be about 60,000 plus cess, a saving of roughly 30,000, with the possibility of deducting genuine expenses on top. The catch is that the lighter outcome rests on a classification the tax department has not formally confirmed. The number is real, but so is the uncertainty behind it.
+The point of the example is not to celebrate a lower bill. It is to show why the classification is worth getting right, and why guessing in your own favour without support is dangerous. The same 3,00,000 could be taxed in materially different ways depending on a question that is not yet fully answered.
+## The honest part: the rules are unsettled
+Now the most important section, and the reason this chapter is more cautious than the others. The treatment of crypto futures is a grey area. The tax department has not given clear, specific guidance on it, and where the law is silent, reasonable people, and reasonable tax officers, can disagree. That means there is real litigation risk: a position you take in good faith could be questioned, and you may have to defend it.
+You cannot remove that uncertainty, but you can protect yourself against it, and the protection is mostly about discipline and records.
+  * Keep complete records of every trade, every contract, and every remittance, including the LRS TCS collected against your PAN.
+  * Keep proof of any expenses you intend to claim under a business treatment.
+  * Do not assume the most favourable reading is automatically safe. Document why you took the position you did.
+  * Treat offshore platform activity as fully visible, because the remittance trail makes it so.
+  * Get a chartered accountant involved before you file, not after a query arrives. This is precisely the situation professional advice exists for.
+
+
+Tip
+When the rules are unsettled, the winning move is not to find the cleverest interpretation, it is to be the trader whose records are so clean that any reasonable position can be explained and supported. You cannot control how the law settles. You can control whether you documented everything, declared everything, and took advice. Do that, and the grey area becomes far less frightening.
+This chapter describes a genuinely unsettled area and is for education only, not tax advice. Because the rules on crypto futures may change and can be interpreted differently, do not rely on this reading for your filing. Sit down with a qualified chartered accountant, walk through your specific trades, and decide your position together.
+On this page

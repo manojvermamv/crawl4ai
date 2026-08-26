@@ -1,0 +1,94 @@
+Chapters
+Module E · Range and Income - Chapter 18
+# The Jade Lizard and Reverse Jade Lizard
+Neat credit structures that remove the risk on one side. Learn the jade lizard (no upside risk) and the reverse jade lizard (no downside risk), and how the credit erases one tail, with real payoffs.
+Range
+What you'll learn
+  * ·The jade lizard structure
+  * ·No risk on the upside
+  * ·The reverse jade lizard
+  * ·No risk on the downside
+  * ·Why the credit matters
+  * ·Reading the real payoffs
+
+
+The ratio spread you just met collected a generous credit but left one tail naked and uncapped. What if you could keep almost all of that credit and yet erase one of the tails completely, so that an entire direction simply cannot hurt you? That is the trick behind the **jade lizard** and its mirror, the **reverse jade lizard**. Each adds one cheap bought wing to a pair of sold options, arranged so the credit you collect is larger than the only spread that can lose. When the credit is bigger than that spread, one whole side of the chart can never dip below zero. It is one of the most elegant ideas in this course, and once you see it you will never unsee it.
+## The one-line idea
+A **jade lizard** sells a put for income, sells a call for more income, and buys one further call to fence the upside. The credit collected is deliberately larger than the width of that call spread, so no matter how high NIFTY climbs, the capped call loss is smaller than the money already banked. The upside cannot lose. Risk remains on one side only, the side you actually have a view on.
+Key idea
+The signature of a jade lizard is a credit larger than the width of its protected spread. When that holds, that whole side cannot lose: the bought wing caps the loss there, and the credit you banked is bigger than the cap. You are left with risk on one direction only, never both.
+## The real trade, rupee by rupee
+Here is the **jade lizard** on real NIFTY prices, captured on 26 June 2026 with the index at **24,056** and the 28 July 2026 expiry about 32 days away. You sell the 23,950 put below the money, sell the 24,150 call above it, and buy the 24,250 call as a wing.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Sell put  | 23,950  | 256.6 received  | plus Rs 16,679 in  |  
+| 2  | Sell call  | 24,150  | 370.1 received  | plus Rs 24,057 in  |  
+| 3  | Buy call  | 24,250  | 316.1 paid  | Rs 20,557 out  |  
+|   |   |   | **Net credit**  | **plus Rs 20,179 in**  |  
+The two sold options bring in Rs 40,736 between them, and the bought 24,250 call costs Rs 20,557, leaving a **net credit of Rs 20,179**. That credit is also your **maximum profit** , kept in full whenever NIFTY finishes between the sold strikes, from 23,950 to 24,150, where all three options expire worthless.
+![The NIFTY jade lizard: a flat maximum profit of Rs 20,179 across the middle, a right side that stays in profit no matter how high NIFTY climbs because the credit covers the call spread, and a single downside breakeven at 23,640 where the naked short put begins to bite.](https://openalgo.in/options-strategies/images/strat-jade-lizard.png) ChartThe NIFTY jade lizard: a flat maximum profit of Rs 20,179 across the middle, a right side that stays in profit no matter how high NIFTY climbs because the credit covers the call spread, and a single downside breakeven at 23,640 where the naked short put begins to bite.
+## The three numbers, and where they come from
+**Maximum profit is the net credit, Rs 20,179.** Anywhere from 23,950 to 24,150 all three options die worthless and you keep the whole credit.
+**There is no upside risk at all.** Legs 2 and 3 form a bear call spread just one hundred points wide, from 24,150 to 24,250, whose worst loss is one hundred times 65, which is Rs 6,500. But you collected Rs 20,179, far more than Rs 6,500. So even if NIFTY rockets away, the call spread caps out while your credit more than covers it, and you still walk away with about 20,179 minus 6,500, which is Rs 13,679. The entire right side of the chart stays green.
+**Maximum loss lives only on the downside, and the breakeven is 23,640.** The sold 23,950 put is naked. The credit is worth about 310 points per share, so NIFTY can fall 310 points below the put strike, to **23,640** , before the loss eats the whole credit. Below that the loss deepens toward a very large figure, listed as about Rs 15.4 lakh if the index collapsed toward zero.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | net credit  | Rs 20,179  |  
+| Upside  | credit minus the call spread width  | Rs 20,179 minus Rs 6,500 = profit, no risk  |  
+| Breakeven  | put strike minus credit per share  | 23,950 minus 310 = 23,640  |  
+## Walking the outcomes at expiry
+Settle the trade at five closing prices. A put is worth max(strike minus NIFTY, 0) and a call is worth max(NIFTY minus strike, 0) per share, with the net per lot of 65.  
+| NIFTY at expiry  | Short 23,950 PE (you owe)  | Short 24,150 CE (you owe)  | Long 24,250 CE (you own)  | Net P&L per lot  |  
+| --- | --- | --- | --- | --- |  
+| 23,400  | 550  | 0  | 0  | minus Rs 15,571 (downside loss)  |  
+| 23,640  | 310  | 0  | 0  | about Rs 0 (downside breakeven)  |  
+| 24,050  | 0  | 0  | 0  | plus Rs 20,179 (max profit)  |  
+| 24,150  | 0  | 0  | 0  | plus Rs 20,179 (max profit)  |  
+| 24,450  | 0  | 300  | 200  | plus Rs 13,679 (upside capped, still profit)  |  
+Read down and the magic is in the bottom row. Even with NIFTY 300 points above the upper sold strike, you still bank Rs 13,679, because the bought 24,250 call caps the call spread and the credit covers it. The only way to lose is a fall below 23,640, where the naked put bites. One tail has simply been erased.
+Heads up
+A jade lizard still carries a naked short put, so its downside loss is very large, listed as about Rs 15.4 lakh if NIFTY fell toward zero. There is no upside risk, but the left tail is real. Once NIFTY breaks below the breakeven of 23,640 you lose 65 rupees for every point it keeps falling, which is why the exchange blocks about Rs 1.71 lakh of margin. Treat the jade lizard as a bullish to neutral credit trade with a serious downside to defend, not a free lunch.
+## Your odds
+The **probability of profit is 68 percent**. NIFTY can sit anywhere above the 23,640 breakeven and you finish in the green, which is a wide cushion, and the entire upside is profit no matter how far it runs. The chart shows the breakeven sitting below the lower sigma band, so the only outcome that loses is a real break to the downside.
+Tip
+Read the 68 percent probability of profit next to the words very large loss. The jade lizard wins most of the time and removes the upside worry entirely, but the surviving downside is naked. A favourable win rate is only half a trade. Place a jade lizard only when you also have a plan to defend or close the short put if NIFTY starts to break, and size it so one bad gap on that side cannot wreck the account.
+## Margin and return on margin
+Because the short put is naked, the exchange blocks a heavy **margin of about Rs 1,70,750**. The bought call shrinks the upside risk to nothing but does nothing for the put, so the margin stays large, the cash cost of carrying that one open tail.
+On **return on margin** , the Rs 20,179 credit against Rs 1,70,750 blocked is about **12 percent** over the month if NIFTY holds above the breakeven. That is a genuine yield, but it rides on an undefined downside, so judge it by the risk, not the headline.
+## Time decay
+The jade lizard is a net seller, collecting Rs 20,179 of premium, so time decay works for you. The **blue dashed T+0 line** sits below the orange at-expiry profit shelf in the middle, and every calm day lifts the position as the sold options melt. Time is on your side as long as NIFTY holds above 23,640. Below that, decay stops helping and the naked put takes over.
+## The reverse jade lizard
+The **reverse jade lizard** flips the structure to erase the downside instead. You sell a call above the money, sell a put below it, and buy a further put to fence the downside.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Sell call  | 24,150  | 370.1 received  | plus Rs 24,057 in  |  
+| 2  | Sell put  | 23,950  | 256.6 received  | plus Rs 16,679 in  |  
+| 3  | Buy put  | 23,850  | 224.1 paid  | Rs 14,570 out  |  
+|   |   |   | **Net credit**  | **plus Rs 26,166 in**  |  
+The two sold options bring in Rs 40,736, the bought 23,850 put costs Rs 14,570, and the position opens for a **net credit of Rs 26,166** , also the maximum profit, kept between 23,950 and 24,150. This time legs 2 and 3 form a bull put spread one hundred points wide, from 23,950 to 23,850, whose worst loss is Rs 6,500. Your credit of Rs 26,166 dwarfs that, so a crash caps out at a small loss the credit easily covers, leaving you about Rs 19,666. That is why the reverse jade lizard has **no downside risk**. The naked side is now the upside, the sold 24,150 call, with a single **breakeven at 24,553**.
+![The NIFTY reverse jade lizard: a flat maximum profit of Rs 26,166 across the middle, a left side that stays in profit no matter how far NIFTY falls because the credit covers the put spread, and a single upside breakeven at 24,553 where the naked short call runs without limit.](https://openalgo.in/options-strategies/images/strat-reverse-jade-lizard.png) ChartThe NIFTY reverse jade lizard: a flat maximum profit of Rs 26,166 across the middle, a left side that stays in profit no matter how far NIFTY falls because the credit covers the put spread, and a single upside breakeven at 24,553 where the naked short call runs without limit.  
+| NIFTY at expiry  | Short 24,150 CE (you owe)  | Short 23,950 PE (you owe)  | Long 23,850 PE (you own)  | Net P&L per lot  |  
+| --- | --- | --- | --- | --- |  
+| 23,600  | 0  | 350  | 250  | plus Rs 19,666 (downside capped, still profit)  |  
+| 23,950  | 0  | 0  | 0  | plus Rs 26,166 (max profit)  |  
+| 24,150  | 0  | 0  | 0  | plus Rs 26,166 (max profit)  |  
+| 24,553  | 403  | 0  | 0  | about Rs 0 (upside breakeven)  |  
+| 24,750  | 600  | 0  | 0  | minus Rs 12,834 (loss grows without limit)  |  
+The top row mirrors the jade lizard's magic in reverse: even with NIFTY 350 points below the lower sold strike, you still bank Rs 19,666, because the bought 23,850 put caps the put spread. The **probability of profit is 72 percent** , and the margin is about Rs 1,76,758.
+Heads up
+A reverse jade lizard has a maximum loss that is unlimited. The sold 24,150 call has no protection above it, so once NIFTY climbs past the breakeven of 24,553 you lose 65 rupees a point with no ceiling, which is why the exchange blocks about Rs 1.77 lakh of margin. The downside is fully covered, but the bearish to neutral lean here comes with a genuine uncapped tail on a rally. Have a plan to defend the short call before you place it.
+## Why the credit erases a tail
+Both structures rest on one piece of arithmetic worth saying plainly. On the protected side you hold a spread one hundred points wide, and the most a one hundred point spread can lose is Rs 6,500. If the credit you collected is bigger than Rs 6,500, then even the worst case on that side leaves you in profit. The credit absorbs the entire spread loss and still has money left over.
+That is the whole secret. You are not buying expensive far protection. You are using the premium from one rich sold option to more than pay for the small spread on the other side, leaving a payoff with risk in one direction only.
+Did you know
+The jade lizard is bullish to neutral: it makes money when NIFTY holds up or drifts higher, with the right side bulletproof and only a fall to defend. The reverse jade lizard is bearish to neutral: it profits when NIFTY softens or holds, with the left side bulletproof and only a rally to defend. Choose the one whose naked tail points away from your real view, so the side you fear is the side that cannot hurt you.
+## Key takeaways
+  * A jade lizard sells a put and a call and buys one further call, collecting a credit larger than the call spread width, so the **upside cannot lose**.
+  * It collects **Rs 20,179** (its max profit), keeps the full credit between 23,950 and 24,150, and risks only the downside below the **23,640 breakeven** , where the naked short put bites.
+  * The reverse jade lizard flips it: a **Rs 26,166** credit erases the downside entirely, leaving an **unlimited** upside tail above the **24,553 breakeven**.
+  * Both wear a high probability of profit, 68 and 72 percent, because one whole tail is removed, but the surviving tail is naked and demands about **Rs 1.7 lakh of margin**.
+  * Choose the structure whose naked tail points away from your view: the jade lizard when you lean mildly bullish, the reverse when you lean mildly bearish.
+  * Build both in **sandbox trading (analyzer mode in OpenAlgo)** , drag the price toward the protected side and watch the line never turn red there, then drag it toward the naked side to see where the loss begins.
+
+
+On this page

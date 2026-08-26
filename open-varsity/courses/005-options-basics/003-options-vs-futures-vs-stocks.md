@@ -1,0 +1,56 @@
+Chapters
+Module A · Why and What - Chapter 03
+# Options vs Futures vs Stocks
+Three ways to bet on the same move, with very different risk. Learn how the capital, the risk shape, and margin versus premium compare, and why an option is not just a cheaper future.
+Basics
+What you'll learn
+  * ·Capital needed for each
+  * ·The shape of the risk
+  * ·Margin vs premium upfront
+  * ·Why options are not cheap futures
+  * ·Limited vs unlimited loss
+  * ·Choosing the right tool
+
+
+Imagine you are convinced RELIANCE is about to rise from its current Rs 1,318. You have three ways to back that single view. You can buy the shares, you can buy the future, or you can buy the call. On the screen they can all look like the same bet on the same stock, and a beginner often treats them as interchangeable, picking whichever needs the least cash. They are not interchangeable. The three behave so differently that the same correct view can make you money in one and lose you money in another. This chapter lines them up side by side so you can see exactly what you are choosing between, and it kills off one of the most expensive myths a new trader carries, that an option is just a cheaper future.
+## Three ways to back the same view
+All three instruments give you exposure to RELIANCE moving. What differs is how much you must put up, what shape your profit and loss takes, and how much you can lose if you are wrong. Get those three things straight for each one and you will never again confuse them.
+## The stock: simplest, linear, full price
+Buying the stock is the plainest of the three. You pay the full price and you own the shares. To match one option lot you would buy 500 shares at Rs 1,318, which costs 500 times 1,318, about Rs 6,59,000. That whole sum leaves your account.
+In return your profit and loss is **linear** , a clean one-for-one line. Every rupee RELIANCE rises adds 500 rupees to your position, and every rupee it falls takes 500 away. There is no expiry, no time pressure, and nothing decays. You can hold for years. Your maximum loss is large, the whole Rs 6,59,000 if the company were to go to zero, but that is a remote, slow risk and you are never asked to top up along the way. The stock is the calmest, heaviest, most forgiving of the three.
+## The future: leverage, still linear, marked daily
+A **future** is an agreement to settle the same 500 shares at a price fixed today, with the difference paid at expiry. The key change from the stock is that you do not pay the full Rs 6,59,000. You post a **margin** , a fraction of the full value, often around a fifth, as a good-faith deposit. That smaller outlay controls the full 500-share exposure, which is leverage.
+But the risk shape is still **linear** , and that is the trap. The future rises and falls one-for-one with the stock, on the full 500 shares, even though you only put up a slice. So a move against you eats your margin quickly, and the exchange marks your position to market every single day. If the loss erodes your deposit, you get a call to add more cash the same day or be closed out. A future has no capped loss and no time decay. It is the stock's exposure on a fraction of the cash, with daily settlement and a loss that can run well past what you first deposited.
+Heads up
+A future is leveraged but linear. It moves one-for-one with the stock on the full lot, it is marked to market daily, and a move against you can demand fresh cash the same day. There is no built-in ceiling on the loss.
+## The option: bent and asymmetric
+A long **option** , say the 1320 call, is the odd one out, and its difference is the whole point. You pay only the premium, about Rs 31 a share, which is about Rs 15,590 for the lot. That premium is the entire cost, and crucially it is the entire risk. No matter how far RELIANCE falls, you can never lose more than that Rs 15,590. Nobody marks you to market for more, nobody calls you for extra cash.
+The price of that comfort is twofold. First, your profit and loss is no longer a straight line, it is **bent**. Below the strike the loss is flat, capped at the premium. Above the strike the line turns up and you start to profit, but only after the stock has cleared the strike plus the premium, a breakeven of about 1351 here. That bent, lopsided shape is what we mean by an **asymmetric** payoff, small and known on the downside, open on the upside. Second, the option carries time-value that melts every day, so even a correct view loses if the move is too small or too slow. You are trading a possible top-up call for a daily rent.
+Key idea
+A long option's defining feature is its bent, asymmetric payoff. The loss is flat and capped at the premium below the strike, while the gain opens up above it. A stock and a future both draw a straight, symmetric line instead.
+## The three-way table
+Here is the same view, RELIANCE rising from 1,318, expressed three ways for one lot of 500 shares. Read down each column to feel how different these really are.  
+| Feature  | Buy the stock  | Buy the future  | Buy the 1320 call  |  
+| --- | --- | --- | --- |  
+| What you put up  | Full price  | A margin deposit  | The premium only  |  
+| Cash outlay  | About Rs 6,59,000  | A fraction, often near a fifth  | About Rs 15,590  |  
+| Risk shape  | Linear, symmetric  | Linear, symmetric  | Bent, asymmetric  |  
+| Daily mark-to-market  | No  | Yes, settled every day  | No  |  
+| Can you be asked for more cash  | No  | Yes, margin calls  | No, never  |  
+| Time decay  | None  | None  | Yes, drains daily  |  
+| Maximum loss  | Large, the whole value  | Large, can exceed the deposit  | Capped at the premium  |  
+| Expiry  | None, hold for years  | Fixed expiry  | Fixed expiry  |  
+The numbers in the cash row alone explain why beginners reach for the option, it is the cheapest door in. But look at the time-decay row and the risk-shape row before you walk through it. The option asks the least cash and gives the only capped loss, yet it is the only one of the three that can quietly bleed to nothing while you wait.
+## Busting the myth: an option is not just a cheaper future
+Because the call costs about Rs 15,590 against the future's roughly one-fifth margin, many newcomers conclude that an option is simply a cheaper, smaller future. This is wrong, and believing it leads to real losses. The two are different animals.
+A future is linear and symmetric. It gains and loses one-for-one in both directions, it never decays, and it is marked to market daily with the threat of margin calls. Its loss has no built-in floor. A long option is bent and asymmetric. Its loss is capped at the premium, it is never marked to market against you, and it carries time decay that works against you every day you hold it. The future asks nothing of the clock, the option pays rent to it.
+So the future and the option are not the same trade at two price points. The future buys you the full linear move for a margin you must defend daily. The option buys you a capped-loss, one-sided claim on the move, in exchange for a premium that melts. Choosing one over the other is choosing a completely different risk, not just a smaller bill.
+Tip
+If you ever catch yourself thinking an option is just a cheaper future, stop. You are not buying a smaller version of the same thing, you are buying a different shape of risk, one with a capped loss, no daily margin call, and a clock ticking against you.
+![The same bet on RELIANCE expressed three ways, showing the straight, symmetric line of a stock and a future against the bent, asymmetric, capped-loss payoff of a long option.](https://openalgo.in/options-basics/images/diagram-options-vs-futures-vs-stocks.png) DiagramThe same bet on RELIANCE expressed three ways, showing the straight, symmetric line of a stock and a future against the bent, asymmetric, capped-loss payoff of a long option.
+## What to carry forward
+Three instruments, one view, three very different journeys. The stock is heavy and calm, full cash up front, a straight line, no clock. The future is leveraged but still a straight line, marked to market daily, with a loss that can outrun your deposit and demand more. The long option is the only one with a capped, known loss, bought for a small premium, but it bends around the strike and pays daily rent to time decay.
+Did you know
+A long option has limited risk and a melting time-value. A future has linear risk, a daily mark-to-market, and no decay. Knowing which of those two you are holding decides whether a flat market quietly costs you nothing or quietly costs you everything you paid.
+When someone offers you a tip on a stock, your real choice is not only what to trade but how. The same correct direction can win as a future and lose as an option if the move is small and slow, or survive a sharp dip as an option while a future is stopped out on a margin call. Match the instrument to your view, your nerve, and the cash you can truly afford to lose, and you have already done more thinking than most of the market.
+On this page

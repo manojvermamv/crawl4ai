@@ -1,0 +1,108 @@
+Chapters
+Module D · Volatility Strategies - Chapter 13
+# Long Straddle and Strangle: Betting on a Big Move
+Sometimes you expect a large move but not which way. Learn the long straddle and strangle, buying both a call and a put, the two breakevens, and the time decay that fights you, with real NIFTY metrics.
+Volatility
+What you'll learn
+  * ·A non-directional, big-move view
+  * ·The long straddle
+  * ·The cheaper long strangle
+  * ·Two breakevens
+  * ·Time decay as the enemy
+  * ·Reading the real payoffs
+
+
+Every strategy so far has needed a direction. You leaned bullish or you leaned bearish, and you chose a structure to match. Now meet the first trades that do not care which way NIFTY goes, only how far. Picture the index sitting at 24,056 with a big event on the calendar, a policy decision or a result that everyone knows will land but nobody can call in advance. You are sure NIFTY is about to move hard. You simply do not know whether up or down. The **long straddle** and the **long strangle** are built for exactly that moment. You buy both a call and a put, so a large move either way pays, and your only real enemy is a market that goes nowhere.
+## The one-line idea
+A **long straddle** buys the at-the-money call and the at-the-money put together, on the same strike and expiry. A **long strangle** does the same thing with cheaper out-of-the-money strikes, a put below the market and a call above it. Either way you own both sides, so one leg profits if NIFTY climbs and the other if it falls. You pay a **net debit** to put the trade on, and that debit, the premium for two options at once, is the whole of your risk.
+You use these when your view is about **volatility, not direction**. You expect a sharp move soon and want to be paid whichever way it breaks. What you must avoid is a calm, drifting market, because that is the one outcome that quietly bleeds you to your maximum loss.
+Key idea
+A long straddle or strangle buys a call and a put together to profit from a big move in either direction. The premium you pay is the entire risk, the profit is open ended on a real move, and a quiet market is the only way to lose the lot. It is a bet on motion, not on which way the market goes.
+## The straddle, rupee by rupee
+Here is the straddle on real NIFTY prices, captured 26 June 2026 with the index at **24,056** and the 28 July 2026 expiry about 32 days out. You buy the at-the-money 24,050 call and the at-the-money 24,050 put.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy call  | 24,050  | 425.8 paid  | Rs 27,677 out  |  
+| 2  | Buy put  | 24,050  | 295.1 paid  | Rs 19,182 out  |  
+|   |   |   | **Net debit**  | **Rs 46,858 out**  |  
+Both legs sit right at the money, where time value is at its richest, so the bill is steep. You pay about 720.9 points a share across the two options, which is **Rs 46,858** for one lot of 65. Because you paid that up front and can never be asked for a rupee more, it is also the most you can lose.
+![The long straddle on NIFTY: a sharp V with its trough at the 24,050 strike where the full Rs 46,858 is lost, breakevens at 23,329 and 24,771, and profit lines that rise without limit as the index travels far in either direction. The blue dashed T+0 line floats above the orange V near the centre, the time value you are fighting.](https://openalgo.in/options-strategies/images/strat-long-straddle.png) ChartThe long straddle on NIFTY: a sharp V with its trough at the 24,050 strike where the full Rs 46,858 is lost, breakevens at 23,329 and 24,771, and profit lines that rise without limit as the index travels far in either direction. The blue dashed T+0 line floats above the orange V near the centre, the time value you are fighting.
+## The three numbers of the straddle
+Each number falls straight out of the trade above. The total premium per share, 425.8 plus 295.1, is 720.9, and that single figure drives everything.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max loss  | the net debit paid  | Rs 46,858  |  
+| Max profit  | open ended on a real move  | Unlimited  |  
+| Breakevens  | strike minus, then plus, the total premium per share  | 24,050 minus 720.9 equals 23,329; 24,050 plus 720.9 equals 24,771  |  
+**Maximum loss is the debit, Rs 46,858.** You suffer it only at one exact point, a close right on 24,050, where both options expire worthless together. **Maximum profit is unlimited.** Above the upper breakeven the call runs with no ceiling, and on a fall the put gains all the way down toward zero, a very large but finite amount, which the builder honestly labels unlimited. **The breakevens are 23,329 and 24,771** , the two marks where a move has finally paid back the 720.9 points of premium you spent.
+## Walking the straddle outcomes at expiry
+Settle the trade at five closing prices and the V appears on its own. A call is worth max(NIFTY minus 24,050, 0) at expiry, a put is worth max(24,050 minus NIFTY, 0), and the net is those two added up times 65, minus the Rs 46,858 you paid.  
+| NIFTY at expiry  | 24,050 call you bought  | 24,050 put you bought  | Net profit or loss  |  
+| --- | --- | --- | --- |  
+| 23,000  | worth 0  | worth 1,050  | plus Rs 21,392  |  
+| 23,329  | worth 0  | worth 721  | Rs 0 (breakeven)  |  
+| 24,050  | worth 0  | worth 0  | minus Rs 46,858 (max loss)  |  
+| 24,771  | worth 721  | worth 0  | Rs 0 (breakeven)  |  
+| 25,300  | worth 1,250  | worth 0  | plus Rs 34,392  |  
+Read down the column and the lesson is stark. The single worst place to land is dead centre, on the strike you bought, where you lose everything. Walk outward in either direction and one leg comes alive, the loss shrinks, you cross zero at a breakeven, and beyond it the profit climbs without limit. You have entered at the very bottom of the valley and you need NIFTY to climb out.
+## The strangle, rupee by rupee
+The straddle works but it is expensive, because both legs sit where time value is dearest. The **long strangle** keeps the same shape for less money by buying out-of-the-money options instead. You buy the 23,950 put two strikes below the market and the 24,150 call two strikes above it.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy put  | 23,950  | 256.6 paid  | Rs 16,679 out  |  
+| 2  | Buy call  | 24,150  | 370.1 paid  | Rs 24,057 out  |  
+|   |   |   | **Net debit**  | **Rs 40,729 out**  |  
+Because both legs are out of the money, each costs less, and the **net debit falls to Rs 40,729** , about Rs 6,000 cheaper than the straddle. The catch is that the cheaper entry buys a worse breakeven, not a better one, because now there is a dead band in the middle where neither leg pays.
+![The long strangle on NIFTY: a flat-bottomed bucket losing the full Rs 40,729 anywhere between 23,950 and 24,150, breakevens at 23,323 and 24,777, and unlimited profit once the index travels far beyond either wing.](https://openalgo.in/options-strategies/images/strat-long-strangle.png) ChartThe long strangle on NIFTY: a flat-bottomed bucket losing the full Rs 40,729 anywhere between 23,950 and 24,150, breakevens at 23,323 and 24,777, and unlimited profit once the index travels far beyond either wing.
+## The three numbers of the strangle
+The total premium per share, 256.6 plus 370.1, is 626.7, and it sets the breakevens off the two strikes you bought.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max loss  | the net debit paid  | Rs 40,729  |  
+| Max profit  | open ended on a real move  | Unlimited  |  
+| Breakevens  | lower strike minus, upper strike plus, the total premium per share  | 23,950 minus 626.7 equals 23,323; 24,150 plus 626.7 equals 24,777  |  
+The strangle gives back nothing in the middle. Anywhere between 23,950 and 24,150 both options die worthless at expiry, so across that whole central band you lose the full Rs 40,729. Its breakevens, **23,323 and 24,777** , sit a little wider than the straddle's. You paid less to enter, and in return NIFTY must move a touch more before it pays you.
+## Walking the strangle outcomes at expiry  
+| NIFTY at expiry  | 23,950 put you bought  | 24,150 call you bought  | Net profit or loss  |  
+| --- | --- | --- | --- |  
+| 23,000  | worth 950  | worth 0  | plus Rs 21,021  |  
+| 23,323  | worth 627  | worth 0  | Rs 0 (breakeven)  |  
+| 24,050  | worth 0  | worth 0  | minus Rs 40,729 (max loss)  |  
+| 24,777  | worth 0  | worth 627  | Rs 0 (breakeven)  |  
+| 25,300  | worth 0  | worth 1,150  | plus Rs 34,021  |  
+The sharp V of the straddle has become a flat-bottomed bucket. Instead of one trough, the loss is flat at Rs 40,729 across the whole gap between the strikes, then the line turns up only outside the wings. Same shape, cheaper to hold, but a wider distance to travel before you are paid.
+## Your odds
+Knowing the most you can win and lose is only half the story. The question that decides whether the trade is smart is how likely a profit is, and that is the **probability of profit** , shown right on the panel. For the **straddle it is 42 percent** , for the **strangle 41 percent**. Both sit below half, and the reason is honest: NIFTY has to travel more than 720 points to pay back the straddle and more than 626 points to pay back the strangle, roughly three percent of the index in about a month, which is a real distance to ask for.
+Look at the faint **sigma bands** on each chart, the move the option market is actually pricing in. The breakevens sit out near the edge of the inner band, not inside it. That is the market telling you these are roughly even-money bets on a big move, no more.
+Tip
+Always read the probability of profit beside the cost, never alone. A straddle that risks Rs 46,858 with a 42 percent chance of profit is only worth buying when you genuinely expect a move larger than the one the market has already priced into those fat premiums. The best entry is when implied volatility is low and you expect it to rise, not after a known event has already swollen the options. Buy the move before the crowd prices it in, not after.
+## Margin
+Because you are a pure buyer, the exchange blocks **margin equal to the debit** , about **Rs 46,858 for the straddle** and **Rs 40,729 for the strangle** , and not a rupee more. There is no SPAN penalty and no exposure buffer, because you have already handed over the most you can lose. This is the quiet gift of being long options: your worst case is printed on the ticket before you ever place the order, and the margin simply equals it.
+There is no fixed return on margin to quote here, because the profit is open ended rather than capped. Judge these trades instead by their cost against the move you expect: you are paying Rs 46,858 or Rs 40,729 for a defined-risk ticket on a large swing, and the payoff grows the further NIFTY runs past a breakeven.
+## Time decay is the enemy
+Look again at the **blue dashed T+0 line** floating above the orange at-expiry V near the centre of each chart. That gap is **time value** , and for a buyer it is a daily tax. You are long two options at once, so the decay runs against you from both legs. Every calm day the blue line sags toward the orange one, and the position loses money even when NIFTY barely moves. A net seller is paid by this same decay. A straddle or strangle buyer fights it every single session.
+Heads up
+A long straddle or strangle bleeds time value on every quiet day, and it bleeds from two legs at once. The Rs 46,858 or Rs 40,729 you paid is at risk not only if NIFTY stands still but also if it drifts slowly, because the move must be both large and reasonably quick to outrun the decay. Never treat these as positions to hold and forget. They are bets that something happens soon, and a calm fortnight is enough to do real damage even before expiry arrives.
+## Straddle or strangle?
+Put the two side by side and the choice is a simple bargain about cost against distance.  
+| Number  | Long Straddle  | Long Strangle  |  
+| --- | --- | --- |  
+| Max profit  | Unlimited  | Unlimited  |  
+| Max loss  | Rs 46,858  | Rs 40,729  |  
+| Breakevens  | 23,329 and 24,771  | 23,323 and 24,777  |  
+| Probability of profit  | 42 percent  | 41 percent  |  
+| Net debit  | Rs 46,858  | Rs 40,729  |  
+| Margin required  | Rs 46,858  | Rs 40,729  |  
+The straddle costs more but starts working a few points sooner, because its legs are already at the money. The strangle costs about Rs 6,000 less but asks for a slightly bigger move before it pays. Choose the straddle when you want the tightest possible breakevens and expect a violent, immediate move. Choose the strangle when you want to risk less and are happy to wait for a larger swing.
+Note
+You can build both in **sandbox trading (analyzer mode in OpenAlgo)** , adding the call and the put one leg at a time and watching the single line of a long option fold into the V of a straddle, then spread into the bucket of a strangle as you push the strikes apart. Slide the modelled price across the chart and feel how rarely a calm day helps you and how richly a real move pays. That instinct, that you are buying motion and fighting the clock, is the heart of every long-volatility trade.
+## Key takeaways
+  * A long straddle buys the at-the-money call and put, a long strangle buys cheaper out-of-the-money strikes, and both profit from a big move in **either direction**.
+  * The **net debit is the entire risk** , Rs 46,858 for the straddle and Rs 40,729 for the strangle, and the margin simply equals it because the trade is defined-risk.
+  * **Profit is unlimited** on a real move, but the breakevens sit far from spot, at 23,329 and 24,771 for the straddle and 23,323 and 24,777 for the strangle.
+  * The **probability of profit is below half** , 42 and 41 percent, because the market has already priced a fair-sized move into those premiums.
+  * **Time decay is the enemy** : you are long two options, the value bleeds twice as fast, and a quiet market is the one outcome that loses you everything.
+  * The straddle pays a higher price for tighter breakevens; the strangle costs less but needs a larger move. In the next chapter you take the other side of both, selling the premium and inheriting the opposite risk.
+
+
+On this page

@@ -1,0 +1,112 @@
+Chapters
+Module E · Range and Income - Chapter 15
+# The Iron Condor
+The most popular income strategy. Learn how four legs build a wide profit zone that pays you if NIFTY stays in a range, the long and short versions, defined risk on both ends, with the metrics.
+Range
+What you'll learn
+  * ·A defined-risk range play
+  * ·Four legs explained simply
+  * ·The wide profit plateau
+  * ·Long vs short iron condor
+  * ·Two breakevens and the POP
+  * ·Reading the real payoff
+
+
+The short strangle from the last chapter had a lovely income shape and one fatal flaw, tails that fell forever. The obvious question is whether you can keep the steady premium while putting a hard floor under the loss. You can, and the structure that does it is the **iron condor** , the most popular defined-risk income trade in the options world. Take the sold strangle and buy a cheaper, further out-of-the-money call and put as insurance. Those two bought wings turn the unlimited tails into known numbers, leaving a four-leg structure that profits inside a range and can never lose more than a fixed, modest amount. NIFTY, the deepest index option market in the country, is its natural home.
+## The one-line idea
+An iron condor is two vertical spreads sharing one expiry, a **bull put spread** on the downside and a **bear call spread** on the upside, placed around the current price. The two inner strikes are sold to collect premium, and the two outer wings are bought to cap each tail. The whole thing has a known maximum profit and a known maximum loss, with no open cliff on either side.
+There is a twist you must understand, and it sits at the heart of this chapter. The OpenAlgo builder offers two faces of the same four strikes, a **Long Iron Condor** and a **Short Iron Condor** , and which one fits you depends entirely on the odds you want, not on the words on the button.
+Key idea
+An iron condor is a bull put spread plus a bear call spread sharing one expiry. The inner sold strikes collect the premium, the outer bought wings cap both tails. It is the defined-risk version of the short strangle, the same range-bound income shape, but with a known, small maximum loss instead of an open tail.
+## The long iron condor, rupee by rupee
+Here is the version the builder calls the **Long Iron Condor** , on real NIFTY prices captured 26 June 2026 with the index at **24,056** and the 28 July 2026 expiry about 32 days out. It is built tight to the money, with the inner strikes only two steps from spot and the wings one hundred points beyond them.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy put  | 23,850  | 224.1 paid  | Rs 14,567 out  |  
+| 2  | Sell put  | 23,950  | 256.6 received  | Rs 16,679 in  |  
+| 3  | Sell call  | 24,150  | 370.1 received  | Rs 24,057 in  |  
+| 4  | Buy call  | 24,250  | 316.1 paid  | Rs 20,547 out  |  
+|   |   |   | **Net credit**  | **Rs 5,616 in**  |  
+The two inner sold options, the 23,950 put and the 24,150 call, are the same legs as a short strangle and bring in most of the premium. The two outer bought options, the 23,850 put and the 24,250 call, cost a little and act as insurance, capping each tail one hundred points out. The net is a **credit of Rs 5,616** that lands in your account when you open the trade.
+![The long iron condor on NIFTY: a flat profit plateau of Rs 5,616 between the 23,950 and 24,150 short strikes, breakevens at 23,864 and 24,236, and a capped loss of just Rs 884 once the index pushes past either wing.](https://openalgo.in/options-strategies/images/strat-long-iron-condor.png) ChartThe long iron condor on NIFTY: a flat profit plateau of Rs 5,616 between the 23,950 and 24,150 short strikes, breakevens at 23,864 and 24,236, and a capped loss of just Rs 884 once the index pushes past either wing.
+## The three numbers of the long iron condor
+The credit per share is Rs 5,616 divided by 65, about 86.4 points, and that single figure sets the breakevens off the two inner short strikes.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | the net credit collected  | Rs 5,616  |  
+| Max loss  | wing width minus the credit  | Rs 6,500 minus Rs 5,616 equals Rs 884  |  
+| Breakevens  | inner short strike minus, then plus, the credit per share  | 23,950 minus 86.4 equals 23,864; 24,150 plus 86.4 equals 24,236  |  
+**Maximum profit is the credit, Rs 5,616** , kept in full if NIFTY finishes between the inner strikes of 23,950 and 24,150. **Maximum loss is fenced at Rs 884.** Each wing is one hundred points wide, worth Rs 6,500 on a lot of 65, and you already collected Rs 5,616 of that, so the most you can lose is the gap. The worst case has gone from unlimited, on the naked strangle, to a known Rs 884.
+## Walking the long iron condor outcomes at expiry
+Settle the trade at five closing prices, taking each leg as its intrinsic value at expiry. The long legs help you, the short legs cost you, and the net is the Rs 5,616 credit plus the long values minus the short values, times 65.  
+| NIFTY at expiry  | 23,850 put (long)  | 23,950 put (short)  | 24,150 call (short)  | 24,250 call (long)  | Net profit or loss  |  
+| --- | --- | --- | --- | --- | --- |  
+| 23,700  | worth 150  | worth 250  | worth 0  | worth 0  | minus Rs 884 (max loss)  |  
+| 23,864  | worth 0  | worth 86  | worth 0  | worth 0  | Rs 0 (breakeven)  |  
+| 24,050  | worth 0  | worth 0  | worth 0  | worth 0  | plus Rs 5,616 (max profit)  |  
+| 24,236  | worth 0  | worth 0  | worth 86  | worth 0  | Rs 0 (breakeven)  |  
+| 24,400  | worth 0  | worth 0  | worth 250  | worth 150  | minus Rs 884 (max loss)  |  
+Read across the rows and the shape is a flat-topped table. Between the inner strikes you keep the full credit. Step past a wing and the loss is capped at Rs 884, because the bought leg matches the sold leg point for point beyond it. The pink spot line at 24,056 sits inside the plateau, so today you are in the profitable zone.
+## The honest catch: a narrow band and low odds
+But notice how narrow that profit band is. The breakevens are only about 190 points on each side of spot, and the sigma bands on the chart show NIFTY can easily travel three or four times that far by expiry. That is why the **probability of profit is just 17 percent**. The structure pays beautifully against its risk, a **reward to risk of about 1 to 6.4** , because the inner strikes hug the money and collect a rich credit. The price of that rich credit is a tight, low-odds profit zone, so you are most likely to walk away with the small Rs 884 loss and only occasionally with the full Rs 5,616.
+Did you know
+A reward to risk of 1 to 6.4 looks wonderful until you read the 17 percent probability of profit beside it. The market does not give away a six-to-one payoff on a likely event. The big credit and the tiny risk are paid for with a narrow band that NIFTY usually escapes.
+## The short iron condor, the high-probability inverse
+The builder also offers the exact mirror, which it calls the **Short Iron Condor**. You take the other side of all four legs, buying the inner strikes and selling the outer wings, and pay a debit instead of collecting a credit.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Sell put  | 23,850  | 224.1 received  | Rs 14,567 in  |  
+| 2  | Buy put  | 23,950  | 256.6 paid  | Rs 16,679 out  |  
+| 3  | Buy call  | 24,150  | 370.1 paid  | Rs 24,057 out  |  
+| 4  | Sell call  | 24,250  | 316.1 received  | Rs 20,547 in  |  
+|   |   |   | **Net debit**  | **Rs 5,616 out**  |  
+Because it is the inverse, every number flips. You now pay Rs 5,616 to enter, and profit whenever NIFTY moves away from dead centre.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | wing width minus the debit  | Rs 6,500 minus Rs 5,616 equals Rs 884  |  
+| Max loss  | the debit paid  | Rs 5,616  |  
+| Breakevens  | the same as the long version  | 23,864 and 24,236  |  
+The **maximum profit is Rs 884** , earned whenever NIFTY finishes outside the breakevens, anywhere except pinned inside the narrow central band. The **maximum loss is Rs 5,616** , suffered only if NIFTY settles between the inner strikes. The headline is the **probability of profit of 83 percent** , because NIFTY almost always drifts away from dead centre over 32 days, and any such drift hands this version its small win.
+![The short iron condor on NIFTY: the inverse shape, a small Rs 884 profit anywhere outside the 23,864 to 24,236 band, but a Rs 5,616 loss if the index pins the central zone at expiry, with an 83 percent probability of profit.](https://openalgo.in/options-strategies/images/strat-short-iron-condor.png) ChartThe short iron condor on NIFTY: the inverse shape, a small Rs 884 profit anywhere outside the 23,864 to 24,236 band, but a Rs 5,616 loss if the index pins the central zone at expiry, with an 83 percent probability of profit.
+## Walking the short iron condor outcomes at expiry  
+| NIFTY at expiry  | 23,850 put (short)  | 23,950 put (long)  | 24,150 call (long)  | 24,250 call (short)  | Net profit or loss  |  
+| --- | --- | --- | --- | --- | --- |  
+| 23,700  | worth 150  | worth 250  | worth 0  | worth 0  | plus Rs 884 (max profit)  |  
+| 23,864  | worth 0  | worth 86  | worth 0  | worth 0  | Rs 0 (breakeven)  |  
+| 24,050  | worth 0  | worth 0  | worth 0  | worth 0  | minus Rs 5,616 (max loss)  |  
+| 24,236  | worth 0  | worth 0  | worth 86  | worth 0  | Rs 0 (breakeven)  |  
+| 24,400  | worth 0  | worth 0  | worth 250  | worth 150  | plus Rs 884 (max profit)  |  
+So you have one structure and two faces. One collects a big credit and rarely keeps it; the other pays a debit, wins a little most of the time, and loses a lot on the rare occasion NIFTY pins the centre, exactly where the long iron condor is happiest.
+## Your odds, and choosing strikes to match them
+This pair is the clearest lesson in the course about reading odds honestly. A trader chasing **income** wants to be right often, so the **high-probability side** , the 83 percent Short Iron Condor, is the one to study. A trader chasing a **big payoff on a quiet expiry** wants the 17 percent Long Iron Condor, which pays six to one when NIFTY pins the range.
+But there is a deeper point. These tight strikes are not the only condor you can build. A **classic income iron condor sells strikes further out of the money** , pushing the short put and short call away from spot. That widens the profit band, raises the probability of profit, and shrinks the credit. You trade a smaller reward for better odds and a calmer night.
+Tip
+Treat the strikes as a dial you set to match the probability of profit you want. Sell the inner strikes close to the money for a big credit and low odds, like the tight Long Iron Condor here. Sell them further out for a wider band, a higher probability of profit, and a smaller credit. Read the probability of profit beside the max loss every time, and pick the strikes that give you the odds you can live with.
+## Margin
+Either face blocks far less than the naked strangle it is built from, because the bought wings cap the loss. The **Long Iron Condor needs about Rs 64,319** , the **Short Iron Condor about Rs 68,864** , reflecting the four legs the exchange must track. Your true cash at risk, though, is only the defined maximum loss, Rs 884 on the long version or Rs 5,616 on the short version.
+On **return on margin** , the long iron condor offers Rs 5,616 against Rs 64,319, roughly **9 percent** if it wins, but it wins only 17 percent of the time. The short iron condor offers Rs 884 against Rs 68,864, only about **1.3 percent** when it wins, but it wins 83 percent of the time. Neither figure means much without its probability beside it.
+## Time decay
+The two faces sit on opposite sides of the clock. The **Long Iron Condor is a net credit** , so you are a net seller of premium inside the band, and **time decay works for you** : each calm day the blue T+0 line lifts toward the orange plateau as the premium you collected melts. The **Short Iron Condor is a net debit** , so you are a net buyer, and **time decay works against you** : you need NIFTY to break out of the band before the clock erodes the position.
+Heads up
+Do not trust the words Long and Short on a builder, and do not assume a credit means a good trade or a debit a bad one. Here the Long Iron Condor is the credit version and the Short Iron Condor is the debit version, which runs against most people's intuition. The only honest way to judge any structure is to read its nine numbers, and whether the credit or debit fits the outcome you actually expect. The label can mislead you. The numbers cannot.
+## The two faces side by side  
+| Number  | Long Iron Condor  | Short Iron Condor  |  
+| --- | --- | --- |  
+| Max profit  | Rs 5,616  | Rs 884  |  
+| Max loss  | Rs 884  | Rs 5,616  |  
+| Breakevens  | 23,864 and 24,236  | 23,864 and 24,236  |  
+| Probability of profit  | 17 percent  | 83 percent  |  
+| Net credit or debit  | credit Rs 5,616  | debit Rs 5,616  |  
+| Margin required  | Rs 64,319  | Rs 68,864  |  
+Either way the position is defined-risk, the worst case printed on the ticket, Rs 884 on one side or Rs 5,616 on the other. That alone makes the iron condor far safer than the naked strangle it is built from.
+Note
+Build both faces in **sandbox trading (analyzer mode in OpenAlgo)** , adding the four legs and watching the plateau form, then flipping every leg to see the payoff turn upside down. Drag the short strikes outward and watch the band widen and the probability of profit rise.
+## Key takeaways
+  * An iron condor is a **bull put spread plus a bear call spread** on one expiry; the inner sold strikes collect premium and the outer wings cap both tails into a fixed maximum loss.
+  * The builder's **Long Iron Condor is the credit version** : it takes in Rs 5,616, risks only Rs 884, but its tight band gives a probability of profit of just **17 percent**.
+  * The **Short Iron Condor is the debit version** : it pays Rs 5,616, makes only Rs 884, but wins **83 percent** of the time because NIFTY usually drifts off centre.
+  * Max loss is the **wing width minus the credit** on the long version (Rs 6,500 minus Rs 5,616 equals Rs 884) and simply the **debit** on the short version, with breakevens at 23,864 and 24,236 for both.
+  * The strikes are a **dial for the odds** : a classic income condor sells further out of the money for a wider band, higher odds, and a smaller credit. Both faces are defined-risk with modest margin, and time decay helps the credit version while it hurts the debit one. Judge each by its nine numbers, never by its label.
+
+
+On this page

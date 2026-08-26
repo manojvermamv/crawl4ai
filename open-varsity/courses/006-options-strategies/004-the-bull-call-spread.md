@@ -1,0 +1,85 @@
+Chapters
+Module B · Bullish Strategies - Chapter 04
+# The Bull Call Spread
+A mildly bullish trade with capped cost and capped profit. Learn how buying one call and selling a higher one builds a cheaper, defined-risk way to be bullish, with the real NIFTY metrics.
+Bullish
+What you'll learn
+  * ·A mildly bullish view
+  * ·Buy one call, sell a higher call
+  * ·Capped cost and capped profit
+  * ·The breakeven
+  * ·When to prefer it over a long call
+  * ·Reading the real payoff
+
+
+The long call from the last chapter had a problem. To buy the 24,050 call you paid about Rs 27,677, and NIFTY then had to climb all the way to 24,476 before you made a single rupee, with only about a one in three chance of getting there. That is a lot to pay, and a long way to travel, for a view that might only be mildly bullish. If you expect NIFTY to drift up toward 24,150 rather than rocket away, there is a cheaper, smarter way to back exactly that opinion. You sell a higher call against the one you bought, and let the market fund most of your bet. This is the **bull call spread** , the first true two-legged strategy every options trader should learn, and the cleanest example of defined risk there is. All figures use real NIFTY data captured on 26 June 2026, spot 24,056, lot 65, the 28 July 2026 expiry about 32 days away.
+## The one-line idea
+A **bull call spread** is two calls on the same expiry. You **buy a lower-strike call** to capture a rise, and you **sell a higher-strike call** to bring premium back in. The cash you collect from the sold call pays down most of the cost of the bought call, so the whole position costs a fraction of the lone call. That smaller cost, the **net debit** , is also the most you can ever lose.
+You use it when your view is **moderately bullish** : you expect NIFTY to rise toward a level, not blast far past it. You trade away the dream of unlimited upside in return for paying far less and breaking even on a much smaller move.
+Key idea
+A bull call spread buys a lower call and sells a higher call for a net debit. The sold call funds most of the bought call, so the trade costs little. That net debit, here Rs 3,624, is both your total cost and your maximum loss. You can never lose more than you put in, and you reach profit on a far smaller move than a lone call needs.
+## The real trade, rupee by rupee
+Here is the exact trade on real NIFTY prices, the index at 24,056. We buy the at-the-money 24,050 call and sell the 24,150 call one strike higher.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy call  | 24,050  | 425.8 paid  | Rs 27,677 out  |  
+| 2  | Sell call  | 24,150  | 370.1 received  | plus Rs 24,053 in  |  
+|   |   |   | **Net debit**  | **Rs 3,624 out**  |  
+You owed Rs 27,677 for the lone call. The sold 24,150 call refunds about Rs 24,053 of that, so your real outlay shrinks to a **net debit of Rs 3,624** for one lot. Because you paid that money upfront and can never be asked for more, the net debit is also the most you can lose. That is what makes the bull call spread a **defined-risk** trade.
+![The NIFTY bull call spread, buying the 24,050 call and selling the 24,150 call. The orange at-expiry line rests on a flat loss floor of Rs 3,624 below 24,050, crosses zero at the breakeven of 24,106, and flattens onto a capped profit of Rs 2,876 above 24,150. The blue dashed T+0 line sits just above it near spot, settling down as time passes.](https://openalgo.in/options-strategies/images/strat-bull-call-spread.png) ChartThe NIFTY bull call spread, buying the 24,050 call and selling the 24,150 call. The orange at-expiry line rests on a flat loss floor of Rs 3,624 below 24,050, crosses zero at the breakeven of 24,106, and flattens onto a capped profit of Rs 2,876 above 24,150. The blue dashed T+0 line sits just above it near spot, settling down as time passes.
+## The three numbers, and where they come from
+Every bull call spread is described by three numbers, and each one falls straight out of the trade above.
+**Maximum loss is the net debit, Rs 3,624.** If NIFTY closes at or below 24,050, both calls expire worthless and your whole outlay is gone. That is the flat floor on the left of the chart.
+**Maximum profit is the strike width minus the debit, Rs 2,876.** The gap between the strikes is 100 points, worth 100 times 65, or Rs 6,500. Once NIFTY closes at or above 24,150, the bought call gains the full 100 points while the sold call cancels anything beyond, so you keep that Rs 6,500 less the Rs 3,624 you paid, which is Rs 2,876.
+**Breakeven is the lower strike plus the debit per share, 24,106.** You paid 55.75 points of net debit per share, so NIFTY must rise that far above the bought strike before you cross into profit. That lands at 24,050 plus 55.75, or 24,106, far closer to spot than the lone call's 24,476.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max loss  | net debit  | Rs 3,624  |  
+| Max profit  | strike width minus net debit  | Rs 6,500 minus Rs 3,624 equals Rs 2,876  |  
+| Breakeven  | lower strike plus debit per share  | 24,050 plus 55.75 equals 24,106  |  
+Did you know
+The max profit Rs 2,876 and the max loss Rs 3,624 always add up to the full strike width of Rs 6,500. The spread simply splits that width between you and the market. Move the strikes and the two numbers change, but their sum stays pinned to the width.
+## Walking the outcomes at expiry
+Settle the spread at a handful of closing prices and the shape appears. The bought call is worth max(NIFTY minus 24,050, 0); the sold call is worth max(NIFTY minus 24,150, 0); your profit is the bought value minus the sold value, times 65, less the Rs 3,624 debit.  
+| NIFTY at expiry  | 24,050 call you bought  | 24,150 call you sold  | Net profit or loss  |  
+| --- | --- | --- | --- |  
+| 23,900  | worth 0  | worth 0  | minus Rs 3,624 (max loss)  |  
+| 24,050  | worth 0  | worth 0  | minus Rs 3,624 (max loss)  |  
+| 24,106  | worth 56  | worth 0  | about Rs 0 (breakeven)  |  
+| 24,150  | worth 100  | worth 0  | plus Rs 2,876 (max profit)  |  
+| 24,300  | worth 250  | worth 150  | plus Rs 2,876 (max profit)  |  
+Read down the table and the trade explains itself. Anywhere at or below 24,050 you lose the full Rs 3,624. Anywhere at or above 24,150 you keep the full Rs 2,876. Between the strikes the result slides from one shelf to the other, passing through zero at 24,106. Notice the bottom row: at 24,300 the bought call is worth 250 and the sold call costs back 150, a net 100 points, the same Rs 6,500 width, so the profit is capped no matter how high NIFTY runs.
+## Your odds
+Knowing the most you can win and lose is half the story. The other half is the **probability of profit** , the market-implied chance the trade ends green.
+For this spread the **POP is about 47 percent**. The breakeven of 24,106 sits just inside the plus one sigma band on the chart, the move the option market is pricing in, so NIFTY needs only a small push above spot to pay. That is far healthier than the lone call's 31 percent, because cutting the breakeven from 24,476 down to 24,106 means a much smaller move counts as a win.
+Tip
+Read the POP next to the risk to reward, here 1 to 0.79. You risk Rs 3,624 to make Rs 2,876, a little less than even money, but you win nearly half the time and on only a small move. The lone call pays more on a big run, yet it crosses into profit far less often. The spread trades a slice of upside for materially better odds.
+## Margin
+The margin the builder blocks here is about **Rs 35,378** , larger than the Rs 3,624 you can actually lose. That looks odd until you remember the exchange charges an exposure amount on the sold call leg, even though the bought call fully caps it. The cash truly at risk is still only the net debit, but be ready for the larger sum to be set aside while the trade is open.
+That margin lets you judge the trade by its **return on margin** : Rs 2,876 of profit against Rs 35,378 blocked for about a month is roughly **8 percent** if it works. That is the real yield to compare across ideas, not the raw profit figure.
+## Time decay
+Look at the **blue dashed T+0 line** against the solid orange expiry line near spot. They sit close together, because a spread holds far less raw time value than a single option: the value bleeding out of the call you bought is largely offset by the value bleeding out of the call you sold. A bull call spread is a **debit** trade, so on balance time works gently against you, but nothing like the steady drain a lone call suffers. The position cares far more about direction than about the clock.
+## Choosing your strikes
+The 100-point spread is one choice among many. Sell a strike closer to spot and you collect more premium, cutting the cost and the breakeven but also capping the profit sooner. Sell a strike further out and you pay more, raising the breakeven, in exchange for a bigger maximum profit if the move is large. The rule of thumb is simple.
+Pick your sold strike at the price you genuinely expect NIFTY to reach, here 24,150, not higher in hope. The maximum profit sits at that strike, so selling one NIFTY is unlikely to touch just throws away premium and raises your cost for nothing, while selling one too close caps the gain before the move is done.
+## Bull call spread or bull put spread?
+The next chapter builds the **bull put spread** , which expresses the very same moderately bullish view with a near-identical payoff shape. So which do you pick? It depends on what the market is paying you.
+  * The **bull call spread** is a **debit** trade. You pay upfront and hope to be right. You profit when NIFTY rises.
+  * The **bull put spread** is a **credit** trade. You are paid upfront and hope to be left alone. You profit when NIFTY simply does not fall.
+
+
+When markets have dropped and fear has fattened put premiums, selling that expensive insurance through a bull put spread is the richer deal. When premiums are cheap and the market is calm, buying the bull call spread can be the better value. They are two routes to the same hill; the credit version puts time decay on your side, the debit version asks the market to move your way.
+Heads up
+Defined risk does not mean small risk. Rs 3,624 per lot is real money, and you lose all of it if NIFTY closes at or below 24,050 at expiry, which is entirely possible with the index sitting near 24,056 today. Always size by the maximum loss, never by the maximum profit, and remember the larger margin stays tied up meanwhile. Two lots risk Rs 7,248, three risk Rs 10,872, and so on.
+Real example
+Rehearse it with no money at risk. Open the OpenAlgo strategy builder, pick the bull call spread template on NIFTY, and watch the nine-metric panel update as you slide the sold strike. See the net debit and the breakeven move together, then confirm the whole trade in sandbox trading (analyzer mode in OpenAlgo) before you ever fund it. Seeing the same numbers this chapter quoted appear under your own hands is what turns a recipe into understanding.
+## Key takeaways
+  * A **bull call spread** buys a lower call and sells a higher call for a net debit, profiting when NIFTY rises toward the upper strike.
+  * **Max loss is the net debit** (Rs 3,624 here), **max profit is the strike width minus the debit** (Rs 2,876), and the two always sum to the full width of Rs 6,500.
+  * **Breakeven is the lower strike plus the debit per share** (24,106), far closer to spot than the lone call's 24,476, so you profit on a much smaller move.
+  * Better odds than the lone call, about **47 percent versus 31 percent** , in exchange for giving up the unlimited upside above the sold strike.
+  * It blocks about **Rs 35,378** of margin and returns roughly **8 percent** on that capital if it works. Size by the max loss, not the max profit.
+  * Prefer it over the **bull put spread** when premiums are cheap and the market is calm, so buying the move is the better value than selling it.
+
+
+On this page

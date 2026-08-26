@@ -1,0 +1,68 @@
+Chapters
+Module C · Reading the Price - Chapter 13
+# Bid, Ask, Spread and Liquidity
+The last traded price can lie to you. Learn the bid, the ask and the spread you actually trade against, the difference between volume and open interest, and why an illiquid strike is dangerous even when it looks cheap.
+Reading
+What you'll learn
+  * ·Why the LTP can mislead
+  * ·Bid, ask and the spread
+  * ·The real cost of a wide spread
+  * ·Volume vs open interest
+  * ·Spotting an illiquid strike
+  * ·Why illiquid options trap you
+
+
+The number printed biggest and brightest on most option screens is the last traded price, the LTP. It looks like the price, the one clean figure that tells you what the option costs. It is also one of the most misleading numbers a beginner trusts. The LTP is simply the price at which the option last changed hands, and that trade might have happened seconds ago or twenty minutes ago. It is history. When you actually go to buy or sell, you trade at two completely different prices, and the gap between them is a real cost that comes straight out of your pocket the instant you enter. This chapter is about the prices that truly matter, the bid and the ask, the spread between them, and the liquidity that decides whether a strike is safe to trade or a quiet trap.
+## The last traded price is a record, not an offer
+Think about what the LTP really tells you. It is the price of a deal that already happened, between two other people, in the past. On a busy at-the-money RELIANCE strike, deals happen constantly, so the LTP is fresh and close to reality. But on a sleepy far-out strike, the last trade might be from twenty minutes ago, before the stock moved fifteen rupees. That LTP is **stale** , a price nobody will actually give you now.
+So the LTP answers the question, what did this option last sell for. It does not answer the question that matters to you, what can I buy or sell it for right now. For that, you have to look at the two prices sitting on either side of the LTP.
+Heads up
+The last traded price is a record of a past deal, not a price you can get. On an illiquid strike it can be badly stale. Never size a trade off the LTP alone; look at the bid and the ask, which are the prices actually on offer right now.
+## Bid and ask: the two real prices
+At any moment, an option has two prices that are genuinely available.
+  * The **ask** , also called the offer, is the lowest price at which someone is willing to sell the option to you. When you buy, you pay the ask.
+  * The **bid** is the highest price at which someone is willing to buy the option from you. When you sell, you receive the bid.
+
+
+The ask is always higher than the bid. That is not a glitch; it is how a market works. Sellers want a little more, buyers want to pay a little less, and the two prices sit a small distance apart with the LTP somewhere in between. The crucial rule for a beginner is simple and slightly painful: **you buy at the ask and you sell at the bid.** You are always trading at the worse of the two prices for you.
+Key idea
+You do not trade at the last traded price. You buy at the ask, the price sellers are asking, and you sell at the bid, the price buyers are bidding. The ask is always the higher number, so you enter at the worse price and exit at the worse price.
+## The spread is an instant cost
+The distance between the bid and the ask is the **spread**. It is the single most underrated cost in option trading, because it is invisible until you understand it, and then you see it on every trade.
+Here is why the spread is a real cost. Suppose you buy an option at the ask and then, a second later, change your mind and sell it. The stock has not moved at all. You still lose money, because you bought at the higher ask and sold at the lower bid. The spread is the toll you pay just to step in and back out of the position. It is gone the moment you enter, before the stock does anything.
+Let us make it concrete with an illustrative pair of RELIANCE call strikes. The numbers below are for teaching, but the shape is exactly what you will see.  
+| Strike (call)  | Bid  | Ask  | Spread  | Spread on one lot of 500  |  
+| --- | --- | --- | --- | --- |  
+| 1320, at-the-money  | 30.80  | 31.20  | Rs 0.40  | Rs 200  |  
+| 1500, far-out-of-the-money  | 0.50  | 1.50  | Rs 1.00  | Rs 500  |  
+Read the at-the-money 1320 row first. The bid is 30.80 and the ask is 31.20, so the spread is just forty paise a share, about Rs 200 on a lot of 500. That is tight. The option is heavily traded, lots of buyers and sellers crowd close together, and the cost of entering and exiting is small next to the roughly Rs 15,590 premium.
+Now read the far-out 1500 row. The bid is fifty paise and the ask is one rupee fifty, so the spread is a full one rupee, about Rs 500 on a lot. In rupee terms that looks small. But look at it as a fraction of the price. You would pay 1.50 to buy and receive only 0.50 to sell. You have lost two-thirds of your money to the spread alone, before the stock moves a single paisa. That is the danger hiding inside a cheap, illiquid strike.
+Heads up
+A wide spread can cost more than your entire edge. On a far-out strike quoted 0.50 bid and 1.50 ask, you pay three times what you would receive to sell instantly. The cheapness is an illusion; the spread quietly eats the trade.
+## Volume and open interest: reading the crowd
+How do you tell a tight, safe strike from a wide, dangerous one before you trade? Two numbers on the option chain tell you how much of a crowd is present.
+  * **Volume** is the number of contracts traded today. It resets each morning. High volume means the strike is active right now, with plenty of buyers and sellers changing hands, which usually means a tighter spread and an easier exit.
+  * **Open interest** , or OI, is the number of contracts still open, that is, positions that have been opened but not yet closed. It builds up over days. High open interest means many participants already hold this strike, so there is a deep pool of interest in it.
+
+
+In plain terms, volume tells you how busy a strike is today, and open interest tells you how crowded it is overall. A strike with both healthy volume and healthy open interest is liquid: easy to enter, easy to exit, with a narrow spread. A strike with almost no volume and thin open interest is illiquid, and that is exactly where beginners get hurt. We look at how the changes in open interest hint at positioning in a later chapter; for now, treat volume and open interest simply as your liquidity check.
+Note
+Volume is how many contracts traded today, a measure of activity right now. Open interest is how many contracts remain open overall, a measure of how crowded the strike is. Healthy numbers in both usually mean a tight spread and an easy exit.
+## Why a far-out illiquid strike is dangerous
+Put the pieces together and you can see why a cheap, far-out-of-the-money strike is one of the most dangerous places for a beginner to wander.
+  * The spread is **wide** , often costing a large slice of the premium just to enter and exit, as the 1500 strike showed.
+  * It is **hard to exit**. With few buyers around, when you want to sell there may be nobody bidding near a fair price, so you either accept a terrible bid or sit stuck in the position.
+  * The price can **gap**. With trades few and far between, the price lurches in jumps rather than moving smoothly, so the option can leap from one level to another with nothing in between, which makes exits unreliable.
+
+
+The painful irony is that these illiquid far-out strikes are exactly the ones beginners are drawn to, because they are cheap and promise a huge percentage gain. The low price is not a bargain. It is the market telling you that almost nobody wants this contract, and that thinness is precisely what makes it expensive to trade and hard to escape.
+Tip
+Before you trade any strike, look at its spread, its volume and its open interest together. If the spread is wide and volume and open interest are thin, walk away, however tempting the cheap premium looks. A strike you cannot exit cleanly is a trap, not an opportunity.
+## How to stay on liquid ground
+Avoiding the trap is mostly a matter of a few simple habits.
+First, trade strikes near the money, where the crowd is. At-the-money and nearby strikes on a major underlying such as RELIANCE or NIFTY carry the most volume and the tightest spreads, so your entry and exit costs stay small.
+Second, judge a price by the bid and ask, never the LTP alone. If the bid and the ask sit far apart, the strike is illiquid, full stop, no matter how active the LTP made it look.
+Third, prefer the nearer expiries that the bulk of traders use, since they hold most of the volume and open interest. The deeper the crowd around your strike, the smaller the spread you pay and the easier it is to leave when you want to.
+The spread is the cost you never see on a payoff diagram and never read in a textbook example, yet it is there on every real trade, taken out before the stock moves at all. Treat liquidity as a filter you apply before anything else: a wonderful trade idea on an illiquid strike is often a losing trade in practice, because the spread and the difficulty of exit quietly hand back your edge. Stay where the crowd is, read the bid and the ask, and let the thin, cheap, far-out strikes go to someone else.
+![The bid is the highest price buyers will pay and the ask is the lowest price sellers will accept; the gap between them is the spread, an instant cost you pay on entry, and it widens sharply on illiquid far-out strikes where volume and open interest are thin.](https://openalgo.in/options-basics/images/diagram-bid-ask-spread.png) DiagramThe bid is the highest price buyers will pay and the ask is the lowest price sellers will accept; the gap between them is the spread, an instant cost you pay on entry, and it widens sharply on illiquid far-out strikes where volume and open interest are thin.
+On this page

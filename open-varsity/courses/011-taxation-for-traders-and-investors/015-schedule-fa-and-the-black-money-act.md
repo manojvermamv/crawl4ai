@@ -1,0 +1,69 @@
+Chapters
+Module D · Global and Crypto - Chapter 15
+# Schedule FA and the Black Money Act
+Owning even one foreign share carries a reporting duty most investors miss. Learn Schedule FA, why you disclose foreign assets even with zero gain, the LRS limit and its TCS, and the severe penalties for staying silent.
+Global
+What you'll learn
+  * ·What Schedule FA is
+  * ·Report even with no gain
+  * ·The LRS limit and TCS
+  * ·The Black Money Act penalties
+  * ·Why this is not optional
+  * ·A simple compliance routine
+
+
+Picture someone who, two years ago, put a modest amount into a few US shares through an investing app. Nothing dramatic, perhaps Rs 90,000 spread across two or three well known names. The shares barely moved, there was no dividend worth speaking of, and at tax time the thought was simple and very human: there was no real gain, so there is nothing to tell the tax department. That single assumption is one of the most expensive mistakes an Indian resident can make, because the duty to report a foreign asset has almost nothing to do with whether you made money on it.
+This chapter is about that duty. It lives in a part of your tax return called Schedule FA, and behind it sits a law with unusually sharp teeth, the Black Money Act of 2015. Once you understand both, you will see why disclosing a foreign holding is not optional housekeeping but a line you simply do not cross.
+![Schedule FA asks what you own abroad, not what you earned, and an unreported foreign asset can fall under the Black Money Act.](https://openalgo.in/taxation/images/diagram-schedule-fa.png) DiagramSchedule FA asks what you own abroad, not what you earned, and an unreported foreign asset can fall under the Black Money Act.
+## Schedule FA: a disclosure that ignores your profit
+Schedule FA is a section of the income tax return where a resident must list every foreign asset they hold. US shares, foreign exchange traded funds (ETFs), overseas brokerage accounts and foreign bank accounts all belong here.
+The part that trips people up is this. As things stand for AY 2026-27, a resident must disclose all foreign assets in Schedule FA even if there was no gain at all. Zero profit does not switch the duty off. A flat share price does not switch it off. Even a holding that lost value must still be disclosed. The schedule is not asking "did you earn anything abroad", it is asking "what do you own abroad", and those are two very different questions.
+Key idea
+Schedule FA reports ownership, not income. If you are a resident and you hold US shares or foreign ETFs, you must disclose them every year, even with zero gain, zero dividend, or a loss. "I made nothing on it" is not a valid reason to leave the box empty.
+This catches honest investors more than anyone. Someone who carefully reported their Indian capital gains, paid every rupee due, and simply assumed an idle US holding was too small or too quiet to matter, can still be in breach. The income was nil, but the disclosure was never optional.
+## What counts as a foreign asset
+You do not need to memorise the full legal list, but you should recognise the common holdings an Indian trader or investor is likely to have. The thread running through all of them is the same: ownership sitting outside India.  
+| Foreign holding  | Goes in Schedule FA  |  
+| --- | --- |  
+| US shares held directly  | Yes  |  
+| Foreign ETFs and mutual funds  | Yes  |  
+| Overseas brokerage account  | Yes  |  
+| Foreign bank account  | Yes  |  
+| Shares of a foreign company bought through an app  | Yes  |  
+The moment your money buys an asset that lives abroad, Schedule FA is in the picture, regardless of how that asset performed. A holding that doubled and a holding that halved are treated exactly alike for the purpose of disclosure. Both must be reported.
+Note
+There are two separate questions every year. First, did the foreign asset produce income (a gain on sale, a dividend), which you tax in the normal way and for which you can claim a Foreign Tax Credit on US tax already withheld. Second, do you own a foreign asset at all, which Schedule FA always wants to know. You can answer "no income" and still owe a "yes" on ownership.
+## The LRS route and the 20 percent TCS
+To buy US shares you first have to send money abroad, and that happens under the Liberalised Remittance Scheme, usually shortened to LRS. This is the window that lets a resident remit funds overseas within an annual limit.
+Two numbers matter here. A 20% TCS (Tax Collected at Source, an advance tax the system collects upfront) applies on remittances above Rs 7 lakh in a year. The reassuring part is that this TCS is not money you lose. It is collected against your PAN and you reclaim it as a credit when you file, set off against your tax or refunded to you.
+Real example
+Suppose you remit Rs 12 lakh abroad in a year to buy US shares. The first Rs 7 lakh carries no TCS. The remaining Rs 5 lakh attracts 20% TCS, which is 20% of 5,00,000, equal to Rs 1,00,000. That Rs 1,00,000 is not gone. It shows up against your PAN, and when you file your return you claim it back as a credit, so the real cost to you is the timing, not the rupees.
+## The Black Money Act, and why this rule bites
+Now the part that turns a paperwork duty into something far more serious. Failure to report foreign assets in Schedule FA does not fall only under the ordinary income tax penalties. It can be pursued under the Black Money (Undisclosed Foreign Income and Assets) Act of 2015, a separate and much harsher law.  
+| Consequence under the Black Money Act 2015  | What it means  |  
+| --- | --- |  
+| Penalty  | Rs 10 lakh per year of non-disclosure  |  
+| Imprisonment  | 6 months to 7 years  |  
+| Tax on undisclosed income  | 30%  |  
+There is one important relief to know, and it changed recently. Since 1 October 2024, this Rs 10 lakh penalty does not apply where the total value of your foreign assets, other than immovable property, stays under Rs 20 lakh during the year. So a modest holding of a few US shares, comfortably under that line, will not by itself attract the Rs 10 lakh penalty. The earlier version of the law, which could hit even tiny holdings, was widely seen as too harsh, and this carve-out fixes that.
+What the carve-out does NOT do is switch off the duty to disclose. You must still report the holding in Schedule FA every year, whatever its size. The relief softens the penalty for small non-immovable foreign assets; it does not make non-disclosure safe, and it gives no shelter at all to larger foreign assets, to immovable property abroad, or to any undisclosed foreign income.
+Heads up
+The Black Money Act penalty for an undisclosed foreign asset can be Rs 10 lakh per year, alongside possible imprisonment of six months to seven years and 30% tax on the undisclosed income. Since October 2024 there is a carve-out: this penalty does not apply where your foreign assets other than property stay under Rs 20 lakh in the year. But the Schedule FA disclosure duty still stands for every foreign holding however small, and the penalty bites hard once the assets are larger or any income is hidden. The safe path is unchanged: disclose everything, every year.
+## A cautionary scenario
+Return to the investor from the opening. Call her Meera. A couple of years ago she moved about Rs 90,000 into three US shares through an app, partly out of curiosity. The shares drifted sideways, paid almost nothing, and she honestly stopped thinking of them as a formal "foreign asset". Each year she filed her return, declared her salary and her Indian capital gains, paid in full, and left Schedule FA blank because, in her mind, there was no foreign income to report.
+She was right that there was no foreign income. She missed that there was a foreign asset. Those are different things, and Schedule FA asks about the second.
+The danger in Meera's position is not the tax on her US shares, which is negligible. The danger is that an unreported foreign asset, however small, sits under the Black Money Act, where the penalty is Rs 10 lakh per year and the matter can even turn criminal. A holding that earned her almost nothing could, in the worst case, expose her to a penalty many times its value, simply because a box was left empty year after year.
+Her sensible fix is the calm one. Disclose the holding, ideally with a chartered accountant guiding her, bring her past returns into line, and from now on treat Schedule FA as a routine, unskippable part of filing. The cost of fixing it early is small. The cost of being found later is not.
+## Staying on the right side of it
+The genuinely reassuring truth is that this is one of the easiest serious risks to avoid, because compliance costs you nothing but a little care and a good record.
+  * Keep a simple list of every foreign holding, the date you bought it, and what you paid.
+  * Disclose all of it in Schedule FA every year, gain or no gain, even at a loss.
+  * Track your LRS remittances and the 20% TCS that applies above Rs 7 lakh, and claim that TCS back as a credit when you file.
+  * The form a resident with foreign assets usually files is ITR-2, or ITR-3 if you also trade as a business.
+  * When foreign assets are in the picture, bring in a chartered accountant. This is exactly the area where a small professional fee buys very large peace of mind.
+
+
+Tip
+Make Schedule FA part of the same habit as gathering your broker statements. Decide once, at the start of every filing season, that every foreign holding gets listed no matter how small or how quiet. The investor who never has to worry about the Black Money Act is simply the one who never leaves the box empty.
+This chapter is for learning, not for filing. Tax rules and the figures inside them change from year to year, and foreign assets are a high-stakes area, so confirm your own position with a qualified chartered accountant before you submit your return.
+On this page

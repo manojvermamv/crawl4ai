@@ -1,0 +1,80 @@
+Chapters
+Module B · Trading Mechanics - Chapter 05
+# How Futures Orders Actually Work
+Before you trade, you need to place an order correctly. Learn the order types (market, limit, stop-loss and stop-loss market), the product types (intraday versus carry-forward), how a square-off works, and the order mistakes that catch beginners.
+Execution
+What you'll learn
+  * ·Market vs limit orders
+  * ·Stop-loss and stop-loss market
+  * ·Intraday (MIS) vs carry-forward (NRML)
+  * ·How a square-off works
+  * ·Auto square-off for intraday
+  * ·Common order mistakes
+
+
+You decide to buy one lot of the RELIANCE future. You tap the buy button, and a fraction of a second later you own 500 shares worth of exposure. To a beginner this feels like pressing a button on a vending machine. It is not. Behind that single tap sits a busy, orderly auction where your order is matched against a real person on the other side, at a real price, under rules that never bend. Once you understand what happens in that moment, the order screen stops being intimidating and becomes a tool you can use with intent. This chapter opens the lid and shows you the machinery.
+## The order book, where buyers and sellers meet
+At the heart of every traded contract is the **order book** , a constantly updating list of everyone who wants to buy and everyone who wants to sell, sorted by price. It has two sides.
+  * The **bid** side holds the buyers. Each bid is a price someone is willing to pay, and the quantity they want. The highest bid is the **best bid** , the most anyone is currently offering to pay.
+  * The **ask** side, also called the offer, holds the sellers. Each ask is a price someone is willing to sell at. The lowest ask is the **best ask** , the cheapest anyone is currently willing to sell for.
+
+
+Picture the RELIANCE future near Rs 1,318. The best bid might be Rs 1,317.95 for two lots, and the best ask Rs 1,318.05 for three lots. The small gap between them, here Rs 0.10, is the **spread** , the no-man's-land between the highest buyer and the lowest seller. Remember that one tick of Rs 0.05 on a RELIANCE lot of 500 shares is worth Rs 25, so this spread is two ticks, about Rs 50 a lot. A later chapter studies the spread as a real cost; for now just see it as the natural gap the order book always carries.
+Below the best bid and ask sit more orders at slightly worse prices, stacked in a ladder of waiting demand and supply. When you send an order, you step into this book, either to wait in the queue or to reach across and trade against someone already in it.
+![The order book stacks buyers on the bid side and sellers on the ask side, with the best bid and best ask meeting at the spread, so every order you send either joins the queue or trades against a resting order on the opposite side.](https://openalgo.in/futures/images/diagram-order-book.png) DiagramThe order book stacks buyers on the bid side and sellers on the ask side, with the best bid and best ask meeting at the spread, so every order you send either joins the queue or trades against a resting order on the opposite side.
+Key idea
+The order book is just two sorted queues, buyers on the bid side and sellers on the ask side. The best bid is the highest price a buyer will pay, the best ask is the lowest price a seller will accept, and the gap between them is the spread.
+## A market order, certain fill, uncertain price
+The simplest way to buy is a **market order** , an instruction to trade right now at whatever the best available price is. You are not naming a price. You are saying take me in immediately, and you accept whatever the order book offers.
+When your buy market order arrives, the exchange matches it against the lowest ask sitting in the book. If you want one lot and three lots are offered at Rs 1,318.05, you are filled instantly at Rs 1,318.05. The fill is essentially guaranteed in a liquid contract, because there is almost always someone resting on the other side.
+What a market order does not promise is the price. You find out the exact price only after you are filled. In the deeply traded near-month NIFTY or RELIANCE future this hardly matters, because the spread is a tick or two. But fire a large market order into a thin book and you can eat through the best ask, then the next, each worse than the last, so your average price drifts away from where you saw it. That gap between the price you expected and the price you got is **slippage** , and a whole later chapter is devoted to it.
+Tip
+Use a market order when getting in or out quickly matters more than the last few paise, and only in a liquid near-month contract. Treat it with respect in anything thin, because a market order will chase the price up the ladder to get filled.
+## A limit order, your price, uncertain fill
+A **limit order** flips the trade-off. Here you name the exact price you are willing to pay, or better, and you wait. A buy limit at Rs 1,317.50 says I will buy at Rs 1,317.50 or lower, but not a paisa more.
+If the market is already at or below your limit, you trade at once. If it is above, your order does not vanish; it joins the bid side of the order book and waits in the queue at your price. The moment a seller is willing to meet you there, you are filled. Until then you sit and wait, and you may wait forever if the price never comes back to you.
+So a limit order gives you certainty of price and surrenders certainty of fill. You will never pay worse than your limit, but you might not trade at all. This is the opposite bargain from the market order, and choosing between them is one of the first real skills of trading.  
+|   | Market order  | Limit order  |  
+| --- | --- | --- |  
+| You control  | Speed  | Price  |  
+| Fill  | Almost certain  | Not guaranteed  |  
+| Price  | Not guaranteed  | Capped at your limit or better  |  
+| Best used when  | You must get in or out now  | You can wait for your price  |  
+![A market order trades immediately at the best available price while a limit order names your price and waits in the queue, so the two order types trade speed against price control.](https://openalgo.in/futures/images/diagram-order-types.png) DiagramA market order trades immediately at the best available price while a limit order names your price and waits in the queue, so the two order types trade speed against price control.
+## Stop orders, the level that protects you
+The third tool every futures trader needs is the **stop order** , sometimes called a stop-loss. A stop is an order that stays dormant until the price touches a level you choose, and only then does it wake up and act. Its everyday job is to cap a loss on a position you already hold.
+Suppose you are long one RELIANCE lot from Rs 1,318 and you decide you will not tolerate a fall past Rs 1,300. You place a stop to sell with a trigger at Rs 1,300. While RELIANCE stays above that level, nothing happens. The instant the price trades down to Rs 1,300, your stop wakes up and sends a sell order to close your position. You do not have to be watching the screen; the exchange watches the level for you.
+There are two common flavours.
+  * A **stop-loss market** order triggers at your level and then sells at the market, taking whatever price is available. The exit is near certain but can slip in a fast move.
+  * A **stop-loss limit** order triggers at your level and then places a limit at a price you set, so you control the worst price you will accept, but it risks not filling if the market gaps straight past your limit.
+
+
+A stop is the disciplined trader's seatbelt, deciding in advance and without emotion the point at which a trade has been proven wrong. Be honest, though, about what it cannot do. In an overnight gap the price can leap clean through your level before any order can act, a danger a later chapter on gaps examines closely.
+Heads up
+A stop-loss limits your loss in normal conditions, but it is not a force field. If RELIANCE gaps from Rs 1,318 to Rs 1,280 overnight, a stop at Rs 1,300 cannot fill at Rs 1,300, because that price never traded. You are filled lower, and your loss is larger than planned. Size your position for that possibility.
+## How your buy actually matches a sale
+It is worth being concrete about the match itself, because it dispels the vending-machine illusion. The exchange runs an **order-matching engine** that pairs incoming orders with resting ones by strict rules, best price first, and for equal prices, whoever queued earliest. When your buy meets a resting sell at the same price, a trade is born, and the clearing house steps in between you as the guarantor, so neither side worries about the other defaulting.
+This is the quiet truth of every futures trade. For you to go long, someone somewhere went short at that instant, at that price. Your order does not summon a position from nowhere; it finds a counterparty in the book.
+Did you know
+Every futures contract has a buyer and a seller created at the same moment. When you buy one RELIANCE lot, a real counterparty sold one lot to you, and the clearing house guarantees both sides. There is no trade without someone taking the opposite view.
+## Intraday or carryforward, the product type decision
+Before you send the order, OpenAlgo asks one more thing, the **product type** , and it changes how the position behaves.
+  * **Intraday** means you intend to open and close within the same trading day. The position is squared off automatically near the close if you have not already exited, and it often qualifies for lighter margin because the risk lasts only hours. It avoids overnight exposure, but it tempts over-trading.
+  * **Carryforward** , also called positional or normal, means you intend to hold the position overnight and beyond. It demands the full margin the contract requires, because the risk now spans the gap to the next session, and it suits a view that needs days or weeks to play out.
+
+
+An earlier chapter on margin covers why the overnight position needs more cash. The point here is that choosing intraday or carryforward is a deliberate decision about how long you mean to hold, not a setting to click past.
+## The life of an order, and where you watch it
+From the moment you place an order it travels through a short, well-defined **order lifecycle** , and OpenAlgo shows you exactly where it is.
+  * **Pending** , also shown as open, means the order has reached the exchange and is sitting in the book, waiting. A resting limit order lives here until it fills or you cancel it.
+  * **Complete** , also called executed or filled, means it has been matched and the trade is done.
+  * **Rejected** means the exchange or your broker refused it, perhaps for insufficient margin, a wrong price band, or a closed market. A rejected order never reached the book.
+  * **Cancelled** means you, or an automatic rule, withdrew the order before it filled.
+
+
+You track all of this in two places. The **order book** in OpenAlgo lists every order you have placed and its current status, pending, complete, rejected or cancelled. The **trade book** lists only the orders that actually executed, with the real fill prices. The order book is the story of your intentions; the trade book is the record of what truly happened. Get into the habit of glancing at both after every action, so a rejected order or a partial fill never goes unnoticed.
+OpenAlgo lets you act on the book in plain ways, placing an order, modifying or cancelling a pending one, or sending a smart order that targets a position size, meaning you tell it the position you want to hold and it works out whether to buy or sell to get there. Whatever the action, it still ends as an entry in this same lifecycle.
+Note
+Two screens, two jobs. The order book shows every order and its status; the trade book shows only the fills that happened, at the prices they happened. After you place anything, check the order book to confirm it was accepted, then the trade book to confirm the fill.
+You now know what that single tap sets in motion. Your order enters a two-sided book, takes the market price or waits at your limit, and is matched against a real counterparty under the clearing house's guarantee, while a stop stands guard over your downside. Choose market or limit by whether speed or price matters more, choose intraday or carryforward by how long you mean to hold, and watch the order book and trade book to know where every order stands. The next chapter looks harder at the spread and the cost of crossing a thin market.
+On this page

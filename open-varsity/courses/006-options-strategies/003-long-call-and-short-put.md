@@ -1,0 +1,110 @@
+Chapters
+Module B · Bullish Strategies - Chapter 03
+# Long Call and Short Put
+The two single-leg bullish trades. Learn the long call (limited risk, unlimited upside) and the short put (collect premium, large downside), the two ends of the bullish spectrum, on real NIFTY payoffs.
+Bullish
+What you'll learn
+  * ·The long call
+  * ·Limited risk, unlimited upside
+  * ·The short put
+  * ·Collecting premium, large risk
+  * ·Buyer vs seller bullishly
+  * ·Reading the real payoffs
+
+
+You have a clear opinion: NIFTY is heading higher over the coming month. There are two plain ways to back that single view with a single option, and they sit on opposite sides of the very same trade. You can **buy a call** , paying a premium now for the right to ride a rise. Or you can **sell a put** , collecting a premium now and promising to buy NIFTY if it falls to your strike. One of you is the buyer, hopeful and patient, carrying a small fixed cost. The other is the seller, paid upfront but shouldering a real obligation. This chapter builds both on real NIFTY option data captured on 26 June 2026, with the index at 24,056, the at-the-money strike at 24,050, one lot of 65 units, and the 28 July 2026 expiry about 32 days away.
+## The one-line idea
+A **long call** pays a small premium for unlimited upside. A **short put** collects a small premium and accepts a large hidden downside. Both express the same bullish view, but they swap the entire bargain: the buyer takes low odds and a capped, known loss in return for an open-ended win, while the seller takes high odds and a friendly clock in return for a capped win and a dangerous tail.
+Key idea
+On the same bullish view and the same 24,050 strike, the long call risks a fixed Rs 27,677 for an unlimited gain at low odds, while the short put earns a fixed Rs 19,182 at high odds but risks a large, lumpy loss if NIFTY collapses. Buyers pay for a big win they rarely get. Sellers get paid often, but the rare loss is heavy.
+## The long call, rupee by rupee
+You buy one at-the-money call. That single leg is the whole position.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy call  | 24,050  | 425.8 paid  | Rs 27,677 out  |  
+|   |   |   | **Net debit**  | **Rs 27,677 out**  |  
+The 24,050 call costs 425.8 per share, which is 425.8 times 65, or **Rs 27,677** for one lot. That money leaves your account the moment you buy, and you can never be asked for a single rupee more. That one fact is the whole comfort of buying an option. Your maximum loss is the premium, full stop, and your upside above the strike has no ceiling at all.
+![The long call on NIFTY, buying the 24,050 call for Rs 27,677. The orange at-expiry line rests on a flat loss floor below the strike, crosses zero at the breakeven of 24,476, then climbs without limit into the green profit zone. The blue dashed T+0 line sits above it, holding the time value that decay will erode.](https://openalgo.in/options-strategies/images/strat-long-call.png) ChartThe long call on NIFTY, buying the 24,050 call for Rs 27,677. The orange at-expiry line rests on a flat loss floor below the strike, crosses zero at the breakeven of 24,476, then climbs without limit into the green profit zone. The blue dashed T+0 line sits above it, holding the time value that decay will erode.
+## The long call's three numbers
+Each number falls straight out of the trade. Nothing to memorise once you see the logic.
+**Maximum loss is the premium, Rs 27,677.** If NIFTY finishes at or below 24,050, the right to buy at 24,050 is worthless and your whole outlay is gone. That is the flat floor on the left of the chart.
+**Maximum profit is unlimited.** Every point NIFTY climbs above the strike adds to the call's value, and nothing stops it, so the line rises forever.
+**Breakeven is the strike plus the premium per share, 24,476.** You paid 425.8 points of premium, so NIFTY must clear the strike and then earn back that 425.8 before you make a rupee. That lands at 24,050 plus 425.8, or 24,476, about 420 points above spot.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max loss  | the premium you paid  | Rs 27,677  |  
+| Max profit  | no ceiling above the strike  | Unlimited  |  
+| Breakeven  | strike plus premium per share  | 24,050 plus 425.8 equals 24,476  |  
+## Walking the long call to expiry
+Settle the call at a handful of closing prices and the shape appears on its own. The call is worth its intrinsic value, max(NIFTY minus 24,050, 0), and your profit is that value minus the 425.8 you paid, all times 65.  
+| NIFTY at expiry  | 24,050 call you bought  | Net profit or loss  |  
+| --- | --- | --- |  
+| 23,800  | worth 0  | minus Rs 27,677 (max loss)  |  
+| 24,050  | worth 0  | minus Rs 27,677 (max loss)  |  
+| 24,476  | worth 426  | about Rs 0 (breakeven)  |  
+| 24,800  | worth 750  | plus Rs 21,073  |  
+| 25,300  | worth 1,250  | plus Rs 53,573 (and climbing)  |  
+Anywhere at or below 24,050 you lose the full premium. Between the strike and 24,476 the loss shrinks but you are still red. Past 24,476 you turn green, and from there every extra point is pure gain with no limit. That is the entire payoff, and it matches the orange line exactly.
+## The short put, rupee by rupee
+Now cross to the other side. Instead of paying for a call, you sell an at-the-money put and take in the premium upfront.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Sell put  | 24,050  | 295.1 received  | plus Rs 19,182 in  |  
+|   |   |   | **Net credit**  | **plus Rs 19,182 in**  |  
+You collect 295.1 per share, which is **Rs 19,182** for the lot, the instant you sell. That credit is the most you can ever make. You keep all of it if NIFTY closes at or above 24,050, because the put you sold then expires worthless and the buyer walks away. In effect you are paid rent for promising to buy NIFTY at 24,050 if it sinks there.
+![The short put on NIFTY, selling the 24,050 put for a credit of Rs 19,182. The orange line is flat at maximum profit above the strike, crosses zero at the breakeven of 23,755, then slides deep into the loss zone toward a very large downside with no floor.](https://openalgo.in/options-strategies/images/strat-short-put.png) ChartThe short put on NIFTY, selling the 24,050 put for a credit of Rs 19,182. The orange line is flat at maximum profit above the strike, crosses zero at the breakeven of 23,755, then slides deep into the loss zone toward a very large downside with no floor.
+## The short put's three numbers
+**Maximum profit is the credit, Rs 19,182.** Above 24,050 the put dies worthless and you keep the rent. That is the flat shelf on the right.
+**Maximum loss runs toward zero, about Rs 1,544,068.** Below the strike the put moves against you rupee for rupee, exactly as if you owned NIFTY from 24,050 down. In a near total collapse the theoretical floor is Rs 1,544,068, which dwarfs the credit. It is not a realistic single session, but it is the honest worst case.
+**Breakeven is the strike minus the credit per share, 23,755.** NIFTY can fall 295.1 points below the strike, to 23,755, before the loss on the put eats the whole credit.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | the premium you collected  | Rs 19,182  |  
+| Max loss  | strike value carried toward zero  | about Rs 1,544,068  |  
+| Breakeven  | strike minus credit per share  | 24,050 minus 295.1 equals 23,755  |  
+## Walking the short put to expiry
+Here the put is worth max(24,050 minus NIFTY, 0), and your result is the 295.1 credit minus that value, times 65.  
+| NIFTY at expiry  | 24,050 put you sold  | Net profit or loss  |  
+| --- | --- | --- |  
+| 24,300  | worth 0  | plus Rs 19,182 (max profit)  |  
+| 24,050  | worth 0  | plus Rs 19,182 (max profit)  |  
+| 23,755  | worth 295  | about Rs 0 (breakeven)  |  
+| 23,500  | worth 550  | minus Rs 16,569  |  
+| 23,000  | worth 1,050  | minus Rs 49,069 (and falling)  |  
+Everything at or above 23,755 keeps you in profit, a wide safe zone. Below it the loss opens up and keeps deepening, with no flat floor until NIFTY is near zero. The shape is the mirror image of the long call.
+Heads up
+The short put is a naked short leg. Its profit is the Rs 19,182 you collect, but its loss runs toward about Rs 1,544,068 in a collapse, and the exchange blocks a heavy margin near Rs 165,042 just to hold it. The risk to reward of 1 to 0.01 says it plainly: a small fixed reward against a large lumpy danger. Sell it only when you would genuinely be content to own NIFTY near 23,755 and can fund the margin and fully respect the tail.
+## Your odds
+The most you can win or lose is only half the story. The other half is how likely each outcome is, and that is the **probability of profit** , the market-implied chance the trade ends green.
+The **long call's POP is about 31 percent**. Its breakeven of 24,476 sits above the plus one sigma band on the chart, so the option market implies only about a one in three chance NIFTY finishes that high by expiry. The **short put's POP is about 62 percent** , because its breakeven of 23,755 sits well below spot, comfortably inside the safe zone. The same bullish view, two very different odds, because the buyer needs a real move while the seller only needs the market not to crash.
+Tip
+Always read the POP next to the max loss, never alone. The short put's 62 percent looks attractive until you set it beside its Rs 1,544,068 tail. The long call's 31 percent looks poor until you set it beside its tiny, fixed Rs 27,677 risk. A trade is the pairing of an outcome with its odds, not either one by itself.
+## Margin and return
+For the long call the **margin equals the debit, Rs 27,677**. Because you cannot lose more than you paid, the exchange blocks only the premium and nothing extra. That is the cleanest margin in the course. The short put is the opposite: it ties up about **Rs 165,042** , roughly six times the credit, because the exchange must cover the open downside on a naked short.
+That gap reframes the return. The short put earns Rs 19,182 on Rs 165,042 blocked, about 12 percent on the capital if it works, but with a tail that can erase many such wins at once. The long call risks its whole Rs 27,677 but no more, and a single strong rally can return several times that. One trade is a small bet on a big move, the other a steady rent with a rare disaster.
+## Time decay
+Look at the **blue dashed T+0 line** against the solid orange expiry line near spot. For the long call the blue line sits above the orange one and sinks toward it as 28 July approaches. That falling gap is **time decay eroding the buyer** : even if NIFTY drifts sideways, the call bleeds value every quiet day, so a long call needs the move to actually happen and reasonably soon.
+For the short put the same decay runs the other way. There the blue T+0 line sits below the orange shelf and rises toward it as days pass, because the premium you sold melts into realised profit. The buyer fights the clock. The seller is paid by it. That single difference is the heart of why so many traders eventually move from buying to selling, accepting the tail in exchange for time on their side.
+## Buyer against seller, both bullish
+Laying the two trades side by side teaches the central bargain of this whole course.  
+|   | Long call  | Short put  |  
+| --- | --- | --- |  
+| You pay or receive  | pay Rs 27,677  | receive Rs 19,182  |  
+| Max loss  | Rs 27,677  | about Rs 1,544,068  |  
+| Max profit  | Unlimited  | Rs 19,182  |  
+| Breakeven  | 24,476  | 23,755  |  
+| Probability of profit  | about 31 percent  | about 62 percent  |  
+| Margin  | Rs 27,677  | Rs 165,042  |  
+Did you know
+Almost every strategy ahead is built by combining these two instincts. The defined-risk spreads in the next chapters tame the long call's cost and the short put's tail at the same time, by adding a second leg that pays for one and protects the other. The single legs here are the raw ingredients.
+For a beginner the defined-risk long call, or better still the spreads just ahead, is the safer place to begin. The short put is worth studying carefully and selling only with full respect for the downside, not leading with.
+## Key takeaways
+  * A **long call** pays a fixed premium (Rs 27,677 here) that is also its maximum loss, in exchange for an unlimited upside above the breakeven of 24,476.
+  * A **short put** collects a fixed credit (Rs 19,182) as its maximum profit, but carries a large loss toward Rs 1,544,068 below the breakeven of 23,755, and demands heavy margin.
+  * The long call has low odds, about 31 percent, and **time decay works against it**. The short put has high odds, about 62 percent, and **time decay works for it**.
+  * The long call's **margin equals its debit** , the cleanest in the course. The short put ties up about Rs 165,042 for a naked downside.
+  * Read every **POP beside its max loss** : high odds with a heavy tail and low odds with a tiny risk are not the same kind of bet.
+  * Buyers pay for the chance of a big win they rarely get. Sellers take frequent small wins and a rare large loss. Neither is wrong, but begin defined.
+
+
+On this page

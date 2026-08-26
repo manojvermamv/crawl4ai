@@ -1,0 +1,68 @@
+Chapters
+Module F · Market Controls and Adjustments - Chapter 22
+# Price Bands, Circuits and Trading Halts
+A contract is not free to move any distance in a day. Learn the operating ranges and price bands that bound a future, why an order can be rejected for breaching them, how index circuit breakers halt the whole market, and how these controls change your risk and your ability to get out.
+Execution
+What you'll learn
+  * ·Operating ranges and price bands
+  * ·Why an order gets rejected
+  * ·Dynamic price bands in F&O
+  * ·Index circuit breakers
+  * ·Halts and how they lift
+  * ·Trading near the limits
+
+
+You have made up your mind. RELIANCE is climbing hard, you want in, and rather than chase the rising price you place a buy order a comfortable distance above where it is trading, ready to be filled if the move continues. You press the button. Instead of a confirmation, the order comes back **rejected**. Nothing was bought. You stare at the screen, certain you did something wrong, because surely on an open market you can offer any price you like for a contract you want.
+You cannot, and that surprise is the subject of this chapter. The exchange does not let a contract travel any distance it pleases in a single day, and it does not let you place an order at just any price. There are walls around the price, walls around the size, and on a wild day there are walls around the whole market that can stop trading altogether. Understanding these walls is not a technicality. When one of them slams shut while you are holding a losing position, it can stop you getting out, and for a leveraged trader that is the difference between a bruise and a disaster.
+## The daily price band
+Every futures contract trades inside a **price band** , sometimes called an operating range. It is a ceiling and a floor for the day, measured as a percentage above and below a **reference price** , usually the previous day's closing or settlement price. The contract is free to move anywhere between those two walls, but it cannot trade or even accept an order beyond them.
+Put the RELIANCE anchor on it. With RELIANCE around **Rs 1,318** and a band of, say, ten percent, the floor sits near Rs 1,186 and the ceiling near Rs 1,450. Inside that range you can buy and sell all day. An order to buy at Rs 1,470, above the ceiling, will not rest on the book and will not fill. The exchange simply refuses it. The band exists to stop a single fat-fingered order, a rumour, or a thin moment from rocketing a contract to an absurd price and dragging real money with it.
+Key idea
+A price band is a daily ceiling and floor, set as a percentage above and below a reference price, usually yesterday's close. A futures contract can move freely inside the band, but an order placed beyond it is rejected by the exchange, not parked for later.
+The exact width is not something to memorise, because it differs by contract and the exchange revises it. Liquid contracts get wider bands; thin or newly listed ones get tighter ones, and NSE publishes the operating range for each security. The lesson is the principle, not a fixed figure: there is always a wall, and you should know roughly where it is before you trade near it.
+## Why your futures order gets rejected
+A rejection feels like a fault, but it is almost always the system protecting the market from an order that breaks a rule. For a beginner there are three usual reasons, and each has a plain fix.
+  * **The price is outside the band.** You named a price above the ceiling or below the floor. The fix is simple: bring your price back inside the operating range. If you genuinely want to buy strength, place the order just inside the ceiling rather than beyond it.
+  * **The size is beyond the quantity freeze.** An earlier chapter on position limits introduced the **quantity freeze** , the largest number of lots the exchange will accept in one single order. Ask for more than that in one go and the order is rejected. The fix is to **slice** the trade, sending several smaller orders that each sit under the freeze, instead of one giant order.
+  * **You are outside the operating range after a move.** On a fast day the band itself can shift, and an order that was valid a moment ago can fall outside the current range. The fix is to re-check the live range and re-price.
+
+
+Tip
+A rejected order is information, not a glitch. Read the reason. If it says the price is out of range, move your price inside the band. If it says the quantity is frozen, break the order into smaller slices. The market is not broken; you have simply hit a wall the exchange put there on purpose.
+![A futures contract trading inside its daily price band: the reference price sits in the middle, the ceiling and floor are set a fixed percentage away, and any order placed beyond a wall is rejected rather than filled.](https://openalgo.in/futures/images/diagram-price-bands.png) DiagramA futures contract trading inside its daily price band: the reference price sits in the middle, the ceiling and floor are set a fixed percentage away, and any order placed beyond a wall is rejected rather than filled.
+## Dynamic price bands: how the F&O wall bends
+A fixed band has an obvious flaw. If a stock has genuinely good news and deserves to move twelve percent, a hard ten percent wall would freeze a fair, orderly move and trap everyone, which is the opposite of what a market is for. So for liquid derivatives the exchange uses **dynamic price bands** , also called flexing.
+Here is how it works in plain terms. The contract carries its band as usual. When the price presses right up against the ceiling or the floor and trades there, the exchange treats that as a signal that the move may be real rather than a glitch. After a short, defined pause, it **flexes** the band, widening it by a further step, often another five percent, so the market can keep going. If the price keeps pushing, the band can flex again, step by step, through the day.
+The important detail for a trader is that each flex comes with a brief pause in trading, a cooling-off moment of a few minutes while the band is reset. So a genuine strong move is not frozen forever, but it does not run in one smooth line either. It advances, pauses while the wall is moved, advances again. If you are trying to act in those minutes, you may find the contract simply will not trade until the flex completes.
+Note
+Dynamic banding is a compromise. A hard band would freeze a fair move; no band would allow a runaway. So the exchange lets the band step wider each time the price leans on it, after a short pause each time. The market keeps moving, but in stages, not in one clean run.
+## Index circuit breakers: halting the whole market
+A price band guards one contract. A **circuit breaker** guards the entire market. When a benchmark index, the NIFTY or the SENSEX, moves a very large amount in a single day, the exchange halts trading across the board, in cash and in derivatives, to let everyone pause, breathe, and absorb what is happening.
+The market-wide breaker has three trigger levels, set at roughly **ten, fifteen and twenty percent** moves in the benchmark, measured from the previous close. Whichever index breaches a level first triggers the halt for the whole market. The crucial twist is that the length of the halt depends on the level breached and the time of day it happens. The same ten percent fall causes a long halt early in the morning and a short one in the afternoon, because there is more or less of the session left to settle down. A twenty percent move is the hard stop: it ends trading for the **rest of the day** , no matter when it strikes.
+The table below shows the shape of the rule. Treat the durations as illustrative, because the exact minutes are defined by the exchange and are worth checking against the current NSE circuit-filter rules before you rely on them.  
+| Index move  | Early in the session  | Later in the session  | Late afternoon  |  
+| --- | --- | --- | --- |  
+| About 10%  | long halt, roughly three quarters of an hour  | shorter halt, around fifteen minutes  | no halt  |  
+| About 15%  | longer halt, well over an hour  | shorter halt  | trading stops for the day  |  
+| About 20%  | trading stops for the rest of the day, at any time  |   |   |  
+![The market-wide circuit breaker: a benchmark index move of roughly 10, 15 or 20 percent halts all trading, with the halt lasting longer earlier in the day and a 20 percent move stopping the market for the rest of the session.](https://openalgo.in/futures/images/diagram-circuit-breaker.png) DiagramThe market-wide circuit breaker: a benchmark index move of roughly 10, 15 or 20 percent halts all trading, with the halt lasting longer earlier in the day and a 20 percent move stopping the market for the rest of the session.
+When a halt at the ten or fifteen percent level lifts, the market does not simply switch back on at the last price. It reopens through a short **pre-open call auction** , a window where orders are collected and a fresh opening price is discovered, before normal trading resumes. During the halt itself, the market is frozen. You cannot buy, you cannot sell, and you cannot exit. Your open positions sit exactly where they were, fully exposed to wherever the price reopens, and your resting orders wait. This is the moment the whole chapter has been building toward.
+## When a band or a halt traps you
+Now join this to leverage, because that is where the danger lives. Suppose you are long one RELIANCE future, 500 shares of exposure, and bad news hits. The contract falls hard and slams into its lower band. At the floor there are sellers but few or no buyers willing to trade higher, so the price is **limit-locked** down. You place a sell order to get out, and it may not fill, because to sell you need a buyer, and at a band that everyone wants to flee, buyers vanish. You are trapped in the loss, unable to act until the band flexes or buyers return, by which point the price may be lower still.
+A market-wide halt does the same thing on a grander scale. The index breaks a circuit level, trading stops, and your losing position is frozen in place. Your exit plan is now useless, because the exchange has closed the door for everyone at once, and when the market reopens through the pre-open auction the price can gap far past where you meant to get out.
+This is why a stop-loss is a plan, not a promise. A later chapter on gap and event risk returns to this, but the principle belongs here too: a stop can only work if the market is open and trading at your level. A band-locked or halted market offers neither, so a stop you trusted to cap your loss at one number can leave you filled far worse, or not filled at all until the price has run away.
+Heads up
+A price band or a circuit halt can stop you exiting a losing trade. At a limit-locked price there may be no buyer to sell to, and during a halt nobody can trade at all. A stop-loss does not guarantee an exit when the market is limit-bound or frozen. Size every leveraged position assuming you might not get out at your chosen price.
+## Trading near the limits
+None of this should frighten you away from futures. It should change how you size and plan. The walls are real, they are known in advance, and a careful trader respects them instead of being shocked by them.
+  * Keep your orders **inside the band**. If you are rejected for price, move inside the operating range rather than fighting the wall.
+  * Slice a large order under the **quantity freeze** instead of sending it whole.
+  * Treat a **limit-locked or halted** market as a position you may be stuck in, and size small enough that being stuck is survivable.
+  * Never assume a **stop** guarantees an exit. It is your intention, not the exchange's promise.
+  * Remember the exact **band widths and circuit levels are exchange-defined** and change, so check the current NSE rules rather than trusting a number from memory.
+
+
+Real example
+A trader holds three lots of a mid-size stock future on results day. The news is bad, the contract gaps down and locks at its lower band, and the trader's stop sits just below, never triggered because nothing trades there. For two hours the loss is frozen and growing on paper, with no buyer to sell to. Had the trader held one lot instead of three, the same locked market would have been an unpleasant morning rather than a threat to the account. The wall did not change. The size did.
+The honest takeaway is steadying. The exchange builds these limits to keep the market orderly and stop one bad moment cascading into chaos, and they protect you most of the time. But the very mechanism that calms a panic, the band and the halt, is also the thing that can hold you inside a loss with the exit sealed. Keep your orders inside the walls, keep your size small enough that a locked market is uncomfortable rather than fatal, and never trade as though a stop is a guarantee. On the rare day the walls close, the trader who already assumed they might is the one still standing when they open again.
+On this page

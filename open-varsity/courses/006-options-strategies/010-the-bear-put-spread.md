@@ -1,0 +1,88 @@
+Chapters
+Module C · Bearish Strategies - Chapter 10
+# The Bear Put Spread
+A defined-risk bearish trade. Learn how buying a put and selling a lower one builds a cheaper way to profit from a fall, with both profit and loss capped, on real NIFTY data.
+Bearish
+What you'll learn
+  * ·A bearish view
+  * ·Buy a put, sell a lower put
+  * ·Capped cost and capped profit
+  * ·The breakeven
+  * ·When to prefer it over a long put
+  * ·Reading the real payoff
+
+
+Most people who turn bearish on NIFTY reach straight for a put, pay a fat premium, and then need a real plunge just to reach breakeven. The bear put spread is the disciplined version of that same instinct. You still buy a put to profit from a fall, but you sell a second, lower put to hand back most of the cost, so your ticket is cheaper and your breakeven sits much closer to today's price. You give up the dream of an unlimited windfall on a crash, and in exchange you get a defined, affordable, and far more likely payoff on an ordinary decline. This chapter builds the trade on real NIFTY prices, shows where every rupee comes from, and gives you the three dimensions most explainers skip: the odds, the margin, and the way time presses on a debit trade.
+## The one-line idea
+A **bear put spread** is two put options on the same expiry. You **buy a higher-strike put** to gain as NIFTY falls, and you **sell a lower-strike put** to claw back most of the cost. What you pay on balance is a **net debit** , and because you can never owe more than you paid, that debit is also the most you can lose. The reward is capped too, at the gap between the strikes minus what you paid.
+You use it when your view is **moderately bearish** , meaning you expect NIFTY to fall, but to a sensible level rather than off a cliff. You are not paying for a collapse. You only need a measured slide.
+Key idea
+A bear put spread buys a higher put and sells a lower put for a net debit. You profit if NIFTY falls below your higher strike, your gain is capped once it drops past your lower strike, and your loss is capped at the debit you paid. It is the debit-and-buy mirror of the credit-and-sell bear call spread, reaching for an active fall rather than a quiet drift.
+## The real trade, rupee by rupee
+Here is the exact trade on real NIFTY prices, captured on 26 June 2026 with the index at **24,056** and the 28 July 2026 expiry about 32 days away. We buy the at-the-money 24,050 put and sell the 23,950 put one strike below.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy put  | 24,050  | 295.1 paid  | Rs 19,182 out  |  
+| 2  | Sell put  | 23,950  | 256.6 received  | plus Rs 16,676 in  |  
+|   |   |   | **Net debit**  | **Rs 2,506 out**  |  
+A lone 24,050 put would have cost the full Rs 19,182. Selling the 23,950 put one strike lower brings in Rs 16,676, which pays down most of that bill and leaves a **net debit of Rs 2,506**. You pay that out of pocket the moment you open the trade, and you can never be asked for another rupee. This is why the bear put spread is called a **debit spread**.
+![The real NIFTY bear put spread: a flat profit shelf of Rs 3,994 below 23,950, a flat loss shelf of Rs 2,506 above 24,050, and a single breakeven at 24,011 just below the spot. The orange at-expiry line climbs into profit as NIFTY falls; the blue dashed T+0 line sits above it near today's price because the bought put still carries time value that decay has not yet stripped away.](https://openalgo.in/options-strategies/images/strat-bear-put-spread.png) ChartThe real NIFTY bear put spread: a flat profit shelf of Rs 3,994 below 23,950, a flat loss shelf of Rs 2,506 above 24,050, and a single breakeven at 24,011 just below the spot. The orange at-expiry line climbs into profit as NIFTY falls; the blue dashed T+0 line sits above it near today's price because the bought put still carries time value that decay has not yet stripped away.
+## The three numbers, and where they come from
+Every bear put spread is pinned down by three numbers, and each one falls straight out of the trade above. Read the logic once and you never have to memorise them.
+**Maximum loss is the net debit, Rs 2,506.** If NIFTY finishes anywhere at or above the 24,050 strike, both puts expire worthless. Nobody exercises a put when the index sits above the strike. You simply lose what you paid, and that is the worst the trade can do.
+**Maximum profit is the spread minus the debit, Rs 3,994.** The spread is the gap between the two strikes, 100 points, worth 100 times 65, which is Rs 6,500. If NIFTY falls below 23,950, both puts are deep in the money and the full 100-point gap is locked in your favour. You collect that Rs 6,500, but you already paid Rs 2,506 to get in, so your net gain is 6,500 minus 2,506, which is **Rs 3,994**. The sold put is what caps the reward here, and as always with a vertical spread, the maximum profit and maximum loss add up to the full strike width.
+**Breakeven is the higher strike minus the debit per share, 24,011.** You paid 38.55 points per share. NIFTY has to fall 38.55 points below the 24,050 strike, to **24,011** , before the bought put has earned back what you paid for the position. Below 24,011 you finish in profit. Above it you finish in loss.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max loss  | net debit  | Rs 2,506  |  
+| Max profit  | spread minus net debit  | Rs 6,500 minus Rs 2,506 = Rs 3,994  |  
+| Breakeven  | higher strike minus debit per share  | 24,050 minus 38.55 = 24,011  |  
+## Walking the outcomes at expiry
+The surest way to trust a strategy is to settle it at a handful of closing prices and watch the money move. Here is the bear put spread at five levels of NIFTY on expiry day, per lot of 65. A put is worth max(strike minus NIFTY, 0) at expiry.  
+| NIFTY at expiry  | 24,050 put you bought  | 23,950 put you sold  | Net profit or loss  |  
+| --- | --- | --- | --- |  
+| 23,800  | worth 250  | worth 150  | plus Rs 3,994 (max profit)  |  
+| 23,950  | worth 100  | worth 0  | plus Rs 3,994 (max profit)  |  
+| 24,011  | worth 39  | worth 0  | Rs 0 (breakeven)  |  
+| 24,050  | worth 0  | worth 0  | minus Rs 2,506 (max loss)  |  
+| 24,300  | worth 0  | worth 0  | minus Rs 2,506 (max loss)  |  
+Read down the table and the shape draws itself. Anywhere from 23,950 downward you collect the full Rs 3,994, because every extra point the bought put gains is handed straight back by the put you sold. Anywhere from 24,050 upward you lose the full Rs 2,506. Between the two strikes the result slides smoothly from one shelf to the other, crossing zero at 24,011. That is the entire payoff, and it matches the orange line on the chart exactly.
+## Your odds
+Knowing the most you can win and lose is only half the story. The question that decides whether a trade is smart is, how likely is each outcome? That is the **probability of profit** , or POP, and the builder prints it right on the panel.
+For this spread the **POP is about 49 percent** , close to a coin flip. That figure comes from the option market itself. Using the volatility priced into NIFTY options, roughly 12.7 percent, and the 32 days left, the market implies a 49 percent chance that NIFTY finishes below the 24,011 breakeven by expiry. Look at the chart again. The faint shaded **sigma bands** show the move the market expects, and the breakeven at 24,011 sits just 45 points below the spot of 24,056, comfortably inside the inner band. You are not asking for a miracle. You are asking for a small step down.
+Tip
+Always read the POP next to the max loss, never alone. This spread risks Rs 2,506 to make Rs 3,994, a reward larger than the risk, but it only wins a little under half the time because it needs NIFTY to actually fall. A debit spread is the opposite bargain to a credit spread: you accept worse odds in exchange for a payoff bigger than what you put up. The POP is how you confirm that trade is worth taking.
+## Margin
+Because every leg is defined and your loss is capped at the debit, the exchange blocks only a modest **margin** of about **Rs 34,113** to hold this position. The sold put is what keeps that number small. A lone long put ties up exactly its premium, but pairing it inside a spread, with one bought and one sold leg the exchange can net against each other, keeps the capital tidy.
+That margin lets you judge the trade honestly through **return on margin**. You stand to make Rs 3,994 against Rs 34,113 blocked for about a month, which is roughly **11.7 percent on the capital at risk** if the trade works. That return, not the raw rupee figure, is the number a serious trader lines up against every other idea competing for the same capital.
+## Time decay
+Look once more at the chart, at the **blue dashed T+0 line** sitting above the solid orange at-expiry line near the current price. That gap is **time value** , and for a net buyer it is a slow leak rather than a gift. At today's spot of 24,056 the trade sits on its max-loss shelf at expiry, yet the blue line shows a smaller loss right now, because the bought 24,050 put still carries time premium. As the calm days pass, that premium melts and the blue line sinks toward the orange floor.
+In plain terms, doing nothing costs you. Every quiet day that NIFTY refuses to fall bleeds a little value out of the put you own, and time decay pulls the position gently toward its maximum loss. A credit-spread seller is paid by the clock. As a debit-spread buyer, you are racing it, so you want your fall to arrive in good time, not on the final day.
+## Choosing your strikes
+The 100-point spread above is one choice among many. Widen or narrow the gap between the strikes and you reshape the whole trade. Here are three bear put spreads on the same NIFTY and the same expiry, every number computed from the same option chain, so you can see the trade-off cleanly.  
+| Spread  | Buy / Sell  | Net debit  | Max profit  | Breakeven  |  
+| --- | --- | --- | --- | --- |  
+| 50 points  | buy 24,050 / sell 24,000  | Rs 1,170  | Rs 2,080  | 24,032  |  
+| 100 points  | buy 24,050 / sell 23,950  | Rs 2,506  | Rs 3,994  | 24,011  |  
+| 200 points  | buy 24,050 / sell 23,850  | Rs 4,615  | Rs 8,385  | 23,979  |  
+The pattern is clear. A **narrower spread** is cheaper and its breakeven sits closest to the spot, so it starts paying on the smallest fall, but its reward is small. A **wider spread** costs more and needs NIFTY to travel a little further to reach breakeven, yet it pays far more if the decline you expect actually lands. Set your sold strike at the level you genuinely think NIFTY can reach, because the maximum profit arrives exactly there. There is no free lunch in the table, only a dial you turn to match your conviction.
+## Bear put spread or bear call spread?
+You met the bear call spread last chapter, and it expresses the same bearish view with a near-identical payoff shape flipped in construction. So which do you pick? The honest answer is, it depends on what you want NIFTY to do.
+  * The **bear call spread** is a **credit** trade. You are paid Rs 3,624 up front and you win if NIFTY merely fails to rise, with time decay on your side. You want stillness.
+  * The **bear put spread** is a **debit** trade. You pay Rs 2,506 up front and you win only if NIFTY actively falls below 24,011, with time decay gently against you. You want movement.
+
+
+Reach for the bear put spread when you expect a genuine, fairly prompt decline, perhaps into a known support or ahead of a catalyst you think breaks the market lower. Its reward of Rs 3,994 against a risk of Rs 2,506, a ratio of about 1 to 1.59, is more generous than the bear call spread, and it pays you the most precisely when NIFTY reaches your lower strike. Reach for the bear call spread instead when you only believe the upside is capped, not that a fall is coming. Many traders keep both in hand and let the market's mood, calm or breaking, decide which one fits.
+Heads up
+A bear put spread is defined-risk, but the risk is real and it is paid in full. The whole Rs 2,506 per lot is gone if NIFTY closes at or above 24,050 at expiry, which it can do by simply holding steady from today's 24,056. A debit trade quietly bleeds toward that loss as time passes if the fall never comes. Size every position by its maximum loss, never by the reward, and place only as many lots as your account can absorb if your bearish call is early or plain wrong.
+You can assemble this spread leg by leg in **sandbox trading (analyzer mode in OpenAlgo)** , watching the cheaper, closer breakeven appear the instant you add the sold put to a lone long put. See the deep profit line of the single put flatten into the Rs 3,994 ceiling, and the cost drop from Rs 19,182 to Rs 2,506 in the same move. That trade, cheaper entry for capped reward, is the heart of every spread. Next we leave the polite two-leg spreads behind and explore three bolder bearish shapes: the put ratio back spread, the short synthetic future, and the risk reversal.
+## Key takeaways
+  * A bear put spread buys a higher put and sells a lower put for a **net debit** , profiting if NIFTY falls below the higher strike.
+  * **Max loss is the net debit** (Rs 2,506 here), **max profit is the spread minus the debit** (Rs 3,994), and **breakeven is the higher strike minus the debit** (24,011).
+  * The reward is larger than the risk, but the **POP is only about 49 percent** , because the trade needs NIFTY to actually fall, and **time decay works gently against you** as a net buyer.
+  * It blocks a small **margin** of about Rs 34,113, and the sold put is what keeps both the loss and the margin tidy. Judge it by its **return on margin** , roughly 11.7 percent here.
+  * **Narrower spreads** are cheaper with a closer breakeven and a smaller reward; **wider spreads** cost more and pay more. Set the sold strike where you expect NIFTY to land.
+  * Choose it over the bear call spread when you expect a **genuine, prompt decline** , and over a lone long put when you want a cheaper ticket with a breakeven close to the money.
+
+
+On this page

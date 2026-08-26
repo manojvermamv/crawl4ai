@@ -1,0 +1,55 @@
+Chapters
+Module A · Why and What - Chapter 02
+# Why Options Exist
+Options were not invented for gambling. Learn the four real jobs they do, hedging, speculation, income and leverage, and why a big institution uses them very differently from a retail trader.
+Basics
+What you'll learn
+  * ·Hedging an existing holding
+  * ·Speculating with limited risk
+  * ·Earning income by selling
+  * ·Leverage, the double edge
+  * ·How institutions really use options
+  * ·Why retail misuse is common
+
+
+You now know what a call and a put are. The natural next question is why anyone built these contracts in the first place. A stock is simple, you own a slice of a company and you share in its rise and fall. A future is a leveraged bet on where a price is heading. Options sit beside both of these for a reason, because they do four distinct jobs that a plain stock or a future cannot do as cleanly. Once you can name those four jobs, the whole options market starts to make sense. Better still, you begin to see which job you are actually doing when you click buy, and that single piece of self-awareness separates traders who last from beginners who quietly burn out.
+## Four jobs in one instrument
+Options exist to serve four real purposes. The very same RELIANCE 1320 call or put can serve more than one of them depending on who holds it and why. Here they are at a glance, and then we walk through each one with the real RELIANCE numbers you already know.  
+| The job  | What it does for you  | Typical tool  | Risk you carry  |  
+| --- | --- | --- | --- |  
+| Hedging  | Insures something you already own  | Buy a put  | The premium paid  |  
+| Speculation  | Bets on direction with a known, capped loss  | Buy a call or a put  | The premium paid  |  
+| Income  | Gets you paid premium for taking on a duty  | Sell a call or a put  | Large, sometimes unlimited  |  
+| Leverage  | Controls a big exposure for a small outlay  | Buy a call or a put  | The premium paid  |  
+Notice that three of the four jobs are done by a buyer, and the buyer's risk in every one of them is the same calm figure, the premium paid. Only the income job is done by a seller, and that is the one job where the risk grows large. Hold that contrast in mind as we go, because it is the spine of everything in this course.
+## Job one: insurance on what you own
+The first job is **hedging** , which simply means protecting something you already hold. Say you own 500 shares of RELIANCE, bought near the current price of Rs 1,318. Those shares are worth 500 times 1,318, which is about Rs 6,59,000. You like the company for the long run, but you are nervous about the next month. You do not want to sell, yet you do not want to ride a crash either.
+This is exactly what a put is for. You buy one 1320 put for about Rs 31 a share, which is about Rs 15,590 for the lot of 500. Now if RELIANCE falls hard, the put gains value as the shares lose it, and your downside is cushioned. If RELIANCE instead climbs, you simply let the put expire and you are out only the premium, the same way an unused home insurance policy costs you the year's premium and nothing more. You paid for peace of mind over the next month, and that is a perfectly rational thing to buy.
+Key idea
+A put bought against shares you own is insurance. You pay a known premium today to cap a loss you are worried about. If the feared fall never comes, the premium is the cost of sleeping well, nothing more.
+## Job two: a defined-risk bet on direction
+The second job is **speculation** , which here means taking a deliberate view on direction. The word has a bad reputation, but options give it a feature that a stock or a future cannot match: the loss is known and capped before you enter.
+Suppose you think RELIANCE will rise over the next month. Buy the 1320 call for about Rs 15,590 a lot. That figure is not just your cost, it is the entire loss you can ever take on the trade, no matter how badly the stock falls. If RELIANCE drops to 1,200 or 1,100 or lower, your loss stops at the premium. Compare that with a future, where every rupee the stock falls keeps draining your account. The capped, defined-risk loss is the headline feature of buying an option, and it is the reason a careful beginner starts here rather than with futures.
+Tip
+When you buy an option, write down the premium in rupees before you enter. That number is your maximum loss for the whole trade. Knowing it in advance is what makes an option a defined-risk way to back a view.
+## Job three: getting paid to wait
+The third job belongs to the other side of the trade, the **seller** , and the job is **income**. When you sell an option, you collect the premium upfront. Sell the RELIANCE 1320 call and roughly Rs 15,590 lands in your account on day one. Sell the 1320 put and a similar amount arrives. Every day the stock fails to make a big move, the time-value you sold melts in your favour, and you aim to keep what you collected.
+This sounds wonderful, and it is precisely where many newcomers get hurt, so let us be blunt. Selling an option is not free income. In exchange for that premium you accept a duty, and the risk on the wrong side is large. A sold call can lose without a clear ceiling if the stock keeps climbing. A sold put can lose heavily if the stock collapses. The exchange also makes you post a sizeable margin to prove you can pay. We devote a full later chapter to selling and its real dangers. For now, file it correctly: income is a genuine job options do, but it is paid risk, never a free gift.
+Heads up
+Collecting premium by selling options is not free money. You are paid upfront for taking on a real obligation, the margin blocked is large, and the loss on the wrong side can dwarf the premium you received. Respect this job before you ever attempt it.
+## Job four: a big position for a small outlay
+The fourth job is **leverage** , which means controlling a large exposure with a small amount of cash. Look again at the two ways to back RELIANCE rising. Buying 500 shares outright costs about Rs 6,59,000. Buying the 1320 call lot costs about Rs 15,590, which is roughly one forty-second of the share cost, yet it gives you a claim on the upside of those same 500 shares above the strike. A small move in the stock can produce a large percentage swing in that little premium. That is leverage, and it is intoxicating.
+It is also a double-edged tool, and honesty matters here. The same leverage that can multiply a small premium can also vaporise it. If RELIANCE drifts sideways or eases lower, that Rs 15,590 can fall toward zero while the shareholder beside you, who is down only a few percent, barely notices. Leverage magnifies both directions, and because time-value keeps draining from a bought option, the odds of a total loss on a leveraged bet are very real. Use leverage as a measured choice, never as a way to put money you cannot lose on the table.
+Heads up
+Leverage cuts both ways. The premium that can double on a good move can also go to zero on a flat or wrong one. Never size an option bet as though only the good outcome exists.
+## Who uses options, and how
+The same four jobs are used very differently by the two big groups in the market, and seeing the gap is sobering.
+Large institutions, the funds and desks that move serious size, lean mostly on the first and third jobs. They buy puts to hedge portfolios they cannot easily sell, they sell premium in a measured, margined, risk-managed way, and they use options to shape and reduce risk rather than to chase a jackpot. For them options are mainly a risk-management tool.
+A great deal of retail activity sits at the opposite end. It concentrates on cheap, far-out-of-the-money options bought purely for the lottery payoff, a tiny premium staked on a huge, unlikely move. Now and then one pays off spectacularly and the story spreads. Far more often the premium simply decays to nothing by expiry. The instrument is the same, but one group is mostly insuring and managing, while the other is mostly gambling on long shots.
+Did you know
+Most far-out-of-the-money option buyers lose money over time, because they are paying pure hope and time decay drains it every day. The contract is identical to the one an institution uses to hedge. The difference in outcomes comes from which job you are really doing.
+![Calls and puts side by side, the two simple building blocks that every one of these four jobs is assembled from.](https://openalgo.in/options-basics/images/diagram-calls-and-puts.png) DiagramCalls and puts side by side, the two simple building blocks that every one of these four jobs is assembled from.
+## What to carry forward
+Options exist because they do four jobs that nothing else does so cleanly. They insure a holding, they let you bet on direction with a capped loss, they let a seller earn premium for taking on risk, and they let a small outlay control a large exposure. Three of those jobs hand the buyer a known, limited loss, which is the gentlest place for a beginner to stand. The fourth, selling for income, pays you upfront but loads you with real risk and a heavy margin.
+Before any trade, ask yourself plainly which of the four jobs you are doing. Am I protecting something, taking a defined-risk view, collecting premium for risk, or reaching for leverage. If your honest answer is none of these, and you are simply buying a cheap far-out option because it might explode, you are doing the gambling that drains most retail accounts. Naming the job is the first discipline of options, and it costs you nothing to practise it.
+On this page

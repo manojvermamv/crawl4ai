@@ -1,0 +1,79 @@
+Chapters
+Module C · Margin and Money - Chapter 12
+# Transaction Costs and Taxation
+A future looks cheap to trade until you add the costs and the tax. Learn the full stack of charges, brokerage, STT, exchange fees, GST and stamp duty, how they move your breakeven, and the basics of how futures profit is taxed as business income.
+Costs
+What you'll learn
+  * ·Brokerage and STT on futures
+  * ·Exchange charges, GST and stamp duty
+  * ·Your true cost-adjusted breakeven
+  * ·Futures as business income
+  * ·ITR-3 and turnover in one line
+  * ·Where to learn the tax in full
+
+
+You buy one NIFTY future, the market moves your way by ten points, you close the trade pleased with yourself, and yet your account is slightly smaller than a simple ten-point gain would suggest. Nothing went wrong. You just met the quiet truth that every futures trader has to learn early: a round trip is never free. Between the moment you buy and the moment you sell, a small stack of charges is taken out, and a separate reckoning with the tax department waits at the end of the year. Neither is large enough to scare you off, but both are large enough to ruin you if you ignore them. This chapter walks through the cost stack first, with real verified numbers, and then through how India taxes what you make.
+## The costs hiding inside every trade
+When you trade a future, several different parties take a tiny slice. Your broker charges a fee for executing the order. The government collects a transaction tax and a stamp duty. The exchange charges for the use of its matching system. The market regulator takes a sliver. And on top of some of those, a goods and services tax is applied. None of these is hidden in a dishonest way, but they are spread across so many lines that a beginner rarely adds them up until they bite.
+The single most important thing to understand is that most of these charges are a **percentage of turnover** , not a flat fee. Turnover here means the rupee value of what you traded, counting both the buy leg and the sell leg. Only the brokerage at a typical discount broker is flat. Everything else grows as your trade size and the contract price grow.
+Here are the components on an NSE futures trade, in plain words:
+  * **Brokerage.** A typical discount broker charges a flat fee of about Rs 20 per executed order. A round trip is two orders, one to enter and one to exit, so that is about Rs 40 in total. Notice it does not change whether you trade one lot near 24,000 or a far pricier contract. It is a fixed fee, not a percentage.
+  * **Securities Transaction Tax (STT).** Charged at 0.05% on the sell-side value of the trade only. You pay it when you close a long or open a short, on the rupee value of that selling leg.
+  * **Exchange transaction charges.** Roughly 0.0019% of turnover, paid to the exchange for matching your order.
+  * **SEBI charges.** A tiny 0.0001% of turnover, paid to the market regulator.
+  * **Stamp duty.** 0.002% on the buy side only, collected by the state government.
+  * **GST.** Goods and services tax at 18%, but charged only on the sum of brokerage plus exchange transaction charges plus SEBI charges. It is a tax on the service fees, not on your whole turnover.
+
+
+Note
+Turnover for costs means the value of both legs added together. One NIFTY lot of 65 near 24,000 is worth about Rs 15,60,000 on each leg, so buying and selling once is about Rs 31,20,000 of turnover. That is why even a single round trip racks up real rupees.
+## One NIFTY lot, start to finish
+Numbers turn this from a list into a lesson. Take our standard NIFTY anchor: one lot of 65, bought and sold near 24,000. Each leg is worth about Rs 15,60,000, so the round-trip turnover is about Rs 31,20,000. Here is exactly what comes out.  
+| Charge  | One NIFTY lot, bought and sold near 24,000  |  
+| --- | --- |  
+| Turnover (both legs)  | about Rs 31,20,000  |  
+| Brokerage  | Rs 40  |  
+| STT  | Rs 780  |  
+| Exchange transaction charges  | Rs 57.10  |  
+| GST  | Rs 18.04  |  
+| SEBI charges  | Rs 3.12  |  
+| Stamp duty  | Rs 31  |  
+| **Total cost of the round trip**  | **about Rs 929**  |  
+| **Points the future must move just to break even**  | **about 14.3 points**  |  
+Sit with that last line, because it is the whole point of the chapter. Before you make a single rupee of profit, NIFTY has to move about 14 points in your favour just to cover the cost of trading one lot. If the future moves up only ten points and you close, the costs eat the gain and you finish slightly down even though your direction was right. The market does not owe you those 14 points. You have to earn them before the trade is even level.
+Notice also which charge dominates. STT at Rs 780 is by far the biggest piece, and it is a straight percentage of the sell value. The flat brokerage of Rs 40 is almost an afterthought by comparison. This is why the percentage charges, not the broker fee, decide your real cost on most trades.
+![The seven charges stacked on one NIFTY round trip, showing that the percentage based STT dwarfs the flat brokerage and that together they add up to about Rs 929, the roughly 14 points the future must move before any profit begins.](https://openalgo.in/futures/images/diagram-cost-stack.png) DiagramThe seven charges stacked on one NIFTY round trip, showing that the percentage based STT dwarfs the flat brokerage and that together they add up to about Rs 929, the roughly 14 points the future must move before any profit begins.
+Key idea
+Costs are a hurdle you clear before profit starts. One NIFTY lot must move about 14 points in your favour simply to break even. Plan your entries and targets knowing the first 14 points belong to the cost stack, not to you.
+## Costs grow with turnover
+Because most of the stack is a percentage, your costs rise as either the contract price or the number of shares rises. The brokerage stays flat, but STT and the exchange, SEBI and stamp charges all swell with turnover. Two stock-future examples make this vivid.
+Take a single-stock future of 500 shares trading near Rs 1,000. The round-trip cost works out to about Rs 330, which across 500 shares is only about 0.66 points. The future has to move barely two-thirds of a rupee in your favour to break even.
+Now take the same 500 shares, but on a stock trading near Rs 10,000. The turnover is ten times larger, and the cost climbs to about Rs 2,875, which is about 5.75 points across the 500 shares. Same quantity, same flat brokerage, but the percentage charges have grown nearly ninefold because the rupee value of the trade is ten times bigger.  
+| Contract  | Round-trip cost  | Cost in points  |  
+| --- | --- | --- |  
+| 500 shares near Rs 1,000  | about Rs 330  | about 0.66 points  |  
+| 500 shares near Rs 10,000  | about Rs 2,875  | about 5.75 points  |  
+| One NIFTY lot near 24,000  | about Rs 929  | about 14.3 points  |  
+Heads up
+The real danger is not one trade, it is many. A trader who takes ten round trips a day pays this cost stack ten times. On a NIFTY lot that is roughly Rs 9,000 of costs in a single day, win or lose. Over-trading quietly bleeds an account even when most of the calls are right, because the costs are certain and the profits are not.
+There is no trick to escape this, only discipline. Trade fewer, better trades, and size your target so it comfortably clears the cost hurdle. Tools like OpenAlgo let you watch your fills and review an order book and trade book, so the costs of a session are something you can see and account for, not a nasty surprise at month end.
+## How futures profits are taxed
+Costs come out trade by trade. Tax arrives once a year, and it treats futures very differently from how it treats shares. This part is India-specific and it matters.
+Income from trading futures is **non-speculative business income**. That phrase has weight. Intraday buying and selling of equity shares is treated as _speculative_ business income, but futures and options traded on a recognised stock exchange are specifically carved out of the speculative category by the Income Tax Act (the proviso to Section 43(5)), so they count as non-speculative business income whatever way they settle. Because it is business income, you report it in **ITR-3** , the return form for business and professional income, and not as capital gains.
+The practical consequence is simple and slightly disappointing. Your futures profit is added to all your other income for the year, such as salary, interest or rent, and the total is taxed at your normal **slab rate**. There is no special lower rate for futures the way there is for some long-term capital gains, and the STT you paid along the way gives you no rebate against the tax.
+Note
+Speculative versus non-speculative is not about how risky the trade feels. It is a tax classification. Intraday equity is speculative, futures and options are non-speculative business income. The label decides which losses can offset which gains, which is where it really counts.
+## Setting off losses and the audit question
+Losses in a business are not wasted, and this is where the non-speculative label earns its keep. A non-speculative business loss can be **set off against most other heads of income in the same year** , with the important exception of salary. So a bad year in futures can reduce the tax on your other business or rental income that year.
+If the loss is larger than what you can absorb in the same year, the unabsorbed part can be **carried forward for eight years** and set off against future business profits. There is one firm condition: you must file your return on time. Miss the filing deadline and you forfeit the right to carry that loss forward, which can be an expensive piece of carelessness.
+Two more ideas you should at least recognise:
+  * **Turnover for the tax-audit test.** This turnover is not the contract value you traded. For futures and options it is computed roughly as the sum of your absolute profits and losses, adding the size of each gain and each loss regardless of sign. A chartered accountant may need to audit your accounts if this turnover crosses the prescribed threshold, or if you declare profits below the presumptive level the law expects. Whether an audit applies depends on your exact figures, so it is a question to settle with a professional rather than guess.
+  * **Advance tax.** Tax is not only paid at year end. If your total tax for the year is above a small threshold, it is payable in **instalments through the year** , on dates set by the rules. Skipping these instalments invites interest, so an active trader budgets for advance tax rather than facing a lump sum and a penalty in one go.
+
+
+I have deliberately not quoted exact slab percentages, thresholds or instalment dates, because these change from year to year in the budget. Learn the structure, which is stable: business income, ITR-3, slab rate, set-off, carry-forward, audit test, advance tax. Look up the current figures, or have your accountant supply them, each year.
+Heads up
+Tax rules change every year and depend on your full financial situation, your other income, your residency and the latest budget. Treat this chapter as a map of how the system works, not as filing advice. Before you file, consult a qualified chartered accountant who can apply the current law to your actual numbers.
+![How a futures result flows through the Indian tax system: profit reported as non-speculative business income in ITR-3, added to other income and taxed at the slab rate, while a loss is set off against other heads or carried forward for eight years if the return is filed on time.](https://openalgo.in/futures/images/diagram-futures-tax.png) DiagramHow a futures result flows through the Indian tax system: profit reported as non-speculative business income in ITR-3, added to other income and taxed at the slab rate, while a loss is set off against other heads or carried forward for eight years if the return is filed on time.
+The takeaway from both halves is the same kind of sobriety. Costs are small per trade but certain and repeated, so they reward patience and punish churn. Tax is the ordinary tax on a business you happen to run from a screen, not a special favour for traders. Trade fewer and better, keep clean records of every fill, file on time, and let a good chartered accountant handle the rest.
+On this page

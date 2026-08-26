@@ -1,0 +1,77 @@
+Chapters
+Module E · Leverage, Margin and Execution Risk - Chapter 24
+# The Broker's Risk System
+Your broker's risk system (RMS) can close your positions before you expect. Cash vs pledged collateral, the pledge haircut, margin shortfall, auto square-off timing, the cash-component rule and peak-margin penalties - the broker-side realities that catch beginners.
+Leverage
+What you'll learn
+  * ·What an RMS does
+  * ·Cash vs pledged collateral
+  * ·The pledge haircut
+  * ·Margin shortfall and square-off
+  * ·Auto square-off timing
+  * ·Peak-margin penalties
+
+
+Arjun wanted more buying power without adding cash, so he pledged his entire stock holding as margin and ran an intraday futures position almost wholly on that pledged collateral. The trade slipped against him in the afternoon. He had a mental stop and meant to act on it, but he lost track of the time. At around 3:25pm his broker's system closed the position for him, at a price worse than his stop, into a thin late-day market. A few weeks later a separate note appeared in his account: a small penalty for a margin shortfall caught at a random check on a different, busier day. Arjun never spoke to a human through any of this. A piece of software did all of it.
+That software is the **Risk Management System** , or **RMS**. Every broker runs one. It watches your margin every moment the market is open, and it acts on its own rules and its own clock, not yours. The previous chapter was about margin calls in general. This one is about the broker-side machinery that triggers them, the parts that quietly catch beginners: cash versus pledged collateral, the pledge haircut, margin shortfall, the auto square-off clock, and peak-margin penalties.
+## What an RMS actually does
+The RMS is the broker's automatic guard. Its job is to make sure that, at every instant, you have enough margin to back your open positions. It checks this continuously, compares it against exchange and broker rules, and if you fall short, it does not wait and it does not ask. It reduces or closes your positions for you, at the market price of that moment.
+It is not personal and it is not cruel. The broker is on the hook to the exchange for your positions, so the RMS protects the broker first. Understanding its rules is how you stay on the right side of it.
+## Cash versus collateral, and the cash-component rule
+You can fund margin in two ways. One is plain **cash** , money sitting in your trading account. The other is **collateral** : you pledge shares, mutual funds or bonds you already own, and the broker counts a portion of their value as margin. Pledging is genuinely useful. Idle holdings start doing double duty.
+But there is a catch that surprises almost every beginner. For futures and options, the exchange requires that a **minimum part of your margin be actual cash**. As of 2026, under current SEBI and exchange rules (check the latest, because these are revised), that cash component is roughly half. The rest can be collateral. Run a position entirely on pledged shares with no cash behind it and the RMS flags a cash shortfall, and a penalty can follow, even if your total margin looks fine on screen.
+The reason is simple. Daily losses are settled in cash, not in pledged shares. If your position loses money overnight, the broker needs real rupees to settle it. Pledged stock cannot pay that bill.
+F&O margin needs a minimum cash part Healthy: about half cash, half collateral cash pledged collateral minimum cash line (roughly half) Risky: all collateral, no cash 100% pledged collateral - no cash to settle losses cash short of the line - penalty risk Total margin can look full while the cash part is missing. The RMS checks the cash part separately.
+## The pledge haircut
+Pledging is not a rupee-for-rupee swap, and this is the second surprise. When you pledge stock, the broker does not credit its full market value as margin. It applies a **haircut** , a safety discount, because the stock itself can fall in price.
+Pledge Rs 1,00,000 of shares and you typically get only around Rs 80,000 to Rs 90,000 of usable margin (the exact haircut varies by stock and is revised, so check your broker's current list). Volatile or less liquid stocks get a bigger haircut. The gap is the broker's cushion against the pledged stock dropping before they can sell it. So your "Rs 1,00,000 of stock" is never Rs 1,00,000 of trading power.
+The pledge haircut: stock value is not margin value You pledge stock worth Rs 1,00,000 of shares You actually receive as usable margin about Rs 85,000 usable haircut ~Rs 15k The haircut is the broker's buffer against the pledged stock falling. It is never zero.
+## Margin shortfall: the RMS squares you off
+Put the pieces together and you can see how a shortfall builds. Your collateral value drops because the pledged shares fell. Or a mark-to-market loss eats your cash. Or you simply held a position larger than your real margin could support. Whatever the cause, the moment your margin sits below the requirement, you are in **margin shortfall** , and the RMS can act.
+When it acts, it sends a market order to close your position. Not a calm limit order at a price you like. A market order takes whatever price is available right then, and that is usually a bad one, because shortfalls tend to appear exactly when the market is moving hard against you. The RMS does not negotiate and does not wait for your stop-loss to trigger first. If its rule says close now, it closes now.
+## The auto square-off clock
+Intraday products (the high-leverage, same-day kind, often labelled MIS) carry an extra rule that has nothing to do with how your trade is going. They must be closed the same day, so the broker's RMS auto-squares them off in a window before the close, commonly around 3:20pm to 3:30pm (the exact time differs by broker and segment, so check yours). It does not matter that your view is right or that price is about to turn. When the clock hits the cutoff, the RMS closes the position at market.
+The intraday clock you do not control 9:15 open your planned stop if it even triggers in time RMS auto square-off ~3:20 - 3:30pm 3:30 close The red window fires on the clock, not on your stop. Exit before it, or it exits for you. An intraday position has a deadline built in. The RMS enforces it automatically.
+## Peak-margin penalties
+The last piece is timing of a different kind. As of 2026, under current SEBI rules (check the latest), the exchange takes several random snapshots of your margin through the day and checks whether you were adequately covered at each one. This is the **peak-margin** system. It does not only look at your margin at entry; it looks at random instants.
+So you can be short of margin for just a few minutes, mid-morning, never get a square-off, and still receive a penalty later because a snapshot happened to catch you short. Arjun's small penalty came from exactly this. The takeaway is uncomfortable but clear: being "mostly covered, most of the time" is not the standard. The standard is covered at every snapshot, all the time.
+Key idea
+The RMS is automatic and runs on the broker's clock, not yours. It can square you off the instant your margin falls short, it force-closes intraday positions near a cutoff time, and it (with the exchange) can penalise you for a shortfall caught at any random snapshot. Keep a cash buffer, know your broker's square-off time, and never run a position 100% on pledged collateral.
+Common mistake
+Beginners make three RMS mistakes at once. They **run entirely on pledged collateral** with no cash, then get hit with a cash-component shortfall the day a loss must be settled. They **ignore the auto square-off time** , assuming their own stop will act first, and get force-closed at a worse price. And they keep **no spare cash buffer** , so a random peak-margin snapshot catches them short. The better move: always keep real cash behind an F&O position, set an alarm a few minutes before your broker's square-off window, and hold a margin cushion so no snapshot ever finds you short.
+## A checklist to stay on the right side of the RMS
+The goal is never to surprise the RMS, and never to let it surprise you.
+  * I keep real cash backing any F&O position, at least the required cash component, not just pledged collateral.
+  * I know my broker's exact intraday auto square-off time and I exit before it myself.
+  * I never run a position 100% on collateral.
+  * I keep a spare margin cushion so a random peak-margin snapshot never finds me short.
+  * I remember pledged stock gives me less margin than its value, because of the haircut.
+  * I treat a market-order forced exit as a worst-case price, and size so I never need one.
+  * I check my broker's current haircut, cash-component and square-off rules, because they change.
+
+
+This is education, not personalised advice. Your exact buffers depend on your capital, your instruments and your broker.
+## Who meets the RMS most
+The RMS touches different users very differently.  
+| User type  | RMS exposure  | Why  |  
+| --- | --- | --- |  
+| Long-term investor (delivery)  | Almost none  | Pays full price, no leverage, nothing for the RMS to square off  |  
+| Active intraday trader  | High  | Uses MIS-style leverage, faces the auto square-off clock daily and peak-margin checks throughout  |  
+| Futures / F&O trader  | High  | Daily mark-to-market and the cash-component rule mean cash shortfalls and forced exits are a constant risk  |  
+| Option seller  | Highest  | Blocks large margin, must keep heavy cash, and a volatility spike can raise the requirement suddenly, drawing an immediate RMS square-off  |  
+The more leverage you use and the more you sell rather than buy, the more often you meet the RMS, and the more a thin cash buffer can hurt you.
+## When this fails
+Doing everything right reduces forced exits, it does not abolish them. An overnight gap can crash the pledged stock and your position at once, so a cash shortfall and a square-off both arrive before the market even reopens for you to act. In a violently fast market, the RMS market order can fill far below the level that triggered it, because there may be almost no buyers there. And rules drift: cash-component percentages, haircuts, square-off windows and peak-margin mechanics all get revised, so a buffer that was safe last year can be short this year.
+The deeper limit is that no buffer makes leverage gentle. A cushion buys you time and keeps the decision in your hands a little longer; it does not remove the underlying danger of holding a position larger than your cash. Right-size first, then keep the buffer. Please verify the current broker and SEBI rules before you rely on any number in this chapter, because they are period-specific and change without much fanfare.
+## Quick self-check
+**1.** What is an RMS and whose interests does it protect first?
+The Risk Management System is the broker's automatic guard that watches your margin every moment the market is open. It protects the broker first, because the broker is on the hook to the exchange for your positions, so it closes or reduces them the instant you fall short, on its own rules and clock.
+**2.** Why can you get a penalty even though your total margin on screen looks full?
+Because F&O margin must include a minimum cash component, roughly half as of 2026 under current rules. If you funded the position almost entirely with pledged collateral and not enough cash, the RMS flags a cash shortfall and a penalty can follow, even though the total looks covered.
+**3.** If you pledge Rs 1,00,000 of stock, how much usable margin do you get, and why less?
+Typically only around Rs 80,000 to Rs 90,000, because the broker applies a haircut, a safety discount, in case the pledged stock falls in price before they can sell it. The exact haircut varies by stock and is revised periodically.
+**4.** Why is the intraday auto square-off independent of your own stop-loss?
+Intraday products must be closed the same day, so the broker's RMS force-closes them in a window before the close, commonly around 3:20pm to 3:30pm. That fires on the clock regardless of where your stop sits or how the trade is going, so you should exit before the window yourself.
+**5.** What is the peak-margin rule, and why does being "mostly covered" not protect you?
+The exchange takes several random snapshots of your margin through the day and checks you were covered at each one. A shortfall at any single snapshot, even for a few minutes, can draw a penalty, so the standard is being covered at every instant, not just most of the time.
+On this page

@@ -1,0 +1,65 @@
+Chapters
+Module B · The Contract and Settlement - Chapter 07
+# Index vs Stock Options in India
+NIFTY options and RELIANCE options follow different rules. Learn the contract specs, the lot sizes, and the big one: index options settle in cash while stock options settle by physical delivery, which catches beginners out.
+Mechanics
+What you'll learn
+  * ·Index options (NIFTY, BANKNIFTY)
+  * ·Single-stock options (RELIANCE)
+  * ·Lot size and contract value
+  * ·Cash settlement for the index
+  * ·Physical delivery for stocks
+  * ·Why stock expiry surprises beginners
+
+
+On your screen, a NIFTY option and a RELIANCE option look like twins. Both have calls and puts, both have strikes, both have an expiry of 28 July 2026, both quote a premium per share. A beginner reasonably assumes they work the same way. They do not, and the difference hides until expiry day, when it can ambush you. One of these contracts, if you hold it to the end while it is in-the-money, settles quietly in cash. The other can drop 500 actual shares of a single company into your account, along with a bill for several lakh rupees you may not have. This chapter shows you exactly how index options and single-stock options differ in India, why that gap matters most at expiry, and the simple habit that keeps you out of trouble.
+## Two families of options
+Indian options come in two families. **Index options** are written on a market index such as NIFTY, BANKNIFTY, FINNIFTY or MIDCPNIFTY. An index is a calculated number, not a thing you can hold, so there are no shares behind it to deliver. **Single-stock options** , also called stock options, are written on an individual company such as RELIANCE, and behind each contract sit real, deliverable shares of that company.
+That one structural fact, shares behind the contract or no shares behind it, drives almost every practical difference between the two. Keep it in front of you as we go.
+## Contract specs and lot sizes
+Both families trade in fixed **lot sizes** , the bundle of units one contract represents. You cannot buy a single unit, you buy a lot. The lot size differs by instrument, and it is set by the exchange. Here are the real lots for the instruments in this course, with how each one settles at expiry.  
+| Underlying  | Family  | Lot size  | Settles at expiry as  |  
+| --- | --- | --- | --- |  
+| NIFTY  | Index  | 65  | Cash  |  
+| BANKNIFTY  | Index  | 30  | Cash  |  
+| FINNIFTY  | Index  | 60  | Cash  |  
+| MIDCPNIFTY  | Index  | 120  | Cash  |  
+| RELIANCE  | Single stock  | 500  | Physical delivery of shares  |  
+NSE options settle on a **Tuesday** , and 28 July 2026 is the monthly expiry both our examples share. Weekly contracts exist only where the exchange currently offers them, presently on the NIFTY weekly, while RELIANCE and the other stocks trade monthly. Notice the lot sizes already tell a story. NIFTY moves in a lot of 65, RELIANCE in a lot of 500, so the rupee value riding on one RELIANCE contract at expiry is large.
+## The big difference: cash versus delivery
+Here is the heart of the chapter, and the single most important thing a beginner must take from it.
+**Index options are cash-settled.** When a NIFTY option finishes in-the-money at expiry, nothing physical changes hands. The exchange simply works out how much the option is worth, its intrinsic value, and pays or charges that amount in cash. With NIFTY near a spot of 24,056 and the at-the-money strike at 24,050, the 28 July call is quoted around Rs 426 a share and the put around Rs 295 a share. Whatever a NIFTY option is worth at the close, you receive or pay that figure in rupees, multiplied by the lot of 65, and the position is gone. Clean, simple, no shares.
+**Single-stock options are physically settled.** When a RELIANCE option finishes in-the-money at expiry, it converts into an actual trade in the shares. An in-the-money 1320 call becomes an obligation to buy 500 RELIANCE shares at 1320. An in-the-money 1320 put becomes an obligation to sell 500 RELIANCE shares at 1320. Real shares, real delivery, real money. This is where the surprise lives.
+Key idea
+Index options pay out in cash. Single-stock options in India deliver actual shares. A NIFTY option that expires in-the-money settles as a rupee amount. A RELIANCE option that expires in-the-money settles as 500 real shares changing hands.
+Note
+Keep two things apart: the cash that settles your profit or loss, and the delivery of securities. An index option finishes purely in cash. A single-stock option carried to expiry in-the-money finishes by the **physical delivery of shares** , the actual stock moving between demat accounts. The generic NSE Clearing settlement-mechanism page describes the cash funds-settlement of value, which is a separate step from that share delivery, so do not read its cash wording as meaning a stock option avoids delivery. The authoritative confirmation that single-stock derivatives are physically settled is the NSE equity-derivatives contract specification and the NSE Clearing settlement schedule (its STT schedule lists them as physically settled stock derivatives). These rules are set by the exchange and the regulator and have changed before, so confirm the current treatment there before any expiry.
+## Why a stock option to expiry can surprise you
+Walk through it with the RELIANCE 1320 call. You bought it for about Rs 15,590, expecting a quick rise. RELIANCE drifts up to, say, 1,340 by 28 July and you forget about the position, or you assume it just pays you the difference like a NIFTY option would. It does not. Because the call finishes in-the-money, it is auto-exercised, and you are now obliged to buy 500 RELIANCE shares at 1320. The bill for that delivery is 500 times 1320, which is about Rs 6,60,000.
+Sit with that number. You staked Rs 15,590 on a directional view, and you have ended the day owing about Rs 6,60,000 for shares you never meant to own. The exchange does not care that you only had premium money in the account. A physically settled option that expires in-the-money creates a genuine delivery obligation, and if you cannot fund it the trade goes into a penalty and short-delivery process that can cost you dearly. The put side is just as jarring in reverse, an in-the-money 1320 put delivered means you must hand over 500 shares you may not even own.
+There is a tax sting layered on top. From 1 April 2026, an option that is exercised attracts securities transaction tax of 0.15 percent on the intrinsic, or settlement, value, which is far heavier than the tax on simply selling the option in the market. So letting a stock option run into physical settlement can cost you both a delivery obligation and a fatter tax bill than closing the position would have.
+Heads up
+A RELIANCE option held to expiry while in-the-money does not just pay you the difference. It turns into a delivery of 500 shares, worth several lakh rupees on one lot, plus a heavier exercise tax. Never assume a stock option settles in cash the way an index option does.
+## Square off in time
+The fix is simple and it is what almost every retail trader does. You **square off** before expiry, meaning you close the position by taking the opposite trade in the market, selling the call you bought, so that you collect or pay the premium difference in cash and walk away with no shares to deliver. You capture your profit or loss as cash and you never touch the physical settlement machinery at all.
+This is why experienced traders treat expiry day on a stock option with respect. They either close the position comfortably before the close, or they enter expiry only with a deliberate plan to take or give delivery, fully funded. Drifting into expiry by accident is the mistake. The index trader has more room for error here, because a cash-settled NIFTY option simply pays out and disappears, but even there it is cleaner to manage your own exit than to leave it to auto-settlement.
+Tip
+On a single-stock option, decide your exit before expiry week, not on expiry afternoon. Squaring off in the market converts your result to cash and removes any delivery obligation. Treat an unplanned drift into stock-option expiry as a real risk, not a minor detail.
+![A NIFTY option settling in cash at expiry set beside a RELIANCE option converting into physical delivery of 500 shares, the difference that surprises beginners on expiry day.](https://openalgo.in/options-basics/images/diagram-index-vs-stock-settlement.png) DiagramA NIFTY option settling in cash at expiry set beside a RELIANCE option converting into physical delivery of 500 shares, the difference that surprises beginners on expiry day.
+## A quick comparison to fix it in memory  
+| Question  | NIFTY (index)  | RELIANCE (single stock)  |  
+| --- | --- | --- |  
+| What is behind it  | A calculated index number  | Real company shares  |  
+| Lot size  | 65  | 500  |  
+| How it settles in-the-money  | Cash, the intrinsic value paid  | Delivery of 500 shares  |  
+| Expiry-day surprise risk  | Low, it just pays out  | High, a delivery obligation appears  |  
+| Value riding on one lot at delivery  | Settled as cash  | About Rs 6,60,000 of shares  |  
+| The safe habit  | Manage the exit  | Square off before expiry  |  
+## What to carry forward
+Index options and single-stock options share the same vocabulary but settle in two completely different ways. A NIFTY option is cash-settled, so finishing in-the-money simply pays a rupee amount and the position closes itself harmlessly. A RELIANCE option is physically settled, so finishing in-the-money turns into the delivery of 500 real shares, worth several lakh on a single lot, with a heavier exercise tax to match.
+Did you know
+In India, every index option cash-settles and every single-stock option physically settles. The lot sizes seal the point, 65 on NIFTY and 500 on RELIANCE, so the value delivered on one in-the-money stock lot at expiry runs to several lakh rupees.
+Note
+Settlement is not the only place single-stock options inherit the rules of the stock derivatives world. The same controls that govern stock futures also touch stock options: a stock can enter the **F &O ban** when its market-wide position limit is breached, so you can take no fresh positions in it; a **corporate action** such as a split or bonus will adjust the lot size and strike of your option; a **quantity freeze** caps how large a single order can be; and a **price band** can have your order rejected. The Futures Trading course works through each of these in its market-controls module, and they apply to stock options just as they do to stock futures.
+The practical lesson is short. Know which family your option belongs to before you trade it, and on any single-stock option make squaring off before expiry your default. Hold a stock option into expiry only when you genuinely intend to take or give delivery and have funded it in full. Do that, and the expiry-day ambush that catches so many beginners will never catch you.
+On this page

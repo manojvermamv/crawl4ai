@@ -1,0 +1,41 @@
+{
+  "chapters_changed": [],
+  "chapters_discovered": 407,
+  "chapters_new": [],
+  "chapters_removed": [],
+  "completed_at": "2026-08-26T07:21:36.957536+00:00",
+  "courses_discovered": 13,
+  "courses_new": [],
+  "courses_removed": [],
+  "errors": [],
+  "pages_changed": [],
+  "pages_fetched": 421,
+  "pages_new": [],
+  "pages_removed": [],
+  "pages_resumed": 0,
+  "pages_unchanged": 420,
+  "pages_written": 0,
+  "skipped": [],
+  "source_url": "https://openalgo.in/learn",
+  "started_at": "2026-08-26T07:17:23.431053+00:00",
+  "status": "success",
+  "verification": {
+    "all_markdown_files_exist": true,
+    "chapter_count_matches_manifest": true,
+    "consistent_file_naming": true,
+    "course_count_matches_manifest": true,
+    "files_with_local_link_rewrites": 0,
+    "spot_checks": [
+      {
+        "content_matches_live_ignoring_local_link_targets": true,
+        "title_present": true,
+        "url": "https://openalgo.in/stocks/why-invest"
+      },
+      {
+        "content_matches_live_ignoring_local_link_targets": true,
+        "title_present": true,
+        "url": "https://openalgo.in/technicals/what-is-technical-analysis"
+      }
+    ]
+  }
+}

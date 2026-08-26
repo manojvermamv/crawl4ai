@@ -1,0 +1,118 @@
+Chapters
+Module F · Advanced and Time - Chapter 19
+# Batman, Double Fly and Double Condor
+The big multi-leg structures. Learn the batman (two ratio wings), the double fly and the double condor, which place two range structures side by side for a wider or twin-peaked profit zone, with the metrics.
+Advanced
+What you'll learn
+  * ·Stacking structures
+  * ·The batman
+  * ·The double fly
+  * ·The double condor
+  * ·Twin profit peaks
+  * ·Reading the real payoffs
+
+
+Every structure so far has drawn a single shape, one tent, one shelf, or one valley. This chapter stacks two of them on the same chart. Picture taking a payoff you already know, copying it, and sliding the copy along the price axis until the diagram grows two separate humps instead of one. That is the secret behind the **batman** , the **double fly** , and the **double condor**. Each places two range structures side by side and bets that NIFTY settles inside one of two zones rather than on a single point. They look fearsome on a screen, yet every one is just two familiar pieces sharing a diagram.
+## The one-line idea
+All three answer the same question: what if you want a twin-peaked or a wider profit zone instead of a single pin? A **batman** bolts a put ratio wing below the money onto a call ratio wing above it, raising two tall peaks with a calm dip between them. A **double fly** places two butterflies side by side, and a **double condor** places two condors side by side, each giving twin profit zones with a loss valley in the middle. The batman pays you a net credit but hides a naked tail on each end. The double fly and double condor are fully defined-risk, with the worst case printed on the ticket before you enter.
+Key idea
+The batman, the double fly, and the double condor each place two range structures side by side, so the payoff grows two profit zones instead of one. The batman is a wide, high-probability credit trade with naked tails on both ends. The double fly and double condor are cheap, defined-risk bets that NIFTY makes a moderate move either way and lands inside one of the two zones.
+## The batman, leg by leg
+The batman takes its name from its outline, two peaks rising on either side of the money like the ears of a cowl, with a dip between them. You build it from two ratio wings on the 28 July 2026 expiry, a put wing below the money and a call wing above it.  
+| Leg  | Action  | Strike  | Type  |  
+| --- | --- | --- | --- |  
+| 1  | Buy 1  | 23,550  | Put  |  
+| 2  | Sell 2  | 23,300  | Put  |  
+| 3  | Buy 1  | 24,550  | Call  |  
+| 4  | Sell 2  | 24,800  | Call  |  
+|   |   | **Net credit**  | **about Rs 5,941**  |  
+The two sold pairs bring in more premium than the two bought legs cost, so the batman opens for a net credit of about Rs 5,941. The deep wing strikes at 23,300 and 24,800 sit beyond the central strikes of the snapshot, so we quote the structure and its net credit rather than each deep premium. Each wing is a ratio front spread, long one option and short two further out, and each builds its own peak.
+![The NIFTY batman: twin profit peaks reaching Rs 22,191 on either side of the money, a calm dip holding the Rs 5,941 credit around spot, and breakevens at 22,959 and 25,141 beyond which the naked ratio tails run away with no ceiling above and a very large floor below.](https://openalgo.in/options-strategies/images/strat-batman.png) ChartThe NIFTY batman: twin profit peaks reaching Rs 22,191 on either side of the money, a calm dip holding the Rs 5,941 credit around spot, and breakevens at 22,959 and 25,141 beyond which the naked ratio tails run away with no ceiling above and a very large floor below.
+## The three numbers, and where they come from
+The batman's headline numbers all fall straight out of its two wings, no memorising required.
+**Maximum profit arrives at either short strike, Rs 22,191.** Take the call side. If NIFTY finishes at 24,800, your long 24,550 call is worth 250 points while both short 24,800 calls expire worthless. Those 250 points are worth 250 times 65, which is Rs 16,250, and you still keep the Rs 5,941 credit. The peak is therefore 16,250 plus 5,941, equal to Rs 22,191. The put wing peaks at 23,300 for exactly the same Rs 22,191.
+**The breakevens come from the naked tails.** Above 24,800 you are net short one call, so the Rs 22,191 peak melts away at Rs 65 for every point higher. Dividing 22,191 by 65 gives about 341 points, so the upper breakeven is 24,800 plus 341, which is 25,141. The lower breakeven mirrors it, 23,300 minus 341, which is 22,959. Past either point the loss keeps running, with no ceiling above and a very large floor below.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | credit plus the 250-point wing capture  | Rs 5,941 plus Rs 16,250 equals Rs 22,191  |  
+| Upper breakeven  | short call strike plus peak in points  | 24,800 plus 341 equals 25,141  |  
+| Lower breakeven  | short put strike minus peak in points  | 23,300 minus 341 equals 22,959  |  
+| Max loss  | naked tails, no ceiling  | Unlimited  |  
+## Walking the outcomes at expiry
+Settle the batman at a spread of closing prices and the twin-peaked shape appears on its own. Each row is per lot of 65.  
+| NIFTY at expiry  | What the wings do  | Net profit or loss  |  
+| --- | --- | --- |  
+| 22,800  | put tail running  | minus Rs 10,309, and falling  |  
+| 22,959  | lower breakeven  | about Rs 0  |  
+| 23,300  | put wing peak  | plus Rs 22,191 (max profit)  |  
+| 24,056  | quiet middle  | plus Rs 5,941 (the credit)  |  
+| 24,800  | call wing peak  | plus Rs 22,191 (max profit)  |  
+| 25,141  | upper breakeven  | about Rs 0  |  
+| 25,400  | call tail running  | minus Rs 16,809, and rising  |  
+Read it from the middle out. Around spot the position simply keeps its Rs 5,941 credit, the dip between the two ears. Move toward either short strike and a wing lifts the payoff to its Rs 22,191 peak. Move past a breakeven and the naked tail takes over, the loss growing without limit above 25,141 and toward a very large figure below 22,959.
+## Your odds
+The batman's **probability of profit is about 78 percent** , the highest credit-trade odds in this part of the course. That number comes straight from the width between the breakevens. Using NIFTY's roughly 12.7 percent implied volatility and the 32 days left, the market puts about a 78 percent chance on the index finishing somewhere between 22,959 and 25,141 by expiry, and that entire band is profit. The faint sigma bands on the chart sit well inside the breakevens, which is exactly why the odds read so high.
+Tip
+Never read that 78 percent without reading the max loss beside it. The batman wins roughly four times out of five, but the one losing time is open-ended on the upside, where the naked calls have no ceiling, and very large on the downside, where the naked puts run toward the floor at zero. A high probability of profit attached to a loss that big is the most seductive and the most dangerous shape in options. Size it by the move that would hurt, not by how often it pays.
+## Margin, the heaviest in the course
+Because the batman carries two naked short pairs, the exchange blocks about **Rs 209,721 of margin** , the largest demand anywhere in this course, with no protective far wing to shrink it the way a defined spread would. Measured against that margin, the calm middle credit of Rs 5,941 is a yield of under 3 percent, and even a perfect pin at a short strike, the Rs 22,191 peak, is only about 11 percent. A wide win zone bought with naked options is never cheap to hold.
+## Time decay
+The batman is a net credit trade, so quiet days lean your way. As expiry nears the extra options you are short decay faster than the ones you are long, nudging the payoff toward a peak if NIFTY drifts toward a short strike. The blue T+0 line sits below the orange at-expiry line through the middle of the chart, the signature of a position that time slowly rewards, as long as price stays inside the wings.
+Heads up
+A batman has an effectively unlimited maximum loss. It is naked above, through the extra sold 24,800 calls, and naked below, through the extra sold 23,300 puts. Past the upper breakeven of 25,141 the loss climbs without any ceiling on a rally, so the upside is truly unlimited; past the lower breakeven of 22,959 it deepens toward a very large figure on a fall, bounded only by the index reaching zero. The 78 percent probability of profit describes the wide calm band, not the size of either tail. This is a professional's range trade, not a beginner's first credit, and it must never be carried naked through an event.
+## The double fly
+The double fly trades the batman's naked tails for fully defined risk. It sets two butterflies side by side, one centered below the money near 23,650 and one above it near 24,450, so instead of one tent over the current price you get two tents flanking it with a valley between.  
+| Component  | Profit zone  | Peak near  |  
+| --- | --- | --- |  
+| Lower butterfly  | 23,495 to 23,805  | 23,650  |  
+| Upper butterfly  | 24,295 to 24,605  | 24,450  |  
+The four **breakevens, 23,495, 23,805, 24,295 and 24,605** , mark the edges of the two tents. You profit inside the lower tent and inside the upper tent. You take your worst loss either in the central valley around spot or far outside both tents, where every long wing has already capped the damage. The **maximum profit is Rs 10,072** at a peak, and because every leg is balanced and the far wings are bought, the **maximum loss is only Rs 2,928** , the small net debit you pay to enter and the most this trade can ever cost you.  
+| Metric  | Value  |  
+| --- | --- |  
+| Max profit  | Rs 10,072  |  
+| Max loss  | Rs 2,928  |  
+| Breakevens  | 23,495 / 23,805 / 24,295 / 24,605  |  
+| Probability of profit  | about 24 percent  |  
+| Risk to reward  | 1 : 3.4  |  
+| Net cost at risk  | about Rs 2,928  |  
+| Margin required  | Rs 130,313  |  
+![The NIFTY double fly: two profit tents, one peaking near 23,650 and one near 24,450, separated by a loss valley around spot, with four breakevens at 23,495, 23,805, 24,295 and 24,605 and a defined worst loss of only Rs 2,928.](https://openalgo.in/options-strategies/images/strat-double-fly.png) ChartThe NIFTY double fly: two profit tents, one peaking near 23,650 and one near 24,450, separated by a loss valley around spot, with four breakevens at 23,495, 23,805, 24,295 and 24,605 and a defined worst loss of only Rs 2,928.
+Note
+A double fly profits when NIFTY makes a moderate move either way and lands inside one of the two tents, and it loses if price sits still in the central valley or runs far past the outer wings. It pairs a defined loss of Rs 2,928 against a reward of Rs 10,072, a clean 1 to 3.4 payoff, but the 24 percent probability of profit is honest about the catch: NIFTY has to land in a fairly narrow zone to win.
+## The double condor
+The double condor is the double fly with flat tops. It places two condors side by side, one just below the money and one just above, so each profit zone is a small plateau rather than a sharp peak. The trade-off for that wider sweet spot is a smaller reward.  
+| Component  | Profit zone  | Center near  |  
+| --- | --- | --- |  
+| Lower condor  | 23,807 to 23,991  | 23,899  |  
+| Upper condor  | 24,107 to 24,291  | 24,199  |  
+The four **breakevens, 23,807, 23,991, 24,107 and 24,291** , sit closer to the money than the double fly's, so this structure wants a smaller move. You profit on the lower table from 23,807 to 23,991 and on the upper table from 24,107 to 24,291, and you lose in the narrow central valley around 24,050 or beyond the outer edges. The **maximum profit is Rs 2,675** and the **maximum loss is only Rs 575** , the cheapest worst case of the three and equal to the small debit you pay.  
+| Metric  | Value  |  
+| --- | --- |  
+| Max profit  | Rs 2,675  |  
+| Max loss  | Rs 575  |  
+| Breakevens  | 23,807 / 23,991 / 24,107 / 24,291  |  
+| Probability of profit  | about 16 percent  |  
+| Risk to reward  | 1 : 4.6  |  
+| Net debit  | Rs 575  |  
+| Margin required  | Rs 127,183  |  
+![The NIFTY double condor: two flat-topped profit tables, one near 23,900 and one near 24,200, separated by a loss valley around spot, with four breakevens and a tiny defined worst loss of just Rs 575.](https://openalgo.in/options-strategies/images/strat-double-condor.png) ChartThe NIFTY double condor: two flat-topped profit tables, one near 23,900 and one near 24,200, separated by a loss valley around spot, with four breakevens and a tiny defined worst loss of just Rs 575.
+## How the three compare  
+| Strategy  | Max profit  | Max loss  | Probability of profit  | Risk  |  
+| --- | --- | --- | --- | --- |  
+| Batman  | Rs 22,191  | Unlimited  | 78 percent  | naked on both sides  |  
+| Double fly  | Rs 10,072  | Rs 2,928  | 24 percent  | defined  |  
+| Double condor  | Rs 2,675  | Rs 575  | 16 percent  | defined  |  
+The three split into two camps. The **batman** is a high-probability credit trade that wins across a huge range but hides naked tails on both sides and the heaviest margin in the course. The **double fly** and **double condor** are fully defined-risk bets on a moderate move either way, with worst cases of just Rs 2,928 and Rs 575, but low odds, because price must land in a fairly tight zone to pay. Notice how reward and odds trade off: the batman buys its 78 percent win rate by selling naked tails, while the double condor's 1 to 4.6 payoff comes at just 16 percent odds. There is no free lunch, only naked risk or a smaller, less likely reward.
+Tip
+For a beginner, the double fly and the double condor are the safe members of this family. Their worst case is printed on the ticket, a few thousand rupees or less, and they teach you how stacked structures behave without exposing you to a runaway loss. Leave the batman until you are fully comfortable defending naked options on both sides at once, and never carry its twin tails through an event unhedged.
+You can build all three in sandbox trading (analyzer mode in OpenAlgo) and drag the modelled price into a tent and out into the valley to feel where each structure wins and loses, and on the batman, past a wing to watch the naked tail take over. Next we move from these expiry-day structures to trades that work across time itself, the calendar and diagonal spreads.
+## Key takeaways
+  * The batman, double fly, and double condor all place **two range structures side by side** , growing two profit zones instead of one.
+  * The **batman** opens for a credit of Rs 5,941, peaks at Rs 22,191 over either short strike, and wins across a wide band at **78 percent odds** , but its loss is **unlimited** through naked tails on both sides.
+  * Its breakevens, **22,959 and 25,141** , come straight from the short strikes plus or minus the peak in points, and past them the loss runs away.
+  * The **double fly** is defined-risk: max profit Rs 10,072, max loss only Rs 2,928, four breakevens, a 1 to 3.4 payoff at 24 percent odds.
+  * The **double condor** is the cheapest and flattest: max profit Rs 2,675, max loss just Rs 575, the widest twin tables but the lowest odds at 16 percent.
+  * Beginners should stay with the **defined-risk pair** and treat the batman as a professional's tool, sized always by the move that would hurt, never by the credit collected.
+
+
+On this page

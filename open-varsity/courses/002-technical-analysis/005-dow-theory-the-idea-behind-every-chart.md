@@ -1,0 +1,79 @@
+Chapters
+Module B · Market Structure & Levels - Chapter 05
+# Dow Theory: The Idea Behind Every Chart
+Long before computers, Charles Dow laid out the rules every chartist still uses, trends, phases and confirmation. Meet the 120-year-old framework that quietly underpins all of modern technical analysis.
+Trend
+What you'll learn
+  * ·The six tenets of Dow Theory
+  * ·Primary, secondary and minor trends
+  * ·Accumulation, markup, distribution
+  * ·Higher highs and higher lows
+  * ·Why volume must confirm
+  * ·How Dow Theory shows up today
+
+
+Long before computers, scanners, or a single line of code, a newspaper editor in New York was quietly writing down what the stock market did each day. His name was Charles Dow. He never wrote a how-to book, and he died in 1902 with his ideas scattered across short articles in the paper he had helped start.
+After he was gone, his followers gathered those articles together and gave the collection a name, Dow Theory. More than a hundred years later, almost everything in this course is really a footnote to what Dow noticed. The idea of a trend, the general direction in which price is heading, the idea that price already reflects what everyone knows, the idea that you wait for proof before you act, Dow said all of it first.
+That is why we begin here. Think of Dow Theory as the grammar of charts. Grammar is the set of rules that lets words form sentences; Dow Theory is the set of ideas that lets price tell a story. Once you can read a chart in Dow's terms, every fancy tool later in the course becomes just a quicker way to measure something you can already see with your own eyes. Learn the grammar first, and the rest comes easily.
+## The six tenets
+Dow Theory is usually boiled down to six core ideas, called tenets, which simply means basic beliefs. None of them is a "buy now" button. Together they are a calm, honest way of describing what a market is doing.
+  1. **The averages discount everything.** "Discount" here means already priced in. Every known hope, fear, profit forecast, and rumour is already baked into today's price. You are not smarter than the whole crowd of buyers and sellers; you are trying to read what they have already decided.
+  2. **The market has three trends.** A big one that lasts months to years, a medium one that lasts weeks, and small daily noise that lasts days. Picture the sea: the tide, the waves riding on the tide, and the little chop on top of the waves.
+  3. **Big trends move through three phases** , accumulation, public participation, and distribution. We will walk through these below.
+  4. **The averages must confirm each other.** Dow watched two groups of stocks, the factories (the Industrials) and the railways that shipped their goods (the Railroads). If factories were busy, the railways carrying their products should be busy too. When one group pushed to a new high and the other refused to follow, he distrusted the move. The modern version is checking whether a broad market index and its leading sectors agree with each other.
+  5. **Volume must confirm the trend.** Volume is the number of shares traded, in other words how many people took part. Price tells you what happened; volume tells you how convincingly. A rally on shrinking volume is suspect.
+  6. **A trend stays in force until it clearly reverses.** You do not guess the turn in advance. You wait until the chart itself breaks its pattern.
+
+
+Key idea
+The whole of Dow Theory shrinks to one stubborn idea: assume the current trend keeps going until the chart proves otherwise. Everything else, the phases, the confirmation, the volume, is just how you decide the chart has finally proven otherwise.
+## Three trends, one inside another
+The single most useful gift Dow gave us is the idea that several trends run at the same time, and that most confusion comes from mixing them up.
+  * The **primary trend** is the tide. It runs for months or years and is the one that actually builds or destroys real wealth. A long-term position trader cares mostly about this.
+  * The **secondary trend** is the wave that moves against the tide, a pullback in a rising market or a bounce in a falling one. (A pullback is a temporary move in the opposite direction.) These last weeks and often give back a third to two-thirds of the previous big move. They scare people into thinking the tide has turned. Usually it has not.
+  * The **minor trend** is the daily chop, the ripples on the waves. Dow treated it as mostly noise, easily pushed around. A short-term swing trader uses it for timing; a long-term investor ignores it.
+
+
+The practical lesson is to always know which trend you are reacting to. A drop of 6 percent is a disaster if it is the start of a new primary downtrend, and a gift if it is an ordinary secondary pullback inside a healthy uptrend. The chart, not your stomach, is what tells you which one it is.
+## Higher highs and higher lows
+Dow did not define a trend by a feeling. He defined it by structure, the simple pattern of peaks and valleys.
+  * An **uptrend** is a staircase of higher highs and higher lows. Each rise climbs above the last peak; each dip stops above the last valley.
+  * A **downtrend** is the opposite, lower highs and lower lows. Each bounce dies below the last peak; each fall slips under the last valley.
+  * A **sideways** market makes roughly equal highs and lows, no staircase, just a flat corridor.
+
+
+An uptrend stays healthy as long as that staircase keeps climbing. The first real crack is not one scary red day. It is the day a pullback drops below the previous higher low. That is the moment that says "the staircase may be turning," and it matters far more than any indicator flashing a colour on your screen.
+A rough but useful shortcut for the same big-picture direction is a 50-day moving average, a line that plots the average closing price of the last 50 days. When that line is rising and price stays above it, the staircase is still climbing.
+Tip
+The simplest takeaway of this whole chapter: you can read a trend with nothing but your eyes. Mark each peak and each valley, then say the pattern out loud, "higher high, higher low, higher high." The moment that sentence breaks, your trend is on notice. No software, no maths, no indicator required.
+## The four phases of a big trend
+Dow described a rising market in three phases. Pairing it with the falling market that follows gives the full cycle traders still draw today: accumulation, then markup, then distribution, then markdown.
+![The market cycle Dow described: quiet accumulation by informed money, a markup phase as the public piles in, distribution at the top, then markdown, each phase carrying a different volume signature.](https://openalgo.in/technicals/images/ch05-dow-phases.png) DiagramThe market cycle Dow described: quiet accumulation by informed money, a markup phase as the public piles in, distribution at the top, then markdown, each phase carrying a different volume signature.
+  * **Accumulation.** The patient, well-informed money buys quietly while the news is still gloomy and everyone else is worn out. Price drifts sideways in a base, and volume is dull. Nobody is excited, which is exactly the point.
+  * **Markup.** The trend becomes obvious. Higher highs and higher lows stack up, volume grows on the up days, and trend followers and the financial press climb aboard. This is the longest, most profitable phase and the easiest to actually trade.
+  * **Distribution.** The same informed money now sells into the excitement. Price stops making clean new highs, churns sideways on heavy volume, and the headlines have never been more cheerful. It is accumulation in reverse, with the crowd now on the wrong side.
+  * **Markdown.** Sellers win. Lower highs and lower lows take over. The people who bought at the top hold on, hoping to get back to even, and their eventual selling feeds the next leg down.
+
+
+You will not label these phases with confidence while they are happening; they are clearest looking back. But the framework keeps you honest about roughly where in the cycle a market probably sits, which is more than most chart-chasers ever stop to ask.
+## Why volume must confirm
+Volume is the lie-detector of Dow Theory. In a healthy uptrend, volume should grow when price moves with the big trend and shrink on the small pullbacks against it. When that relationship flips, when rallies come on thin volume and declines come on heavy volume, the trend is running on fumes even if price is still ticking up.
+Heads up
+Volume confirmation is a warning light, not a trigger. Plenty of trends climb on unremarkable volume and keep going; plenty of volume spikes lead nowhere. Treat a volume warning as a reason to tighten your risk and pay closer attention, never as a guaranteed reversal.
+## How Dow Theory shows up today
+Strip away the old railway averages and Dow Theory comes down to this: respect the big trend, ask for confirmation, and do not fight the structure. Every modern tool is just a machine for doing that.
+One common modern tool is a moving-average trend filter, a rule that says only hold a stock while it trades above its 200-day average and its 50-day average sits above its 200-day average. That is Dow's "trade with the big trend and assume it lasts" idea turned into a rule. And here the course's honesty rule bites hard. When we tested exactly that filter across 48 Nifty 50 stocks over 16 years, it beat simple buy-and-hold (just buying and never selling) in only 4 of those 48 cases, about 8 percent. Its median return was about 107 percent, against roughly 744 percent for just holding. What it did deliver was protection: a median worst loss from peak to trough, called a drawdown, of about 47 percent versus 56 percent for holding, while sitting safely in cash and out of the market roughly 45 percent of the time.
+Did you know
+This 120-year-old idea works exactly as advertised, and exactly as limited. Trading with the big trend cut the worst drawdown and kept you out during the ugliest stretches, but it badly lagged simple buy-and-hold on raw return. Dow Theory is a framework for managing risk inside trends, not a machine for beating the market.
+That is the right way to carry Dow forward. He never promised you bigger profits. He gave you a vocabulary for knowing which way the tide is running and when the structure says it has turned. Use it to control risk and to stop mistaking a wave for the tide. The indicators later in the course are simply faster, more precise ways of asking the very same questions Dow once asked with a pencil and a newspaper.
+## Quick recap
+  * **Six tenets:** the averages price in everything; three trends run at once; big trends move in three phases; the averages confirm each other; volume confirms; a trend holds until it clearly reverses.
+  * **Three nested trends:** primary (the tide, months to years), secondary (the wave against it, weeks), minor (daily noise). Always know which one you are reacting to.
+  * A trend is structure: higher highs and higher lows for up, lower highs and lower lows for down. The trend changes when a pullback breaks the prior swing low (or high).
+  * The cycle runs accumulation, markup, distribution, markdown, each with its own volume signature; you label phases best in hindsight.
+  * Volume confirms: it should grow with the big trend and fade on counter-moves. Treat a divergence as a warning, not a trigger.
+  * Tested as a 50/200 trend filter, Dow's logic beat buy-and-hold only about 8 percent of the time but cut drawdowns, a risk-management framework, not a profit machine.
+
+
+Next, we take Dow's abstract idea of a "trend" and make it concrete: how to actually draw a trendline, decide when it is real, and tell an ordinary pullback from a genuine change of trend.
+On this page

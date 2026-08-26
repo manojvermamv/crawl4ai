@@ -1,0 +1,57 @@
+Chapters
+Module D · Chart Patterns - Chapter 15
+# Gaps: When Price Jumps the Queue
+Sometimes a stock opens far from yesterday's close, leaving a gap. Learn the four kinds, common, breakaway, runaway and exhaustion, and what each says, using real NSE gap examples.
+Patterns
+What you'll learn
+  * ·Why gaps form (news, results)
+  * ·Common vs breakaway gaps
+  * ·Runaway and exhaustion gaps
+  * ·Do gaps get filled?
+  * ·Gaps with volume
+  * ·Trading around a gap safely
+
+
+A stock closes at 1,200 on Tuesday and opens at 1,290 on Wednesday. The chart shows it plainly: a visible blank space, a gap, where no trading happened at all. Price did not walk from one level to the next; it jumped the queue. Something happened overnight, while the market was shut, that everyone agreed mattered. A results announcement, a government order, a fall in global markets, a takeover rumour. By the time the opening bell rang, the new information was already baked into the price, and the only way for the market to show it was to open somewhere else entirely.
+Gaps are among the most misunderstood things on a chart, weighed down by one stubborn piece of folklore, "all gaps get filled", that the real data flatly contradicts. To "fill" a gap just means price later trades back across that blank space, closing it in. Some gaps do fill quickly and mean almost nothing. Others mark the explosive start of a move that never looks back. The whole skill is telling those apart, and the honest answer is that the _size_ of the gap and the _situation_ it opens in tell you far more than any blanket rule. Let us take them in order.
+## Why gaps form
+A gap is simply a session opening away from the previous close, leaving a band of prices that never traded. They form because markets are closed for far more hours than they are open, and information does not wait politely for the bell. Most Indian gaps you will care about come from scheduled, high-impact events: quarterly **results** , management guidance about the future, dividend or bonus news, an order win or loss, a credit-rating change, or an overnight move in global markets and commodities that repositions the whole index at the open. The bigger and more surprising the news, the bigger the gap.
+Key idea
+A gap is the market repricing in one step instead of many small ones. The questions to ask are always the same: what news caused it, how big is the jump, where in the trend did it happen, and did volume confirm it? Those four answers, not a rule of thumb, tell you which kind of gap you are looking at.
+## The four kinds of gap
+Gaps are traditionally sorted into four types by _where_ they appear and _what they do next_. The labels are descriptive, not predictive. You often only know for certain which one you had with the benefit of hindsight, but they are a genuinely useful way to think about what a gap means.
+![The four classic gap types by where they appear in a move: a common gap inside a range, a breakaway gap launching a new trend, a runaway \(measuring\) gap mid-trend, and an exhaustion gap near the end before the move stalls.](https://openalgo.in/technicals/images/ch15-gap-types.png) DiagramThe four classic gap types by where they appear in a move: a common gap inside a range, a breakaway gap launching a new trend, a runaway (measuring) gap mid-trend, and an exhaustion gap near the end before the move stalls.
+  * **Common gaps** happen inside a range or a quiet drift, on ordinary news or none at all. They are small, carry little meaning, and tend to fill quickly as price wanders back across them. The bulk of everyday gaps are these.
+  * **Breakaway gaps** launch a _new_ move. Price gaps out of a consolidation, a base or a chart pattern, often on heavy volume and real news. These are the gaps that matter most, because they frequently _do not_ fill: the gap itself is the start of a trend, and filling it would undo the breakout.
+  * **Runaway gaps** , also called _measuring_ gaps, appear in the _middle_ of an established trend, as a fresh wave of buyers or sellers piles in and accelerates a move already under way. They often sit roughly halfway through the total move, which is where the "measuring" nickname comes from.
+  * **Exhaustion gaps** come near the _end_ of an extended move, a last, frantic leap as the final latecomers chase. They look powerful but tend to stall and reverse soon after, and they usually _do_ fill. An exhaustion gap and a breakaway gap can look identical on the day; what separates them is the age of the trend and what price does in the sessions that follow.
+
+
+Occasionally these combine into a striking shape called an **island reversal**. Price gaps _up_ on exhaustion, trades sideways for a session or a few at the new high, then gaps _back down_ , leaving a small cluster of bars stranded above the rest of the chart like an island, with empty gaps on both sides. It is a vivid sign that the late buyers who chased the first gap are now trapped and selling. The mirror version at a bottom marks a sharp turn up. Islands are uncommon, but when one forms after a long trend it is one of the more reliable warnings that the move has flipped.
+## Do gaps get filled?
+Here is where folklore meets evidence. "Gaps always fill" is comforting because it suggests an easy trade: sell the gap up, buy the gap down, and wait for price to come back like a magnet. The data says be careful. Measured across the Nifty 50, gaps fill _often but not always_ , and, crucially, **the bigger the gap, the less likely it is to fill**.
+![Gap-fill rates on Nifty 50 daily data: gaps larger than 2% filled roughly 78% to 79% of the time within 20 sessions, but gaps larger than 5% filled only about 71% to 73%. Bigger gaps run; the ](https://openalgo.in/technicals/images/ch15-gap-fill-rates.png) Data vizGap-fill rates on Nifty 50 daily data: gaps larger than 2% filled roughly 78% to 79% of the time within 20 sessions, but gaps larger than 5% filled only about 71% to 73%. Bigger gaps run; the "all gaps fill" rule is a myth.
+Did you know
+On real Nifty 50 daily data, **gaps over 2% filled within 20 sessions about 78% to 79% of the time** , high, but not the "always" of the myth. And gaps over **5% filled only about 71% to 73%** of the time. That is the opposite of what folklore suggests: the _largest_ gaps, the dramatic ones you most want to bet against, are the _least_ likely to come back. Big gaps tend to be breakaway gaps, and breakaway gaps run.
+The lesson is not "gaps never fill", because most do, eventually. It is that betting on a gap filling is a probability bet that gets _worse_ exactly as the gap gets more exciting. A small gap inside a range is a reasonable fill candidate. A 6% gap out of a long base, on huge volume and a fresh earnings beat, is the _last_ thing you want to sell short on the assumption that it must come back.
+## Gaps with volume
+Volume, the number of shares traded, is the single best tell for separating a meaningful gap from a throwaway one. A gap on **heavy volume** says real money repositioned on the news. It has conviction behind it and is more likely to hold and extend, the breakaway and runaway cases. A gap on **light volume** is thinner, more likely a common gap, and more likely to drift back and fill. The same logic flags exhaustion: when a gap comes after a long trend on a climactic volume spike but then fails to make further progress, the market is showing you a buying or selling _climax_ , the last of the demand or supply being spent.
+Tip
+The simplest way to read a gap: look at two numbers together, how big it is and how much volume came with it. A large gap on big volume out of a base is a breakaway to respect, not to fade. A small gap on quiet volume inside a range is the kind that usually fills. The size tells you the conviction; the volume confirms it.
+## Trading around a gap safely
+Gaps are dangerous precisely because they are exciting. They pull traders into chasing or fading on impulse, at the worst possible moment of the day. A few honest guidelines keep you out of the obvious traps.
+First, **do not chase the open**. The opening minutes after a big gap are the most volatile and least informative of the whole session; price is still discovering where the new fair value sits. Letting the first range form before acting costs you nothing and saves you from the immediate snap-back.
+Second, **respect the gap level itself**. The previous close, and the open of the gap, become meaningful support or resistance, much like the role-reversal levels from earlier in the course, where a broken ceiling becomes a new floor. A gap up that holds above its prior close is showing strength; one that slips back below it is failing, and that failure is itself information.
+Heads up
+The riskiest trade on a gap day is fading a large gap on the assumption it "must fill". You are betting against the news, against the volume, and against the data. Remember that gaps over 5% filled only about 71% to 73% of the time, so you are on the wrong side of the base rate on the very gaps most likely to keep running. If you trade a gap at all, trade in the direction the volume confirms, and define your stop _before_ you enter.
+Third, **size down**. Gaps mean volatility, how much price jumps around, and more volatility means a wider sensible stop, which means a smaller position to keep your risk the same. The arithmetic of risk does not change just because the chart looks thrilling. If anything, a gap day is when discipline matters most.
+## Quick recap
+  * A gap is the market repricing in one jump on overnight news (results, ratings, global moves), a band of prices that never traded.
+  * Four kinds: **common** (noise, fills fast), **breakaway** (starts a trend, often does not fill), **runaway or measuring** (mid-trend acceleration), and **exhaustion** (end of a move, usually fills then reverses).
+  * "All gaps fill" is a myth: Nifty 50 gaps over 2% filled about 78% to 79% within 20 sessions, but gaps over 5% filled only about 71% to 73%, because bigger gaps run.
+  * Volume separates a meaningful gap from a throwaway one; heavy volume means conviction, light volume means a likely fill.
+  * Trade gaps with care: do not chase the open, respect the gap level, never fade a big gap just because folklore says it must fill, and size down for the volatility.
+
+
+Next, we leave chart patterns behind and turn to the maths laid on top of price, starting with moving averages, the trend smoothed into a single line, and the golden and death crosses, measured against their real base rates.
+On this page

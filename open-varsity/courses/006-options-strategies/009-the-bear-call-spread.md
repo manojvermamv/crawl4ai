@@ -1,0 +1,73 @@
+Chapters
+Module C · Bearish Strategies - Chapter 09
+# The Bear Call Spread
+A bearish credit trade. Learn how selling a call and buying a higher one collects premium with defined risk, profiting if NIFTY stays below the short strike, with the metrics.
+Bearish
+What you'll learn
+  * ·A bearish, premium-collecting view
+  * ·Sell a call, buy a higher call
+  * ·The net credit
+  * ·Defined maximum loss
+  * ·Profit if price stays down
+  * ·Reading the real payoff
+
+
+The last chapter left you holding a problem. The short call is a tempting bearish trade, a 69 percent chance of profit and a fat credit, but it carries an unlimited loss and demands a Rs 177,541 margin block. You wanted to be bearish without betting the house. The **bear call spread** is the answer. It keeps the sold call that pays you when NIFTY stays calm or falls, and it adds a second, cheaper call bought a little higher up that caps the disaster at a known number. You give back a slice of the credit in exchange for a hard ceiling on your loss. This is the bearish credit-spread cousin of the bull put spread you met earlier: same defined-risk, credit-collecting shape, simply built from calls and tilted to profit when the market fails to rise. For a beginner who wants to collect premium on a bearish view, this is the trade the naked short should have been all along.
+## The one-line idea
+A **bear call spread** is two call options on the same expiry. You **sell a lower-strike call** to collect a fat premium, the leg that pays you if NIFTY stays at or below the strike, and you **buy a higher-strike call** as cheap insurance against a real rally. You keep the difference as a net credit, and that credit is the most you can make. Because the bought call caps how far the sold call can hurt you, the most you can lose is fixed and known before you ever click the button.
+You use it when your view is **moderately bearish to neutral** , meaning you think NIFTY will fall, stay flat, or at worst rise only a little. You do not need a crash. You only need NIFTY to avoid climbing hard.
+Key idea
+A bear call spread sells a lower call and buys a higher call for a net credit. You profit if NIFTY stays at or below your lower strike, you lose only if it rises past your higher strike, and both the profit and the loss are capped. It is a bet that the market will not rally, not a bet that it will fall.
+## The real trade, rupee by rupee
+Here is the exact trade on real NIFTY prices, captured on 26 June 2026 with the index at 24,056 and the 28 July 2026 expiry about 32 days away. We sell the at-the-money 24,050 call and buy the 24,150 call one strike above.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Sell call  | 24,050  | 425.8 received  | plus Rs 27,677 in  |  
+| 2  | Buy call  | 24,150  | 370.1 paid  | Rs 24,057 out  |  
+|   |   |   | **Net credit**  | **plus Rs 3,624 in**  |  
+The premium you receive for the 24,050 call is larger than the premium you pay for the 24,150 call, because the lower strike is worth more. That gap is your **net credit of about Rs 3,624** , and it lands in your account the moment you open the trade. This is why the bear call spread is called a credit spread.
+![The NIFTY bear call spread: a flat profit ceiling of Rs 3,624 below 24,050, a breakeven at 24,106, and a capped loss of Rs 2,876 above 24,150, with the blue dashed T+0 line sitting below the orange expiry line because the sold time value has yet to decay.](https://openalgo.in/options-strategies/images/strat-bear-call-spread.png) ChartThe NIFTY bear call spread: a flat profit ceiling of Rs 3,624 below 24,050, a breakeven at 24,106, and a capped loss of Rs 2,876 above 24,150, with the blue dashed T+0 line sitting below the orange expiry line because the sold time value has yet to decay.
+## The three numbers, and where they come from
+Each number falls straight out of the trade above, no memorising required.
+**Maximum profit is the net credit, Rs 3,624.** If NIFTY finishes at or below the 24,050 strike, both calls expire worthless, nobody exercises a call when the index is below the strike, you owe nothing, and you keep the full credit.
+**Maximum loss is the spread minus the credit, Rs 2,876.** The spread is the gap between the two strikes, 100 points, worth 100 times 65, which is Rs 6,500. If NIFTY rallies above 24,150, both calls are in the money and the full 100-point gap is locked against you. You lose that Rs 6,500, but you already pocketed Rs 3,624, so your real loss is 6,500 minus 3,624, which is **Rs 2,876**. The bought call is what stops the loss growing past this.
+**Breakeven is the lower strike plus the credit per share, 24,106.** You collected about 56 points of credit a share. NIFTY can drift 56 points above the 24,050 strike, to **24,106** , before the loss on your short call eats the whole credit.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | the net credit  | Rs 3,624  |  
+| Max loss  | spread minus net credit  | Rs 6,500 minus Rs 3,624 equals Rs 2,876  |  
+| Breakeven  | lower strike plus credit per share  | 24,050 plus 56 equals 24,106  |  
+## Walking the outcomes at expiry
+Settle the spread at five closing prices and the shape appears on its own. Each call is worth whatever NIFTY finishes above its strike, and what you sold is owed by you.  
+| NIFTY at expiry  | 24,050 call you sold  | 24,150 call you bought  | Net profit or loss  |  
+| --- | --- | --- | --- |  
+| 23,800  | worth 0  | worth 0  | plus Rs 3,624 (max profit)  |  
+| 24,050  | worth 0  | worth 0  | plus Rs 3,624 (max profit)  |  
+| 24,106  | 56 owed  | worth 0  | about Rs 0 (breakeven)  |  
+| 24,150  | 100 owed  | worth 0  | minus Rs 2,876 (max loss)  |  
+| 24,400  | 350 owed  | worth 250  | minus Rs 2,876 (max loss)  |  
+Read it down the page. Anywhere from 24,050 downward you collect the full Rs 3,624, and notice it works even if NIFTY merely sits still, not only if it falls. Anywhere from 24,150 upward you lose the full Rs 2,876. Between the two strikes the result slides from one shelf to the other, crossing zero at 24,106. Look at the bottom row: at 24,400 the sold call owes 350 while the bought call returns 250, leaving a net 100 points, the full width, which is exactly why the loss never grows past Rs 2,876 no matter how high NIFTY runs.
+## Your odds
+Knowing the most you can win and lose is only half the story. The question that decides whether a trade is smart is how likely each outcome is. For this spread the **probability of profit is about 53 percent** , a touch better than a coin flip. That number comes from the option market itself: using the volatility priced into NIFTY, about 12.7 percent, and the 32 days left, the market implies a 53 percent chance NIFTY finishes below the 24,106 breakeven by expiry. Look at the chart again. The faint sigma bands show the move the market expects, and the breakeven at 24,106 sits just above the spot, comfortably inside the inner band. NIFTY does not need to fall. It only needs to avoid a real rally.
+Tip
+Always read the maximum loss next to the probability of profit, never alone. This spread risks Rs 2,876 to make Rs 3,624, so here the capped reward is actually slightly larger than the capped risk, a reward to risk of 1 to 1.26, and the odds lean your way at 53 percent. That combination, a favourable payout and better than even odds with time on your side, is what makes a credit spread worth placing.
+## Margin
+Because you are a net seller, the exchange blocks margin as security, here about **Rs 34,789** , made of a SPAN component plus an exposure buffer. The bought 24,150 call is what keeps this number small. The naked short call from the last chapter tied up Rs 177,541; this spread, with the same bearish stance, blocks roughly a fifth of that, because the protective wing defines the worst case for the exchange. That single bought leg does double duty: it caps your loss at Rs 2,876 and it slashes the capital the trade needs.
+That margin lets you judge the trade honestly through return on margin. You stand to make Rs 3,624 against Rs 34,789 blocked for about a month, which is roughly **10 percent on the capital at risk** if the trade works. That yield, not the raw credit, is the number a serious trader compares across ideas.
+## Time decay
+Look once more at the chart, at the blue dashed T+0 line sitting below the solid orange at-expiry line on the profit side. That gap is time value, and for a net seller it is a gift. Every calm day a little of the premium in the call you are short melts away, and the blue line settles down toward the orange one. You collected the credit up front, and time quietly converts it into realised profit as long as NIFTY behaves. A long option buyer fights this decay every day. As a credit-spread seller, you are paid by it.
+## Bear call spread or long put?
+You met the long put last chapter, and it also profits when NIFTY falls, so which do you pick? The honest answer is that they suit different views. The long put is a debit trade that pays handsomely on a hard, fast fall, because its profit keeps climbing the further NIFTY drops. The bear call spread caps your reward at the modest Rs 3,624 credit no matter how far NIFTY falls, but it pays you even if the index merely goes nowhere, and time decay works in your favour the whole time.
+Reach for the **bear call spread** when you think the upside is exhausted but you do not expect fireworks down, and you want time on your side. Reach for the **long put** when you expect a genuine, sharp decline and want the open-ended payoff that comes with it. The spread says "the rally is over"; the put says "the fall is coming".
+Heads up
+Defined risk is not the same as small risk. Rs 2,876 per lot is real money, and you lose all of it if NIFTY closes at or above 24,150, which a single strong up day can deliver. Always size to the maximum loss, never to the credit. Decide how much you can afford to lose if the index rallies against you, then count back to how many lots that allows.
+## Key takeaways
+  * A bear call spread sells a lower call and buys a higher call for a **net credit** , profiting if NIFTY stays at or below the lower strike.
+  * **Max profit is the net credit** (Rs 3,624 here), **max loss is the spread minus the credit** (Rs 2,876), and **breakeven is the lower strike plus the credit** (24,106).
+  * Here the capped reward is slightly larger than the capped risk, a **reward to risk of 1 to 1.26** , with a **53 percent probability of profit** and time decay on your side.
+  * It blocks **margin of about Rs 34,789** , roughly a fifth of the naked short call's block, because the bought wing defines the worst case. Judge it by its **return on margin, about 10 percent**.
+  * It is the bearish credit-spread cousin of the bull put spread: same defined-risk, credit-collecting shape, built from calls.
+  * Choose it over the long put when you expect NIFTY to stall rather than crash, and you want to be paid to wait.
+
+
+On this page

@@ -1,0 +1,113 @@
+Chapters
+Module E · Range and Income - Chapter 16
+# The Iron Fly and the Butterfly
+Tighter, higher-reward cousins of the condor. Learn the iron fly (long and short) and the call and put butterfly, which pay the most if NIFTY pins one strike, with real payoff shapes.
+Range
+What you'll learn
+  * ·The iron fly
+  * ·Long vs short iron fly
+  * ·The call and put butterfly
+  * ·A pin-the-strike bet
+  * ·Higher reward, narrower zone
+  * ·Reading the real payoffs
+
+
+The iron condor paid you to keep NIFTY inside a wide room. This chapter shrinks that room until it is a single doorway. If your view is that the index will settle almost exactly where it sits today, near 24,050, you can build a structure that peaks sharply at that one strike and slopes away on both sides. These are the **iron fly** and the **butterfly** , the pin-the-strike trades. They are fully defined-risk, cost a few hundred rupees or collect a rich credit, and pay many times their cost if NIFTY lands on the nail. The honest catch is that pinning one strike is a low-odds event, shown here three ways to the very same peak.
+## The one-line idea
+A **pin-the-strike** trade sells the options at the money to harvest their fat premium, then buys a cheaper wing on each side so the loss is fenced. The result is a tent: a tall profit peak at the central strike that falls away steeply once NIFTY drifts either way. You build the same tent three ways, from an iron fly, a call butterfly, or a put butterfly, and all three say the same thing, that NIFTY will finish very close to where it is now.
+Key idea
+A pin-the-strike trade is the iron condor with no plateau. It peaks at a single central strike, collects most of its value from at-the-money options, and caps the loss at a small known amount with bought wings. It pays the most only if NIFTY finishes almost exactly on the body strike at expiry.
+## The real trade, rupee by rupee
+Here is the **long iron fly** on real NIFTY prices, captured on 26 June 2026 with the index at **24,056** and the 28 July 2026 expiry about 32 days away. You sell the at-the-money 24,050 put and the 24,050 call together, a short straddle, then buy a 23,950 put and a 24,150 call as wings one hundred points out on each side. The OpenAlgo builder calls this credit version the **Long Iron Fly**.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy put  | 23,950  | 256.6 paid  | Rs 16,679 out  |  
+| 2  | Sell put  | 24,050  | 295.1 received  | plus Rs 19,182 in  |  
+| 3  | Sell call  | 24,050  | 425.8 received  | plus Rs 27,677 in  |  
+| 4  | Buy call  | 24,150  | 370.1 paid  | Rs 24,057 out  |  
+|   |   |   | **Net credit**  | **plus Rs 6,130 in**  |  
+The two sold at-the-money options bring in the lion's share, while the two bought wings cost a little less. The gap is your **net credit of Rs 6,130** , which lands in your account the moment you open the trade, and it is the most this position can ever make.
+![The long iron fly on NIFTY: a sharp profit peak of Rs 6,130 right at the 24,050 body strike, narrow breakevens at 23,956 and 24,148, and a capped loss of only Rs 370 once the index drifts past either wing. The pink spot line at 24,056 sits almost on the peak, which is both the appeal and the trap.](https://openalgo.in/options-strategies/images/strat-long-iron-fly.png) ChartThe long iron fly on NIFTY: a sharp profit peak of Rs 6,130 right at the 24,050 body strike, narrow breakevens at 23,956 and 24,148, and a capped loss of only Rs 370 once the index drifts past either wing. The pink spot line at 24,056 sits almost on the peak, which is both the appeal and the trap.
+## The three numbers, and where they come from
+**Maximum profit is the net credit, Rs 6,130.** If NIFTY finishes exactly on 24,050, all four options expire worthless, the wings were never needed, and you keep the whole credit.
+**Maximum loss is the wing width minus the credit, Rs 370.** Each wing sits one hundred points from the body, a gap worth Rs 6,500. Past either wing that spread locks in the full Rs 6,500 against you, but you already banked Rs 6,130, so the real loss is 6,500 minus 6,130, which is **Rs 370**.
+**Breakevens sit just inside each wing, at 23,956 and 24,148.** You collected about 94 points of credit per share, so NIFTY can fall 94 points below the body or rise 98 points above it before the loss on the tested side eats the credit.  
+| Number  | How it is built  | This trade  |  
+| --- | --- | --- |  
+| Max profit  | net credit  | Rs 6,130  |  
+| Max loss  | wing width minus net credit  | Rs 6,500 minus Rs 6,130 = Rs 370  |  
+| Breakevens  | body strike, less or plus the credit per share  | 24,050 minus 94 = 23,956; 24,050 plus 98 = 24,148  |  
+## Walking the outcomes at expiry
+Settle the trade at five closing prices and the tent appears on its own. At expiry a put is worth max(strike minus NIFTY, 0) and a call is worth max(NIFTY minus strike, 0) per share, with the net per lot of 65.  
+| NIFTY at expiry  | Long 23,950 PE  | Short 24,050 PE  | Short 24,050 CE  | Long 24,150 CE  | Net P&L per lot  |  
+| --- | --- | --- | --- | --- | --- |  
+| 23,850  | 100  | 200  | 0  | 0  | minus Rs 370 (max loss)  |  
+| 23,956  | 0  | 94  | 0  | 0  | about Rs 0 (lower breakeven)  |  
+| 24,050  | 0  | 0  | 0  | 0  | plus Rs 6,130 (max profit)  |  
+| 24,150  | 0  | 0  | 100  | 0  | minus Rs 370 (max loss)  |  
+| 24,250  | 0  | 0  | 200  | 100  | minus Rs 370 (max loss)  |  
+The picture is stark. The full Rs 6,130 is collected at one price only, 24,050. A whisker either side and the credit shrinks fast, reaching the Rs 370 loss shelf by the time NIFTY touches a wing, with the call-side breakeven at 24,148. This matches the orange line exactly.
+## Your odds
+The number that decides whether the trade is smart is, how likely is that single peak? That is the **probability of profit** , and for the long iron fly it is just **9 percent**. Using the volatility priced into NIFTY, about 12.7 percent, and the 32 days left, the market implies only a 9 percent chance the index finishes inside the narrow 23,956 to 24,148 band. On the chart, the profit zone is far tighter than even the inner sigma band. You are not asking NIFTY to stay calm, you are asking it to freeze.
+Tip
+Always read the probability of profit next to the reward and the max loss together. The long iron fly risks only Rs 370 to make Rs 6,130, a dazzling reward to risk of about 1 to 16.5, but it pays in full just 9 percent of the time. A glittering payout multiple means little if you almost never collect it.
+## Margin and return on margin
+Because the trade is fully fenced, the exchange blocks a modest **margin of about Rs 63,940** , far below the lakhs a naked straddle would demand. The bought wings slash the capital the trade needs. On **return on margin** , Rs 6,130 against Rs 63,940 blocked is roughly **9.6 percent** if the pin lands, but weight that by the 9 percent odds first.
+## Time decay
+The **blue dashed T+0 line** sits well below the orange at-expiry peak at the body. That gap is time value, and for the long iron fly it is a friend, but only if NIFTY is parked on 24,050. As expiry nears and the index sits still, the rich options you are short melt away and the blue line climbs toward the sharp orange peak. If NIFTY has wandered to a wing, time walks you down to the Rs 370 shelf instead. Decay rewards stillness, and punishes drift.
+## The short iron fly: the high-probability inverse
+The builder offers the mirror, the **Short Iron Fly**. You take the other side of all four legs, paying a **net debit of Rs 6,130** instead of collecting it.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Sell put  | 23,950  | 256.6 received  | plus Rs 16,679 in  |  
+| 2  | Buy put  | 24,050  | 295.1 paid  | Rs 19,182 out  |  
+| 3  | Buy call  | 24,050  | 425.8 paid  | Rs 27,677 out  |  
+| 4  | Sell call  | 24,150  | 370.1 received  | plus Rs 24,057 in  |  
+|   |   |   | **Net debit**  | **Rs 6,130 out**  |  
+Every number flips. The **maximum profit is Rs 370** , won almost anywhere NIFTY moves at all. The **maximum loss is Rs 6,130** , suffered only if the index freezes on 24,050. The **probability of profit jumps to 91 percent** , the breakevens stay at 23,956 and 24,148, and the margin is about Rs 69,490.
+![The short iron fly on NIFTY: the inverse of the long fly, a small Rs 370 profit almost anywhere except pinned at 24,050, but a Rs 6,130 loss if the index settles on the strike, with a 91 percent probability of profit.](https://openalgo.in/options-strategies/images/strat-short-iron-fly.png) ChartThe short iron fly on NIFTY: the inverse of the long fly, a small Rs 370 profit almost anywhere except pinned at 24,050, but a Rs 6,130 loss if the index settles on the strike, with a 91 percent probability of profit.
+Heads up
+The 91 percent probability of profit on the short iron fly is seductive, but it wins only Rs 370 against a Rs 6,130 loss. One bad pin undoes sixteen wins. And do not be misled by the labels: the Long Iron Fly is the credit version, the Short Iron Fly the debit version, which runs against intuition. Judge each by its nine numbers, never by its name.
+## The call butterfly: the same peak from one option type
+You can build that identical tent without selling any straddle, using a single option type. A **call butterfly** uses three strikes and four call legs to peak at the middle.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy call  | 23,950  | 486.9 paid  | Rs 31,649 out  |  
+| 2  | Sell call (x2)  | 24,050  | 425.8 received  | plus Rs 55,354 in  |  
+| 3  | Buy call  | 24,150  | 370.1 paid  | Rs 24,053 out  |  
+|   |   |   | **Net debit**  | **Rs 348 out**  |  
+You buy one call below, sell two at the body, and buy one above. The two sold calls bring in most of the premium, leaving a tiny **net debit of Rs 348** , your **maximum loss** , suffered if NIFTY finishes outside the wings. The **maximum profit is Rs 6,152** , reached only if NIFTY pins 24,050, where the lower wing is worth its full hundred points against two worthless sold calls. The **breakevens are 23,954 and 24,148** , the probability of profit again **9 percent** , and the reward to risk a brilliant 1 to 17.7 on a margin of about Rs 64,000.
+![The call butterfly on NIFTY: built from calls alone, a sharp profit tent peaking at Rs 6,152 on the 24,050 body, breakevens at 23,954 and 24,148, and a tiny Rs 348 loss outside the wings.](https://openalgo.in/options-strategies/images/strat-call-butterfly.png) ChartThe call butterfly on NIFTY: built from calls alone, a sharp profit tent peaking at Rs 6,152 on the 24,050 body, breakevens at 23,954 and 24,148, and a tiny Rs 348 loss outside the wings.
+Lay this chart beside the long iron fly and they are almost the same picture: a sharp peak at 24,050, the same breakevens and 9 percent odds, built from different legs for a different cash flow.
+## The put butterfly: two routes, one shape
+The **put butterfly** reaches the identical peak using only puts, the mirror of the call version.  
+| Leg  | Action  | Strike  | Premium per share  | Cash flow per lot of 65  |  
+| --- | --- | --- | --- | --- |  
+| 1  | Buy put  | 24,150  | 339.2 paid  | Rs 22,045 out  |  
+| 2  | Sell put (x2)  | 24,050  | 295.1 received  | plus Rs 38,363 in  |  
+| 3  | Buy put  | 23,950  | 256.6 paid  | Rs 16,679 out  |  
+|   |   |   | **Net debit**  | **Rs 361 out**  |  
+It costs a **net debit of Rs 361** , its **maximum loss** , and pays a **maximum profit of Rs 6,139** if NIFTY pins 24,050. The breakevens are 23,955 and 24,148, the probability of profit again 9 percent, and the margin about Rs 63,877. Place the call butterfly and the put butterfly side by side and you cannot tell their payoffs apart.
+![The put butterfly on NIFTY: built from puts alone, the same peak of Rs 6,139 at 24,050, breakevens at 23,955 and 24,148, and a near-identical Rs 361 loss outside the wings, proving calls and puts are two routes to one shape.](https://openalgo.in/options-strategies/images/strat-put-butterfly.png) ChartThe put butterfly on NIFTY: built from puts alone, the same peak of Rs 6,139 at 24,050, breakevens at 23,955 and 24,148, and a near-identical Rs 361 loss outside the wings, proving calls and puts are two routes to one shape.
+Did you know
+The call butterfly costs Rs 348 and the put butterfly Rs 361, a few rupees apart, and both pin the same strike for the same reward and the same 9 percent odds. The deeper lesson: a payoff shape is not tied to one option type. Calls and puts are two languages that describe the very same picture, and a skilled trader picks whichever legs are cheaper or more liquid to reach the shape they want.
+## Choosing among the pin-the-strike family
+You now have four ways to wager on where NIFTY settles. The choice comes down to cash flow and odds, not the shape of the tent.  
+| Structure  | Built from  | Cost or credit  | Max profit  | Max loss  | POP  | Margin  |  
+| --- | --- | --- | --- | --- | --- | --- |  
+| Long iron fly  | short straddle plus two wings  | credit Rs 6,130  | Rs 6,130  | Rs 370  | 9%  | Rs 63,940  |  
+| Call butterfly  | four calls  | debit Rs 348  | Rs 6,152  | Rs 348  | 9%  | Rs 64,000  |  
+| Put butterfly  | four puts  | debit Rs 361  | Rs 6,139  | Rs 361  | 9%  | Rs 63,877  |  
+| Short iron fly  | the inverse, four legs  | debit Rs 6,130  | Rs 370  | Rs 6,130  | 91%  | Rs 69,490  |  
+The three pin-the-strike bets share a peak near Rs 6,100, a tiny loss, and 9 percent odds. Choose a butterfly to pay a small known debit in one option type, or the credit iron fly to collect the premium up front. Use the short iron fly only with clear eyes, since a high chance of a small win paired with a large loss on the rare pin demands tight management.
+Heads up
+Place pin-the-strike trades close to expiry, not weeks early, so NIFTY has less room to wander off the body. And never confuse the dazzling reward multiple with the odds: at 9 percent, the long fly and the butterflies are cheap, targeted, low-probability bets, not income machines. Read the maximum loss the builder reports, never the large gross turnover of the four legs.
+## Key takeaways
+  * A pin-the-strike trade is the iron condor collapsed to a point: it pays the most only if NIFTY finishes almost exactly on the body strike, 24,050 here.
+  * The **long iron fly** collects a **net credit of Rs 6,130** (its max profit), risks only **Rs 370** (the wing width minus the credit), and breaks even at 23,956 and 24,148.
+  * The **call butterfly** and **put butterfly** reach the same peak from one option type, for a tiny debit of Rs 348 or Rs 361, proving calls and puts are two routes to one shape.
+  * All three pin-the-strike bets share a **9 percent probability of profit** : a glorious reward to risk that is rarely collected, so size them as cheap long shots.
+  * The **short iron fly** is the inverse, a 91 percent chance of a small Rs 370 win against a Rs 6,130 loss on the rare pin. All four are defined-risk on a modest margin near Rs 64,000. Build them in **sandbox trading (analyzer mode in OpenAlgo)** to watch how fast the peak collapses.
+
+
+On this page
