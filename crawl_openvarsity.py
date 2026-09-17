@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Agent-callable crawler for the OpenAlgo Open Varsity learning catalogue.
+"""Agent-callable, adapter-based crawler for OpenAlgo and arXiv HTML sources.
 
-The program deliberately discovers the catalogue on every run.  It never embeds
-course names, course slugs, chapter names, or chapter counts.
+The OpenAlgo adapter deliberately discovers the catalogue on every run.  It
+never embeds course names, course slugs, chapter names, or chapter counts.
 """
 
 from __future__ import annotations
@@ -15,9 +15,10 @@ import os
 import re
 import tempfile
 from dataclasses import asdict, dataclass, field
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
+from abc import ABC, abstractmethod
+from typing import Any, Awaitable, Callable, Iterable
 from urllib.parse import urljoin, urlsplit, urlunsplit
 
 # Keep Crawl4AI's database, robots cache, and logs beside this portable script
@@ -42,12 +43,18 @@ def canonical_url(url: str) -> str:
     return urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), path, "", ""))
 
 
-def validate_request(start_url: str, max_depth: int, retries: int, concurrency: int) -> None:
-    """Keep the public interface inside the single supported learning scope."""
-    if canonical_url(start_url) != DEFAULT_START_URL:
-        raise ValueError(f"start_url must be {DEFAULT_START_URL}")
-    if max_depth < 2:
-        raise ValueError("max_depth must be at least 2 for landing → course → chapter discovery")
+def validate_request(
+    start_url: str,
+    max_depth: int,
+    retries: int,
+    concurrency: int,
+    adapter: SourceAdapter | None = None,
+) -> None:
+    """Validate shared crawl controls plus the selected adapter's URL scope."""
+    selected = adapter or ADAPTERS["openalgo"]
+    selected.validate_start_url(start_url)
+    if max_depth < selected.minimum_depth():
+        raise ValueError(f"max_depth must be at least {selected.minimum_depth()} for the {selected.name} adapter")
     if retries < 0:
         raise ValueError("retries must be zero or greater")
     if concurrency < 1:
@@ -172,6 +179,297 @@ class PageRecord:
     title: str
     relative_path: str
     content_hash: str
+    kind: str = "page"
+
+
+@dataclass
+class DiscoveredPage:
+    """A page returned by a source adapter before output-path assignment."""
+
+    url: str
+    title: str
+    markdown: str
+    kind: str = "page"
+
+
+@dataclass
+class DiscoveredCollection:
+    """A source-native collection with one optional overview and ordered pages."""
+
+    url: str
+    title: str
+    overview: DiscoveredPage | None
+    pages: list[DiscoveredPage]
+
+
+FetchPage = Callable[[Any, str, int], Awaitable[Any | None]]
+FetchPages = Callable[[Any, list[str], int], Awaitable[dict[str, Any]]]
+
+
+class SourceAdapter(ABC):
+    """Pluggable source contract used by the shared crawl/persist engine.
+
+    An adapter owns URL scope and live hierarchy discovery.  The runner owns
+    Crawl4AI execution, checkpointing, change detection, path safety, and JSON
+    reporting.  Adding a source therefore does not require changing persistence
+    or the agent-facing interface.
+    """
+
+    name: str
+    default_start_url: str | None
+    output_dir_name: str
+    meta_dir_name: str
+    default_max_depth: int = 0
+
+    @abstractmethod
+    def validate_start_url(self, start_url: str) -> None:
+        raise NotImplementedError
+
+    @abstractmethod
+    def url_allowed(self, url: str) -> bool:
+        raise NotImplementedError
+
+    @abstractmethod
+    async def discover(
+        self,
+        app: "OpenVarsityCrawler",
+        crawler: AsyncWebCrawler,
+        start_url: str,
+        max_depth: int,
+    ) -> list[DiscoveredCollection]:
+        raise NotImplementedError
+
+    def crawl_excluded_tags(self) -> list[str]:
+        return ["nav", "footer"]
+
+    def crawl_excluded_selector(self) -> str | None:
+        return "header.sticky"
+
+    def minimum_depth(self) -> int:
+        """Smallest useful depth for this source's discovery strategy."""
+        return 0
+
+    def collection_folder(self, index: int, title: str) -> str:
+        return f"{index:03d}-{slugify(title, 'collection')}"
+
+    @abstractmethod
+    def page_relative_path(
+        self,
+        collection_index: int,
+        collection: DiscoveredCollection,
+        page_index: int,
+        page: DiscoveredPage,
+        folder: str,
+    ) -> str:
+        raise NotImplementedError
+
+
+class OpenAlgoAdapter(SourceAdapter):
+    name = "openalgo"
+    default_start_url = DEFAULT_START_URL
+    output_dir_name = "courses"
+    meta_dir_name = ".openvarsity"
+    default_max_depth = 2
+    excluded_path_prefixes = ("/features", "/download", "/blog", "/faq", "/roadmap")
+
+    def validate_start_url(self, start_url: str) -> None:
+        if canonical_url(start_url) != DEFAULT_START_URL:
+            raise ValueError(f"start_url must be {DEFAULT_START_URL} for the openalgo adapter")
+
+    def url_allowed(self, url: str) -> bool:
+        if not is_internal_content_url(url, DEFAULT_START_URL):
+            return False
+        path = (urlsplit(url).path.rstrip("/") or "/").lower()
+        return not any(path == prefix or path.startswith(prefix + "/") for prefix in self.excluded_path_prefixes)
+
+    def minimum_depth(self) -> int:
+        # The catalogue is discovered as landing → course → chapter.
+        return 2
+
+    def collection_folder(self, index: int, title: str) -> str:
+        return f"{index:03d}-{slugify(title, 'course')}"
+
+    async def discover(
+        self,
+        app: "OpenVarsityCrawler",
+        crawler: AsyncWebCrawler,
+        start_url: str,
+        max_depth: int,
+    ) -> list[DiscoveredCollection]:
+        landing = await app.fetch(crawler, start_url, depth=0)
+        if landing is None:
+            raise RuntimeError("The Open Varsity landing page could not be fetched.")
+        candidate_courses = [
+            url for url in discover_course_urls(page_html(landing), start_url) if self.url_allowed(url)
+        ]
+        if not candidate_courses:
+            raise RuntimeError("No course links were discovered from the Open Varsity landing page.")
+        course_results = await app.fetch_many(crawler, candidate_courses, depth=1)
+        discovered: list[DiscoveredCollection] = []
+        for course_url in candidate_courses:
+            course_result = course_results.get(course_url)
+            if course_result is None:
+                continue
+            course_html = page_html(course_result)
+            chapters = [
+                url for url in discover_chapter_urls(course_html, course_url, start_url) if self.url_allowed(url)
+            ]
+            if not chapters:
+                app.summary.skipped.append({"url": course_url, "reason": "not_a_course_page"})
+                continue
+            overview = DiscoveredPage(course_url, page_title(course_html, course_url), markdown_value(course_result), "overview")
+            pending = await app.fetch_many(crawler, chapters, depth=2)
+            pages: list[DiscoveredPage] = []
+            for chapter_index, chapter_url in enumerate(chapters, 1):
+                result = pending.get(chapter_url)
+                if result is None:
+                    continue
+                html = page_html(result)
+                pages.append(DiscoveredPage(chapter_url, page_title(html, f"Chapter {chapter_index}"), markdown_value(result), "chapter"))
+            discovered.append(DiscoveredCollection(course_url, overview.title, overview, pages))
+        return discovered
+
+    def page_relative_path(
+        self,
+        collection_index: int,
+        collection: DiscoveredCollection,
+        page_index: int,
+        page: DiscoveredPage,
+        folder: str,
+    ) -> str:
+        if page.kind == "overview":
+            filename = "000-course-overview.md"
+        else:
+            filename = f"{page_index:03d}-{slugify(page.title, 'chapter')}.md"
+        return f"{self.output_dir_name}/{folder}/{filename}"
+
+
+# arXiv supports both modern identifiers (YYMM.NNNNN) and legacy
+# category/7-digit identifiers (for example hep-th/9901001).
+ARXIV_HTML_PATH = re.compile(
+    r"^/html/(?:\d{4}\.\d{4,5}|[A-Za-z][A-Za-z0-9.-]*/\d{7})(?:v\d+)?$"
+)
+
+
+def is_arxiv_html_url(url: str) -> bool:
+    parsed = urlsplit(url)
+    return parsed.scheme in {"http", "https"} and parsed.netloc.lower() == "arxiv.org" and bool(ARXIV_HTML_PATH.fullmatch(parsed.path))
+
+
+def discover_arxiv_html_urls(html: str, base_url: str) -> list[str]:
+    root = content_root(html)
+    return unique_urls(
+        canonical_url(urljoin(base_url, str(anchor["href"])))
+        for anchor in root.find_all("a", href=True)
+        if is_arxiv_html_url(canonical_url(urljoin(base_url, str(anchor["href"]))))
+    )
+
+
+class ArxivHtmlAdapter(SourceAdapter):
+    name = "arxiv"
+    default_start_url = None
+    output_dir_name = "papers"
+    meta_dir_name = ".arxiv"
+    default_max_depth = 0
+
+    def validate_start_url(self, start_url: str) -> None:
+        if not is_arxiv_html_url(start_url):
+            raise ValueError("arxiv adapter accepts only an arxiv.org/html/<paper-id>[vN] URL; PDF/abs/source URLs are excluded")
+
+    def url_allowed(self, url: str) -> bool:
+        return is_arxiv_html_url(url)
+
+    def minimum_depth(self) -> int:
+        # A single paper is a complete crawl. Explicitly increasing depth lets
+        # callers follow links to other HTML papers when desired.
+        return 0
+
+    def collection_folder(self, index: int, title: str) -> str:
+        return f"{index:03d}-{slugify(title, 'paper')}"
+
+    def crawl_excluded_tags(self) -> list[str]:
+        return ["header", "nav", "footer", "aside", "script", "style"]
+
+    def crawl_excluded_selector(self) -> str | None:
+        # arXiv's page shell contains a report-issue dialog, announcement
+        # banner, and fixed action buttons outside the paper document. Keep
+        # the document/figures while excluding those UI-only nodes.
+        return "dialog, .announcement-banner, .ds-announcement, .fixed-buttons-container"
+
+    async def discover(
+        self,
+        app: "OpenVarsityCrawler",
+        crawler: AsyncWebCrawler,
+        start_url: str,
+        max_depth: int,
+    ) -> list[DiscoveredCollection]:
+        queue: list[tuple[str, int]] = [(canonical_url(start_url), 0)]
+        seen: set[str] = set()
+        collections: list[DiscoveredCollection] = []
+        while queue:
+            url, depth = queue.pop(0)
+            if url in seen or depth > max_depth or not self.url_allowed(url):
+                if depth > max_depth:
+                    app.summary.skipped.append({"url": url, "reason": "max_depth"})
+                continue
+            seen.add(url)
+            result = await app.fetch(crawler, url, depth)
+            if result is None:
+                continue
+            html = page_html(result)
+            title = page_title(html, url)
+            page = DiscoveredPage(url, title, markdown_value(result), "paper")
+            collections.append(DiscoveredCollection(url, title, None, [page]))
+            for child in discover_arxiv_html_urls(html, url):
+                if child not in seen:
+                    queue.append((child, depth + 1))
+        return collections
+
+    def page_relative_path(
+        self,
+        collection_index: int,
+        collection: DiscoveredCollection,
+        page_index: int,
+        page: DiscoveredPage,
+        folder: str,
+    ) -> str:
+        return f"{self.output_dir_name}/{folder}/{page_index:03d}-{slugify(page.title, 'paper')}.md"
+
+
+ADAPTERS: dict[str, SourceAdapter] = {
+    "openalgo": OpenAlgoAdapter(),
+    "arxiv": ArxivHtmlAdapter(),
+}
+
+
+def get_adapter(name: str) -> SourceAdapter:
+    try:
+        return ADAPTERS[name.lower()]
+    except KeyError as exc:
+        raise ValueError(f"unknown source adapter {name!r}; choose one of {', '.join(sorted(ADAPTERS))}") from exc
+
+
+def manifest_collections(manifest: dict[str, Any]) -> list[dict[str, Any]]:
+    """Read the generic schema and the pre-adapter OpenAlgo schema."""
+    if isinstance(manifest.get("collections"), list):
+        return [collection for collection in manifest["collections"] if isinstance(collection, dict)]
+    # Existing OpenAlgo mirrors used courses/chapters. Keep them upgradable.
+    return [
+        {
+            **course,
+            "pages": course.get("pages", course.get("chapters", [])),
+        }
+        for course in manifest.get("courses", [])
+        if isinstance(course, dict)
+    ]
+
+
+def collection_pages(collection: dict[str, Any]) -> list[dict[str, Any]]:
+    pages = collection.get("pages", collection.get("chapters", []))
+    if not isinstance(pages, list):
+        pages = []
+    overview = collection.get("overview")
+    return ([overview] if isinstance(overview, dict) else []) + [page for page in pages if isinstance(page, dict)]
 
 
 @dataclass
@@ -199,6 +497,7 @@ class RunSummary:
     pages_changed: list[str] = field(default_factory=list)
     pages_removed: list[str] = field(default_factory=list)
     courses_new: list[str] = field(default_factory=list)
+    courses_changed: list[str] = field(default_factory=list)
     courses_removed: list[str] = field(default_factory=list)
     chapters_new: list[str] = field(default_factory=list)
     chapters_changed: list[str] = field(default_factory=list)
@@ -206,6 +505,19 @@ class RunSummary:
     skipped: list[dict[str, str]] = field(default_factory=list)
     errors: list[dict[str, str]] = field(default_factory=list)
     verification: dict[str, Any] = field(default_factory=dict)
+    # Adapter-neutral fields are appended so the historical positional
+    # constructor order remains compatible for existing OpenAlgo callers.
+    adapter: str = "openalgo"
+    collections_discovered: int = 0
+    pages_discovered: int = 0
+    collections_new: list[str] = field(default_factory=list)
+    collections_changed: list[str] = field(default_factory=list)
+    collections_removed: list[str] = field(default_factory=list)
+    papers_discovered: int = 0
+    papers_new: list[str] = field(default_factory=list)
+    papers_changed: list[str] = field(default_factory=list)
+    papers_removed: list[str] = field(default_factory=list)
+    courses_changed: list[str] = field(default_factory=list)
 
 
 class OpenVarsityCrawler:
@@ -216,21 +528,23 @@ class OpenVarsityCrawler:
         max_depth: int = 2,
         retries: int = 3,
         concurrency: int = 8,
+        adapter: SourceAdapter | None = None,
     ) -> None:
-        validate_request(start_url, max_depth, retries, concurrency)
+        self.adapter = adapter or ADAPTERS["openalgo"]
+        validate_request(start_url, max_depth, retries, concurrency, self.adapter)
         self.output_dir = output_dir.resolve()
-        self.content_dir = self.output_dir / "courses"
-        self.meta_dir = self.output_dir / ".openvarsity"
+        self.content_dir = self.output_dir / self.adapter.output_dir_name
+        self.meta_dir = self.output_dir / self.adapter.meta_dir_name
         self.start_url = canonical_url(start_url)
         self.max_depth = max_depth
         self.retries = retries
         self.concurrency = max(1, concurrency)
-        self.summary = RunSummary(started_at=self.now(), source_url=self.start_url)
+        self.summary = RunSummary(started_at=self.now(), adapter=self.adapter.name, source_url=self.start_url)
         self.state: dict[str, Any] = {}
 
     @staticmethod
     def now() -> str:
-        return datetime.now(UTC).isoformat()
+        return datetime.now(timezone.utc).isoformat()
 
     def load_json(self, path: Path, default: Any) -> Any:
         try:
@@ -263,8 +577,9 @@ class OpenVarsityCrawler:
             word_count_threshold=1,
             # Keep content headers (they carry chapter H1s), while excluding
             # only the site-wide chrome and footer.
-            excluded_tags=["nav", "footer"],
-            excluded_selector="header.sticky",
+            excluded_tags=self.adapter.crawl_excluded_tags(),
+            excluded_selector=self.adapter.crawl_excluded_selector(),
+            url_matcher=self.adapter.url_allowed,
             verbose=False,
             log_console=False,
         )
@@ -326,12 +641,13 @@ class OpenVarsityCrawler:
                 self.summary.errors.append({"url": url, "error": "Crawl4AI returned no result"})
         return by_url
 
-    def page_record(self, url: str, title: str, relative_path: str, markdown: str) -> PageRecord:
+    def page_record(self, url: str, title: str, relative_path: str, markdown: str, kind: str = "page") -> PageRecord:
         return PageRecord(
             url=canonical_url(url),
             title=title,
             relative_path=relative_path,
             content_hash=hashlib.sha256(markdown.encode("utf-8")).hexdigest(),
+            kind=kind,
         )
 
     def write_page(self, record: PageRecord, markdown: str, prior_pages: dict[str, dict[str, Any]]) -> bool:
@@ -345,26 +661,40 @@ class OpenVarsityCrawler:
         self.summary.pages_written += 1
         if prior:
             self.summary.pages_changed.append(record.url)
+            if record.kind == "chapter":
+                self.summary.chapters_changed.append(record.url)
+            elif record.kind == "paper":
+                self.summary.papers_changed.append(record.url)
+            elif record.kind == "overview":
+                self.summary.collections_changed.append(record.url)
+                if self.adapter.name == "openalgo":
+                    self.summary.courses_changed.append(record.url)
         else:
             self.summary.pages_new.append(record.url)
+            if record.kind == "chapter":
+                self.summary.chapters_new.append(record.url)
         return True
 
     def prune_removed(self, old_manifest: dict[str, Any], manifest: dict[str, Any]) -> None:
-        old_courses = {course["url"]: course for course in old_manifest.get("courses", [])}
-        new_courses = {course["url"]: course for course in manifest.get("courses", [])}
-        for url, course in old_courses.items():
-            if url not in new_courses:
-                self.summary.courses_removed.append(url)
+        old_collections = {collection["url"]: collection for collection in manifest_collections(old_manifest)}
+        new_collections = {collection["url"]: collection for collection in manifest_collections(manifest)}
+        for url in old_collections:
+            if url not in new_collections:
+                self.summary.collections_removed.append(url)
+                if self.adapter.name == "openalgo":
+                    self.summary.courses_removed.append(url)
+                elif self.adapter.name == "arxiv":
+                    self.summary.papers_removed.append(url)
         old_pages = {
             page["url"]: page
-            for course in old_manifest.get("courses", [])
-            for page in [course.get("overview", {})] + course.get("chapters", [])
+            for collection in manifest_collections(old_manifest)
+            for page in collection_pages(collection)
             if page
         }
         new_pages = {
             page["url"]: page
-            for course in manifest.get("courses", [])
-            for page in [course.get("overview", {})] + course.get("chapters", [])
+            for collection in manifest_collections(manifest)
+            for page in collection_pages(collection)
             if page
         }
         for url, page in old_pages.items():
@@ -375,7 +705,7 @@ class OpenVarsityCrawler:
                     candidate.unlink()
                 if replacement is None:
                     self.summary.pages_removed.append(url)
-                    if page["relative_path"].rsplit("/", 1)[-1] != "000-course-overview.md":
+                    if self.adapter.name == "openalgo" and page["relative_path"].rsplit("/", 1)[-1] != "000-course-overview.md":
                         self.summary.chapters_removed.append(url)
         # Empty folders are only removed beneath this crawler's dedicated root.
         if self.content_dir.exists():
@@ -390,19 +720,24 @@ class OpenVarsityCrawler:
         return re.sub(r"\s+", " ", without_targets).strip()
 
     def verify(self, manifest: dict[str, Any], spot_checks: dict[str, str]) -> None:
-        courses = manifest.get("courses", [])
-        chapter_paths = [page["relative_path"] for course in courses for page in course["chapters"]]
-        all_paths = [course["overview"]["relative_path"] for course in courses] + chapter_paths
-        expected_paths = [
-            f"courses/{index:03d}-{slugify(course['title'], 'course')}/{chapter_index:03d}-{slugify(page['title'], 'chapter')}.md"
-            for index, course in enumerate(courses, 1)
-            for chapter_index, page in enumerate(course["chapters"], 1)
-        ]
+        collections = manifest_collections(manifest)
+        page_paths = [page["relative_path"] for collection in collections for page in collection_pages(collection)]
+        expected_paths: list[str] = []
+        for collection_index, collection in enumerate(collections, 1):
+            folder = self.adapter.collection_folder(collection_index, collection["title"])
+            discovered = DiscoveredCollection(collection["url"], collection["title"], None, [])
+            if collection.get("overview"):
+                page = collection["overview"]
+                discovered_page = DiscoveredPage(page["url"], page["title"], "", page.get("kind", "overview"))
+                expected_paths.append(self.adapter.page_relative_path(collection_index, discovered, 0, discovered_page, folder))
+            for page_index, page in enumerate(collection.get("pages", collection.get("chapters", [])), 1):
+                discovered_page = DiscoveredPage(page["url"], page["title"], "", page.get("kind", "page"))
+                expected_paths.append(self.adapter.page_relative_path(collection_index, discovered, page_index, discovered_page, folder))
         spot_results = []
         page_lookup = {
             page["url"]: page
-            for course in courses
-            for page in [course["overview"]] + course["chapters"]
+            for collection in collections
+            for page in collection_pages(collection)
         }
         for url, live_markdown in spot_checks.items():
             page = page_lookup[url]
@@ -417,11 +752,20 @@ class OpenVarsityCrawler:
                     "title_present": f"# {page['title']}" in output_markdown,
                 }
             )
+        chapter_count = sum(
+            1
+            for collection in collections
+            for page in collection.get("pages", collection.get("chapters", []))
+            if page.get("kind", "chapter") == "chapter"
+        )
         self.summary.verification = {
-            "course_count_matches_manifest": len(courses) == self.summary.courses_discovered,
-            "chapter_count_matches_manifest": len(chapter_paths) == self.summary.chapters_discovered,
-            "all_markdown_files_exist": all((self.output_dir / path).is_file() for path in all_paths),
-            "consistent_file_naming": chapter_paths == expected_paths,
+            "collection_count_matches_manifest": len(collections) == self.summary.collections_discovered,
+            "page_count_matches_manifest": len(page_paths) == self.summary.pages_discovered,
+            "course_count_matches_manifest": len(collections) == self.summary.courses_discovered if self.adapter.name == "openalgo" else None,
+            "chapter_count_matches_manifest": self.summary.chapters_discovered == chapter_count if self.adapter.name == "openalgo" else None,
+            "paper_count_matches_manifest": len(collections) == self.summary.papers_discovered if self.adapter.name == "arxiv" else None,
+            "all_markdown_files_exist": all((self.output_dir / path).is_file() for path in page_paths),
+            "consistent_file_naming": page_paths == expected_paths,
             "spot_checks": spot_results,
         }
 
@@ -434,8 +778,8 @@ class OpenVarsityCrawler:
         """
         url_paths = {
             page["url"]: page["relative_path"]
-            for course in manifest["courses"]
-            for page in [course["overview"]] + course["chapters"]
+            for collection in manifest_collections(manifest)
+            for page in collection_pages(collection)
         }
         changed_files = 0
         link_pattern = re.compile(r"\]\((https?://[^\s)]+)(\s+\"[^)]*\")?\)")
@@ -460,117 +804,115 @@ class OpenVarsityCrawler:
                 changed_files += 1
         return changed_files
 
+    def materialize_page(
+        self,
+        collection_index: int,
+        collection: DiscoveredCollection,
+        page_index: int,
+        page: DiscoveredPage,
+        folder: str,
+        old_pages: dict[str, dict[str, Any]],
+        resume_completed: dict[str, dict[str, Any]],
+        spot_checks: dict[str, str],
+    ) -> PageRecord | None:
+        relative_path = self.adapter.page_relative_path(collection_index, collection, page_index, page, folder)
+        current = self.page_record(page.url, page.title, relative_path, page.markdown, page.kind)
+        if page.kind != "overview" and len(spot_checks) < 2:
+            spot_checks[current.url] = page.markdown
+        saved = resume_completed.get(current.url)
+        if (
+            saved
+            and saved.get("content_hash") == current.content_hash
+            and saved.get("relative_path") == relative_path
+            and (self.output_dir / relative_path).is_file()
+        ):
+            self.summary.pages_resumed += 1
+            self.summary.skipped.append({"url": current.url, "reason": "resumed_from_checkpoint"})
+            return current
+        self.write_page(current, page.markdown, old_pages)
+        self.state["completed"][current.url] = asdict(current)
+        self.checkpoint()
+        return current
+
     async def run(self) -> RunSummary:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.content_dir.mkdir(parents=True, exist_ok=True)
-        old_manifest = self.load_json(self.meta_dir / MANIFEST_FILE_NAME, {"courses": []})
+        old_manifest = self.load_json(self.meta_dir / MANIFEST_FILE_NAME, {"collections": []})
         old_pages = {
             page["url"]: page
-            for course in old_manifest.get("courses", [])
-            for page in [course.get("overview", {})] + course.get("chapters", [])
+            for collection in manifest_collections(old_manifest)
+            for page in collection_pages(collection)
             if page
         }
         previous_state = self.load_json(self.meta_dir / STATE_FILE_NAME, {})
-        resume_completed = previous_state.get("completed", {}) if previous_state.get("status") == "running" else {}
-        self.state = {"status": "running", "started_at": self.now(), "source_url": self.start_url, "completed": resume_completed}
+        saved_completed = previous_state.get("completed", {})
+        resume_completed = saved_completed if previous_state.get("status") == "running" and isinstance(saved_completed, dict) else {}
+        self.state = {
+            "status": "running",
+            "started_at": self.now(),
+            "source_url": self.start_url,
+            "adapter": self.adapter.name,
+            "completed": resume_completed,
+        }
         self.checkpoint()
 
         browser = BrowserConfig(headless=True, verbose=False)
-        manifest_courses: list[CourseRecord] = []
+        manifest_entries: list[dict[str, Any]] = []
         spot_checks: dict[str, str] = {}
         try:
             async with AsyncWebCrawler(config=browser) as crawler:
-                landing = await self.fetch(crawler, self.start_url, depth=0)
-                if landing is None:
-                    raise RuntimeError("The Open Varsity landing page could not be fetched.")
-                candidate_courses = discover_course_urls(page_html(landing), self.start_url)
-                if not candidate_courses:
-                    raise RuntimeError("No course links were discovered from the Open Varsity landing page.")
-
-                # Course page validation prevents header/footer/unrelated landing links
-                # from entering the content tree.
-                discovered_courses: list[tuple[str, str, list[str], str]] = []
-                course_results = await self.fetch_many(crawler, candidate_courses, depth=1)
-                for course_url in candidate_courses:
-                    course_result = course_results.get(course_url)
-                    if course_result is None:
-                        continue
-                    course_html = page_html(course_result)
-                    chapters = discover_chapter_urls(course_html, course_url, self.start_url)
-                    if not chapters:
-                        self.summary.skipped.append({"url": course_url, "reason": "not_a_course_page"})
-                        continue
-                    discovered_courses.append((course_url, page_title(course_html, course_url), chapters, markdown_value(course_result)))
-
-                self.summary.courses_discovered = len(discovered_courses)
-                self.summary.chapters_discovered = sum(len(chapters) for _, _, chapters, _ in discovered_courses)
+                discovered = await self.adapter.discover(self, crawler, self.start_url, self.max_depth)
+                self.summary.collections_discovered = len(discovered)
+                self.summary.pages_discovered = sum(len(collection.pages) + (1 if collection.overview else 0) for collection in discovered)
+                if self.adapter.name == "openalgo":
+                    self.summary.courses_discovered = len(discovered)
+                    self.summary.chapters_discovered = sum(sum(page.kind == "chapter" for page in collection.pages) for collection in discovered)
+                elif self.adapter.name == "arxiv":
+                    self.summary.papers_discovered = len(discovered)
                 self.state["discovered"] = {
-                    "courses": [
-                        {"url": url, "title": title, "chapter_urls": chapters}
-                        for url, title, chapters, _ in discovered_courses
+                    "collections": [
+                        {
+                            "url": collection.url,
+                            "title": collection.title,
+                            "page_urls": [page.url for page in collection.pages],
+                        }
+                        for collection in discovered
                     ]
                 }
                 self.checkpoint()
 
-                old_course_urls = {course["url"] for course in old_manifest.get("courses", [])}
-                for course_index, (course_url, course_title, chapter_urls, course_markdown) in enumerate(discovered_courses, 1):
-                    course_folder = f"{course_index:03d}-{slugify(course_title, 'course')}"
-                    if course_url not in old_course_urls:
-                        self.summary.courses_new.append(course_url)
-                    # Course pages are first-class discovered content, saved at a
-                    # stable index path before their chapter files.
-                    overview = self.page_record(
-                        course_url,
-                        course_title,
-                        f"courses/{course_folder}/000-course-overview.md",
-                        course_markdown,
-                    )
-                    self.write_page(overview, course_markdown, old_pages)
-                    self.state["completed"][course_url] = asdict(overview)
-                    self.checkpoint()
-                    chapter_records: list[PageRecord] = []
-                    pending_chapters: list[str] = []
-                    for chapter_index, chapter_url in enumerate(chapter_urls, 1):
-                        saved = resume_completed.get(chapter_url)
-                        expected_prefix = f"courses/{course_folder}/{chapter_index:03d}-"
-                        if saved and str(saved.get("relative_path", "")).startswith(expected_prefix) and (self.output_dir / saved["relative_path"]).is_file():
-                            record = PageRecord(**saved)
-                            chapter_records.append(record)
-                            self.summary.pages_resumed += 1
-                            self.summary.skipped.append({"url": chapter_url, "reason": "resumed_from_checkpoint"})
-                            continue
-                        pending_chapters.append(chapter_url)
-                    chapter_results = await self.fetch_many(crawler, pending_chapters, depth=2)
-                    for chapter_index, chapter_url in enumerate(chapter_urls, 1):
-                        if any(record.url == chapter_url for record in chapter_records):
-                            continue
-                        result = chapter_results.get(chapter_url)
-                        if result is None:
-                            continue
-                        markdown = markdown_value(result)
-                        html = page_html(result)
-                        title = page_title(html, f"Chapter {chapter_index}")
-                        relative_path = f"courses/{course_folder}/{chapter_index:03d}-{slugify(title, 'chapter')}.md"
-                        record = self.page_record(chapter_url, title, relative_path, markdown)
-                        if course_index <= 2 and chapter_index == 1:
-                            spot_checks[record.url] = markdown
-                        changed = self.write_page(record, markdown, old_pages)
-                        if changed:
-                            if record.url in old_pages:
-                                self.summary.chapters_changed.append(record.url)
-                            else:
-                                self.summary.chapters_new.append(record.url)
-                        chapter_records.append(record)
-                        self.state["completed"][chapter_url] = asdict(record)
-                        self.checkpoint()
-                    manifest_courses.append(
-                        CourseRecord(course_url, course_title, f"courses/{course_folder}", overview, chapter_records)
-                    )
+                old_collection_urls = {collection["url"] for collection in manifest_collections(old_manifest)}
+                for collection_index, collection in enumerate(discovered, 1):
+                    folder = self.adapter.collection_folder(collection_index, collection.title)
+                    if collection.url not in old_collection_urls:
+                        self.summary.collections_new.append(collection.url)
+                        if self.adapter.name == "openalgo":
+                            self.summary.courses_new.append(collection.url)
+                        elif self.adapter.name == "arxiv":
+                            self.summary.papers_new.append(collection.url)
+                    entry: dict[str, Any] = {
+                        "url": collection.url,
+                        "title": collection.title,
+                        "relative_path": f"{self.adapter.output_dir_name}/{folder}",
+                        "overview": None,
+                        "pages": [],
+                    }
+                    if collection.overview:
+                        page = collection.overview
+                        record = self.materialize_page(collection_index, collection, 0, page, folder, old_pages, resume_completed, spot_checks)
+                        if record:
+                            entry["overview"] = asdict(record)
+                    for page_index, page in enumerate(collection.pages, 1):
+                        record = self.materialize_page(collection_index, collection, page_index, page, folder, old_pages, resume_completed, spot_checks)
+                        if record:
+                            entry["pages"].append(asdict(record))
+                    manifest_entries.append(entry)
 
             manifest = {
+                "adapter": self.adapter.name,
                 "source_url": self.start_url,
                 "generated_at": self.now(),
-                "courses": [asdict(course) for course in manifest_courses],
+                "collections": manifest_entries,
             }
             self.prune_removed(old_manifest, manifest)
             rewritten_files = self.rewrite_internal_links(manifest)
@@ -589,6 +931,11 @@ class OpenVarsityCrawler:
         return self.summary
 
 
+# Generic name for new integrations; the historical class name remains for
+# callers that already import it.
+SourceCrawler = OpenVarsityCrawler
+
+
 async def crawl_openvarsity(
     output_dir: str | Path,
     start_url: str = DEFAULT_START_URL,
@@ -596,28 +943,56 @@ async def crawl_openvarsity(
     retries: int = 3,
     concurrency: int = 8,
 ) -> dict[str, Any]:
-    """Importable, JSON-serialisable entry point for an AI agent or scheduler."""
+    """Backward-compatible OpenAlgo entry point (the default adapter)."""
+    return await crawl_source(output_dir, "openalgo", start_url, max_depth, retries, concurrency)
+
+
+async def crawl_source(
+    output_dir: str | Path,
+    source: str = "openalgo",
+    start_url: str | None = None,
+    max_depth: int | None = None,
+    retries: int = 3,
+    concurrency: int = 8,
+) -> dict[str, Any]:
+    """Run any registered source adapter and return a JSON-serialisable summary."""
+    resolved_source = source.lower()
     try:
-        summary = await OpenVarsityCrawler(Path(output_dir), start_url, max_depth, retries, concurrency).run()
+        adapter = get_adapter(resolved_source)
+        resolved_url = start_url or adapter.default_start_url
+        if not resolved_url:
+            raise ValueError("start_url is required for the arxiv adapter (use an arxiv.org/html/<paper-id>[vN] URL)")
+        resolved_depth = adapter.default_max_depth if max_depth is None else max_depth
+        summary = await OpenVarsityCrawler(
+            Path(output_dir), resolved_url, resolved_depth, retries, concurrency, adapter
+        ).run()
         return asdict(summary)
     except Exception as exc:
-        now = datetime.now(UTC).isoformat()
+        now = datetime.now(timezone.utc).isoformat()
         return asdict(
             RunSummary(
                 started_at=now,
                 completed_at=now,
                 status="failed",
-                source_url=canonical_url(start_url),
-                errors=[{"url": canonical_url(start_url), "error": str(exc)}],
+                adapter=resolved_source,
+                source_url=canonical_url(start_url) if start_url else "",
+                errors=[{"url": canonical_url(start_url) if start_url else "", "error": str(exc)}],
             )
         )
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Mirror OpenAlgo's live Open Varsity catalogue as Markdown.")
-    parser.add_argument("--output", type=Path, required=True, help="Directory to receive courses/ and .openvarsity/ state.")
-    parser.add_argument("--start-url", default=DEFAULT_START_URL, help="Open Varsity landing page URL.")
-    parser.add_argument("--max-depth", type=int, default=2, help="Maximum discovery depth; 2 covers landing, course, chapter.")
+    parser = argparse.ArgumentParser(description="Crawl a registered learning/research source into structured Markdown.")
+    # Do not use argparse choices here: an unknown adapter must still produce
+    # the same structured JSON failure that every other agent input receives.
+    parser.add_argument(
+        "--source",
+        default="openalgo",
+        help=f"Source adapter (default: openalgo; available: {', '.join(sorted(ADAPTERS))}).",
+    )
+    parser.add_argument("--output", type=Path, required=True, help="Directory to receive the selected adapter's content and state.")
+    parser.add_argument("--start-url", default=None, help="Source URL. Required for arxiv; defaults to Open Varsity for openalgo.")
+    parser.add_argument("--max-depth", type=int, default=None, help="Maximum discovery depth (OpenAlgo defaults to 2; arXiv defaults to 0).")
     parser.add_argument("--retries", type=int, default=3, help="Crawl4AI transient/anti-bot retry rounds per page.")
     parser.add_argument("--concurrency", type=int, default=8, help="Maximum simultaneous chapter fetches.")
     return parser.parse_args()
@@ -625,7 +1000,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    summary = asyncio.run(crawl_openvarsity(args.output, args.start_url, args.max_depth, args.retries, args.concurrency))
+    summary = asyncio.run(crawl_source(args.output, args.source, args.start_url, args.max_depth, args.retries, args.concurrency))
     print(json.dumps(summary, indent=2, sort_keys=True))
     return 0 if summary["status"] in {"success", "partial_success"} else 1
 

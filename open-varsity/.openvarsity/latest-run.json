@@ -1,30 +1,44 @@
 {
+  "adapter": "openalgo",
   "chapters_changed": [],
   "chapters_discovered": 407,
   "chapters_new": [],
   "chapters_removed": [],
-  "completed_at": "2026-08-26T07:21:36.957536+00:00",
+  "collections_changed": [],
+  "collections_discovered": 13,
+  "collections_new": [],
+  "collections_removed": [],
+  "completed_at": "2026-09-17T10:03:18.205654+00:00",
+  "courses_changed": [],
   "courses_discovered": 13,
   "courses_new": [],
   "courses_removed": [],
   "errors": [],
   "pages_changed": [],
+  "pages_discovered": 420,
   "pages_fetched": 421,
   "pages_new": [],
   "pages_removed": [],
   "pages_resumed": 0,
   "pages_unchanged": 420,
   "pages_written": 0,
+  "papers_changed": [],
+  "papers_discovered": 0,
+  "papers_new": [],
+  "papers_removed": [],
   "skipped": [],
   "source_url": "https://openalgo.in/learn",
-  "started_at": "2026-08-26T07:17:23.431053+00:00",
+  "started_at": "2026-09-17T10:02:10.909550+00:00",
   "status": "success",
   "verification": {
     "all_markdown_files_exist": true,
     "chapter_count_matches_manifest": true,
+    "collection_count_matches_manifest": true,
     "consistent_file_naming": true,
     "course_count_matches_manifest": true,
     "files_with_local_link_rewrites": 0,
+    "page_count_matches_manifest": true,
+    "paper_count_matches_manifest": null,
     "spot_checks": [
       {
         "content_matches_live_ignoring_local_link_targets": true,
@@ -34,7 +48,7 @@
       {
         "content_matches_live_ignoring_local_link_targets": true,
         "title_present": true,
-        "url": "https://openalgo.in/technicals/what-is-technical-analysis"
+        "url": "https://openalgo.in/stocks/asset-classes"
       }
     ]
   }

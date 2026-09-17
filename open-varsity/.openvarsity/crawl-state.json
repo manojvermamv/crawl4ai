@@ -1,2530 +1,2951 @@
 {
+  "adapter": "openalgo",
   "completed": {
     "https://openalgo.in/amibroker": {
       "content_hash": "da6f34b373f7722bfd69535f25914755dd6ad5f6012c6974e6c30e3d747dc40c",
+      "kind": "overview",
       "relative_path": "courses/010-amibroker-afl/000-course-overview.md",
       "title": "AmiBroker AFL",
       "url": "https://openalgo.in/amibroker"
     },
     "https://openalgo.in/amibroker/alerts": {
       "content_hash": "e2d9ba6c381c4c6009ee48ba4989b3495fcfab0a0e73c3138137ae96e60baaab",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/034-alerts-telegram-voice.md",
       "title": "Alerts: Telegram & Voice",
       "url": "https://openalgo.in/amibroker/alerts"
     },
     "https://openalgo.in/amibroker/arrays-and-loops": {
       "content_hash": "0f555b0a5d1ba52dc81ce30ffedeaf5f19099858325207786b7088890f7f6429",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/011-arrays-vs-loops-the-for-loop.md",
       "title": "Arrays vs Loops: the for-loop",
       "url": "https://openalgo.in/amibroker/arrays-and-loops"
     },
     "https://openalgo.in/amibroker/backtest-report": {
       "content_hash": "7d792feb7fadd8c9c5f8be17389944f9a385835c6d8ffbf3658aa3990cd461b0",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/026-reading-the-backtest-report.md",
       "title": "Reading the Backtest Report",
       "url": "https://openalgo.in/amibroker/backtest-report"
     },
     "https://openalgo.in/amibroker/breakout-system": {
       "content_hash": "096e243e265ba5670bfd63fa1edfbc302d78d22a616575a5a1c26ebfed41f529",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/031-strategy-donchian-opening-range-breakout.md",
       "title": "Strategy: Donchian / Opening-Range Breakout",
       "url": "https://openalgo.in/amibroker/breakout-system"
     },
     "https://openalgo.in/amibroker/building-a-scanner": {
       "content_hash": "7d676c48568dc28ebe015ab34f3b7d402953d5a69b032d2fded5b87330ddf8ac",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/019-building-a-signal-scanner.md",
       "title": "Building a Signal Scanner",
       "url": "https://openalgo.in/amibroker/building-a-scanner"
     },
     "https://openalgo.in/amibroker/built-in-functions": {
       "content_hash": "65e7d71d1a4a863625c0766cb5267d05665798b60a45c004680236e3322e5007",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/007-built-in-functions-indicators.md",
       "title": "Built-in Functions & Indicators",
       "url": "https://openalgo.in/amibroker/built-in-functions"
     },
     "https://openalgo.in/amibroker/buy-sell-signals": {
       "content_hash": "9b7cecd147105f2effddf8e0639a5af518a037b205fe12da1bf5c4f445c9cfda",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/021-buy-sell-short-cover.md",
       "title": "Buy, Sell, Short & Cover",
       "url": "https://openalgo.in/amibroker/buy-sell-signals"
     },
     "https://openalgo.in/amibroker/cleaning-signals": {
       "content_hash": "82d6494f22793ec271d5ab8c789b49e6013fc29f4df15fd9c0fc6dafd2ad87b0",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/022-clean-signals-exrem-flip-no-repainting.md",
       "title": "Clean Signals: ExRem, Flip & No Repainting",
       "url": "https://openalgo.in/amibroker/cleaning-signals"
     },
     "https://openalgo.in/amibroker/color-coding": {
       "content_hash": "ba73607d22279e12be2b981eaba780f017d657e1d0664cf93bdd64fc67ae604b",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/014-colours-ribbons-conditional-candles.md",
       "title": "Colours, Ribbons & Conditional Candles",
       "url": "https://openalgo.in/amibroker/color-coding"
     },
     "https://openalgo.in/amibroker/conditions-and-logic": {
       "content_hash": "5fd694f38fee5e8b02a157e49264ae7c17c8e142d100730a64e171832727690a",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/008-conditions-logic-iif.md",
       "title": "Conditions, Logic & IIf",
       "url": "https://openalgo.in/amibroker/conditions-and-logic"
     },
     "https://openalgo.in/amibroker/custom-functions": {
       "content_hash": "f746d3fae6c5887148e8297142fe3f8040cbb116922cf510b4f8554e064312ed",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/012-custom-functions-procedures.md",
       "title": "Custom Functions & Procedures",
       "url": "https://openalgo.in/amibroker/custom-functions"
     },
     "https://openalgo.in/amibroker/dates-and-sessions": {
       "content_hash": "4f01b4abf154daf6fbce662592fe75f31d58ae9a72c8faa249170e23a57478d0",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/010-dates-times-the-trading-session.md",
       "title": "Dates, Times & the Trading Session",
       "url": "https://openalgo.in/amibroker/dates-and-sessions"
     },
     "https://openalgo.in/amibroker/ema-crossover-system": {
       "content_hash": "51e3eceea9da1f534b4d8eb51237e2a042a9b54ac8e39b4a88e58556f59c8323",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/028-strategy-ema-crossover-system.md",
       "title": "Strategy: EMA Crossover System",
       "url": "https://openalgo.in/amibroker/ema-crossover-system"
     },
     "https://openalgo.in/amibroker/exploration-basics": {
       "content_hash": "1a698d4fbba180d3c1978fe2bceb05b84c8253535ffcb8c8329bd709d0a7414a",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/018-exploration-the-analysis-window.md",
       "title": "Exploration: the Analysis Window",
       "url": "https://openalgo.in/amibroker/exploration-basics"
     },
     "https://openalgo.in/amibroker/first-backtest": {
       "content_hash": "c70b36f7b0f9f1667e1166e60d9078b85ce4425ee314a134c13ee388c41a8668",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/025-your-first-backtest.md",
       "title": "Your First Backtest",
       "url": "https://openalgo.in/amibroker/first-backtest"
     },
     "https://openalgo.in/amibroker/formula-editor": {
       "content_hash": "5bccd6dc0dfac473546012bef681d2cf46ef9ffeaeb79d10f109044f62c86829",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/002-the-formula-editor-your-first-indicator.md",
       "title": "The Formula Editor & Your First Indicator",
       "url": "https://openalgo.in/amibroker/formula-editor"
     },
     "https://openalgo.in/amibroker/gfx-dashboards": {
       "content_hash": "440b8992feab2c1ff8981ab6c275ad33eb2e8ce9da6bf915dc5a817963c29c1d",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/017-gfx-dashboards.md",
       "title": "GFX Dashboards",
       "url": "https://openalgo.in/amibroker/gfx-dashboards"
     },
     "https://openalgo.in/amibroker/how-afl-thinks": {
       "content_hash": "ac1691681ef628635649e6fea181bdc6824acd9c819f1a64c2d31938db5b164e",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/003-how-afl-thinks-arrays-bars.md",
       "title": "How AFL Thinks: Arrays & Bars",
       "url": "https://openalgo.in/amibroker/how-afl-thinks"
     },
     "https://openalgo.in/amibroker/multi-timeframe": {
       "content_hash": "b01332a80e7a319565c213e069c9abe5d97151dfe5503459948635e382ed646d",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/033-multiple-time-frames.md",
       "title": "Multiple Time Frames",
       "url": "https://openalgo.in/amibroker/multi-timeframe"
     },
     "https://openalgo.in/amibroker/openalgo-automation": {
       "content_hash": "ef711fe8656289ad340b1fa629b3f26720bfa70ba40f8a92c6820b6bb6c9e31a",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/035-automating-orders-with-openalgo.md",
       "title": "Automating Orders with OpenAlgo",
       "url": "https://openalgo.in/amibroker/openalgo-automation"
     },
     "https://openalgo.in/amibroker/optimization": {
       "content_hash": "f51394ad21cc116a7ee69a5d31d331a969467ea39bd96539bd621559bfc53153",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/027-optimisation-robustness.md",
       "title": "Optimisation & Robustness",
       "url": "https://openalgo.in/amibroker/optimization"
     },
     "https://openalgo.in/amibroker/panes-and-foreign": {
       "content_hash": "4397f2bc89d0388d11cd502e7bc488d08596d1f0a479bd7359d14daaacb2bd7f",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/016-multiple-panes-comparing-symbols.md",
       "title": "Multiple Panes & Comparing Symbols",
       "url": "https://openalgo.in/amibroker/panes-and-foreign"
     },
     "https://openalgo.in/amibroker/parameters": {
       "content_hash": "fb6c93e1d10ae0952436ed37c824de9dca4e95b9c71dcd4e41521899ef01bef9",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/006-parameters-interactive-controls.md",
       "title": "Parameters: Interactive Controls",
       "url": "https://openalgo.in/amibroker/parameters"
     },
     "https://openalgo.in/amibroker/plotting-and-styles": {
       "content_hash": "f70acc3b917da6b07afc3c1d46655a496a6be4daa34561e50449cd068614a5d9",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/005-plotting-chart-styles.md",
       "title": "Plotting & Chart Styles",
       "url": "https://openalgo.in/amibroker/plotting-and-styles"
     },
     "https://openalgo.in/amibroker/position-sizing": {
       "content_hash": "29f2f13079becdd3c1c9415a096e889715dc40d844d27455e5bee166e6d51237",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/024-position-sizing-trade-delays.md",
       "title": "Position Sizing & Trade Delays",
       "url": "https://openalgo.in/amibroker/position-sizing"
     },
     "https://openalgo.in/amibroker/price-and-variables": {
       "content_hash": "720a7e61be04972b54937d790acace0c8953a4a0cf2e789de3eda21de33077ff",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/004-price-arrays-variables-operators.md",
       "title": "Price Arrays, Variables & Operators",
       "url": "https://openalgo.in/amibroker/price-and-variables"
     },
     "https://openalgo.in/amibroker/ranking-and-filtering": {
       "content_hash": "77d86c7861e48a50d9a4966c4fc2e340360fefb91ea615ea419d2cf9dfcd94df",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/020-filtering-sorting-ranking.md",
       "title": "Filtering, Sorting & Ranking",
       "url": "https://openalgo.in/amibroker/ranking-and-filtering"
     },
     "https://openalgo.in/amibroker/referencing-bars": {
       "content_hash": "d332fc18b39dd8ee566e2697396dc978a6b065aa5474de29e4c2df9b133a9d75",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/009-looking-back-ref-cross-barssince.md",
       "title": "Looking Back: Ref, Cross & BarsSince",
       "url": "https://openalgo.in/amibroker/referencing-bars"
     },
     "https://openalgo.in/amibroker/rsi-pullback-system": {
       "content_hash": "ad5fc2c9be989ba351f227749c4044b88bbe5c70073f74a043597a70281e55cf",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/032-strategy-rsi-pullback-mean-reversion.md",
       "title": "Strategy: RSI Pullback & Mean Reversion",
       "url": "https://openalgo.in/amibroker/rsi-pullback-system"
     },
     "https://openalgo.in/amibroker/shapes-and-text": {
       "content_hash": "d36b2425e43348ebe89854834c771a8ead56dd1968abcf1584957bc8489c8f8c",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/013-arrows-shapes-text.md",
       "title": "Arrows, Shapes & Text",
       "url": "https://openalgo.in/amibroker/shapes-and-text"
     },
     "https://openalgo.in/amibroker/stops-and-targets": {
       "content_hash": "a3c89b60847e4c15cc6e8ff57c3f1d3faa00c3d91a05cb748688ad7d76dace0d",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/023-stops-targets-applystop.md",
       "title": "Stops, Targets & ApplyStop",
       "url": "https://openalgo.in/amibroker/stops-and-targets"
     },
     "https://openalgo.in/amibroker/supertrend-system": {
       "content_hash": "c02c39127333185c7313193d9823895cc7363112075404a369bb6f9ecf8f9d35",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/029-strategy-supertrend-system.md",
       "title": "Strategy: Supertrend System",
       "url": "https://openalgo.in/amibroker/supertrend-system"
     },
     "https://openalgo.in/amibroker/title-and-strformat": {
       "content_hash": "e9ff75e6a846cfba4166104f49ad55e183fb8340c33c996ffe95662084c175f7",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/015-the-title-bar-strformat.md",
       "title": "The Title Bar & StrFormat",
       "url": "https://openalgo.in/amibroker/title-and-strformat"
     },
     "https://openalgo.in/amibroker/vwap-intraday-system": {
       "content_hash": "9b0d0c72aa8d0cb717639798b493603e5513956323160e9ed6dbf91e1336aae8",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/030-strategy-vwap-intraday-system.md",
       "title": "Strategy: VWAP Intraday System",
       "url": "https://openalgo.in/amibroker/vwap-intraday-system"
     },
     "https://openalgo.in/amibroker/what-is-amibroker": {
       "content_hash": "89505434dd2239f744e60121f70672e3de1c210c88aedd3fbd248df94ffed2fb",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/001-what-is-amibroker-afl.md",
       "title": "What is AmiBroker & AFL",
       "url": "https://openalgo.in/amibroker/what-is-amibroker"
     },
     "https://openalgo.in/amibroker/whats-next": {
       "content_hash": "2acad2f08c70ff95107a29b5c951f04270bfbcd916d94f8ce1f397abe8f6f508",
+      "kind": "chapter",
       "relative_path": "courses/010-amibroker-afl/036-where-to-go-next.md",
       "title": "Where to Go Next",
       "url": "https://openalgo.in/amibroker/whats-next"
     },
     "https://openalgo.in/fundamentals": {
       "content_hash": "db9ad3193740015a7ea0d4db820d570fbe15332e29d6a9d61bb0f5edeb45154e",
+      "kind": "overview",
       "relative_path": "courses/003-python-for-traders/000-course-overview.md",
       "title": "Python for Traders",
       "url": "https://openalgo.in/fundamentals"
     },
     "https://openalgo.in/fundamentals/comprehensions": {
       "content_hash": "61434f6813b53afc510c77addcf517c50fa17db2afa6cba6a6982ebeb81ad377",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/015-comprehensions.md",
       "title": "Comprehensions",
       "url": "https://openalgo.in/fundamentals/comprehensions"
     },
     "https://openalgo.in/fundamentals/conditionals": {
       "content_hash": "2d487935c3724f1b93fb75dfc60ac7a1f6f713f68b948987ac183bf21579e57c",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/013-making-decisions-if-elif-else.md",
       "title": "Making Decisions: if / elif / else",
       "url": "https://openalgo.in/fundamentals/conditionals"
     },
     "https://openalgo.in/fundamentals/data-cleaning": {
       "content_hash": "fb13112415c87a3b85ed5dcc20908d97f5d95ed69f7231df579d31fb752564a5",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/029-data-cleaning.md",
       "title": "Data Cleaning",
       "url": "https://openalgo.in/fundamentals/data-cleaning"
     },
     "https://openalgo.in/fundamentals/dataframes": {
       "content_hash": "646701f7ecae3c334c2f0966a1860c48bf153b0b722f05bf6ea862acd204207c",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/027-the-dataframe.md",
       "title": "The DataFrame",
       "url": "https://openalgo.in/fundamentals/dataframes"
     },
     "https://openalgo.in/fundamentals/dates-and-times": {
       "content_hash": "1ec8e757176000de8631b67e5c0e2c6ec484dae0fd1f9faa4289dec52690cdac",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/023-dates-times.md",
       "title": "Dates & Times",
       "url": "https://openalgo.in/fundamentals/dates-and-times"
     },
     "https://openalgo.in/fundamentals/dates-in-pandas": {
       "content_hash": "8446cda815301aae337e024b6aa875f3f3a1e472911fdc3a271fdf391b1e3272",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/030-dates-time-series.md",
       "title": "Dates & Time Series",
       "url": "https://openalgo.in/fundamentals/dates-in-pandas"
     },
     "https://openalgo.in/fundamentals/dictionaries": {
       "content_hash": "2379b27ff30d3222585ddc3db606d9fa875c0c75963b1cf850da65c6706fcb27",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/011-dictionaries.md",
       "title": "Dictionaries",
       "url": "https://openalgo.in/fundamentals/dictionaries"
     },
     "https://openalgo.in/fundamentals/errors-and-debugging": {
       "content_hash": "725e2b91c9a261ee4607a82ae2b816effc66f11478f21defc7319ee80ac89edd",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/020-errors-debugging.md",
       "title": "Errors & Debugging",
       "url": "https://openalgo.in/fundamentals/errors-and-debugging"
     },
     "https://openalgo.in/fundamentals/fetching-data": {
       "content_hash": "6d92a275286aa6a3b8dc83a88b6746d8ffb67370ba982b4965532fbb341fe3a5",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/037-fetching-data-over-http.md",
       "title": "Fetching Data over HTTP",
       "url": "https://openalgo.in/fundamentals/fetching-data"
     },
     "https://openalgo.in/fundamentals/files": {
       "content_hash": "1d0d976cc0c9883ddbf85f47f7dcb2430e5aa4c3bd15e308cb29094d54a088f0",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/021-reading-writing-files.md",
       "title": "Reading & Writing Files",
       "url": "https://openalgo.in/fundamentals/files"
     },
     "https://openalgo.in/fundamentals/functions": {
       "content_hash": "89627896ca6afc59ceca1a1305831d714b17ad935f0f2645402bf65afbbe81a3",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/016-functions.md",
       "title": "Functions",
       "url": "https://openalgo.in/fundamentals/functions"
     },
     "https://openalgo.in/fundamentals/getting-unstuck": {
       "content_hash": "69146718631a08ddb394bb1a91c653722c07898dbbe2334453e16930e9c32477",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/024-getting-unstuck.md",
       "title": "Getting Unstuck",
       "url": "https://openalgo.in/fundamentals/getting-unstuck"
     },
     "https://openalgo.in/fundamentals/grouping-data": {
       "content_hash": "85261e187182aaa6360e73e8e3612f41ab5dd81e16ec8cb638d1ccb9489ed4c9",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/031-grouping-aggregation.md",
       "title": "Grouping & Aggregation",
       "url": "https://openalgo.in/fundamentals/grouping-data"
     },
     "https://openalgo.in/fundamentals/input-output-fstrings": {
       "content_hash": "41f790a996789ed6f375559001a97775c7d27777993f453772d0f191440364e6",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/007-input-output-f-strings.md",
       "title": "Input, Output & f-strings",
       "url": "https://openalgo.in/fundamentals/input-output-fstrings"
     },
     "https://openalgo.in/fundamentals/installing-libraries": {
       "content_hash": "c2a2f68e0a355b225477f04592fca4617cc5d428c6e60fcea3b74eb7cdd6d1ed",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/019-installing-libraries-pip-venv.md",
       "title": "Installing Libraries: pip & venv",
       "url": "https://openalgo.in/fundamentals/installing-libraries"
     },
     "https://openalgo.in/fundamentals/installing-python": {
       "content_hash": "b12fbd5f8ac2a179660c2ca2a211f99064076b83129bb15f5702217383ea8a6e",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/002-installing-python-pip.md",
       "title": "Installing Python & pip",
       "url": "https://openalgo.in/fundamentals/installing-python"
     },
     "https://openalgo.in/fundamentals/json-data": {
       "content_hash": "46e3bc2bba32d2f53ce179d5d2a3b28368e40a6870e7dd5d66e44d3f4c028fd0",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/022-working-with-json.md",
       "title": "Working with JSON",
       "url": "https://openalgo.in/fundamentals/json-data"
     },
     "https://openalgo.in/fundamentals/lists": {
       "content_hash": "55e709fe63150940f99e195bf8c005ccac6329727ed7970c91685172452f3d2f",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/009-lists-your-first-data-structure.md",
       "title": "Lists: Your First Data Structure",
       "url": "https://openalgo.in/fundamentals/lists"
     },
     "https://openalgo.in/fundamentals/loading-data": {
       "content_hash": "fab31686f768dbc58536bc7ef1b8d2171ba2f5842cd328822562ee14ed1ff702",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/028-loading-market-data.md",
       "title": "Loading Market Data",
       "url": "https://openalgo.in/fundamentals/loading-data"
     },
     "https://openalgo.in/fundamentals/loops": {
       "content_hash": "bc093fe24040abaf9c8b8a4848e692367634e1fb529b2a8ba007c182a4de128c",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/014-loops-for-while.md",
       "title": "Loops: for & while",
       "url": "https://openalgo.in/fundamentals/loops"
     },
     "https://openalgo.in/fundamentals/market-landscape": {
       "content_hash": "a5133ea73efdcc207895cdda2c22f42ba1ddcd5646f4bc808286ed33a9459380",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/033-the-market-landscape.md",
       "title": "The Market Landscape",
       "url": "https://openalgo.in/fundamentals/market-landscape"
     },
     "https://openalgo.in/fundamentals/modules-and-imports": {
       "content_hash": "09da8cc8c239e290a878636952b331bc59298085ece75c541a1f83e88e84e6d4",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/017-modules-imports.md",
       "title": "Modules & Imports",
       "url": "https://openalgo.in/fundamentals/modules-and-imports"
     },
     "https://openalgo.in/fundamentals/money-timings-holidays": {
       "content_hash": "f0b97e6bc02ffbcbaf9c99a9e380b6c406192426c99bb808c8ea249609b66ed8",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/035-money-timings-holidays.md",
       "title": "Money, Timings & Holidays",
       "url": "https://openalgo.in/fundamentals/money-timings-holidays"
     },
     "https://openalgo.in/fundamentals/numbers-and-types": {
       "content_hash": "7d48a15e7cf88e524c1935426484cde27cbd1b34277558876a492edde96ae357",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/005-numbers-data-types.md",
       "title": "Numbers & Data Types",
       "url": "https://openalgo.in/fundamentals/numbers-and-types"
     },
     "https://openalgo.in/fundamentals/numpy-basics": {
       "content_hash": "833eb731b4af2944ead68122bb8df406e912431d740e41d0cf1597912fd87b2e",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/025-numpy-basics.md",
       "title": "NumPy Basics",
       "url": "https://openalgo.in/fundamentals/numpy-basics"
     },
     "https://openalgo.in/fundamentals/ohlcv-data": {
       "content_hash": "7487e60bc1f3dfad6f0121342d2d1c076a70ac3537be7a802396639e1e6a5737",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/036-working-with-ohlcv-data.md",
       "title": "Working with OHLCV Data",
       "url": "https://openalgo.in/fundamentals/ohlcv-data"
     },
     "https://openalgo.in/fundamentals/operators": {
       "content_hash": "6017d39f57197822f8a2d00ea5d3002e4681ad97d1de4a67416049f5fee8226e",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/006-operators-p-l-math.md",
       "title": "Operators & P&L Math",
       "url": "https://openalgo.in/fundamentals/operators"
     },
     "https://openalgo.in/fundamentals/pandas-series": {
       "content_hash": "935962122bcb77de521e95b05cbc38b2061fbbe453d7f32536c660e2b54b9249",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/026-pandas-series.md",
       "title": "Pandas Series",
       "url": "https://openalgo.in/fundamentals/pandas-series"
     },
     "https://openalgo.in/fundamentals/quotes-and-live": {
       "content_hash": "497561ce92225bb744cccb87b875d3d4e66a461fc8eef6a2b55f3b8f5e70fd27",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/038-live-quotes-delayed-data.md",
       "title": "Live Quotes & Delayed Data",
       "url": "https://openalgo.in/fundamentals/quotes-and-live"
     },
     "https://openalgo.in/fundamentals/returns-signals-performance": {
       "content_hash": "4a35ce87cc4fcf7924cb8919da19cc5ab960ab157d3d205300f2cd573d9d67e1",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/040-returns-signals-performance.md",
       "title": "Returns, Signals & Performance",
       "url": "https://openalgo.in/fundamentals/returns-signals-performance"
     },
     "https://openalgo.in/fundamentals/sets": {
       "content_hash": "f88d0482c1bb2c44d39da0655d6ee29a829c3864c3e95ee1d2d4e5ed6e55af29",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/012-sets.md",
       "title": "Sets",
       "url": "https://openalgo.in/fundamentals/sets"
     },
     "https://openalgo.in/fundamentals/standard-library": {
       "content_hash": "8844230c92bd65c27a3f54f6b000d9bc793e0e4c4ae8c73199f07690372c9080",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/018-the-standard-library-tour.md",
       "title": "The Standard Library Tour",
       "url": "https://openalgo.in/fundamentals/standard-library"
     },
     "https://openalgo.in/fundamentals/strings": {
       "content_hash": "f18bbe83b4c11d17c351fdf55de5a1ef10b4fe94fd9dcd9c9da921ebe7e44eb3",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/008-working-with-strings.md",
       "title": "Working with Strings",
       "url": "https://openalgo.in/fundamentals/strings"
     },
     "https://openalgo.in/fundamentals/symbols-and-tickers": {
       "content_hash": "8b8419a24eb753cfd3e4e25b82a23a442ad6b30f9543a82d64111879a0efe6d2",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/034-symbols-tickers-lot-sizes.md",
       "title": "Symbols, Tickers & Lot Sizes",
       "url": "https://openalgo.in/fundamentals/symbols-and-tickers"
     },
     "https://openalgo.in/fundamentals/tuples": {
       "content_hash": "e13627ced80c5fda8eea280f74c0ede7e86ef49e8e43b8e9145d5deb7d2cbfbf",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/010-tuples.md",
       "title": "Tuples",
       "url": "https://openalgo.in/fundamentals/tuples"
     },
     "https://openalgo.in/fundamentals/variables-and-comments": {
       "content_hash": "ab7a676dc7ac284a01e58ed23a36d046314f97ef36b0869b4d807eae7f5a0508",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/004-variables-comments.md",
       "title": "Variables & Comments",
       "url": "https://openalgo.in/fundamentals/variables-and-comments"
     },
     "https://openalgo.in/fundamentals/visualization": {
       "content_hash": "74d268d501a8e3819dd0220ed783ff2a92024a1abb7a771a3323cac0cae4a527",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/032-data-visualization.md",
       "title": "Data Visualization",
       "url": "https://openalgo.in/fundamentals/visualization"
     },
     "https://openalgo.in/fundamentals/vscode-and-jupyter": {
       "content_hash": "f4cba8bfa97d59782995a8258d4610de0a45b247d94a18b7c4e304adc87d8a87",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/003-your-toolkit-vs-code-jupyter.md",
       "title": "Your Toolkit: VS Code & Jupyter",
       "url": "https://openalgo.in/fundamentals/vscode-and-jupyter"
     },
     "https://openalgo.in/fundamentals/websockets-concept": {
       "content_hash": "72f4d3b52822f5370309415ffe4d8ef5403e1138424c7310926d9bdb2c3e2444",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/039-what-a-websocket-is.md",
       "title": "What a WebSocket Is",
       "url": "https://openalgo.in/fundamentals/websockets-concept"
     },
     "https://openalgo.in/fundamentals/why-python-for-finance": {
       "content_hash": "cc5fd5ec26c5d07d2bb4124f78b9e14a4652de811f74f1dd96bc56fb470c3c9a",
+      "kind": "chapter",
       "relative_path": "courses/003-python-for-traders/001-why-python-for-finance.md",
       "title": "Why Python for Finance",
       "url": "https://openalgo.in/fundamentals/why-python-for-finance"
     },
     "https://openalgo.in/futures": {
       "content_hash": "39b66070db0b27f2f87abc3082f8439780e9e83fba2b085142c5daaf9e8f378a",
+      "kind": "overview",
       "relative_path": "courses/004-futures-trading/000-course-overview.md",
       "title": "Futures Trading",
       "url": "https://openalgo.in/futures"
     },
     "https://openalgo.in/futures/basis-and-carry": {
       "content_hash": "68c9f964546db7a451458f3347147f57354fad8a92fb924032a9c761f9e517c9",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/013-basis-and-the-cost-of-carry.md",
       "title": "Basis and the Cost of Carry",
       "url": "https://openalgo.in/futures/basis-and-carry"
     },
     "https://openalgo.in/futures/calendar-spread-and-basis": {
       "content_hash": "3d3fdc809c79fbfcc0b56b7cfe0b6b105195304f0a1ac5bf30e0cbfcc23c9e76",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/016-roll-spreads-calendar-spreads-and-basis-trading.md",
       "title": "Roll Spreads, Calendar Spreads and Basis Trading",
       "url": "https://openalgo.in/futures/calendar-spread-and-basis"
     },
     "https://openalgo.in/futures/contract-specs": {
       "content_hash": "1679bc9455592d871742a2ea091ab7ccb122f7a084f147a4f82cf4ee9c41434b",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/004-reading-a-contract-lot-size-expiry-and-tick.md",
       "title": "Reading a Contract: Lot Size, Expiry and Tick",
       "url": "https://openalgo.in/futures/contract-specs"
     },
     "https://openalgo.in/futures/corporate-actions": {
       "content_hash": "04c8c05ea42f64c54c83b2945ec04340044c0c511b6fbb6e2751d17d48a88bd4",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/021-corporate-actions-and-f-o-adjustments.md",
       "title": "Corporate Actions and F&O Adjustments",
       "url": "https://openalgo.in/futures/corporate-actions"
     },
     "https://openalgo.in/futures/costs-and-taxation": {
       "content_hash": "ff1f7a756cc63171e9e6609b1ba8c80eed014bceb3d4a9b8a417cc579391d9a6",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/012-transaction-costs-and-taxation.md",
       "title": "Transaction Costs and Taxation",
       "url": "https://openalgo.in/futures/costs-and-taxation"
     },
     "https://openalgo.in/futures/expiry-calendar-and-cycle": {
       "content_hash": "6e64dc25e558bd3af23a414dad24c3d560bffa621a41cd63066ccccc3f09cec0",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/014-the-expiry-calendar-and-contract-cycle.md",
       "title": "The Expiry Calendar and Contract Cycle",
       "url": "https://openalgo.in/futures/expiry-calendar-and-cycle"
     },
     "https://openalgo.in/futures/futures-payoff": {
       "content_hash": "e8d6fd688e274f921e562e3b98bc19f9b412722d98b2421f61c8563851dc1fe9",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/008-the-futures-payoff-a-straight-line.md",
       "title": "The Futures Payoff: A Straight Line",
       "url": "https://openalgo.in/futures/futures-payoff"
     },
     "https://openalgo.in/futures/futures-vs-forwards-options-equity": {
       "content_hash": "1e6cc20cdf25ecc343ba4d8ed8dd11eac85aa17180788eb2275f83a785a242c9",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/002-futures-vs-forwards-options-and-shares.md",
       "title": "Futures vs Forwards, Options and Shares",
       "url": "https://openalgo.in/futures/futures-vs-forwards-options-equity"
     },
     "https://openalgo.in/futures/gap-and-event-risk": {
       "content_hash": "131b86dc116cbbb60bbe76918c775b3e2d406231b36aa65883d6aeb035931072",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/025-gap-risk-and-event-risk.md",
       "title": "Gap Risk and Event Risk",
       "url": "https://openalgo.in/futures/gap-and-event-risk"
     },
     "https://openalgo.in/futures/hedging-with-futures": {
       "content_hash": "be36a500079a7a7f60f41c5c2fa05bb674c5cd9433971c927861248d894f6bee",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/023-hedging-a-portfolio-worked-examples.md",
       "title": "Hedging a Portfolio: Worked Examples",
       "url": "https://openalgo.in/futures/hedging-with-futures"
     },
     "https://openalgo.in/futures/how-futures-orders-work": {
       "content_hash": "55b3e732f98c12bbac9781f220671b7884e161e483c2a121751d676f1d65f192",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/005-how-futures-orders-actually-work.md",
       "title": "How Futures Orders Actually Work",
       "url": "https://openalgo.in/futures/how-futures-orders-work"
     },
     "https://openalgo.in/futures/index-vs-stock-futures": {
       "content_hash": "0e8ac2e2f3dd7cf7d43fa1ad257fbca3403c8ae05bc5e2bdcef4ab191ab0e429",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/018-index-futures-vs-stock-futures.md",
       "title": "Index Futures vs Stock Futures",
       "url": "https://openalgo.in/futures/index-vs-stock-futures"
     },
     "https://openalgo.in/futures/liquidity-spread-slippage": {
       "content_hash": "c3d64f3485a0302cd68147a2227509654fa932b8211efcb30ad7dcdbe926837e",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/006-liquidity-the-bid-ask-spread-and-slippage.md",
       "title": "Liquidity, the Bid-Ask Spread and Slippage",
       "url": "https://openalgo.in/futures/liquidity-spread-slippage"
     },
     "https://openalgo.in/futures/long-and-short": {
       "content_hash": "23b763f0c94a7882378e939a9414802644ee0b975bb3b97bf6f2ec8bbc59166e",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/007-going-long-and-going-short.md",
       "title": "Going Long and Going Short",
       "url": "https://openalgo.in/futures/long-and-short"
     },
     "https://openalgo.in/futures/margin-and-leverage": {
       "content_hash": "15155fa2d5bdcb6c0cea54498d663ee21687760e035d3e8ccc6a13f34440bfdc",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/009-margin-and-leverage-the-double-edged-sword.md",
       "title": "Margin and Leverage: The Double-Edged Sword",
       "url": "https://openalgo.in/futures/margin-and-leverage"
     },
     "https://openalgo.in/futures/mark-to-market": {
       "content_hash": "ebf31251f82624802a13b073612069e533a8eed1e35c288ad292b039a79d8647",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/011-mark-to-market-settled-every-single-day.md",
       "title": "Mark-to-Market: Settled Every Single Day",
       "url": "https://openalgo.in/futures/mark-to-market"
     },
     "https://openalgo.in/futures/mistakes-and-checklist": {
       "content_hash": "05418f4c4b9acadf697b973ec6dee54f8270437d50f40a49569990cd28c57cd0",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/027-beginner-mistakes-and-your-futures-checklist.md",
       "title": "Beginner Mistakes and Your Futures Checklist",
       "url": "https://openalgo.in/futures/mistakes-and-checklist"
     },
     "https://openalgo.in/futures/open-interest-in-futures": {
       "content_hash": "ce094000efe15f24eb023ea342a1f769fc6afc862c9413e130ba14c11f69f014",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/019-open-interest-in-futures.md",
       "title": "Open Interest in Futures",
       "url": "https://openalgo.in/futures/open-interest-in-futures"
     },
     "https://openalgo.in/futures/position-limits-and-ban": {
       "content_hash": "2219a740bc4f372c03193c67339ef90d510f0008f66188d99db706e164599fb4",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/020-position-limits-the-f-o-ban-and-quantity-freeze.md",
       "title": "Position Limits, the F&O Ban and Quantity Freeze",
       "url": "https://openalgo.in/futures/position-limits-and-ban"
     },
     "https://openalgo.in/futures/position-sizing": {
       "content_hash": "f9c5f87cfd522a31a9be5c96e70757d7858a9738b887777ab3d6f05ccbd5fc2d",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/024-position-sizing-with-futures.md",
       "title": "Position Sizing with Futures",
       "url": "https://openalgo.in/futures/position-sizing"
     },
     "https://openalgo.in/futures/price-bands-and-halts": {
       "content_hash": "275b0d9ac44226e4278f2fe356a7ae619a89ed6596809f9527f804c0df097605",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/022-price-bands-circuits-and-trading-halts.md",
       "title": "Price Bands, Circuits and Trading Halts",
       "url": "https://openalgo.in/futures/price-bands-and-halts"
     },
     "https://openalgo.in/futures/risks-of-leverage": {
       "content_hash": "9290f23e462728d59d1a5b1a6c14d4d141f4270181181a8c1ecde7929c44b05c",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/026-the-risks-of-leverage-and-how-to-survive.md",
       "title": "The Risks of Leverage (and How to Survive)",
       "url": "https://openalgo.in/futures/risks-of-leverage"
     },
     "https://openalgo.in/futures/rollover": {
       "content_hash": "10e92a7b346ba2d1bdb8a6fc5f2effac33beae9937e6b162044d4351b2a4d5f3",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/015-rollover-moving-to-the-next-month.md",
       "title": "Rollover: Moving to the Next Month",
       "url": "https://openalgo.in/futures/rollover"
     },
     "https://openalgo.in/futures/settlement-stock-vs-index": {
       "content_hash": "6d875fe3c7d30d4423392ed290e6566cc5c460307a866b71ed7bdf344bdbd657",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/017-settlement-stock-delivery-vs-index-cash.md",
       "title": "Settlement: Stock Delivery vs Index Cash",
       "url": "https://openalgo.in/futures/settlement-stock-vs-index"
     },
     "https://openalgo.in/futures/span-margin-and-pledge": {
       "content_hash": "cb5b0fd676d8e4b05d4edaaffc4d01d6295ce6d590d5279a923ba4d3069146b8",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/010-span-margin-exposure-and-pledged-collateral.md",
       "title": "SPAN Margin, Exposure and Pledged Collateral",
       "url": "https://openalgo.in/futures/span-margin-and-pledge"
     },
     "https://openalgo.in/futures/what-is-a-future": {
       "content_hash": "640fb702bcd71d1a42db895a0da4d81fb431960f372bf78b5c4d62cd21f43677",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/001-what-is-a-futures-contract.md",
       "title": "What Is a Futures Contract?",
       "url": "https://openalgo.in/futures/what-is-a-future"
     },
     "https://openalgo.in/futures/why-futures-exist": {
       "content_hash": "87fa9fdbda8643c0f44e35be5dda8cf9dbc7f6ade3ec0823c7e9d01cc32434e8",
+      "kind": "chapter",
       "relative_path": "courses/004-futures-trading/003-why-futures-exist-hedgers-and-speculators.md",
       "title": "Why Futures Exist: Hedgers and Speculators",
       "url": "https://openalgo.in/futures/why-futures-exist"
     },
     "https://openalgo.in/options-basics": {
       "content_hash": "d8b82a8e8ca1638f084f7ff7c880cc0124e8b85829101d5803bfcbbed8db1d96",
+      "kind": "overview",
       "relative_path": "courses/005-options-basics/000-course-overview.md",
       "title": "Options Basics",
       "url": "https://openalgo.in/options-basics"
     },
     "https://openalgo.in/options-basics/bid-ask-spread-liquidity": {
       "content_hash": "4b963f9199f7367fda534f72032dfaf70cc68b600ee6de9adc56e08725f9a896",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/013-bid-ask-spread-and-liquidity.md",
       "title": "Bid, Ask, Spread and Liquidity",
       "url": "https://openalgo.in/options-basics/bid-ask-spread-liquidity"
     },
     "https://openalgo.in/options-basics/buyer-vs-seller": {
       "content_hash": "9542892de3e621d8463b285aa328be81da6f8a0c7b70233adfb262a64a06e649",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/017-buyer-vs-seller-who-has-the-edge.md",
       "title": "Buyer vs Seller: Who Has the Edge?",
       "url": "https://openalgo.in/options-basics/buyer-vs-seller"
     },
     "https://openalgo.in/options-basics/calls-and-puts": {
       "content_hash": "feb839709d443df7265da80508ad2c83aae4164cda7b5d85f0273200d30a6032",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/004-calls-and-puts-the-two-building-blocks.md",
       "title": "Calls and Puts: The Two Building Blocks",
       "url": "https://openalgo.in/options-basics/calls-and-puts"
     },
     "https://openalgo.in/options-basics/choosing-strike-and-expiry": {
       "content_hash": "c79a66064c952319ee665db81bdd1f6db6e52455b0ede44691ee74689fa82aca",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/022-how-to-choose-a-strike-and-an-expiry.md",
       "title": "How to Choose a Strike and an Expiry",
       "url": "https://openalgo.in/options-basics/choosing-strike-and-expiry"
     },
     "https://openalgo.in/options-basics/event-risk": {
       "content_hash": "2ed7f46e7abfe40311e08a167e209c5be4568ffb70de9f454c1634f9cf7b813f",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/024-event-risk-results-policy-and-budgets.md",
       "title": "Event Risk: Results, Policy and Budgets",
       "url": "https://openalgo.in/options-basics/event-risk"
     },
     "https://openalgo.in/options-basics/expiry-exercise-assignment": {
       "content_hash": "2785b2eaa4c415d0ea7e75ac3796b39231cce462e0891d8a624c59c365e7bf59",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/008-expiry-exercise-and-assignment.md",
       "title": "Expiry, Exercise and Assignment",
       "url": "https://openalgo.in/options-basics/expiry-exercise-assignment"
     },
     "https://openalgo.in/options-basics/hv-iv-and-expected-move": {
       "content_hash": "16e26145189f19205a00d549bb13b89263a540b20123f5c475238dd60c5b2c17",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/020-historical-vs-implied-volatility-and-the-expected-move.md",
       "title": "Historical vs Implied Volatility, and the Expected Move",
       "url": "https://openalgo.in/options-basics/hv-iv-and-expected-move"
     },
     "https://openalgo.in/options-basics/implied-volatility": {
       "content_hash": "72233a15a5491b85b60e89606f0d57b79d297dd75bc70dffecf7f6cac7fff391",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/019-implied-volatility-the-market-s-fear-gauge.md",
       "title": "Implied Volatility: The Market's Fear Gauge",
       "url": "https://openalgo.in/options-basics/implied-volatility"
     },
     "https://openalgo.in/options-basics/index-vs-stock-options": {
       "content_hash": "0528efef8f5423c36712210f98cad721a60ec55cec9349e73a43c61ae11d3a0c",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/007-index-vs-stock-options-in-india.md",
       "title": "Index vs Stock Options in India",
       "url": "https://openalgo.in/options-basics/index-vs-stock-options"
     },
     "https://openalgo.in/options-basics/intrinsic-and-time-value": {
       "content_hash": "6b5817b8d0259ad5dd2179c5332ead2dab3f0e34571b4e6bb369bb04acb84cc1",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/010-intrinsic-value-and-time-value.md",
       "title": "Intrinsic Value and Time Value",
       "url": "https://openalgo.in/options-basics/intrinsic-and-time-value"
     },
     "https://openalgo.in/options-basics/long-call": {
       "content_hash": "3b2589b3f0f029e3eb0659cc96b772fc86928c0c3863686bd35a9a1ba8a1d32b",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/014-buying-a-call-long-call.md",
       "title": "Buying a Call (Long Call)",
       "url": "https://openalgo.in/options-basics/long-call"
     },
     "https://openalgo.in/options-basics/long-put": {
       "content_hash": "91c50e8020e3875515f43b063276b3277a169442041cd1f241d652fb7b1f7fcd",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/015-buying-a-put-long-put.md",
       "title": "Buying a Put (Long Put)",
       "url": "https://openalgo.in/options-basics/long-put"
     },
     "https://openalgo.in/options-basics/margin-and-costs": {
       "content_hash": "71d76f5984d162db73029a2e4822f4e391cad85c3398f37f8d1c3641beaa65f7",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/023-margin-for-sellers-and-transaction-costs.md",
       "title": "Margin for Sellers, and Transaction Costs",
       "url": "https://openalgo.in/options-basics/margin-and-costs"
     },
     "https://openalgo.in/options-basics/moneyness": {
       "content_hash": "373f9cbf79155c8a2e40b64e451b0cd6da0e4826dcb5ae82e7d70c91c04f4062",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/009-in-at-and-out-of-the-money.md",
       "title": "In, At and Out of the Money",
       "url": "https://openalgo.in/options-basics/moneyness"
     },
     "https://openalgo.in/options-basics/open-interest-volume-pcr": {
       "content_hash": "129961dc992c396bdc6c5fdc19c37211bfaf248d9c64520394e8732b43ecf8d3",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/021-open-interest-volume-and-pcr.md",
       "title": "Open Interest, Volume and PCR",
       "url": "https://openalgo.in/options-basics/open-interest-volume-pcr"
     },
     "https://openalgo.in/options-basics/options-vs-futures-vs-stocks": {
       "content_hash": "364ef1eb910551e6e2c398debc06c7d35f0df3ff7c8c3dc17d264c2c3f69b68f",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/003-options-vs-futures-vs-stocks.md",
       "title": "Options vs Futures vs Stocks",
       "url": "https://openalgo.in/options-basics/options-vs-futures-vs-stocks"
     },
     "https://openalgo.in/options-basics/payoff-vs-live-pnl": {
       "content_hash": "7073198f5d9de67826183493a33961de8d5e4b580e71e3ef252811f12e051908",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/011-payoff-at-expiry-vs-live-p-l-before-expiry.md",
       "title": "Payoff at Expiry vs Live P&L Before Expiry",
       "url": "https://openalgo.in/options-basics/payoff-vs-live-pnl"
     },
     "https://openalgo.in/options-basics/premium-strike-expiry": {
       "content_hash": "d2a1494b3e49aa2e121feba9a8f72f1b425cf9ee1ebd195ef6ddd0618e3e3d46",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/005-premium-strike-and-expiry.md",
       "title": "Premium, Strike and Expiry",
       "url": "https://openalgo.in/options-basics/premium-strike-expiry"
     },
     "https://openalgo.in/options-basics/right-not-obligation": {
       "content_hash": "78ad6c671dcad98f1dcd8f2cb00ae81bccc9428091fbd995685fed515438c994",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/006-the-right-not-the-obligation.md",
       "title": "The Right, Not the Obligation",
       "url": "https://openalgo.in/options-basics/right-not-obligation"
     },
     "https://openalgo.in/options-basics/risk-and-mistakes": {
       "content_hash": "c09403922f66f02a8530fc492f51ecc1bcda51103a838ba785b65c288dd3dec7",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/025-risk-management-and-the-classic-mistakes.md",
       "title": "Risk Management and the Classic Mistakes",
       "url": "https://openalgo.in/options-basics/risk-and-mistakes"
     },
     "https://openalgo.in/options-basics/short-call-and-put": {
       "content_hash": "f9f692395cdac4732f5a659c558aad13a2875d7aaac798834fbbfefee781739f",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/016-selling-options-short-call-and-put.md",
       "title": "Selling Options (Short Call and Put)",
       "url": "https://openalgo.in/options-basics/short-call-and-put"
     },
     "https://openalgo.in/options-basics/spreads-and-checklist": {
       "content_hash": "25a54948150e59069596229d12d8ce4f52df68de9f04d11817721a9361ee7e4b",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/026-from-single-legs-to-spreads-and-your-checklist.md",
       "title": "From Single Legs to Spreads, and Your Checklist",
       "url": "https://openalgo.in/options-basics/spreads-and-checklist"
     },
     "https://openalgo.in/options-basics/the-greeks": {
       "content_hash": "e845d59b6320a2045de24cddae50b3b1277c05e34e540e9be249e35d87e0f1b0",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/018-the-greeks-delta-gamma-theta-vega.md",
       "title": "The Greeks: Delta, Gamma, Theta, Vega",
       "url": "https://openalgo.in/options-basics/the-greeks"
     },
     "https://openalgo.in/options-basics/the-option-chain": {
       "content_hash": "de19ed4f53ec56aefb98c6d51778067d6c131f7825cf374ec7156c5c65371bc2",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/012-reading-the-option-chain.md",
       "title": "Reading the Option Chain",
       "url": "https://openalgo.in/options-basics/the-option-chain"
     },
     "https://openalgo.in/options-basics/what-is-an-option": {
       "content_hash": "40a1cc44f797b70e236c658af8a9a7908bec7cf5d88a0e66a5eabc0c4e944d86",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/001-what-is-an-option.md",
       "title": "What Is an Option?",
       "url": "https://openalgo.in/options-basics/what-is-an-option"
     },
     "https://openalgo.in/options-basics/why-options-exist": {
       "content_hash": "5890778fc713dbce23a96bd6b2bad6f8368009a18ded2f53c3c3300305b09754",
+      "kind": "chapter",
       "relative_path": "courses/005-options-basics/002-why-options-exist.md",
       "title": "Why Options Exist",
       "url": "https://openalgo.in/options-basics/why-options-exist"
     },
     "https://openalgo.in/options-strategies": {
       "content_hash": "45596d8c246c02844452a4425a40d2f76a5b7fc3f7522557e86a2ea1c83dc84f",
+      "kind": "overview",
       "relative_path": "courses/006-options-strategies/000-course-overview.md",
       "title": "Options Strategies",
       "url": "https://openalgo.in/options-strategies"
     },
     "https://openalgo.in/options-strategies/advanced-multileg": {
       "content_hash": "b9057e70df85ad119522a23e25ba6ff262469ff7fa2d34a73848a3246cd4890d",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/019-batman-double-fly-and-double-condor.md",
       "title": "Batman, Double Fly and Double Condor",
       "url": "https://openalgo.in/options-strategies/advanced-multileg"
     },
     "https://openalgo.in/options-strategies/bear-call-spread": {
       "content_hash": "16170b9fcc8e502393067980c2767289b1f05e05dcc455006b02c39f151ea5bb",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/009-the-bear-call-spread.md",
       "title": "The Bear Call Spread",
       "url": "https://openalgo.in/options-strategies/bear-call-spread"
     },
     "https://openalgo.in/options-strategies/bear-put-spread": {
       "content_hash": "1d41c1f562ba13360a4533917244f5f47a0eb0218414afec47e40d81dd6d82e4",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/010-the-bear-put-spread.md",
       "title": "The Bear Put Spread",
       "url": "https://openalgo.in/options-strategies/bear-put-spread"
     },
     "https://openalgo.in/options-strategies/bear-ratio-synthetic": {
       "content_hash": "2aab798c4e8dcf8ce77bad7986b8e3505025429cdfdf39a3cdc32d7825ba8eba",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/011-put-ratio-back-spread-synthetic-and-risk-reversal.md",
       "title": "Put Ratio Back Spread, Synthetic and Risk Reversal",
       "url": "https://openalgo.in/options-strategies/bear-ratio-synthetic"
     },
     "https://openalgo.in/options-strategies/bearish-butterfly-condor": {
       "content_hash": "bf6b8e17524ae19d3ca374dcb3ecee5e9880fc3b866277716dcb3eecfc277c48",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/012-bearish-butterfly-and-bearish-condor.md",
       "title": "Bearish Butterfly and Bearish Condor",
       "url": "https://openalgo.in/options-strategies/bearish-butterfly-condor"
     },
     "https://openalgo.in/options-strategies/bull-call-spread": {
       "content_hash": "46433396eabfbaca6842df9d585f65d52428c5a39478c39e999ec2915cb0256a",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/004-the-bull-call-spread.md",
       "title": "The Bull Call Spread",
       "url": "https://openalgo.in/options-strategies/bull-call-spread"
     },
     "https://openalgo.in/options-strategies/bull-put-spread": {
       "content_hash": "47a31e654b93463835860d16b469071771c5b6493deab37495fd357569c03c5c",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/005-the-bull-put-spread.md",
       "title": "The Bull Put Spread",
       "url": "https://openalgo.in/options-strategies/bull-put-spread"
     },
     "https://openalgo.in/options-strategies/bull-ratio-synthetic": {
       "content_hash": "efb82adb0911ef75e9dcc4a1811acfbb6b7d3011be4b4bf45b93abf6cdae69a7",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/006-ratio-back-spread-synthetic-and-range-forward.md",
       "title": "Ratio Back Spread, Synthetic and Range Forward",
       "url": "https://openalgo.in/options-strategies/bull-ratio-synthetic"
     },
     "https://openalgo.in/options-strategies/bullish-butterfly-condor": {
       "content_hash": "366746f58f673d7b21f9af2bd47a044efad6c21cec28f74a66dc69d48e9e374f",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/007-bullish-butterfly-and-bullish-condor.md",
       "title": "Bullish Butterfly and Bullish Condor",
       "url": "https://openalgo.in/options-strategies/bullish-butterfly-condor"
     },
     "https://openalgo.in/options-strategies/calendars": {
       "content_hash": "6c4f2ef159416392b2c2e67ea9ecb09e076848541045e0e1dc07eb32150b7b11",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/020-calendar-and-diagonal-spreads-trading-time.md",
       "title": "Calendar and Diagonal Spreads: Trading Time",
       "url": "https://openalgo.in/options-strategies/calendars"
     },
     "https://openalgo.in/options-strategies/choosing-and-managing": {
       "content_hash": "ba9680bf6dfccd84bb75cefaa4bfda766932fab3c484f3fb8db42ba1833e6793",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/027-choosing-a-strategy-and-managing-it.md",
       "title": "Choosing a Strategy and Managing It",
       "url": "https://openalgo.in/options-strategies/choosing-and-managing"
     },
     "https://openalgo.in/options-strategies/collateral-and-margin": {
       "content_hash": "b843348f09f66dd09717766a209df0fa644bc3086f16473eaed4a2dadd8b7c77",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/022-margin-and-collateral-for-f-o.md",
       "title": "Margin and Collateral for F&O",
       "url": "https://openalgo.in/options-strategies/collateral-and-margin"
     },
     "https://openalgo.in/options-strategies/iron-condor": {
       "content_hash": "fc27fadcd653fe46ad288a199f4bd3228b9d153c2ff9164633bc4babd31613fc",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/015-the-iron-condor.md",
       "title": "The Iron Condor",
       "url": "https://openalgo.in/options-strategies/iron-condor"
     },
     "https://openalgo.in/options-strategies/iron-fly-butterfly": {
       "content_hash": "911602e23b9ac99b81b8879ec05da78bb7d81144ce0a4febd3e139121b944f86",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/016-the-iron-fly-and-the-butterfly.md",
       "title": "The Iron Fly and the Butterfly",
       "url": "https://openalgo.in/options-strategies/iron-fly-butterfly"
     },
     "https://openalgo.in/options-strategies/jade-lizard": {
       "content_hash": "e639b5093d68497b859696e527375dc721b6852d50208a7b7553077d19715732",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/018-the-jade-lizard-and-reverse-jade-lizard.md",
       "title": "The Jade Lizard and Reverse Jade Lizard",
       "url": "https://openalgo.in/options-strategies/jade-lizard"
     },
     "https://openalgo.in/options-strategies/long-call-short-put": {
       "content_hash": "c56df7161128f9587970da7e3e81bc13ddaf9c3483df9741ade4f15dc834106f",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/003-long-call-and-short-put.md",
       "title": "Long Call and Short Put",
       "url": "https://openalgo.in/options-strategies/long-call-short-put"
     },
     "https://openalgo.in/options-strategies/long-put-short-call": {
       "content_hash": "900e6cd5a409a671222e9d22c44e8d7eeea3d7e28e15d0694c6a042de6737aac",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/008-long-put-and-short-call.md",
       "title": "Long Put and Short Call",
       "url": "https://openalgo.in/options-strategies/long-put-short-call"
     },
     "https://openalgo.in/options-strategies/long-straddle-strangle": {
       "content_hash": "7de3cf6ee3203be09b5e77bbec712d83b040f22d97aa5e8efd827da86b42bb08",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/013-long-straddle-and-strangle-betting-on-a-big-move.md",
       "title": "Long Straddle and Strangle: Betting on a Big Move",
       "url": "https://openalgo.in/options-strategies/long-straddle-strangle"
     },
     "https://openalgo.in/options-strategies/margin-penalties": {
       "content_hash": "b2b92ead55fe8818f9b39a2f62733100ac9182b51a7a72d617063001aea6d28f",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/024-margins-and-margin-penalties.md",
       "title": "Margins and Margin Penalties",
       "url": "https://openalgo.in/options-strategies/margin-penalties"
     },
     "https://openalgo.in/options-strategies/options-adjustments": {
       "content_hash": "d8b592f76db4697ff8b2bd910cc1100bfd7c4a768694ae6da6ff4ba4a6c0ac30",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/025-options-adjustments-defending-a-tested-trade.md",
       "title": "Options Adjustments: Defending a Tested Trade",
       "url": "https://openalgo.in/options-strategies/options-adjustments"
     },
     "https://openalgo.in/options-strategies/pledging-for-margin": {
       "content_hash": "af6d16a76dd42be686acdb388e3033cbd969723d8e45aa3f2fcfa97608e70829",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/023-pledging-for-margin-smartly.md",
       "title": "Pledging for Margin, Smartly",
       "url": "https://openalgo.in/options-strategies/pledging-for-margin"
     },
     "https://openalgo.in/options-strategies/position-greeks-and-iv": {
       "content_hash": "3349625e2220c28cb368ced85303b8f1fa224da74f48d80de3e59d1d113b3806",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/026-position-greeks-and-the-volatility-regime.md",
       "title": "Position Greeks and the Volatility Regime",
       "url": "https://openalgo.in/options-strategies/position-greeks-and-iv"
     },
     "https://openalgo.in/options-strategies/ratio-and-backspreads": {
       "content_hash": "bbdd011ae2f08613c1f4b8bf8a7d5577df1121d8eaaaaf0972a597851062d15f",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/017-call-and-put-ratio-spreads.md",
       "title": "Call and Put Ratio Spreads",
       "url": "https://openalgo.in/options-strategies/ratio-and-backspreads"
     },
     "https://openalgo.in/options-strategies/reading-payoffs": {
       "content_hash": "227f07ff59a83385a43d30468d64b51a7d12c8e2b8ead064b25481f5cf767603",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/002-the-nine-numbers-max-profit-pop-margin-and-more.md",
       "title": "The Nine Numbers: Max Profit, POP, Margin and More",
       "url": "https://openalgo.in/options-strategies/reading-payoffs"
     },
     "https://openalgo.in/options-strategies/short-straddle-strangle": {
       "content_hash": "7217d28157326945e36d983e35ea4a189e1b1443cb651bd95e8e97705e403b19",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/014-short-straddle-and-strangle-betting-on-calm.md",
       "title": "Short Straddle and Strangle: Betting on Calm",
       "url": "https://openalgo.in/options-strategies/short-straddle-strangle"
     },
     "https://openalgo.in/options-strategies/synthetic-and-covered": {
       "content_hash": "442db87d7ce4d53d93d0b6e1612cd942d2c9647d1c2643bf24573c88b21330e1",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/021-synthetics-and-the-covered-call.md",
       "title": "Synthetics and the Covered Call",
       "url": "https://openalgo.in/options-strategies/synthetic-and-covered"
     },
     "https://openalgo.in/options-strategies/the-strategy-builder": {
       "content_hash": "c54c30c8faafc5639ad9365732765792a48778376d77658c3537ee9b532221b8",
+      "kind": "chapter",
       "relative_path": "courses/006-options-strategies/001-the-strategy-builder-and-the-payoff-diagram.md",
       "title": "The Strategy Builder and the Payoff Diagram",
       "url": "https://openalgo.in/options-strategies/the-strategy-builder"
     },
     "https://openalgo.in/python": {
       "content_hash": "af45ecb8e6884be76a8d5b04a66c0a843880c5854e18fd544c6fe6c305804ac2",
+      "kind": "overview",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/000-course-overview.md",
       "title": "Learn algorithmic trading with Python",
       "url": "https://openalgo.in/python"
     },
     "https://openalgo.in/python/backtesting-basics": {
       "content_hash": "04616d72f69f9c4bf2d1f89b8433db7daeb2c02b683b920b9391a0c5b7fabda8",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/026-backtesting-from-scratch-with-vectorbt.md",
       "title": "Backtesting from Scratch & with VectorBT",
       "url": "https://openalgo.in/python/backtesting-basics"
     },
     "https://openalgo.in/python/cash-equity-strategies": {
       "content_hash": "9442cab138bdf1736984a51265782eecb951e7f5207701407300aceac8eab41f",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/019-cash-equity-strategies.md",
       "title": "Cash & Equity Strategies",
       "url": "https://openalgo.in/python/cash-equity-strategies"
     },
     "https://openalgo.in/python/getting-started": {
       "content_hash": "85ee02608bf3f830ddb7ee74e471d8f23a1513f9e5eeae16c755648caf9f1ce8",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/001-getting-started-with-openalgo.md",
       "title": "Getting Started with OpenAlgo",
       "url": "https://openalgo.in/python/getting-started"
     },
     "https://openalgo.in/python/historical-data": {
       "content_hash": "dce6c12303d1ff0dbaa0d709d11bba4c853f215964d18aff4f7dc6ab9f1a31ac",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/005-historical-data-timeframes.md",
       "title": "Historical Data & Timeframes",
       "url": "https://openalgo.in/python/historical-data"
     },
     "https://openalgo.in/python/intraday-strategies": {
       "content_hash": "342f42d3ca06483bf8541b10b147cc800f6a8b86f0b495002cc2154c88a0710b",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/020-intraday-strategies.md",
       "title": "Intraday Strategies",
       "url": "https://openalgo.in/python/intraday-strategies"
     },
     "https://openalgo.in/python/market-data-quotes": {
       "content_hash": "94430f8c961de843e04c8961c19b672a6cc0fe64b344a1d4cf3f4fce83e8ecba",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/004-quotes-depth-ltp.md",
       "title": "Quotes, Depth & LTP",
       "url": "https://openalgo.in/python/market-data-quotes"
     },
     "https://openalgo.in/python/matplotlib-charts": {
       "content_hash": "1af1e658b708f1d996a504c125c0b6135dcbf1cec81faa2d228ade82f144fa06",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/008-charting-with-matplotlib.md",
       "title": "Charting with Matplotlib",
       "url": "https://openalgo.in/python/matplotlib-charts"
     },
     "https://openalgo.in/python/ml-neural-capstone": {
       "content_hash": "8fe75d78f7301fcb54a3fd155dece2cc05362dc24a866f6c6d51fea982670414",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/030-machine-learning-neural-nets-a-complete-bot.md",
       "title": "Machine Learning, Neural Nets & a Complete Bot",
       "url": "https://openalgo.in/python/ml-neural-capstone"
     },
     "https://openalgo.in/python/momentum-indicators": {
       "content_hash": "b4eff5115072fc752ce9d0d3d76afa07b8a432ac687486a61a7c8c1bb091df5f",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/012-momentum-indicators.md",
       "title": "Momentum Indicators",
       "url": "https://openalgo.in/python/momentum-indicators"
     },
     "https://openalgo.in/python/momentum-volatility": {
       "content_hash": "2a6a8b079e9c47c85c328a32c7a881e5604e7a5af0b66137f24d3448feedd3c7",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/022-momentum-volatility-trading.md",
       "title": "Momentum & Volatility Trading",
       "url": "https://openalgo.in/python/momentum-volatility"
     },
     "https://openalgo.in/python/numpy-for-traders": {
       "content_hash": "d49ea3b62280882ddb6c2c114e5d12b078296503e5f9267d53bf5b3c3780bb6c",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/006-numpy-for-traders.md",
       "title": "NumPy for Traders",
       "url": "https://openalgo.in/python/numpy-for-traders"
     },
     "https://openalgo.in/python/optimization": {
       "content_hash": "5f846ae08fb692c6608a5c37d5a213f4815ec71f51f5fc309dcdeb34b2bbb324",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/028-parameter-optimisation.md",
       "title": "Parameter Optimisation",
       "url": "https://openalgo.in/python/optimization"
     },
     "https://openalgo.in/python/options-strategies": {
       "content_hash": "4184c63f7341c571e92c5af91084f60b53fd4b1a4c0b9d85385664e88e68e267",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/024-options-strategies.md",
       "title": "Options Strategies",
       "url": "https://openalgo.in/python/options-strategies"
     },
     "https://openalgo.in/python/oscillators": {
       "content_hash": "af8995f132eae441818c533a91bf59a654136c9c6e440818c23913a79b6a4111",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/015-oscillators.md",
       "title": "Oscillators",
       "url": "https://openalgo.in/python/oscillators"
     },
     "https://openalgo.in/python/pair-stat-arb": {
       "content_hash": "69fc84d0605b39308b6b5a68d96eb629c4aaa630ab45a34bfc3dd63759f226e9",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/021-pair-trading-statistical-arbitrage.md",
       "title": "Pair Trading & Statistical Arbitrage",
       "url": "https://openalgo.in/python/pair-stat-arb"
     },
     "https://openalgo.in/python/pandas-for-traders": {
       "content_hash": "c157f9a4e27311b1dec101e4b464339c78b9723a52ede449863af45d5558d6f4",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/007-pandas-for-traders.md",
       "title": "Pandas for Traders",
       "url": "https://openalgo.in/python/pandas-for-traders"
     },
     "https://openalgo.in/python/performance-metrics": {
       "content_hash": "bb31eec779dee9409ce18589f0cb5eef203708cae4b7672c7b0a2c0244e7b2e2",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/027-performance-metrics-reporting.md",
       "title": "Performance Metrics & Reporting",
       "url": "https://openalgo.in/python/performance-metrics"
     },
     "https://openalgo.in/python/placing-orders": {
       "content_hash": "8c60027772e93a98653554dd0d22d79780850472df588b873d8eabfe352cc778",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/025-placing-managing-orders.md",
       "title": "Placing & Managing Orders",
       "url": "https://openalgo.in/python/placing-orders"
     },
     "https://openalgo.in/python/plotly-charts": {
       "content_hash": "a7b56f1c6801cd5772d50b4c4259e0854d70ef64f79b11188a39a816ded11e3d",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/009-interactive-charts-with-plotly.md",
       "title": "Interactive Charts with Plotly",
       "url": "https://openalgo.in/python/plotly-charts"
     },
     "https://openalgo.in/python/python-for-traders": {
       "content_hash": "e96a0d34fcf1a94776e926e2043b16a3a71789d296b46421be7524932bcd1ce7",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/002-python-essentials-for-traders.md",
       "title": "Python Essentials for Traders",
       "url": "https://openalgo.in/python/python-for-traders"
     },
     "https://openalgo.in/python/risk-position-sizing": {
       "content_hash": "ef73ec52b9d8dda9949ce733231e2fc805e95f7e2ba8e4037b8c9d921ec8f403",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/032-risk-position-sizing.md",
       "title": "Risk & Position Sizing",
       "url": "https://openalgo.in/python/risk-position-sizing"
     },
     "https://openalgo.in/python/scanning": {
       "content_hash": "e8bbe52077fd09c5f8f1684fc1a708154baf90f8ea491f219060f2e17356e56c",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/018-scanning-screeners.md",
       "title": "Scanning & Screeners",
       "url": "https://openalgo.in/python/scanning"
     },
     "https://openalgo.in/python/seasonal-strategies": {
       "content_hash": "e51a65b04a427e7c3f607d2e0f007ad8cf4eb6c55aa33a18036c1a6c5f528495",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/023-seasonal-calendar-strategies.md",
       "title": "Seasonal & Calendar Strategies",
       "url": "https://openalgo.in/python/seasonal-strategies"
     },
     "https://openalgo.in/python/signals": {
       "content_hash": "4382bdfa487abeede0766aef3163a2f040d389a05f1e58d53cac4e05ccac795c",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/017-from-indicators-to-trading-signals.md",
       "title": "From Indicators to Trading Signals",
       "url": "https://openalgo.in/python/signals"
     },
     "https://openalgo.in/python/statistical-hybrid": {
       "content_hash": "9514a6284afeb6352260d790ec60e76e4f8f21f936c83a21148a0c22d4938b7f",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/016-statistical-hybrid-utility-functions.md",
       "title": "Statistical, Hybrid & Utility Functions",
       "url": "https://openalgo.in/python/statistical-hybrid"
     },
     "https://openalgo.in/python/streamlit-apps": {
       "content_hash": "5ef2ef2fda573c5622c467c0b17e0e42e2a73450e98e3d3ee2e9e207fca656ad",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/010-live-dashboards-with-streamlit.md",
       "title": "Live Dashboards with Streamlit",
       "url": "https://openalgo.in/python/streamlit-apps"
     },
     "https://openalgo.in/python/symbols-exchanges": {
       "content_hash": "c1b720fecf163eed657ef541d7295228032fc31ec5aad31229273f717e9510a2",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/003-symbols-exchanges-lot-sizes.md",
       "title": "Symbols, Exchanges & Lot Sizes",
       "url": "https://openalgo.in/python/symbols-exchanges"
     },
     "https://openalgo.in/python/trend-indicators": {
       "content_hash": "98b8a48978a51973ddb394d8d30029f76483e0913a68c853dbae91ff3a460ff7",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/011-trend-moving-averages.md",
       "title": "Trend & Moving Averages",
       "url": "https://openalgo.in/python/trend-indicators"
     },
     "https://openalgo.in/python/volatility-indicators": {
       "content_hash": "3f6ed43f62831db351ffd95e93c983d7229f0d23266d24e9695f0cba2353bcd4",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/013-volatility-indicators.md",
       "title": "Volatility Indicators",
       "url": "https://openalgo.in/python/volatility-indicators"
     },
     "https://openalgo.in/python/volume-indicators": {
       "content_hash": "6f661cea91c07fd5f47670796cb4717d188175270d160664453f3336f4db4051",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/014-volume-indicators.md",
       "title": "Volume Indicators",
       "url": "https://openalgo.in/python/volume-indicators"
     },
     "https://openalgo.in/python/walk-forward": {
       "content_hash": "1c4d0bedc0bf4b355b429c8a7f0894b2ffc2798b320ef48b8d11c145697e6def",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/029-walk-forward-testing-robustness.md",
       "title": "Walk-Forward Testing & Robustness",
       "url": "https://openalgo.in/python/walk-forward"
     },
     "https://openalgo.in/python/websockets": {
       "content_hash": "2354d480597a5b9faf0a01acb5e4efef1e7ebc833c654c7a39e6050db96a2722",
+      "kind": "chapter",
       "relative_path": "courses/007-learn-algorithmic-trading-with-python/031-real-time-data-with-websockets.md",
       "title": "Real-Time Data with WebSockets",
       "url": "https://openalgo.in/python/websockets"
     },
     "https://openalgo.in/quant": {
       "content_hash": "6d74e9ca7c4ba30b7d03bb630f345aadb977f026f990ac0e146faeb8a48dcef4",
+      "kind": "overview",
       "relative_path": "courses/008-quantitative-trading/000-course-overview.md",
       "title": "Quantitative Trading",
       "url": "https://openalgo.in/quant"
     },
     "https://openalgo.in/quant/algo-trading-foundations": {
       "content_hash": "6fed7222df9dbfeb4a52a397a72d2ed9ad0aabc0fa2a5cdb49abdae6a6ed0179",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/029-algorithmic-trading-foundations.md",
       "title": "Algorithmic Trading Foundations",
       "url": "https://openalgo.in/quant/algo-trading-foundations"
     },
     "https://openalgo.in/quant/alpha-research-process": {
       "content_hash": "fb6c23509968cb0c3923483ce8e0634e0dd4d225bff37c9b310bdda8100234ee",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/059-the-alpha-research-process.md",
       "title": "The Alpha Research Process",
       "url": "https://openalgo.in/quant/alpha-research-process"
     },
     "https://openalgo.in/quant/alt-data-nlp": {
       "content_hash": "f5748eaeb5b55ba5c9ea59651e7fe8b314342f3b1a8c66e01afc1e749d66970c",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/066-alternative-data-and-nlp-for-indian-markets.md",
       "title": "Alternative Data and NLP for Indian Markets",
       "url": "https://openalgo.in/quant/alt-data-nlp"
     },
     "https://openalgo.in/quant/auctions": {
       "content_hash": "6420c92d5bccf7397eb0798559f678ccac6853c6bea73ee1ef45ed46ca697dc4",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/022-pre-open-call-auction-and-closing-auction.md",
       "title": "Pre-Open, Call Auction and Closing Auction",
       "url": "https://openalgo.in/quant/auctions"
     },
     "https://openalgo.in/quant/backtesting-rigor": {
       "content_hash": "bb0989fcc003d67cd2288bd0e8ee0201c1f8f8a0aa4ced7f8e2519c256c205ab",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/067-backtesting-without-fooling-yourself.md",
       "title": "Backtesting Without Fooling Yourself",
       "url": "https://openalgo.in/quant/backtesting-rigor"
     },
     "https://openalgo.in/quant/basis-and-index-arb": {
       "content_hash": "531a65a3cc2d2dbf4eb34c2bb7cf5a39560f2feb4c0bff6b0fc307ec7aedf691",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/050-cash-futures-basis-and-index-arbitrage.md",
       "title": "Cash-Futures Basis and Index Arbitrage",
       "url": "https://openalgo.in/quant/basis-and-index-arb"
     },
     "https://openalgo.in/quant/bias-lookahead-survivorship": {
       "content_hash": "e75fd578d89544b63cea0a31ad1c6b1fc065df45dff4e1c29cf3fbfd22ad9644",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/068-look-ahead-survivorship-and-corporate-action-bias.md",
       "title": "Look-Ahead, Survivorship and Corporate-Action Bias",
       "url": "https://openalgo.in/quant/bias-lookahead-survivorship"
     },
     "https://openalgo.in/quant/bulk-block-deals": {
       "content_hash": "e2df690a230b825c2cefaa99b9b1a3d8fad581a4604e52d98e0d3ecd2210c0ac",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/024-bulk-deals-block-deals-and-special-windows.md",
       "title": "Bulk Deals, Block Deals and Special Windows",
       "url": "https://openalgo.in/quant/bulk-block-deals"
     },
     "https://openalgo.in/quant/capacity-and-half-life": {
       "content_hash": "4f8ab7c225074445f643445ef54c4f7fa1999da7656da3006cb93df5b19fec1a",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/048-capacity-turnover-and-signal-half-life.md",
       "title": "Capacity, Turnover and Signal Half-Life",
       "url": "https://openalgo.in/quant/capacity-and-half-life"
     },
     "https://openalgo.in/quant/capstone": {
       "content_hash": "a093ff6fc5d64f3e2735515b1dbfc4d2119d8a64cc4024f7e28ab337d291c29a",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/078-capstone-a-full-indian-quant-research-project.md",
       "title": "Capstone: A Full Indian Quant Research Project",
       "url": "https://openalgo.in/quant/capstone"
     },
     "https://openalgo.in/quant/circuit-breakers": {
       "content_hash": "499a10214666cf25168eb4f4c6b6ebd8ce886e964d7ac09b411235f0b067069d",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/023-circuit-breakers-price-bands-and-trading-halts.md",
       "title": "Circuit Breakers, Price Bands and Trading Halts",
       "url": "https://openalgo.in/quant/circuit-breakers"
     },
     "https://openalgo.in/quant/clearing-and-settlement": {
       "content_hash": "3a78759174cb27c7b2e85b89206115a65abe6f5cb04dde850a39d65cdb52a7f8",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/007-clearing-settlement-t-1-and-optional-t-0.md",
       "title": "Clearing, Settlement, T+1 and Optional T+0",
       "url": "https://openalgo.in/quant/clearing-and-settlement"
     },
     "https://openalgo.in/quant/cointegration-pairs": {
       "content_hash": "d445256df1071a13fb61f59b3c0ee7572702ca0b82575eea70e9b4c3c07551f5",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/045-cointegration-and-pairs-trading.md",
       "title": "Cointegration and Pairs Trading",
       "url": "https://openalgo.in/quant/cointegration-pairs"
     },
     "https://openalgo.in/quant/cost-of-trading": {
       "content_hash": "1898e1b5bacaf2e58cbbab2ec11943f2d2d2687f981bd72e2d66904f3071c337",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/008-the-true-cost-of-a-trade.md",
       "title": "The True Cost of a Trade",
       "url": "https://openalgo.in/quant/cost-of-trading"
     },
     "https://openalgo.in/quant/cross-sectional-momentum": {
       "content_hash": "1f5a1442a6e29998ead7aaa7cc17a45fecc3c3ce1ed4d4db607bb1dc45d7f19a",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/060-cross-sectional-momentum.md",
       "title": "Cross-Sectional Momentum",
       "url": "https://openalgo.in/quant/cross-sectional-momentum"
     },
     "https://openalgo.in/quant/currency-and-rate-derivatives": {
       "content_hash": "34984bd415ba9a608560bedf016bf98d2b949672c6d32c9034adca5d5562d749",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/057-currency-and-interest-rate-derivatives.md",
       "title": "Currency and Interest-Rate Derivatives",
       "url": "https://openalgo.in/quant/currency-and-rate-derivatives"
     },
     "https://openalgo.in/quant/data-infrastructure": {
       "content_hash": "dd1fd75d344faf501ab4e8ed681b2b310185b02ef03ee7e5bd588e23b89cff5a",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/073-data-and-research-infrastructure.md",
       "title": "Data and Research Infrastructure",
       "url": "https://openalgo.in/quant/data-infrastructure"
     },
     "https://openalgo.in/quant/distributions-fat-tails": {
       "content_hash": "88f782b3667230f8b07be9f4c8c0ec1626854c6fc0501604e6052a5f566cf71c",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/011-distributions-fat-tails-and-extreme-moves.md",
       "title": "Distributions, Fat Tails and Extreme Moves",
       "url": "https://openalgo.in/quant/distributions-fat-tails"
     },
     "https://openalgo.in/quant/dma-colocation-latency": {
       "content_hash": "894804a4e030c2fde671cb2fc1e1b5f821daea93f8a074feb416c1f95055923c",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/031-dma-co-location-and-low-latency-access.md",
       "title": "DMA, Co-Location and Low-Latency Access",
       "url": "https://openalgo.in/quant/dma-colocation-latency"
     },
     "https://openalgo.in/quant/equity-derivatives-microstructure": {
       "content_hash": "77ac3fb373012844951dff0bbf123f9aa6e1ff82ac1c95e08875b963b21e9e9d",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/056-equity-derivatives-microstructure-in-india.md",
       "title": "Equity Derivatives Microstructure in India",
       "url": "https://openalgo.in/quant/equity-derivatives-microstructure"
     },
     "https://openalgo.in/quant/event-driven": {
       "content_hash": "38107aba7c18884ff94e939011e1484d070f608d16c15951e691ad4e19116c0f",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/063-event-driven-strategies.md",
       "title": "Event-Driven Strategies",
       "url": "https://openalgo.in/quant/event-driven"
     },
     "https://openalgo.in/quant/execution-algorithms": {
       "content_hash": "9bba7025f2a0ecff7a5c65e71df361a760263dbdd19200f3036e4c6edc4d2012",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/037-execution-algorithms-vwap-twap-pov-and-is.md",
       "title": "Execution Algorithms: VWAP, TWAP, POV and IS",
       "url": "https://openalgo.in/quant/execution-algorithms"
     },
     "https://openalgo.in/quant/feature-engineering-labeling": {
       "content_hash": "1f9f1274b1aed2b21bacbd7ed7bdab1378895a8464521e4a2a6e5d4dacfd5172",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/071-feature-engineering-labeling-and-leakage.md",
       "title": "Feature Engineering, Labeling and Leakage",
       "url": "https://openalgo.in/quant/feature-engineering-labeling"
     },
     "https://openalgo.in/quant/flow-based-strategies": {
       "content_hash": "6071e139bb5be39c088c00edd83c6db5af23fdcd264ffbb9e8222fda902c89df",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/064-flow-based-strategies-fii-dii-oi-and-expiry.md",
       "title": "Flow-Based Strategies: FII/DII, OI and Expiry",
       "url": "https://openalgo.in/quant/flow-based-strategies"
     },
     "https://openalgo.in/quant/forecast-evaluation": {
       "content_hash": "d4893dbf170c296e3933e03e56de28b8970b9af244c858ed12f6e004b9351ec8",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/047-forecast-evaluation-and-model-decay.md",
       "title": "Forecast Evaluation and Model Decay",
       "url": "https://openalgo.in/quant/forecast-evaluation"
     },
     "https://openalgo.in/quant/futures-and-carry": {
       "content_hash": "1153860eb22c173f1895a5bf865a37d8d81539d0e9c297b663e336f988d923d4",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/049-futures-forwards-and-cost-of-carry.md",
       "title": "Futures, Forwards and Cost of Carry",
       "url": "https://openalgo.in/quant/futures-and-carry"
     },
     "https://openalgo.in/quant/gamma-scalping-vol-trading": {
       "content_hash": "90307857143fb51bfee3cbe83b69ad84d8f35f07f988cf9c1ba4b394b4ed989d",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/055-gamma-scalping-and-volatility-trading.md",
       "title": "Gamma Scalping and Volatility Trading",
       "url": "https://openalgo.in/quant/gamma-scalping-vol-trading"
     },
     "https://openalgo.in/quant/hft-strategy-families": {
       "content_hash": "5c901aff603728d12d007f70004e5ed0ef7d84ac25246a1540ddf03bc9c17866",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/034-hft-strategy-families-making-arb-and-event.md",
       "title": "HFT Strategy Families: Making, Arb and Event",
       "url": "https://openalgo.in/quant/hft-strategy-families"
     },
     "https://openalgo.in/quant/hft-vs-algo-vs-systematic": {
       "content_hash": "b3999d82b63db699b921278639bf778d2a85482f3910a1803657326bb6610910",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/030-hft-vs-algo-trading-vs-systematic-trading.md",
       "title": "HFT vs Algo Trading vs Systematic Trading",
       "url": "https://openalgo.in/quant/hft-vs-algo-vs-systematic"
     },
     "https://openalgo.in/quant/impact-cost-tca": {
       "content_hash": "59b74109920dac53e85ddf4519b97423bfe9e8c8eca5886bf0824411c5aa1617",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/026-impact-cost-slippage-and-transaction-cost-analysis.md",
       "title": "Impact Cost, Slippage and Transaction Cost Analysis",
       "url": "https://openalgo.in/quant/impact-cost-tca"
     },
     "https://openalgo.in/quant/indian-market-map": {
       "content_hash": "d87fa11204f0322207daf79589b08c37b7d2d650c6639c4c1ff8d03157e71add",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/004-the-map-of-indian-markets.md",
       "title": "The Map of Indian Markets",
       "url": "https://openalgo.in/quant/indian-market-map"
     },
     "https://openalgo.in/quant/inference-and-hypothesis-testing": {
       "content_hash": "104317b02440d0726ef38fa04b37a7545b51d427dc304bc990e5da8e5142ae9d",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/012-statistical-inference-and-hypothesis-testing.md",
       "title": "Statistical Inference and Hypothesis Testing",
       "url": "https://openalgo.in/quant/inference-and-hypothesis-testing"
     },
     "https://openalgo.in/quant/intraday-mean-reversion-breakout": {
       "content_hash": "078b27863494d6879e76c27da207e58859121a2af25376a9c4cd714fb3e768c3",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/065-intraday-mean-reversion-and-breakout-models.md",
       "title": "Intraday Mean Reversion and Breakout Models",
       "url": "https://openalgo.in/quant/intraday-mean-reversion-breakout"
     },
     "https://openalgo.in/quant/kill-switches-risk-controls": {
       "content_hash": "dedb442096bc9ece2aaa95ae158f1835133a76ef738ea74df76f0c7d2c30ea54",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/040-kill-switches-risk-controls-and-algo-surveillance.md",
       "title": "Kill Switches, Risk Controls and Algo Surveillance",
       "url": "https://openalgo.in/quant/kill-switches-risk-controls"
     },
     "https://openalgo.in/quant/limit-order-book": {
       "content_hash": "198df183ce61d174cdcc2f7920a79ef991bc831c3ec2835c6e2d62a2bd43dd54",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/018-limit-order-book-fundamentals.md",
       "title": "Limit Order Book Fundamentals",
       "url": "https://openalgo.in/quant/limit-order-book"
     },
     "https://openalgo.in/quant/linear-algebra-pca": {
       "content_hash": "7c3b037e10c8e864239b10c48783ab91de29079304c6864691a2fd0e41a82285",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/015-linear-algebra-covariance-and-pca.md",
       "title": "Linear Algebra, Covariance and PCA",
       "url": "https://openalgo.in/quant/linear-algebra-pca"
     },
     "https://openalgo.in/quant/liquidity-spread-depth": {
       "content_hash": "8274de75ac52494bdc7902b66f3b533e21ebfc0956919a3cef54be53013467df",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/025-liquidity-spread-and-depth.md",
       "title": "Liquidity, Spread and Depth",
       "url": "https://openalgo.in/quant/liquidity-spread-depth"
     },
     "https://openalgo.in/quant/live-trading-system-design": {
       "content_hash": "30e488331630116ef68aa21f580640346f8de6a4f46ce8651fac5e2ed9285284",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/075-live-trading-system-design.md",
       "title": "Live Trading System Design",
       "url": "https://openalgo.in/quant/live-trading-system-design"
     },
     "https://openalgo.in/quant/margins-and-position-limits": {
       "content_hash": "2da3313eea277fb03c7408950337e3b6299a7292ab5ef71832bb7a8b23d3fa95",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/058-margins-collateral-position-limits-and-settlement.md",
       "title": "Margins, Collateral, Position Limits and Settlement",
       "url": "https://openalgo.in/quant/margins-and-position-limits"
     },
     "https://openalgo.in/quant/market-data-feeds": {
       "content_hash": "01c531e36cc954fd245848d3d878048cb5c0da704555e15311827cbba811fcc9",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/032-market-data-feeds-snapshot-tick-l2-and-l3.md",
       "title": "Market Data Feeds: Snapshot, Tick, L2 and L3",
       "url": "https://openalgo.in/quant/market-data-feeds"
     },
     "https://openalgo.in/quant/market-making-inventory": {
       "content_hash": "6907e97fb558030445e3ee014d3f9ece77de9911013fc796f52dc32159ed8c08",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/038-market-making-and-inventory-risk.md",
       "title": "Market Making and Inventory Risk",
       "url": "https://openalgo.in/quant/market-making-inventory"
     },
     "https://openalgo.in/quant/market-participants": {
       "content_hash": "476df0fa1217de3343c452030a825ba8a937410bbcccfca46729e5d92733fbd3",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/005-market-participants-and-who-moves-prices.md",
       "title": "Market Participants and Who Moves Prices",
       "url": "https://openalgo.in/quant/market-participants"
     },
     "https://openalgo.in/quant/market-plumbing": {
       "content_hash": "41dc45232bbe4ad99ce4395e28c6595b2d0a0e5ddbe6e95d4931e0f7996306e6",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/006-sebi-exchanges-clearing-corps-and-depositories.md",
       "title": "SEBI, Exchanges, Clearing Corps and Depositories",
       "url": "https://openalgo.in/quant/market-plumbing"
     },
     "https://openalgo.in/quant/mean-reversion-ou": {
       "content_hash": "7a92b11e6afe9ee0a59b8ec6ca2d353cc9aeb2555ce758633c75b0816c289312",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/044-mean-reversion-and-ornstein-uhlenbeck.md",
       "title": "Mean Reversion and Ornstein-Uhlenbeck",
       "url": "https://openalgo.in/quant/mean-reversion-ou"
     },
     "https://openalgo.in/quant/ml-in-quant": {
       "content_hash": "36601bdedb437facbd54fa0be3587c2d6098b803d75d706eb416f8c12587fdf4",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/070-machine-learning-in-quant-promise-and-peril.md",
       "title": "Machine Learning in Quant: Promise and Peril",
       "url": "https://openalgo.in/quant/ml-in-quant"
     },
     "https://openalgo.in/quant/monitoring-reconciliation": {
       "content_hash": "fe60d97f6ac1521e72051dbac49bd9b5df248808ff86376a3a0bbb32218ee97a",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/076-monitoring-reconciliation-and-incident-handling.md",
       "title": "Monitoring, Reconciliation and Incident Handling",
       "url": "https://openalgo.in/quant/monitoring-reconciliation"
     },
     "https://openalgo.in/quant/multiple-testing": {
       "content_hash": "695747e6fe42866b978aef4ef7aeb712607f63c9c8abcbc003986eac9fa87422",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/013-multiple-testing-and-false-discovery.md",
       "title": "Multiple Testing and False Discovery",
       "url": "https://openalgo.in/quant/multiple-testing"
     },
     "https://openalgo.in/quant/optimization-methods": {
       "content_hash": "02bb952181faf1061a39c794d668680bd5bd4da9221088e7326832eb1b24f82c",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/016-optimization-constraints-and-numerical-methods.md",
       "title": "Optimization, Constraints and Numerical Methods",
       "url": "https://openalgo.in/quant/optimization-methods"
     },
     "https://openalgo.in/quant/options-pricing": {
       "content_hash": "6010fe049e0a6a859186c7167e90351d23dfcb63fe1d673b42b4116c1a1dc879",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/051-options-pricing-black-scholes-vs-black-76.md",
       "title": "Options Pricing: Black-Scholes vs Black-76",
       "url": "https://openalgo.in/quant/options-pricing"
     },
     "https://openalgo.in/quant/order-flow": {
       "content_hash": "44ed37fc2c48e51f506ad3c5539bc8cd67302625a92048e00bfa7377512ddb5b",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/027-open-interest-volume-and-order-flow.md",
       "title": "Open Interest, Volume and Order Flow",
       "url": "https://openalgo.in/quant/order-flow"
     },
     "https://openalgo.in/quant/order-to-trade-ratio": {
       "content_hash": "88f5c4385813cef2397372777659d64edede17ace9f89c4bb98a89c7445d3d1e",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/035-order-to-trade-ratio-cancellations-and-quote-stuffing.md",
       "title": "Order-to-Trade Ratio, Cancellations and Quote Stuffing",
       "url": "https://openalgo.in/quant/order-to-trade-ratio"
     },
     "https://openalgo.in/quant/order-types-lifecycle": {
       "content_hash": "617893ad4aa300b3727547ffc7dc6b28f360a0aeb4e6638f74ca78203fbdcef9",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/019-order-types-and-the-order-lifecycle.md",
       "title": "Order Types and the Order Lifecycle",
       "url": "https://openalgo.in/quant/order-types-lifecycle"
     },
     "https://openalgo.in/quant/orderbook-reconstruction": {
       "content_hash": "688aa677df308b765a4007dd5601366bfc836b702c42e730c57e05b47cdaa562",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/033-order-book-reconstruction-and-replay.md",
       "title": "Order Book Reconstruction and Replay",
       "url": "https://openalgo.in/quant/orderbook-reconstruction"
     },
     "https://openalgo.in/quant/portfolio-construction-risk": {
       "content_hash": "4e7f5d9864893907aabb17897c95acb1c92595aa27b063540389df637f91ec29",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/072-portfolio-construction-risk-models-var-and-stress.md",
       "title": "Portfolio Construction, Risk Models, VaR and Stress",
       "url": "https://openalgo.in/quant/portfolio-construction-risk"
     },
     "https://openalgo.in/quant/price-time-priority": {
       "content_hash": "7682c710ccc9eae6b402d969e364d3c94b3187883363fdf59d7f0a06bd3b8da2",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/020-price-time-priority-and-queue-position.md",
       "title": "Price-Time Priority and Queue Position",
       "url": "https://openalgo.in/quant/price-time-priority"
     },
     "https://openalgo.in/quant/probability-for-traders": {
       "content_hash": "4e5383ac774c7bd4ff310b81f41dd6d5b0189d4e9be0f7b9eb54a00311f91462",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/010-probability-for-traders.md",
       "title": "Probability for Traders",
       "url": "https://openalgo.in/quant/probability-for-traders"
     },
     "https://openalgo.in/quant/quant-firms": {
       "content_hash": "addf5f64ec9c9c89326d3b8d391c60b295251bda6dedefb1d4ba51cd36f64beb",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/003-buy-side-sell-side-prop-and-hft-firms.md",
       "title": "Buy-Side, Sell-Side, Prop and HFT Firms",
       "url": "https://openalgo.in/quant/quant-firms"
     },
     "https://openalgo.in/quant/quant-roles": {
       "content_hash": "279af8e1d7e36e363458173ce526a3607cd3e31f102340a79c093f9ba0790fcc",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/002-quant-researcher-vs-quant-trader-vs-quant-developer.md",
       "title": "Quant Researcher vs Quant Trader vs Quant Developer",
       "url": "https://openalgo.in/quant/quant-roles"
     },
     "https://openalgo.in/quant/realized-volatility": {
       "content_hash": "3ff6a39ca1fb5dd211f042805d2d2839a2e12063efcd3405d81a00fa8cc29010",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/043-realized-and-intraday-volatility.md",
       "title": "Realized and Intraday Volatility",
       "url": "https://openalgo.in/quant/realized-volatility"
     },
     "https://openalgo.in/quant/regimes-and-breaks": {
       "content_hash": "af85e3b3b8a21c93d0ed2427854a068dce7c6903d15d3c04ca2480a91598853e",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/046-regime-detection-and-structural-breaks.md",
       "title": "Regime Detection and Structural Breaks",
       "url": "https://openalgo.in/quant/regimes-and-breaks"
     },
     "https://openalgo.in/quant/research-to-production": {
       "content_hash": "5fe793319c4aed210e91b0e110484c63a814e094119aba52988f0877209b025b",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/074-the-research-to-production-pipeline.md",
       "title": "The Research-to-Production Pipeline",
       "url": "https://openalgo.in/quant/research-to-production"
     },
     "https://openalgo.in/quant/retail-api-algo-framework": {
       "content_hash": "a4a6b3b892f8d31b73a054c909056a703889b826e93c802d82431028078e072b",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/039-the-retail-api-algo-framework-in-india.md",
       "title": "The Retail API Algo Framework in India",
       "url": "https://openalgo.in/quant/retail-api-algo-framework"
     },
     "https://openalgo.in/quant/returns-and-distributions": {
       "content_hash": "4d68523d8571c9a88f599c8eb9f2b32372bef84b32a0d24cd1ece72546548588",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/009-returns-log-returns-and-stylized-facts.md",
       "title": "Returns, Log Returns and Stylized Facts",
       "url": "https://openalgo.in/quant/returns-and-distributions"
     },
     "https://openalgo.in/quant/sebi-algo-compliance-ethics": {
       "content_hash": "f9a24865ca67d53f87f99d1a545cfe244e3d80f0941aaff3d6068dec48c0f990",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/077-sebi-algo-compliance-and-ethics.md",
       "title": "SEBI Algo Compliance and Ethics",
       "url": "https://openalgo.in/quant/sebi-algo-compliance-ethics"
     },
     "https://openalgo.in/quant/short-selling-slb": {
       "content_hash": "fd1b7aee75d67ab0d1449e199550c0359a2489d632ff1efaf7bb5208c1488eda",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/028-short-selling-slb-and-borrowing-mechanics.md",
       "title": "Short Selling, SLB and Borrowing Mechanics",
       "url": "https://openalgo.in/quant/short-selling-slb"
     },
     "https://openalgo.in/quant/smart-order-routing": {
       "content_hash": "77ff917e9efa788ef008d8631a7da818cba6fe02016cbfe5f00175421691336a",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/036-smart-order-routing-and-multi-venue-execution.md",
       "title": "Smart Order Routing and Multi-Venue Execution",
       "url": "https://openalgo.in/quant/smart-order-routing"
     },
     "https://openalgo.in/quant/stationarity-random-walk": {
       "content_hash": "dba82c4fac3916465db5c132446134d8fa9fafe9a1e39b6d78bd20aad924a636",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/014-stationarity-random-walks-and-the-emh.md",
       "title": "Stationarity, Random Walks and the EMH",
       "url": "https://openalgo.in/quant/stationarity-random-walk"
     },
     "https://openalgo.in/quant/statistical-arbitrage": {
       "content_hash": "7ff51d715260c61d8602cdd19ceb71b34e4e57201926022c67049341f0ccb4f4",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/062-statistical-arbitrage-and-market-neutral-books.md",
       "title": "Statistical Arbitrage and Market-Neutral Books",
       "url": "https://openalgo.in/quant/statistical-arbitrage"
     },
     "https://openalgo.in/quant/the-greeks": {
       "content_hash": "cb7b0bf61e04e07aa179a267b02d8444567e136d947f08fc3917e7fb4f52e7d4",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/052-the-greeks-delta-gamma-vega-theta-and-rho.md",
       "title": "The Greeks: Delta, Gamma, Vega, Theta and Rho",
       "url": "https://openalgo.in/quant/the-greeks"
     },
     "https://openalgo.in/quant/time-series-models": {
       "content_hash": "8d0f61da4e28e923c01eeb6f99199941ab03feec993264b7d1cf1b28595d123c",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/041-ar-ma-and-arima-models.md",
       "title": "AR, MA and ARIMA Models",
       "url": "https://openalgo.in/quant/time-series-models"
     },
     "https://openalgo.in/quant/trading-day-structure": {
       "content_hash": "f3614901d6b10e2fe9618d4732ff243dfb87facd3f221ca40f91d7532d710dc4",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/021-the-indian-trading-day-structure.md",
       "title": "The Indian Trading Day Structure",
       "url": "https://openalgo.in/quant/trading-day-structure"
     },
     "https://openalgo.in/quant/value-quality-factors": {
       "content_hash": "aac8a89f1689c9a855d9cd16366b4e302869f5e4b79dd06796bbb17186aa7396",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/061-value-quality-size-and-low-vol-factors.md",
       "title": "Value, Quality, Size and Low-Vol Factors",
       "url": "https://openalgo.in/quant/value-quality-factors"
     },
     "https://openalgo.in/quant/vix-and-vrp": {
       "content_hash": "2924178f15d34ccae41d887030a16a80ab84ba2339a0b94b338c36fbde565cc2",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/054-india-vix-and-the-volatility-risk-premium.md",
       "title": "India VIX and the Volatility Risk Premium",
       "url": "https://openalgo.in/quant/vix-and-vrp"
     },
     "https://openalgo.in/quant/volatility-modeling": {
       "content_hash": "46adef8261fe60edb3e4c2f31f5e55f41fe11d103f2b232ab27fe22f7d1e9a79",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/042-volatility-modeling-ewma-arch-and-garch.md",
       "title": "Volatility Modeling: EWMA, ARCH and GARCH",
       "url": "https://openalgo.in/quant/volatility-modeling"
     },
     "https://openalgo.in/quant/volatility-surface": {
       "content_hash": "0ad9e092b8fedecaef35193a2acd84a3601af8050db436c705074a4b70d576ce",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/053-the-volatility-surface-skew-and-term-structure.md",
       "title": "The Volatility Surface, Skew and Term Structure",
       "url": "https://openalgo.in/quant/volatility-surface"
     },
     "https://openalgo.in/quant/walkforward-purged-cv": {
       "content_hash": "4714f714cb64192b5bd9206d57471d36656423e7a6fa6bd37ea085e664546df2",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/069-walk-forward-purged-cv-and-deflated-sharpe.md",
       "title": "Walk-Forward, Purged CV and Deflated Sharpe",
       "url": "https://openalgo.in/quant/walkforward-purged-cv"
     },
     "https://openalgo.in/quant/what-is-a-quant": {
       "content_hash": "b79e6fb29b8e2f898638103fe95a086e520976e0bb19098b2f5a6751c7cabac1",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/001-what-a-quant-actually-does.md",
       "title": "What a Quant Actually Does",
       "url": "https://openalgo.in/quant/what-is-a-quant"
     },
     "https://openalgo.in/quant/why-microstructure-matters": {
       "content_hash": "95e24e1253f5baf21682cf4c50844acf753963044d016b45a08d4df19764665b",
+      "kind": "chapter",
       "relative_path": "courses/008-quantitative-trading/017-why-market-microstructure-matters.md",
       "title": "Why Market Microstructure Matters",
       "url": "https://openalgo.in/quant/why-microstructure-matters"
     },
     "https://openalgo.in/risk-management": {
       "content_hash": "c2fd920744f868baf6fee7bda00716998fdc045853bd47cdcffcfde0c0edab1c",
+      "kind": "overview",
       "relative_path": "courses/012-risk-management/000-course-overview.md",
       "title": "Risk Management",
       "url": "https://openalgo.in/risk-management"
     },
     "https://openalgo.in/risk-management/asset-allocation": {
       "content_hash": "29cab03050f7a0fa7d143f3fe2e821277beb881c82d2fc82e078bfa79e89d1e4",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/009-asset-allocation-the-biggest-decision.md",
       "title": "Asset Allocation: The Biggest Decision",
       "url": "https://openalgo.in/risk-management/asset-allocation"
     },
     "https://openalgo.in/risk-management/broker-rms-reality": {
       "content_hash": "9babbc841638dad27a50945995399acd98ab94a54c55fd3500a0d4df3288cc3f",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/024-the-broker-s-risk-system.md",
       "title": "The Broker's Risk System",
       "url": "https://openalgo.in/risk-management/broker-rms-reality"
     },
     "https://openalgo.in/risk-management/capital-buckets": {
       "content_hash": "fd06057650c6849f0af1676bd54b9a867ec78d168f4b0c124f07c290f2665d0f",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/006-capital-buckets.md",
       "title": "Capital Buckets",
       "url": "https://openalgo.in/risk-management/capital-buckets"
     },
     "https://openalgo.in/risk-management/concentrated-stock-risk": {
       "content_hash": "66ebf6760aa323da555939733bf2f467a2066a6e8e65bd54d12b9ae43e76348d",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/013-concentrated-stock-risk.md",
       "title": "Concentrated Stock Risk",
       "url": "https://openalgo.in/risk-management/concentrated-stock-risk"
     },
     "https://openalgo.in/risk-management/diversification": {
       "content_hash": "d2b0ca9f632f8d1df53da51b440d0017e0795c55ec64265513303f7560d8165e",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/010-diversification-without-overdoing-it.md",
       "title": "Diversification Without Overdoing It",
       "url": "https://openalgo.in/risk-management/diversification"
     },
     "https://openalgo.in/risk-management/drawdowns-losing-streaks": {
       "content_hash": "7cefb1aff485b0d21a142b8e40716c0e72e8f8b0d06c8c4de5fd040697e49cec",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/019-drawdowns-and-losing-streaks.md",
       "title": "Drawdowns and Losing Streaks",
       "url": "https://openalgo.in/risk-management/drawdowns-losing-streaks"
     },
     "https://openalgo.in/risk-management/expiry-day-risk": {
       "content_hash": "69138bacebb1f50ede2a31d2c0c9f76114b93e6a8adfdaff1e92a6b37123ad1a",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/032-expiry-day-risk.md",
       "title": "Expiry-Day Risk",
       "url": "https://openalgo.in/risk-management/expiry-day-risk"
     },
     "https://openalgo.in/risk-management/fix-your-base": {
       "content_hash": "148a71118d08961b030a8012dfe0aa2f23db185ff2cb73a02d1e0c9483519d8c",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/005-before-you-invest-fix-your-base.md",
       "title": "Before You Invest: Fix Your Base",
       "url": "https://openalgo.in/risk-management/fix-your-base"
     },
     "https://openalgo.in/risk-management/futures-risk": {
       "content_hash": "4b02f0c3ba05fc422cd4e7e3de6a19a1d8ef06666de6883fbc266e16ca602d07",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/028-futures-risk.md",
       "title": "Futures Risk",
       "url": "https://openalgo.in/risk-management/futures-risk"
     },
     "https://openalgo.in/risk-management/gap-and-event-risk": {
       "content_hash": "eafd8dab5457b89d564fea1d15ae909f796a0820ed69b4e78c27b9d24f294e8a",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/026-gap-risk-and-event-risk.md",
       "title": "Gap Risk and Event Risk",
       "url": "https://openalgo.in/risk-management/gap-and-event-risk"
     },
     "https://openalgo.in/risk-management/greeks-as-risk": {
       "content_hash": "9efad10d0e5a81762496b94d0d88497a725f8925081b5136c32f543e74ad436a",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/031-greeks-as-risk-language.md",
       "title": "Greeks as Risk Language",
       "url": "https://openalgo.in/risk-management/greeks-as-risk"
     },
     "https://openalgo.in/risk-management/investor-mistakes": {
       "content_hash": "8456c27730bbef800a8ff072fb3d88b51f5c3ab30cbfb7103a5f9621989d267c",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/014-investor-mistakes-that-look-smart.md",
       "title": "Investor Mistakes That Look Smart",
       "url": "https://openalgo.in/risk-management/investor-mistakes"
     },
     "https://openalgo.in/risk-management/leverage": {
       "content_hash": "32528371befe8ffe01fbd6c8631019164be3ee115a5edb4a0edb3ef88665494a",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/022-leverage-the-fastest-way-to-lose-control.md",
       "title": "Leverage: The Fastest Way to Lose Control",
       "url": "https://openalgo.in/risk-management/leverage"
     },
     "https://openalgo.in/risk-management/margin-calls": {
       "content_hash": "1231fb8f202e4e4d5c46256c11ff07e2ab708821f164935ba4706ba336b444a0",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/023-margin-calls-and-forced-exits.md",
       "title": "Margin Calls and Forced Exits",
       "url": "https://openalgo.in/risk-management/margin-calls"
     },
     "https://openalgo.in/risk-management/option-buyer-risk": {
       "content_hash": "900bf6c0c042dfb79804ed72e037fb9758f7e19fd04e1e96820bdf63775bb687",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/029-option-buyer-risk.md",
       "title": "Option Buyer Risk",
       "url": "https://openalgo.in/risk-management/option-buyer-risk"
     },
     "https://openalgo.in/risk-management/option-seller-risk": {
       "content_hash": "8c6e04d498e102296061c6334df8f7d22a3495c9f447642a824cbf63c71048fe",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/030-option-seller-risk.md",
       "title": "Option Seller Risk",
       "url": "https://openalgo.in/risk-management/option-seller-risk"
     },
     "https://openalgo.in/risk-management/portfolio-heat": {
       "content_hash": "789eb6240663487c69ceea9df0ef78cc1e8d7fa46c7918368bef4e31f3a03799",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/021-portfolio-heat-your-total-open-risk.md",
       "title": "Portfolio Heat: Your Total Open Risk",
       "url": "https://openalgo.in/risk-management/portfolio-heat"
     },
     "https://openalgo.in/risk-management/position-sizing": {
       "content_hash": "e9600b404483a081e461ef681c44c65cd1da2dea9d89eea6cbc6292ce32c46f1",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/016-position-sizing-made-simple.md",
       "title": "Position Sizing Made Simple",
       "url": "https://openalgo.in/risk-management/position-sizing"
     },
     "https://openalgo.in/risk-management/rebalancing": {
       "content_hash": "0881d32b257315a7740ce4ca6bb920a854c1afb03b7cc606f70a4949071e5bf2",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/012-rebalancing-selling-winners-buying-losers.md",
       "title": "Rebalancing: Selling Winners, Buying Losers",
       "url": "https://openalgo.in/risk-management/rebalancing"
     },
     "https://openalgo.in/risk-management/risk-capacity-vs-tolerance": {
       "content_hash": "9eeec662412c7a9daf3846c3ef2cb23013a9f04dad44300f6bb8bf8ea24b8728",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/008-how-much-risk-can-you-actually-take.md",
       "title": "How Much Risk Can You Actually Take?",
       "url": "https://openalgo.in/risk-management/risk-capacity-vs-tolerance"
     },
     "https://openalgo.in/risk-management/risk-limits": {
       "content_hash": "93c9e54d9e855c8811449f8ac8b78e70e63104227f70c4607cf6624c8084913e",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/020-daily-weekly-and-monthly-risk-limits.md",
       "title": "Daily, Weekly and Monthly Risk Limits",
       "url": "https://openalgo.in/risk-management/risk-limits"
     },
     "https://openalgo.in/risk-management/risk-reward-win-rate": {
       "content_hash": "0b4a53d717b53ff80c16abf65cd3ff1a078972fd4ee42a1f11965a397066efba",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/018-risk-reward-and-win-rate.md",
       "title": "Risk-Reward and Win Rate",
       "url": "https://openalgo.in/risk-management/risk-reward-win-rate"
     },
     "https://openalgo.in/risk-management/risk-vs-reward": {
       "content_hash": "83abc3ea6ad3062dd5a0dfb399e6b767995ae2ba506062f33931d3033bac9461",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/003-risk-vs-reward-simply-explained.md",
       "title": "Risk vs Reward, Simply Explained",
       "url": "https://openalgo.in/risk-management/risk-vs-reward"
     },
     "https://openalgo.in/risk-management/sip-lumpsum-falls": {
       "content_hash": "2165ff31c9da4e3c033d2ea4f59fa50ee2c07e4d6c89375d449f2f059b8d4f87",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/011-sips-lumpsum-and-market-falls.md",
       "title": "SIPs, Lumpsum and Market Falls",
       "url": "https://openalgo.in/risk-management/sip-lumpsum-falls"
     },
     "https://openalgo.in/risk-management/slippage-liquidity-spread": {
       "content_hash": "df370f70fdc2e6158c1940ee192073ebf6bb86f852b2ec6c1461f3ae21dcb1da",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/025-slippage-liquidity-and-spread.md",
       "title": "Slippage, Liquidity and Spread",
       "url": "https://openalgo.in/risk-management/slippage-liquidity-spread"
     },
     "https://openalgo.in/risk-management/sources-and-staying-current": {
       "content_hash": "397a4308d5481cc374b38fe4bf2f0a8f5b6992788c85e85886ed9369afedf011",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/033-sources-and-staying-current.md",
       "title": "Sources and Staying Current",
       "url": "https://openalgo.in/risk-management/sources-and-staying-current"
     },
     "https://openalgo.in/risk-management/stop-loss": {
       "content_hash": "2b3f1a3b36e32b569391db59f64ea30acc373f7345806b48d789a99fe573a4ba",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/017-stop-loss-insurance-or-illusion.md",
       "title": "Stop-Loss: Insurance or Illusion?",
       "url": "https://openalgo.in/risk-management/stop-loss"
     },
     "https://openalgo.in/risk-management/survive-first": {
       "content_hash": "4f0ba46efb7bde914dd78b34baaf4489dcdba1270cceff6b8ac1aabec9adc69b",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/002-the-first-rule-survive.md",
       "title": "The First Rule: Survive",
       "url": "https://openalgo.in/risk-management/survive-first"
     },
     "https://openalgo.in/risk-management/the-risk-pyramid": {
       "content_hash": "2cbe10890b479cc7413eb5f14a247b1340dd2c863cde6042a5c30963c5794bca",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/004-the-risk-pyramid.md",
       "title": "The Risk Pyramid",
       "url": "https://openalgo.in/risk-management/the-risk-pyramid"
     },
     "https://openalgo.in/risk-management/time-horizon-is-risk": {
       "content_hash": "48d6353c4e5b464621924f727ad35eb8f5fb6634cf24b52dfd84bc2476729e0b",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/007-time-horizon-is-risk-management.md",
       "title": "Time Horizon Is Risk Management",
       "url": "https://openalgo.in/risk-management/time-horizon-is-risk"
     },
     "https://openalgo.in/risk-management/trading-is-not-investing": {
       "content_hash": "7fbb5d087fdc1bf712f4140f98a539275f220dc4d8f78334390d6ee8752a9f14",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/015-trading-is-not-investing.md",
       "title": "Trading Is Not Investing",
       "url": "https://openalgo.in/risk-management/trading-is-not-investing"
     },
     "https://openalgo.in/risk-management/what-risk-really-means": {
       "content_hash": "e21bdccd56c166c9165fa70368d89de3fc3d4e57697bfd6503923f948d2fd391",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/001-what-risk-really-means.md",
       "title": "What Risk Really Means",
       "url": "https://openalgo.in/risk-management/what-risk-really-means"
     },
     "https://openalgo.in/risk-management/why-fno-is-different": {
       "content_hash": "9c2923454cb33a06c5c0575060b894481fa89c9cee953abfc8e9882d4a105040",
+      "kind": "chapter",
       "relative_path": "courses/012-risk-management/027-why-f-o-is-different.md",
       "title": "Why F&O Is Different",
       "url": "https://openalgo.in/risk-management/why-fno-is-different"
     },
     "https://openalgo.in/stats-arb": {
       "content_hash": "6f8535d09956ba2c24f9d5ec396d0db92cab2ea723c5f405eb0138a428dff577",
+      "kind": "overview",
       "relative_path": "courses/009-statistical-arbitrage/000-course-overview.md",
       "title": "Statistical Arbitrage",
       "url": "https://openalgo.in/stats-arb"
     },
     "https://openalgo.in/stats-arb/baskets-and-johansen": {
       "content_hash": "46db747f0fede80e0ca6a1c8927b74daa59e3607b53ecfbf5f29be70a95ab0ec",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/012-baskets-and-the-johansen-test.md",
       "title": "Baskets and the Johansen Test",
       "url": "https://openalgo.in/stats-arb/baskets-and-johansen"
     },
     "https://openalgo.in/stats-arb/building-the-database": {
       "content_hash": "55c38fb4731370481deaa149cc637006c4331d41d6ed123806d07e993da68e13",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/002-building-the-historical-database.md",
       "title": "Building the Historical Database",
       "url": "https://openalgo.in/stats-arb/building-the-database"
     },
     "https://openalgo.in/stats-arb/capstone-and-checklist": {
       "content_hash": "7f8ccecd6d2397af7a73a4d4dc1971389ccd393211a651dda0a6ce31691316ea",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/017-capstone-the-honest-stat-arb-workflow.md",
       "title": "Capstone: The Honest Stat-Arb Workflow",
       "url": "https://openalgo.in/stats-arb/capstone-and-checklist"
     },
     "https://openalgo.in/stats-arb/cointegration-mechanics": {
       "content_hash": "a2bb9cd4b589b662967a4d5a0e3fac40ad39df2b8f10a83336c6904173970774",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/007-cointegration-mechanics.md",
       "title": "Cointegration Mechanics",
       "url": "https://openalgo.in/stats-arb/cointegration-mechanics"
     },
     "https://openalgo.in/stats-arb/correlation-is-not-cointegration": {
       "content_hash": "13b83a96a880d6e25913ae80e121506b4d81c89d41f891e977840c3b9ca82652",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/006-correlation-is-not-cointegration.md",
       "title": "Correlation Is Not Cointegration",
       "url": "https://openalgo.in/stats-arb/correlation-is-not-cointegration"
     },
     "https://openalgo.in/stats-arb/cross-sectional-factor-neutral": {
       "content_hash": "a2222df8d6376c819dac7cd896f1e920f0f83ef1fce8edce1449f2d3fee1e7b9",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/013-cross-sectional-factor-neutral-stat-arb.md",
       "title": "Cross-Sectional, Factor-Neutral Stat Arb",
       "url": "https://openalgo.in/stats-arb/cross-sectional-factor-neutral"
     },
     "https://openalgo.in/stats-arb/dynamic-hedge-ratios-kalman": {
       "content_hash": "7b4ec8989e24cf0d551d0530bc268df9ff20e9ce71be28849f76ffe19c7f95a9",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/011-dynamic-hedge-ratios-with-the-kalman-filter.md",
       "title": "Dynamic Hedge Ratios with the Kalman Filter",
       "url": "https://openalgo.in/stats-arb/dynamic-hedge-ratios-kalman"
     },
     "https://openalgo.in/stats-arb/finding-pairs-without-fooling-yourself": {
       "content_hash": "d1bb41ee7f1b0dd9e82f38a3c79e7271f1529e19f8eaa59869eb4d08c500b32e",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/008-finding-pairs-without-fooling-yourself.md",
       "title": "Finding Pairs Without Fooling Yourself",
       "url": "https://openalgo.in/stats-arb/finding-pairs-without-fooling-yourself"
     },
     "https://openalgo.in/stats-arb/honest-backtesting-and-validation": {
       "content_hash": "0abb3c4325bf2be50632caa9cf9db059b3cae69e0d7b3f6c8bfbfdf17ac74fce",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/015-honest-backtesting-and-validation.md",
       "title": "Honest Backtesting and Validation",
       "url": "https://openalgo.in/stats-arb/honest-backtesting-and-validation"
     },
     "https://openalgo.in/stats-arb/implementation-pathways": {
       "content_hash": "889abe9a8975e114bceed7f7511ed0f1ad6444754fbddbce3cf29cf27774628f",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/016-implementation-pathways.md",
       "title": "Implementation Pathways",
       "url": "https://openalgo.in/stats-arb/implementation-pathways"
     },
     "https://openalgo.in/stats-arb/research-vs-real-markets": {
       "content_hash": "1f6f653cb884c47bef4a12108bf03d86634e78ad50a82ea6f4c9e1f0b9ec90c9",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/004-research-vs-real-markets.md",
       "title": "Research vs Real Markets",
       "url": "https://openalgo.in/stats-arb/research-vs-real-markets"
     },
     "https://openalgo.in/stats-arb/risk-sizing-and-portfolio": {
       "content_hash": "f937f2af3c229331f6a00ecf0ecc3250b548a06f82d3081bd8386f6e265d58c2",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/014-risk-sizing-and-portfolio-construction.md",
       "title": "Risk, Sizing and Portfolio Construction",
       "url": "https://openalgo.in/stats-arb/risk-sizing-and-portfolio"
     },
     "https://openalgo.in/stats-arb/stationarity-and-random-walks": {
       "content_hash": "25ef495ccf4b90a241e325b21cf77b251b6c2b868d4b19cb8fe90e4c4fbdf406",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/005-stationarity-and-random-walks.md",
       "title": "Stationarity and Random Walks",
       "url": "https://openalgo.in/stats-arb/stationarity-and-random-walks"
     },
     "https://openalgo.in/stats-arb/the-brutal-reality-check": {
       "content_hash": "d6ad602f3175e66d4b942e7ef096ca49959857680ae449b07eacf3abf462a84a",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/010-the-brutal-reality-check.md",
       "title": "The Brutal Reality Check",
       "url": "https://openalgo.in/stats-arb/the-brutal-reality-check"
     },
     "https://openalgo.in/stats-arb/the-data-layer-and-its-biases": {
       "content_hash": "345925fc6e9d040ccd7fb9c3b439745b0f201dfa6facc37df13d174b3d54c0b2",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/003-the-data-layer-and-its-biases.md",
       "title": "The Data Layer and Its Biases",
       "url": "https://openalgo.in/stats-arb/the-data-layer-and-its-biases"
     },
     "https://openalgo.in/stats-arb/the-spread-and-the-signal": {
       "content_hash": "b6cf1636af4fc9862f90b2cd12374a735ef28a60fe24680a6b40da515c8a3d68",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/009-the-spread-and-the-signal.md",
       "title": "The Spread and the Signal",
       "url": "https://openalgo.in/stats-arb/the-spread-and-the-signal"
     },
     "https://openalgo.in/stats-arb/what-is-statistical-arbitrage": {
       "content_hash": "decf733b19c227603caf10fa4859bbd1bbc8c4d0bcecd42886f54fb443f29ea7",
+      "kind": "chapter",
       "relative_path": "courses/009-statistical-arbitrage/001-what-statistical-arbitrage-really-is.md",
       "title": "What Statistical Arbitrage Really Is",
       "url": "https://openalgo.in/stats-arb/what-is-statistical-arbitrage"
     },
     "https://openalgo.in/stocks": {
       "content_hash": "ba7ac931b5145493a8697f167e367d63e82bf2fdd5266085762b3476493b067a",
+      "kind": "overview",
       "relative_path": "courses/001-stock-market-basics/000-course-overview.md",
       "title": "Stock Market Basics",
       "url": "https://openalgo.in/stocks"
     },
     "https://openalgo.in/stocks/asset-classes": {
       "content_hash": "49a404a5bbef0cc256d5bc435fa70a733e3b3a8bace446e286a05dc3066c09a2",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/002-where-to-put-your-money-the-asset-classes.md",
       "title": "Where to Put Your Money: The Asset Classes",
       "url": "https://openalgo.in/stocks/asset-classes"
     },
     "https://openalgo.in/stocks/clearing-settlement": {
       "content_hash": "7666d28ce46a1b299759e316905283217daeffed611d9f9f6f8ca63c9ca243bc",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/006-what-happens-after-you-hit-buy.md",
       "title": "What Happens After You Hit Buy",
       "url": "https://openalgo.in/stocks/clearing-settlement"
     },
     "https://openalgo.in/stocks/corporate-actions-raising": {
       "content_hash": "7145e2208c0efa813db51319f839ddc9da3e47afcddafd0d5e1ea21eb37de559",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/009-rights-fpo-ofs-bonus-splits.md",
       "title": "Rights, FPO, OFS, Bonus & Splits",
       "url": "https://openalgo.in/stocks/corporate-actions-raising"
     },
     "https://openalgo.in/stocks/events-and-prices": {
       "content_hash": "4869c42ee6c37696d16e97d2c2a2df77b4875fc702ac3a4e8b8321734825f51e",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/015-earnings-dividends-events-that-move-prices.md",
       "title": "Earnings, Dividends & Events That Move Prices",
       "url": "https://openalgo.in/stocks/events-and-prices"
     },
     "https://openalgo.in/stocks/getting-started": {
       "content_hash": "208b6f11ea93054fe47837d91a01715ab4f7259a6a25975178e3dc3d464f5051",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/016-your-first-steps-as-an-investor.md",
       "title": "Your First Steps as an Investor",
       "url": "https://openalgo.in/stocks/getting-started"
     },
     "https://openalgo.in/stocks/how-companies-get-funded": {
       "content_hash": "97e7c7108f98f7f5e48b29dd2d5e6c73ae0a8f26a670b7019166767515fe0271",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/007-from-startup-to-stock-how-companies-get-funded.md",
       "title": "From Startup to Stock: How Companies Get Funded",
       "url": "https://openalgo.in/stocks/how-companies-get-funded"
     },
     "https://openalgo.in/stocks/indices": {
       "content_hash": "a101a8aa65da184431ab5222c70fd003e15e74eac6e1d8c06b335400e6946294",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/011-nifty-sensex-how-indices-are-built.md",
       "title": "Nifty, Sensex & How Indices Are Built",
       "url": "https://openalgo.in/stocks/indices"
     },
     "https://openalgo.in/stocks/macro-forces": {
       "content_hash": "15de4ef0fffb6fcb0eb5799128bc634f4cdffcbabe805236ebd4e1b5466cd4f5",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/014-macro-rates-inflation-global-cues.md",
       "title": "Macro, Rates, Inflation & Global Cues",
       "url": "https://openalgo.in/stocks/macro-forces"
     },
     "https://openalgo.in/stocks/market-ecosystem": {
       "content_hash": "a164c6082ff3a1d0aa0be80da2f946e20f445e7229ceb81ff49a9c35c6f1a74f",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/005-exchanges-brokers-depositories.md",
       "title": "Exchanges, Brokers & Depositories",
       "url": "https://openalgo.in/stocks/market-ecosystem"
     },
     "https://openalgo.in/stocks/market-jargon": {
       "content_hash": "42fbfc87c70617f579fbbdd98898b2d19c2ca8500782a9fea86bef49e149e363",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/012-bull-bear-the-jargon-you-ll-hear.md",
       "title": "Bull, Bear & the Jargon You'll Hear",
       "url": "https://openalgo.in/stocks/market-jargon"
     },
     "https://openalgo.in/stocks/risk-and-psychology": {
       "content_hash": "1581fea22b2f144906ce2779b880d21646cb5275b47d057af88c6f3b50d3cdaa",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/017-your-own-worst-enemy-risk-mindset.md",
       "title": "Your Own Worst Enemy: Risk & Mindset",
       "url": "https://openalgo.in/stocks/risk-and-psychology"
     },
     "https://openalgo.in/stocks/scams-and-protection": {
       "content_hash": "d5177cbd467ead0f0ba1fdcfcb5af75941c2652b1f26b4d57faed5bba3e1d4c9",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/018-scams-manipulation-how-to-protect-yourself.md",
       "title": "Scams, Manipulation & How to Protect Yourself",
       "url": "https://openalgo.in/stocks/scams-and-protection"
     },
     "https://openalgo.in/stocks/sebi-and-regulators": {
       "content_hash": "18692902c8990a253d22ba638ac6d3768d4f7929d135edea231a4873e819be80",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/004-sebi-the-guardians-of-the-market.md",
       "title": "SEBI & the Guardians of the Market",
       "url": "https://openalgo.in/stocks/sebi-and-regulators"
     },
     "https://openalgo.in/stocks/stock-quote": {
       "content_hash": "064ea518ef78169f26699d4cfb7a453f900b1e5d486be3a41b9a0b7d058ff3a3",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/010-anatomy-of-a-stock-quote.md",
       "title": "Anatomy of a Stock Quote",
       "url": "https://openalgo.in/stocks/stock-quote"
     },
     "https://openalgo.in/stocks/the-ipo": {
       "content_hash": "fc8dd26f5b9f3ecf4d576aba2d5e0b9c1daa07940431cc8100629061a519dbbc",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/008-the-ipo-how-a-company-goes-public.md",
       "title": "The IPO: How a Company Goes Public",
       "url": "https://openalgo.in/stocks/the-ipo"
     },
     "https://openalgo.in/stocks/what-is-a-stock": {
       "content_hash": "71e08d3a7b5a025317589c7b386f8a74ebf0403aa05853389a26526a51dcc39a",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/003-the-stock-market-demystified.md",
       "title": "The Stock Market, Demystified",
       "url": "https://openalgo.in/stocks/what-is-a-stock"
     },
     "https://openalgo.in/stocks/what-moves-a-stock": {
       "content_hash": "33e1ce2efead4813263422003537b0dce0024c7dcad7d5aedb8c1ba910a9ca3a",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/013-what-makes-a-stock-move.md",
       "title": "What Makes a Stock Move",
       "url": "https://openalgo.in/stocks/what-moves-a-stock"
     },
     "https://openalgo.in/stocks/why-invest": {
       "content_hash": "59f1a93b8cfdf4280ef48a366715fc4a91d210fe1c47fcf728cb56d8804ccd71",
+      "kind": "chapter",
       "relative_path": "courses/001-stock-market-basics/001-why-you-must-invest.md",
       "title": "Why You Must Invest",
       "url": "https://openalgo.in/stocks/why-invest"
     },
     "https://openalgo.in/taxation": {
       "content_hash": "a8b31358c1191d44a34800a7fae59eee7105f231a233b32760ac061ca2ea3caf",
+      "kind": "overview",
       "relative_path": "courses/011-taxation-for-traders-and-investors/000-course-overview.md",
       "title": "Taxation for Traders and Investors",
       "url": "https://openalgo.in/taxation"
     },
     "https://openalgo.in/taxation/advance-tax-and-deadlines": {
       "content_hash": "3152a0b34a395b0614ee7f804f36ddf617cf9d29b632261720d4f3cb2869c6c2",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/004-advance-tax-and-the-dates-you-cannot-miss.md",
       "title": "Advance Tax and the Dates You Cannot Miss",
       "url": "https://openalgo.in/taxation/advance-tax-and-deadlines"
     },
     "https://openalgo.in/taxation/capital-gains-on-shares": {
       "content_hash": "02b53413bab7d6df56d92e5f05c6e48dcc072ac7fd67fa2b2f1fca0031bad3e9",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/005-capital-gains-on-shares-and-mutual-funds.md",
       "title": "Capital Gains on Shares and Mutual Funds",
       "url": "https://openalgo.in/taxation/capital-gains-on-shares"
     },
     "https://openalgo.in/taxation/choosing-your-itr": {
       "content_hash": "492429f974d8926e91bfd45f79b3e589c65bf239e9506ab8de364e0030bcef7b",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/018-which-itr-form-is-yours.md",
       "title": "Which ITR Form Is Yours",
       "url": "https://openalgo.in/taxation/choosing-your-itr"
     },
     "https://openalgo.in/taxation/crypto-fno-tax": {
       "content_hash": "ddd76b7d313750cb1f40f63c87ca5c82b144e81474aeb9ff7755192a69a70b4c",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/017-crypto-futures-and-derivatives-a-grey-area.md",
       "title": "Crypto Futures and Derivatives: A Grey Area",
       "url": "https://openalgo.in/taxation/crypto-fno-tax"
     },
     "https://openalgo.in/taxation/crypto-tax-basics": {
       "content_hash": "ef8914e900a34f0a7da4340a6b809f7ac925b887a43d38492d18995d020fcf89",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/016-crypto-tax-the-flat-30-percent-and-the-1-percent-tds.md",
       "title": "Crypto Tax: The Flat 30 Percent and the 1 Percent TDS",
       "url": "https://openalgo.in/taxation/crypto-tax-basics"
     },
     "https://openalgo.in/taxation/fno-is-business-income": {
       "content_hash": "efd8403698e10021412db87dba2e8bd6f3456af395160c0071c2693d1fa83779",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/009-the-number-one-mistake-f-o-is-business-income.md",
       "title": "The Number One Mistake: F&O Is Business Income",
       "url": "https://openalgo.in/taxation/fno-is-business-income"
     },
     "https://openalgo.in/taxation/fno-losses-set-off": {
       "content_hash": "27cfb8feb82e51a8ddc8872046b29a23e4948d9cb0993aa07cf261ab61975862",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/012-f-o-losses-set-off-and-carry-forward.md",
       "title": "F&O Losses: Set-Off and Carry-Forward",
       "url": "https://openalgo.in/taxation/fno-losses-set-off"
     },
     "https://openalgo.in/taxation/fno-tax-audit": {
       "content_hash": "7ee6fa2c6eac92d4c4b44ea2824c9455be7b11f631849ff9098a63fdfb2d18b3",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/011-when-an-f-o-trader-needs-a-tax-audit.md",
       "title": "When an F&O Trader Needs a Tax Audit",
       "url": "https://openalgo.in/taxation/fno-tax-audit"
     },
     "https://openalgo.in/taxation/fno-turnover-and-expenses": {
       "content_hash": "4ff7b68571970f3a3126778eb4f1477bf7f7e4be8e73962e3bba0bea03de9a4a",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/010-f-o-turnover-is-not-what-you-think.md",
       "title": "F&O Turnover Is Not What You Think",
       "url": "https://openalgo.in/taxation/fno-turnover-and-expenses"
     },
     "https://openalgo.in/taxation/foreign-assets-and-black-money": {
       "content_hash": "414cc18279b66d262e7cf9fd530d6cf07488679abeefacb82bcaa68fc3d68dc8",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/015-schedule-fa-and-the-black-money-act.md",
       "title": "Schedule FA and the Black Money Act",
       "url": "https://openalgo.in/taxation/foreign-assets-and-black-money"
     },
     "https://openalgo.in/taxation/gifting-and-inheriting-shares": {
       "content_hash": "39a3a4561d432c8cf1d86728bfaeb0aed57e1efba617cdecd4199edd78489a13",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/008-gifting-and-inheriting-shares.md",
       "title": "Gifting and Inheriting Shares",
       "url": "https://openalgo.in/taxation/gifting-and-inheriting-shares"
     },
     "https://openalgo.in/taxation/intraday-trading-tax": {
       "content_hash": "ac8edfc9c0e1ffea89e231aeea731298e0b37126d02be027a7eda6c137cd1e82",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/007-intraday-trading-speculative-income.md",
       "title": "Intraday Trading: Speculative Income",
       "url": "https://openalgo.in/taxation/intraday-trading-tax"
     },
     "https://openalgo.in/taxation/not-reporting-fno": {
       "content_hash": "a023920ffa437908ad4074fab77cba1b79f69597ec881dbbbdc64aecf1c65c46",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/013-what-happens-if-you-do-not-report-f-o.md",
       "title": "What Happens If You Do Not Report F&O",
       "url": "https://openalgo.in/taxation/not-reporting-fno"
     },
     "https://openalgo.in/taxation/old-vs-new-regime": {
       "content_hash": "6c36b78a19c84fcc722315c7464dc3f60c7629ceddf2d904aa91d6b606a24330",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/003-old-regime-or-new-which-tax-slabs-apply.md",
       "title": "Old Regime or New: Which Tax Slabs Apply",
       "url": "https://openalgo.in/taxation/old-vs-new-regime"
     },
     "https://openalgo.in/taxation/stt-and-charges": {
       "content_hash": "e1dbcf3e1fea7093ffd123a4ba9446dee44ad93d8c7583916cf31c902b46e3ce",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/006-stt-and-the-charges-hiding-in-every-trade.md",
       "title": "STT and the Charges Hiding in Every Trade",
       "url": "https://openalgo.in/taxation/stt-and-charges"
     },
     "https://openalgo.in/taxation/tax-on-us-stocks": {
       "content_hash": "b619f4761678f79a86a868fa32c8fb7a214632102018511fde6143cf7d0ef4a8",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/014-tax-on-us-stocks-for-indian-investors.md",
       "title": "Tax on US Stocks for Indian Investors",
       "url": "https://openalgo.in/taxation/tax-on-us-stocks"
     },
     "https://openalgo.in/taxation/the-income-buckets": {
       "content_hash": "22c9d86aad6a1f3ac86721f6604ce97fe32ae1d146604e110583163ebad2869e",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/002-the-three-buckets-how-your-profit-is-classified.md",
       "title": "The Three Buckets: How Your Profit Is Classified",
       "url": "https://openalgo.in/taxation/the-income-buckets"
     },
     "https://openalgo.in/taxation/the-traders-tax-checklist": {
       "content_hash": "6b1a5385e057e17e5197bb05f6598dbe0aabcb11a750a4a7546208a5887071ef",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/019-the-trader-s-year-round-tax-checklist.md",
       "title": "The Trader's Year-Round Tax Checklist",
       "url": "https://openalgo.in/taxation/the-traders-tax-checklist"
     },
     "https://openalgo.in/taxation/why-tax-matters": {
       "content_hash": "ba4c26f44742a90df37908ef0b7fb0877bd1475e57391deeda0a8237ac063e06",
+      "kind": "chapter",
       "relative_path": "courses/011-taxation-for-traders-and-investors/001-why-tax-matters.md",
       "title": "Why Tax Matters",
       "url": "https://openalgo.in/taxation/why-tax-matters"
     },
     "https://openalgo.in/technicals": {
       "content_hash": "970a4be5789d6a10915e877fbd38199996c04664e43addc5f952d2ce420bd7f9",
+      "kind": "overview",
       "relative_path": "courses/002-technical-analysis/000-course-overview.md",
       "title": "Technical Analysis",
       "url": "https://openalgo.in/technicals"
     },
     "https://openalgo.in/technicals/bollinger-bands": {
       "content_hash": "2b297854e7cbb4d545854e0c276f8c64ba809a8ab727622b26c0e44eaee9ef2a",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/019-bollinger-bands-atr-and-volatility.md",
       "title": "Bollinger Bands, ATR and Volatility",
       "url": "https://openalgo.in/technicals/bollinger-bands"
     },
     "https://openalgo.in/technicals/building-a-strategy": {
       "content_hash": "6b8a826ab7d464e75d9daa60eab4fe84343ed32d7103d0dccc002e3834abcb88",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/026-from-setup-to-system-build-backtest.md",
       "title": "From Setup to System: Build & Backtest",
       "url": "https://openalgo.in/technicals/building-a-strategy"
     },
     "https://openalgo.in/technicals/candlestick-anatomy": {
       "content_hash": "bcd8815fe882bd2edd0bbfe99adf7d5cbb10ae054b7be25cda40c11a07490251",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/003-the-candlestick-one-bar-five-numbers-a-story.md",
       "title": "The Candlestick: One Bar, Five Numbers, a Story",
       "url": "https://openalgo.in/technicals/candlestick-anatomy"
     },
     "https://openalgo.in/technicals/channels-and-breakouts": {
       "content_hash": "dd64dd0220f58690b982d8cb0c83d42a91926e2dd33eda4f0825800ffb14949b",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/008-channels-ranges-the-breakout.md",
       "title": "Channels, Ranges & the Breakout",
       "url": "https://openalgo.in/technicals/channels-and-breakouts"
     },
     "https://openalgo.in/technicals/combining-indicators": {
       "content_hash": "da71bf6c680709ccdc163d9125282fe101d2d6af755f8f93ace2aee414e82de6",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/023-stacking-indicators-without-fooling-yourself.md",
       "title": "Stacking Indicators Without Fooling Yourself",
       "url": "https://openalgo.in/technicals/combining-indicators"
     },
     "https://openalgo.in/technicals/continuation-patterns": {
       "content_hash": "e3eeed8b347f5e2762f3c92f82da5064582b18cfb5222ea88bec28b372f8600a",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/014-pauses-not-reversals-continuation-patterns.md",
       "title": "Pauses, Not Reversals: Continuation Patterns",
       "url": "https://openalgo.in/technicals/continuation-patterns"
     },
     "https://openalgo.in/technicals/dow-theory": {
       "content_hash": "8c3fccf130fd23056d48d7583b63b947f7fd115316ec25be784db8b0d63a9a80",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/005-dow-theory-the-idea-behind-every-chart.md",
       "title": "Dow Theory: The Idea Behind Every Chart",
       "url": "https://openalgo.in/technicals/dow-theory"
     },
     "https://openalgo.in/technicals/fibonacci": {
       "content_hash": "5ebc090fc297115147b52283d8276666d248bca39cb1c4ce61df201b908684e3",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/009-fibonacci-the-pullback-map.md",
       "title": "Fibonacci: The Pullback Map",
       "url": "https://openalgo.in/technicals/fibonacci"
     },
     "https://openalgo.in/technicals/gaps": {
       "content_hash": "748dcb5a83fb506ad55c22fc19ded1f5e8b0bd949f46a8c4406fa6c02a0f11d4",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/015-gaps-when-price-jumps-the-queue.md",
       "title": "Gaps: When Price Jumps the Queue",
       "url": "https://openalgo.in/technicals/gaps"
     },
     "https://openalgo.in/technicals/indicator-toolbox": {
       "content_hash": "25c0640a2022865ad23c4843b8c4f814236ba226e5688567dc305301eaae376b",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/024-the-full-indicator-toolbox-80-at-your-fingertips.md",
       "title": "The Full Indicator Toolbox: 80+ at Your Fingertips",
       "url": "https://openalgo.in/technicals/indicator-toolbox"
     },
     "https://openalgo.in/technicals/macd": {
       "content_hash": "aae2283f8c7731e5a249375ba186921f0fef63fee77ea458c6b5d0620d792443",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/018-macd-trend-and-momentum-in-one.md",
       "title": "MACD: Trend and Momentum in One",
       "url": "https://openalgo.in/technicals/macd"
     },
     "https://openalgo.in/technicals/moving-averages": {
       "content_hash": "0b119ff571c2b0517353d5f26db33109099315569cc36db0bc04bb3e600f3be7",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/016-moving-averages-the-trend-smoothed.md",
       "title": "Moving Averages: The Trend, Smoothed",
       "url": "https://openalgo.in/technicals/moving-averages"
     },
     "https://openalgo.in/technicals/multi-candle-patterns": {
       "content_hash": "d2fd579567586ee3d528204bc04287b82fe20e23d774af9c2db59dd74d14ed89",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/011-two-and-three-candle-tells.md",
       "title": "Two- and Three-Candle Tells",
       "url": "https://openalgo.in/technicals/multi-candle-patterns"
     },
     "https://openalgo.in/technicals/multiple-timeframe-analysis": {
       "content_hash": "7f08f5b631eaebe106106191d1af66672c4c3d78ff6ced56d75588728abd82b3",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/025-top-down-multiple-timeframe-analysis.md",
       "title": "Top-Down: Multiple-Timeframe Analysis",
       "url": "https://openalgo.in/technicals/multiple-timeframe-analysis"
     },
     "https://openalgo.in/technicals/patterns-in-context": {
       "content_hash": "e6f20a8165a7de2f9851078b65d4b2aa4607f5f097a8d703112ada637f3735fd",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/012-why-a-pattern-only-matters-in-context.md",
       "title": "Why a Pattern Only Matters in Context",
       "url": "https://openalgo.in/technicals/patterns-in-context"
     },
     "https://openalgo.in/technicals/psychology-and-next-steps": {
       "content_hash": "f1bff7540444e3837d8cd548e594cd9732d54a77687c05f8d2cd558f83b0415a",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/028-the-last-edge-psychology-discipline-what-s-next.md",
       "title": "The Last Edge: Psychology, Discipline & What's Next",
       "url": "https://openalgo.in/technicals/psychology-and-next-steps"
     },
     "https://openalgo.in/technicals/reading-charts": {
       "content_hash": "e20d2157d4f992b3b6949b9c61fb603f356d59636f427238defe67adf221638b",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/002-reading-a-chart-without-getting-lost.md",
       "title": "Reading a Chart Without Getting Lost",
       "url": "https://openalgo.in/technicals/reading-charts"
     },
     "https://openalgo.in/technicals/reversal-patterns": {
       "content_hash": "2b767b28c43b1dbf271e70ef6530b193aed49c8ed290e71a7df141484786b987",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/013-tops-bottoms-reversal-patterns.md",
       "title": "Tops & Bottoms: Reversal Patterns",
       "url": "https://openalgo.in/technicals/reversal-patterns"
     },
     "https://openalgo.in/technicals/risk-management": {
       "content_hash": "6258a76fb04211ac0f7c01cdeb15cc76d7d53d42fad094b8da7136b564bbf283",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/027-risk-first-position-sizing-stops.md",
       "title": "Risk First: Position Sizing & Stops",
       "url": "https://openalgo.in/technicals/risk-management"
     },
     "https://openalgo.in/technicals/rsi-and-momentum": {
       "content_hash": "1ed2118d1484ae45920df88854c65d2c8f0c4009c5ca778574bf7e39404b5fad",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/017-rsi-and-the-momentum-oscillators.md",
       "title": "RSI and the Momentum Oscillators",
       "url": "https://openalgo.in/technicals/rsi-and-momentum"
     },
     "https://openalgo.in/technicals/single-candle-patterns": {
       "content_hash": "631d5a88a20e462d0c064a3f64e1af9b958946e9685ea77476c98df0854df78a",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/010-single-candles-that-whisper-a-turn.md",
       "title": "Single Candles That Whisper a Turn",
       "url": "https://openalgo.in/technicals/single-candle-patterns"
     },
     "https://openalgo.in/technicals/support-and-resistance": {
       "content_hash": "baffda87f2a10807cc21a1e99e026a19ae636fce0cad45290b0bc4f7c27abd41",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/007-support-resistance-where-price-remembers.md",
       "title": "Support & Resistance: Where Price Remembers",
       "url": "https://openalgo.in/technicals/support-and-resistance"
     },
     "https://openalgo.in/technicals/timeframes-and-scales": {
       "content_hash": "a53864c1c8470e25a76b83f648b77f33036fae2e9d03e4c18c70afc568cc00ad",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/004-timeframes-scales-why-a-chart-can-mislead.md",
       "title": "Timeframes, Scales & Why a Chart Can Mislead",
       "url": "https://openalgo.in/technicals/timeframes-and-scales"
     },
     "https://openalgo.in/technicals/trend-following-tools": {
       "content_hash": "5d069ed629c1ff6043915e218f1cbd110b29f7d66f829c8a5f2cffef77b3239d",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/022-trend-tools-that-sit-on-price-supertrend-sar-and-ichimoku.md",
       "title": "Trend Tools That Sit on Price: Supertrend, SAR and Ichimoku",
       "url": "https://openalgo.in/technicals/trend-following-tools"
     },
     "https://openalgo.in/technicals/trend-strength": {
       "content_hash": "7b5ec56c531cb0db2fa5b86487a7b2d34ee6feeaf655cbe8d29df34e6d236557",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/021-how-strong-is-the-trend-adx-dmi-and-aroon.md",
       "title": "How Strong Is the Trend? ADX, DMI and Aroon",
       "url": "https://openalgo.in/technicals/trend-strength"
     },
     "https://openalgo.in/technicals/trends-and-trendlines": {
       "content_hash": "919a50646a66f535489e6e632a3aa52f59493d2e4ab108a7c87afbaff77c0946",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/006-the-trend-is-your-friend-until-it-bends.md",
       "title": "The Trend Is Your Friend, Until It Bends",
       "url": "https://openalgo.in/technicals/trends-and-trendlines"
     },
     "https://openalgo.in/technicals/volume": {
       "content_hash": "20f7ac8be64302e5ec38881331ac81279dd8052307eabdb021e2d42de8557b66",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/020-volume-indicators-obv-mfi-and-money-flow.md",
       "title": "Volume Indicators: OBV, MFI and Money Flow",
       "url": "https://openalgo.in/technicals/volume"
     },
     "https://openalgo.in/technicals/what-is-technical-analysis": {
       "content_hash": "8d07067a4e93f7d83ccb164d06e76360dfeef79a43054cf36053595daaf4ffc5",
+      "kind": "chapter",
       "relative_path": "courses/002-technical-analysis/001-what-technical-analysis-actually-is-and-isn-t.md",
       "title": "What Technical Analysis Actually Is (and Isn't)",
       "url": "https://openalgo.in/technicals/what-is-technical-analysis"
     },
     "https://openalgo.in/trading-psychology": {
       "content_hash": "143a44ca74eb65f8d81dba9e7fc381e9d1363ae49073eca340e8bad09cc0d6fb",
+      "kind": "overview",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/000-course-overview.md",
       "title": "Trading Psychology & Risk Playbooks",
       "url": "https://openalgo.in/trading-psychology"
     },
     "https://openalgo.in/trading-psychology/adjustment-risk": {
       "content_hash": "bef9026c4f74c10f3fb5886d9fce44cb22666d3f90287ad9d7e5c723bad1fd3d",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/016-adjustment-risk.md",
       "title": "Adjustment Risk",
       "url": "https://openalgo.in/trading-psychology/adjustment-risk"
     },
     "https://openalgo.in/trading-psychology/compulsive-trading": {
       "content_hash": "f4e569794eb67671816db2db8e74a706fb0f1dd6e652fb03b7a9c05233000bdf",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/007-when-trading-becomes-compulsive.md",
       "title": "When Trading Becomes Compulsive",
       "url": "https://openalgo.in/trading-psychology/compulsive-trading"
     },
     "https://openalgo.in/trading-psychology/cost-of-hedging": {
       "content_hash": "b6999f4210902500a60ec3f2d1abce4be35cd19324fbb0bb97a6c88304e029d7",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/011-the-cost-of-hedging.md",
       "title": "The Cost of Hedging",
       "url": "https://openalgo.in/trading-psychology/cost-of-hedging"
     },
     "https://openalgo.in/trading-psychology/credit-spreads-condors": {
       "content_hash": "044c2248d804ae143fc04075023c1f32296a295a80e73e0ffda972a6bd4608dd",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/015-credit-spreads-iron-condors-and-iron-flies.md",
       "title": "Credit Spreads, Iron Condors and Iron Flies",
       "url": "https://openalgo.in/trading-psychology/credit-spreads-condors"
     },
     "https://openalgo.in/trading-psychology/discipline-is-a-system": {
       "content_hash": "4d316b6d37b1a829ee035ca1ef106baca80ec3915da966f4f5390867e5ecbbfe",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/004-discipline-is-a-system-not-a-personality-trait.md",
       "title": "Discipline Is a System, Not a Personality Trait",
       "url": "https://openalgo.in/trading-psychology/discipline-is-a-system"
     },
     "https://openalgo.in/trading-psychology/emotional-intelligence": {
       "content_hash": "0f95ff4bc42c539fc15732fa32f9014fc8bc91c3b6a4ad51cdc55fc79bb7a957",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/006-building-emotional-intelligence.md",
       "title": "Building Emotional Intelligence",
       "url": "https://openalgo.in/trading-psychology/emotional-intelligence"
     },
     "https://openalgo.in/trading-psychology/final-checklist": {
       "content_hash": "cfd416b6e27089cc823e9d6fad738c639b21eb43cb78811a59f19f2ff9d0e520",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/025-final-checklist-before-you-put-real-money.md",
       "title": "Final Checklist: Before You Put Real Money",
       "url": "https://openalgo.in/trading-psychology/final-checklist"
     },
     "https://openalgo.in/trading-psychology/fomo-overconfidence-herd": {
       "content_hash": "98b728ade4bf66b1a9035fb81d2910d56779c4a785bac0f1808a6d6137e325ac",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/003-fomo-overconfidence-and-herd-behaviour.md",
       "title": "FOMO, Overconfidence and Herd Behaviour",
       "url": "https://openalgo.in/trading-psychology/fomo-overconfidence-herd"
     },
     "https://openalgo.in/trading-psychology/hedge-ratio-portfolio": {
       "content_hash": "07151bd2f057bfcd8c2ccae93b97ecc0f01be1c199e553320f0a5fab3b5a7a41",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/013-hedge-ratio-and-portfolio-hedge.md",
       "title": "Hedge Ratio and Portfolio Hedge",
       "url": "https://openalgo.in/trading-psychology/hedge-ratio-portfolio"
     },
     "https://openalgo.in/trading-psychology/loss-aversion-revenge": {
       "content_hash": "b03fb51adba73f336f79626c2fd6bfaf787a5c39817a5e6daaa5e0b2d84d063d",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/002-loss-aversion-and-revenge-trading.md",
       "title": "Loss Aversion and Revenge Trading",
       "url": "https://openalgo.in/trading-psychology/loss-aversion-revenge"
     },
     "https://openalgo.in/trading-psychology/naked-vs-hedged-selling": {
       "content_hash": "f6ac622244269a57246b2570bc5bb34b37bca7dcd98519205984479837e36eeb",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/014-naked-selling-vs-hedged-selling.md",
       "title": "Naked Selling vs Hedged Selling",
       "url": "https://openalgo.in/trading-psychology/naked-vs-hedged-selling"
     },
     "https://openalgo.in/trading-psychology/plan-futures-traders": {
       "content_hash": "91f6474dae88847a99ff7185d244c1cc4314422c01dc080cd04cfcc80022ef5b",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/021-risk-plan-for-futures-traders.md",
       "title": "Risk Plan for Futures Traders",
       "url": "https://openalgo.in/trading-psychology/plan-futures-traders"
     },
     "https://openalgo.in/trading-psychology/plan-hedgers": {
       "content_hash": "5be0c59b5ed5d561e4f7c67e97831808f82b8c110aba9662a31a850722276c9b",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/024-risk-plan-for-hedgers.md",
       "title": "Risk Plan for Hedgers",
       "url": "https://openalgo.in/trading-psychology/plan-hedgers"
     },
     "https://openalgo.in/trading-psychology/plan-intraday-traders": {
       "content_hash": "0fd1d59558ee4e78825b2f26a92f3a8bc40a64b93c901d813eb811afb3b84c57",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/020-risk-plan-for-intraday-traders.md",
       "title": "Risk Plan for Intraday Traders",
       "url": "https://openalgo.in/trading-psychology/plan-intraday-traders"
     },
     "https://openalgo.in/trading-psychology/plan-long-term-investors": {
       "content_hash": "3b4c6e2e981f6ca4a9b2b1fb4decde09c8e42e3b13456faad270845cef1f6065",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/018-risk-plan-for-long-term-investors.md",
       "title": "Risk Plan for Long-Term Investors",
       "url": "https://openalgo.in/trading-psychology/plan-long-term-investors"
     },
     "https://openalgo.in/trading-psychology/plan-option-buyers": {
       "content_hash": "b7f43d49fe6a177d23486c6153a34b2fdbba199722dadf243d636fadd62c1632",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/022-risk-plan-for-option-buyers.md",
       "title": "Risk Plan for Option Buyers",
       "url": "https://openalgo.in/trading-psychology/plan-option-buyers"
     },
     "https://openalgo.in/trading-psychology/plan-option-sellers": {
       "content_hash": "1c9e3181dd994c7f5a875cd926939927863fab122516a5d89698bec855085b2c",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/023-risk-plan-for-option-sellers.md",
       "title": "Risk Plan for Option Sellers",
       "url": "https://openalgo.in/trading-psychology/plan-option-sellers"
     },
     "https://openalgo.in/trading-psychology/plan-stock-traders": {
       "content_hash": "a9090d423dae6abc72246cca003b4a654c7055f07cf831067e347056aa6c2bca",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/019-risk-plan-for-stock-traders.md",
       "title": "Risk Plan for Stock Traders",
       "url": "https://openalgo.in/trading-psychology/plan-stock-traders"
     },
     "https://openalgo.in/trading-psychology/simple-hedging-tools": {
       "content_hash": "22f5a2e4d257d8166336fba059f792c669c3850905b2aedba5532153f79003de",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/012-simple-hedging-tools.md",
       "title": "Simple Hedging Tools",
       "url": "https://openalgo.in/trading-psychology/simple-hedging-tools"
     },
     "https://openalgo.in/trading-psychology/sources-and-staying-current": {
       "content_hash": "1018e9e0ec8c2b538f77e2d3989254de0d653d64ed2cd992890e6187e00e19ce",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/026-sources-and-staying-current.md",
       "title": "Sources and Staying Current",
       "url": "https://openalgo.in/trading-psychology/sources-and-staying-current"
     },
     "https://openalgo.in/trading-psychology/tail-risk-for-sellers": {
       "content_hash": "59d3fe70338f9279add60745e762d34719b3f3c3fa4cbbbb17caf935fd0b5bbb",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/017-tail-risk-for-option-sellers.md",
       "title": "Tail Risk for Option Sellers",
       "url": "https://openalgo.in/trading-psychology/tail-risk-for-sellers"
     },
     "https://openalgo.in/trading-psychology/trading-journal": {
       "content_hash": "4e5253d8c189c461145472732caaaf23fa9da93494858f426f03ed23ffc0662a",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/005-trading-journal-and-review-process.md",
       "title": "Trading Journal and Review Process",
       "url": "https://openalgo.in/trading-psychology/trading-journal"
     },
     "https://openalgo.in/trading-psychology/what-hedging-does": {
       "content_hash": "82febee45bd182bf23a23e41908093f6abc56f149059dd5f4cbb46c4fc51d2dc",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/008-what-hedging-really-does.md",
       "title": "What Hedging Really Does",
       "url": "https://openalgo.in/trading-psychology/what-hedging-does"
     },
     "https://openalgo.in/trading-psychology/when-not-to-hedge": {
       "content_hash": "99b112671c931844724d07165c4c825332019a91e93eab44385b49ab8ffdbc0f",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/010-when-you-should-not-hedge.md",
       "title": "When You Should Not Hedge",
       "url": "https://openalgo.in/trading-psychology/when-not-to-hedge"
     },
     "https://openalgo.in/trading-psychology/when-to-hedge": {
       "content_hash": "8854302f4da32924f656469b9478c98e12af6eff210d2b9c5c7c1f0e2e932a8c",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/009-when-you-should-hedge.md",
       "title": "When You Should Hedge",
       "url": "https://openalgo.in/trading-psychology/when-to-hedge"
     },
     "https://openalgo.in/trading-psychology/your-brain-and-markets": {
       "content_hash": "4656c6ff3cf3eb8e00df7f9763288e8bae66a62a40a3720a8da8d04418de48e5",
+      "kind": "chapter",
       "relative_path": "courses/013-trading-psychology-risk-playbooks/001-your-brain-is-not-built-for-markets.md",
       "title": "Your Brain Is Not Built for Markets",
       "url": "https://openalgo.in/trading-psychology/your-brain-and-markets"
     }
   },
   "discovered": {
-    "courses": [
+    "collections": [
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/stocks/why-invest",
           "https://openalgo.in/stocks/asset-classes",
           "https://openalgo.in/stocks/what-is-a-stock",
@@ -2548,7 +2969,7 @@
         "url": "https://openalgo.in/stocks"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/technicals/what-is-technical-analysis",
           "https://openalgo.in/technicals/reading-charts",
           "https://openalgo.in/technicals/candlestick-anatomy",
@@ -2582,7 +3003,7 @@
         "url": "https://openalgo.in/technicals"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/fundamentals/why-python-for-finance",
           "https://openalgo.in/fundamentals/installing-python",
           "https://openalgo.in/fundamentals/vscode-and-jupyter",
@@ -2628,7 +3049,7 @@
         "url": "https://openalgo.in/fundamentals"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/futures/what-is-a-future",
           "https://openalgo.in/futures/futures-vs-forwards-options-equity",
           "https://openalgo.in/futures/why-futures-exist",
@@ -2661,7 +3082,7 @@
         "url": "https://openalgo.in/futures"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/options-basics/what-is-an-option",
           "https://openalgo.in/options-basics/why-options-exist",
           "https://openalgo.in/options-basics/options-vs-futures-vs-stocks",
@@ -2693,7 +3114,7 @@
         "url": "https://openalgo.in/options-basics"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/options-strategies/the-strategy-builder",
           "https://openalgo.in/options-strategies/reading-payoffs",
           "https://openalgo.in/options-strategies/long-call-short-put",
@@ -2726,7 +3147,7 @@
         "url": "https://openalgo.in/options-strategies"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/python/getting-started",
           "https://openalgo.in/python/python-for-traders",
           "https://openalgo.in/python/symbols-exchanges",
@@ -2764,7 +3185,7 @@
         "url": "https://openalgo.in/python"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/quant/what-is-a-quant",
           "https://openalgo.in/quant/quant-roles",
           "https://openalgo.in/quant/quant-firms",
@@ -2848,7 +3269,7 @@
         "url": "https://openalgo.in/quant"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/stats-arb/what-is-statistical-arbitrage",
           "https://openalgo.in/stats-arb/building-the-database",
           "https://openalgo.in/stats-arb/the-data-layer-and-its-biases",
@@ -2871,7 +3292,7 @@
         "url": "https://openalgo.in/stats-arb"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/amibroker/what-is-amibroker",
           "https://openalgo.in/amibroker/formula-editor",
           "https://openalgo.in/amibroker/how-afl-thinks",
@@ -2913,7 +3334,7 @@
         "url": "https://openalgo.in/amibroker"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/taxation/why-tax-matters",
           "https://openalgo.in/taxation/the-income-buckets",
           "https://openalgo.in/taxation/old-vs-new-regime",
@@ -2938,7 +3359,7 @@
         "url": "https://openalgo.in/taxation"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/risk-management/what-risk-really-means",
           "https://openalgo.in/risk-management/survive-first",
           "https://openalgo.in/risk-management/risk-vs-reward",
@@ -2977,7 +3398,7 @@
         "url": "https://openalgo.in/risk-management"
       },
       {
-        "chapter_urls": [
+        "page_urls": [
           "https://openalgo.in/trading-psychology/your-brain-and-markets",
           "https://openalgo.in/trading-psychology/loss-aversion-revenge",
           "https://openalgo.in/trading-psychology/fomo-overconfidence-herd",
@@ -3010,8 +3431,8 @@
       }
     ]
   },
-  "finished_at": "2026-08-26T07:21:36.957520+00:00",
+  "finished_at": "2026-09-17T10:03:18.205644+00:00",
   "source_url": "https://openalgo.in/learn",
-  "started_at": "2026-08-26T07:17:23.491456+00:00",
+  "started_at": "2026-09-17T10:02:10.911521+00:00",
   "status": "success"
 }
