@@ -8,7 +8,7 @@
   "collections_discovered": 13,
   "collections_new": [],
   "collections_removed": [],
-  "completed_at": "2026-09-17T10:03:18.205654+00:00",
+  "completed_at": "2026-09-19T05:45:29.916878+00:00",
   "courses_changed": [],
   "courses_discovered": 13,
   "courses_new": [],
@@ -28,9 +28,10 @@
   "papers_removed": [],
   "skipped": [],
   "source_url": "https://openalgo.in/learn",
-  "started_at": "2026-09-17T10:02:10.909550+00:00",
+  "started_at": "2026-09-19T05:43:47.376072+00:00",
   "status": "success",
   "verification": {
+    "all_local_link_targets_exist": true,
     "all_markdown_files_exist": true,
     "chapter_count_matches_manifest": true,
     "collection_count_matches_manifest": true,
@@ -50,6 +51,8 @@
         "title_present": true,
         "url": "https://openalgo.in/stocks/asset-classes"
       }
-    ]
+    ],
+    "unresolved_local_link_count": 0,
+    "unresolved_local_links": []
   }
 }

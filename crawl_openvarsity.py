@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from abc import ABC, abstractmethod
 from typing import Any, Awaitable, Callable, Iterable
-from urllib.parse import urljoin, urlsplit, urlunsplit
+from urllib.parse import unquote, urljoin, urlsplit, urlunsplit
 
 # Keep Crawl4AI's database, robots cache, and logs beside this portable script
 # unless a host explicitly provides a shared base directory.  This must precede
@@ -752,6 +752,19 @@ class OpenVarsityCrawler:
                     "title_present": f"# {page['title']}" in output_markdown,
                 }
             )
+        unresolved_local_links: list[dict[str, str]] = []
+        local_link_pattern = re.compile(r"!?\[[^\]]*\]\(([^)\s]+)")
+        for relative_path in page_paths:
+            source = self.output_dir / relative_path
+            if not source.is_file():
+                continue
+            for raw_target in local_link_pattern.findall(source.read_text(encoding="utf-8")):
+                parsed = urlsplit(raw_target)
+                if parsed.scheme in {"http", "https", "mailto"} or raw_target.startswith("#"):
+                    continue
+                target = (source.parent / unquote(parsed.path)).resolve()
+                if not target.is_file():
+                    unresolved_local_links.append({"source": relative_path, "target": raw_target})
         chapter_count = sum(
             1
             for collection in collections
@@ -766,6 +779,9 @@ class OpenVarsityCrawler:
             "paper_count_matches_manifest": len(collections) == self.summary.papers_discovered if self.adapter.name == "arxiv" else None,
             "all_markdown_files_exist": all((self.output_dir / path).is_file() for path in page_paths),
             "consistent_file_naming": page_paths == expected_paths,
+            "all_local_link_targets_exist": not unresolved_local_links,
+            "unresolved_local_link_count": len(unresolved_local_links),
+            "unresolved_local_links": unresolved_local_links[:100],
             "spot_checks": spot_results,
         }
 
@@ -774,15 +790,41 @@ class OpenVarsityCrawler:
 
         Crawl4AI remains responsible for HTML-to-Markdown conversion. This small
         post-processing step only changes links whose destinations are also in
-        this mirror; external/source links stay intact.
+        this mirror; external/source links stay intact. Some Crawl4AI versions
+        emit a relative Markdown filename synthesized from the link text (for
+        example ``001-page-course-title.md``) instead of the original URL. The
+        same-course prefix match below resolves that form against the manifest
+        without embedding any course or chapter names.
         """
         url_paths = {
             page["url"]: page["relative_path"]
             for collection in manifest_collections(manifest)
             for page in collection_pages(collection)
         }
+        collection_paths: dict[str, list[str]] = {}
+        for collection in manifest_collections(manifest):
+            paths = [page["relative_path"] for page in collection_pages(collection)]
+            for path in paths:
+                collection_paths[path] = paths
+
+        def relative_alias_target(source_relative: str, raw_target: str) -> str | None:
+            """Resolve Crawl4AI's synthesized relative filename, if unique."""
+            target_path, _, _fragment = raw_target.partition("#")
+            if not target_path or target_path.startswith(("/", "\\")):
+                return None
+            candidate_paths = collection_paths.get(source_relative, [])
+            target_name = Path(unquote(target_path)).name
+            target_stem = Path(target_name).stem
+            matches = [
+                candidate
+                for candidate in candidate_paths
+                if target_stem == Path(candidate).stem
+                or target_stem.startswith(Path(candidate).stem + "-")
+            ]
+            return matches[0] if len(matches) == 1 else None
+
         changed_files = 0
-        link_pattern = re.compile(r"\]\((https?://[^\s)]+)(\s+\"[^)]*\")?\)")
+        link_pattern = re.compile(r"\]\(([^\s)]+)(\s+\"[^)]*\")?\)")
         for source_relative in url_paths.values():
             source = self.output_dir / source_relative
             if not source.exists():
@@ -792,7 +834,11 @@ class OpenVarsityCrawler:
             def replacement(match: re.Match[str]) -> str:
                 raw_url, title = match.group(1), match.group(2) or ""
                 parsed = urlsplit(raw_url)
-                target_relative = url_paths.get(canonical_url(raw_url))
+                target_relative = (
+                    url_paths.get(canonical_url(raw_url))
+                    if parsed.scheme in {"http", "https"}
+                    else relative_alias_target(source_relative, raw_url)
+                )
                 if target_relative is None:
                     return match.group(0)
                 relative = Path(os.path.relpath(self.output_dir / target_relative, source.parent)).as_posix()

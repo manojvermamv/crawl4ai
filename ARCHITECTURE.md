@@ -37,6 +37,11 @@ depth checks, out-of-order batch mapping, resumable state, content hashes,
 atomic JSON, path-safe removal, local links, and verification.  An adapter
 must return `DiscoveredCollection` objects and must not write files itself.
 
+The link pass normalizes both original absolute URLs and Crawl4AI-generated
+relative filenames against the discovered manifest. This keeps generated
+course navigation portable even when the converter adds a title or course
+suffix to a relative destination.
+
 Crawl4AI also handles HTML-to-Markdown media conversion.  Charts and other
 images are retained as Markdown image links with their source URL/alt text;
 the crawler does not download or reinterpret binary assets.  Thus the

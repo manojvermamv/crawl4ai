@@ -277,6 +277,31 @@ class PersistenceAndAgentScenariosTest(unittest.TestCase):
         self.assertIn("https://example.org/page", converted)
         self.assertIn("https://openalgo.in/course/images/chart.png", converted)
 
+    def test_synthesized_relative_crawl4ai_links_become_local(self) -> None:
+        overview = self.record("https://openalgo.in/course", "courses/001-course/000-course-overview.md")
+        chapter = self.record("https://openalgo.in/course/one", "courses/001-course/001-page.md")
+        source = self.root / overview.relative_path
+        source.parent.mkdir(parents=True, exist_ok=True)
+        source.write_text(
+            "[chapter](001-page-course-title.md#part)\n"
+            "[missing](999-not-discovered-course-title.md)\n",
+            encoding="utf-8",
+        )
+        (self.root / chapter.relative_path).write_text("# Page\n", encoding="utf-8")
+        self.assertEqual(self.app.rewrite_internal_links(self.manifest(overview, [chapter])), 1)
+        converted = source.read_text(encoding="utf-8")
+        self.assertIn("](001-page.md#part)", converted)
+        self.assertIn("999-not-discovered-course-title.md", converted)
+
+        manifest = self.manifest(overview, [chapter])
+        self.app.summary.collections_discovered = 1
+        self.app.summary.pages_discovered = 2
+        self.app.summary.courses_discovered = 1
+        self.app.summary.chapters_discovered = 1
+        self.app.verify(manifest, {})
+        self.assertFalse(self.app.summary.verification["all_local_link_targets_exist"])
+        self.assertEqual(self.app.summary.verification["unresolved_local_link_count"], 1)
+
     def test_arxiv_link_rewrite_keeps_pdf_and_abs_links_remote(self) -> None:
         adapter = ArxivHtmlAdapter()
         self.app = OpenVarsityCrawler(

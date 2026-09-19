@@ -6,7 +6,7 @@ It discovers the live hierarchy on every run:
 
 1. `https://openalgo.in/learn` discovers course cards.
 2. Each live course page discovers its ordered chapter links.
-3. Only those discovered chapter pages are converted and written.
+3. Each discovered course overview and chapter page is converted and written.
 
 No course name, course slug, chapter name, chapter count, or page list is configured in the code. Links to other site sections and other subdomains never enter the output scope.
 
@@ -162,11 +162,11 @@ arxiv-mirror/
     latest-run.json
 ```
 
-`manifest.json` is the previous successful source-of-truth. The next run always performs discovery again, writes only pages whose Crawl4AI Markdown hash changed, reports additions/removals, and safely prunes managed files for removed collections/pages. `crawl-state.json` is checkpointed after discovery and after every converted page, so an interrupted job has durable progress and its next invocation can continue without losing completed work. Existing OpenAlgo manifests using `courses` and `chapters` are upgraded automatically.
+`manifest.json` is the source-of-truth for the latest completed discovery. The next run always performs discovery again, writes only pages whose Crawl4AI Markdown hash changed, reports additions/removals/changes, and safely prunes managed files for removed collections/pages. `crawl-state.json` is checkpointed after discovery and after every converted page, so an interrupted job has durable progress and its next invocation can continue without losing completed work. Existing OpenAlgo manifests using `courses` and `chapters` are upgraded automatically.
 
 The report's `verification` section checks that live-discovered counts equal
 manifest counts, every Markdown file exists, and every path follows the
-adapter's naming convention. It also emits spot-check results against live
-converted Markdown. `RunSummary` includes generic collection/page changes plus
+adapter's naming convention, and every rewritten local Markdown link resolves.
+It also emits spot-check results against live converted Markdown. `RunSummary` includes generic collection/page changes plus
 OpenAlgo-compatible course/chapter aliases and arXiv paper aliases, so an
 agent can decide success, partial success, or failure without parsing logs.
